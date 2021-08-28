@@ -1,0 +1,12 @@
+com\epam\db\entities\User.class
+com\epam\util\Encrypt.class
+com\epam\controller\LogoutServlet.class
+com\epam\controller\LoginFilter.class
+com\epam\controller\TestsServlet.class
+com\epam\TestServlet.class
+com\epam\db\entities\Test.class
+com\epam\db\dao\UserDao.class
+com\epam\db\DBUtil.class
+com\epam\controller\LoginServlet.class
+com\epam\db\dao\TestDao.class
+com\epam\controller\CreateTestServlet.class

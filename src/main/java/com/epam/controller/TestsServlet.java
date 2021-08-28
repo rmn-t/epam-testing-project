@@ -36,7 +36,10 @@ public class TestsServlet extends HttpServlet {
         HttpSession session = req.getSession(false);
         System.out.println(session.getAttribute("testsSorting").toString());
         List<Test> tests = TestDao.getTestsLimitedSorted(pageId,recordsPerPage,session.getAttribute("testsSorting").toString());
-        int lastPage = (TestDao.getTestsNumber() / recordsPerPage);
+        System.out.println(TestDao.getTestsNumber());
+        int totalTests = TestDao.getTestsNumber();
+        int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
+        System.out.println(lastPage);
         req.setAttribute("tests",tests);
         req.setAttribute("lastPage",lastPage);
         req.getRequestDispatcher("/tests.jsp").forward(req,resp);

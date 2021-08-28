@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Creating new test</title>
-    <form action="/createTest" method="POST">
+    <form action="/epam/createTest" method="POST">
         <label for="testName">Name: </label>
         <input name="testName" id="testName">
         <br><br>
@@ -20,7 +20,11 @@
         </select>
         <br>
         <br>
-        <input type="submit" value="Create">
+        <label for="duration">Duration:</label>
+        <input type="number" name="duration" id="duration">
+        <br>
+        <br>
+        <input type="submit" value="Create test">
     </form>
 </head>
 <body>

@@ -72,6 +72,35 @@ public class TestDao {
         return results;
     }
 
+    public static int insertNewTest(String name, String subject, String complexity,int durationSec) {
+        int res = 0;
+        Connection con = null;
+        PreparedStatement prepStmt = null;
+        ResultSet generatedKeys = null;
+        try {
+            con = DBUtil.getConnection();
+            prepStmt = con.prepareStatement("INSERT INTO test(name,subject,complexity,duration_sec) values(?,?,?,?);",Statement.RETURN_GENERATED_KEYS);
+            int k = 0;
+            prepStmt.setString(++k,name);
+            prepStmt.setString(++k,subject);
+            prepStmt.setString(++k,complexity);
+            prepStmt.setInt(++k,durationSec);
+            prepStmt.executeUpdate();
+            generatedKeys = prepStmt.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                res = generatedKeys.getInt(1);
+            } else {
+                throw new SQLException("Creating user failed, no ID obtained.");
+            }
+        } catch (SQLException exception) {
+            System.out.println("adding new test failed");
+            System.out.println(exception.getMessage());
+        } finally {
+            DBUtil.closeAllInOrder(generatedKeys,prepStmt,con);
+        }
+        return res;
+    }
+
     public static int getTestsNumber() {
         int res = 0;
         Connection con = null;

@@ -28,13 +28,9 @@
         <a href="/epam/createTest.jsp">Create new test</a>
         <br>
         <br>
-        <a href="/epam/editTest.jsp">Edit test</a>
-        - my tests<br>
-        - pagination<br>
-        - sorting<br>
-        - for admin create new test<br>
-        - view edit tests<br>
-        </br>
+        <a href="/epam/passed/tests?page=1">My tests</a>
+        <br>
+        <br>
         <form action="logout">
             <input type="submit" value="Logout">
         </form>
@@ -66,6 +62,7 @@
                 <th>duration</th>
                 <th>number of tests</th>
                 <th>details</th>
+                <th>Pass</th>
             </thead>
             <tbody>
                 <c:forEach items="${requestScope['tests']}" var="element">
@@ -76,7 +73,8 @@
                         <td>${element.complexity}</td>
                         <td>${element.duration}</td>
                         <td>${element.questionsNum}</td>
-                        <td><a href="/epam/test?id=${element.id}">Next</a></td>
+                        <td><a href="/epam/test?id=${element.id}">Details</a></td>
+                        <td><a href="/epam/take/test?id=${element.id}">Start</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

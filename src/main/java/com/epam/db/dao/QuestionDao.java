@@ -66,7 +66,7 @@ public class QuestionDao {
         ResultSet rs = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("SELECT (id,text,test_id) FROM question WHERE test_id = ?;");
+            prepStmt = con.prepareStatement("SELECT id,text,test_id FROM question WHERE test_id = ?;");
             prepStmt.setInt(1,testId);
             rs = prepStmt.executeQuery();
             while (rs.next()) {

@@ -1,5 +1,7 @@
 package com.epam.db.entities;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Question {
@@ -49,6 +51,16 @@ public class Question {
         this.answers = answers;
     }
 
+    private List<Answer> getOnlyCorrectAnswers(List<Answer> answers) {
+        List<Answer> result = new ArrayList<>();
+        for (Answer answer : answers) {
+            if (answer.getIsCorrect()) {
+                result.add(answer);
+            }
+        }
+        return result;
+    }
+
     @Override
     public String toString() {
         return "Question{" +
@@ -57,6 +69,22 @@ public class Question {
                 ", testId=" + testId +
                 ", answers=" + answers +
                 '}';
+    }
+
+    public boolean validateAnswers(String[] userAnswers) {
+        if (userAnswers == null) {
+            return false;
+        }
+        List<Answer> correctAnswers = getOnlyCorrectAnswers(this.answers);
+        if (userAnswers.length != correctAnswers.size()) {
+            return false;
+        }
+        for (Answer answer : correctAnswers) {
+            if (!Arrays.asList(userAnswers).contains("" + answer.getId())) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

@@ -2,15 +2,15 @@ package com.epam.db.entities;
 
 public class User {
     private int id;
-    private String login;
+    private String username;
     private String password;
     private int salt;
     private String role;
     private String status;
 
-    public User(int id, String login, String password, int salt, String role, String status) {
+    public User(int id, String username, String password, int salt, String role, String status) {
         this.id = id;
-        this.login = login;
+        this.username = username;
         this.password = password;
         this.role = role;
         this.status = status;
@@ -28,12 +28,12 @@ public class User {
         this.id = id;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

@@ -5,7 +5,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
-public abstract class Encrypt {
+public class Encrypt {
+    private Encrypt() {    }
+
     public static String getSecurePassword(String password, int salt) {
         StringBuilder res = new StringBuilder();
         try {

@@ -12,7 +12,10 @@ public class UserDao {
 
     private String query = "SELECT * FROM user WHERE username=?";
 
-    public boolean checkCredentials(String username,String password) {
+    public UserDao() {
+    }
+
+    public boolean checkCredentials(String username, String password) {
         Connection con = null;
         PreparedStatement prepStmt = null;
         ResultSet rs = null;

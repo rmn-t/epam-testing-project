@@ -21,6 +21,68 @@ public class TestDao {
 
     private static final String queryAllTests = "SELECT id,name,subject,complexity,duration_sec,questionsNum FROM test;";
 
+    private TestDao() {
+    }
+
+    public static Test getTestById(int testId) {
+        Test test = null;
+        Connection con = null;
+        PreparedStatement prepStmt = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtil.getConnection();
+            prepStmt = con.prepareStatement("SELECT id,name,subject,complexity,duration_sec,questionsNum FROM TEST where id = ?;");
+            prepStmt.setInt(1,testId);
+            rs = prepStmt.executeQuery();
+            rs.next();
+            test = mapTest(rs);
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        } finally {
+            DBUtil.closeAllInOrder(rs,prepStmt,con);
+        }
+        return test;
+    }
+
+    public static void updateTestById(int id,String name, String subject,String complexity,int duration) {
+        Connection con = null;
+        PreparedStatement prepStmt = null;
+        try {
+            con = DBUtil.getConnection();
+            prepStmt = con.prepareStatement("UPDATE test SET name = ?, subject = ?, complexity = ?, duration_sec = ? WHERE id = ?;");
+            int k = 1;
+            prepStmt.setString(k++,name);
+            prepStmt.setString(k++,subject);
+            prepStmt.setString(k++,complexity);
+            prepStmt.setInt(k++,duration);
+            prepStmt.setInt(k++,id);
+            prepStmt.executeUpdate();
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        } finally {
+            DBUtil.closeAllInOrder(prepStmt,con);
+        }
+    }
+
+    /**
+     * maybe worth to check if id exists in db before doing delete?
+     * @param id
+     */
+    public static void deleteTestById(int id) {
+        Connection con = null;
+        PreparedStatement prepStmt = null;
+        try {
+            con = DBUtil.getConnection();
+            prepStmt = con.prepareStatement("DELETE FROM test WHERE id = ?;");
+            prepStmt.setInt(1,id);
+            prepStmt.executeUpdate();
+            System.out.println("Deleted test by id");
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        } finally {
+            DBUtil.closeAllInOrder(prepStmt,con);
+        }
+    }
 
     public static List<Test> getAllTests() {
         List<Test> results = new ArrayList<>();

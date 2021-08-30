@@ -25,7 +25,10 @@
         <h1> Home page ...</h1>
         <h2>WELCOME ${username}</h2>
         <h3>Need to implement:</h3>
-        <a href="/epam/createTest.html">Create new test</a>
+        <a href="/epam/createTest.jsp">Create new test</a>
+        <br>
+        <br>
+        <a href="/epam/editTest.jsp">Edit test</a>
         - my tests<br>
         - pagination<br>
         - sorting<br>
@@ -62,6 +65,7 @@
                 <th>complexity</th>
                 <th>duration</th>
                 <th>number of tests</th>
+                <th>details</th>
             </thead>
             <tbody>
                 <c:forEach items="${requestScope['tests']}" var="element">
@@ -72,6 +76,7 @@
                         <td>${element.complexity}</td>
                         <td>${element.duration}</td>
                         <td>${element.questionsNum}</td>
+                        <td><a href="/epam/test?id=${element.id}">Next</a></td>
                     </tr>
                 </c:forEach>
             </tbody>

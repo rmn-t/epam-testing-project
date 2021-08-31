@@ -24,7 +24,7 @@
     function checkTime() {
         document.getElementById("time-left").innerHTML = 'Time left: ' + min + ' min ' + sec + ' sec';
         if (totalSeconds <= 0 ) {
-            setTimeout('document.testForm.submit()',1);
+            setTimeout('document.testForm.submit()',1000);
         } else {
             totalSeconds = totalSeconds - 1;
             min = parseInt(totalSeconds/60);
@@ -32,11 +32,11 @@
             setTimeout("checkTime()",1000);
         }
     }
-    setTimeout("checkTime()",1000);
+    setTimeout("checkTime()",1);
 </script>
 
 
-    <a href="tests?page=1">Tests</a>
+    <a href="/epam/tests?page=1">Tests</a>
     <c:set var="currentTestId" value="${param.id}" scope="session"/>
     <br>
     <c:out value="${sessionScope.currentTestId}"></c:out>

@@ -24,6 +24,8 @@
         %>
         <h1> Home page ...</h1>
         <h2>WELCOME ${username}</h2>
+            <a href="/epam/tests?page=1">Tests</a>
+                    <br>
         <br>
         <form action="logout">
             <input type="submit" value="Logout">

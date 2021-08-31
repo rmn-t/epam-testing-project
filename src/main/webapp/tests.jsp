@@ -19,7 +19,7 @@
             response.setHeader("Pragma","no-cache"); // HTTP 1.0
             response.setHeader("Expires","0"); // if using a proxy server
             if(session.getAttribute("username") == null) {
-                    response.sendRedirect("login.jsp");
+                response.sendRedirect("login.jsp");
             }
         %>
         <h1> Home page ...</h1>
@@ -29,6 +29,9 @@
         <br>
         <br>
         <a href="/epam/passed/tests?page=1">My tests</a>
+        <br>
+        <br>
+        <a href="/epam/users?page=1&sort=username">Users</a>
         <br>
         <br>
         <form action="logout">

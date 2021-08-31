@@ -17,6 +17,11 @@ public class LogoutServlet extends HttpServlet{
         session.removeAttribute("username");
         session.removeAttribute("testsSorting");
         session.invalidate();
-        resp.sendRedirect("login");
+        resp.sendRedirect("/epam/login.jsp");
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req,resp);
     }
 }

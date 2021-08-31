@@ -1,8 +1,10 @@
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\question\EditQuestionServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\LoginServlet.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\UsersServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\QuestionDao.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\question\DeleteQuestionServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\TestsServlet.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\EditUserServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\CreateTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\TimerServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\DBUtil.java

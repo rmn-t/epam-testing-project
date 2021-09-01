@@ -14,6 +14,10 @@
         <param-value>jdbc/mysql</param-value>
     </context-param>
 
+    <error-page>
+        <location>/error.jsp</location>
+    </error-page>
+
     <resource-env-ref>
         <description>Provide access for DataSource</description>
         <resource-env-ref-name>jdbc/mysql</resource-env-ref-name>

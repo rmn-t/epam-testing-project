@@ -1,0 +1,8 @@
+01:46:02,377  INFO root:35 - logging info msg
+01:46:02,379  WARN root:36 - logging warn msg
+01:46:02,380 ERROR root:37 - logging error msg
+01:46:02,380 FATAL root:38 - logging fatal msg
+01:47:03,895  INFO root:35 - logging info msg
+01:47:03,900  WARN root:36 - logging warn msg
+01:47:03,901 ERROR root:37 - logging error msg
+01:47:03,901 FATAL root:38 - logging fatal msg

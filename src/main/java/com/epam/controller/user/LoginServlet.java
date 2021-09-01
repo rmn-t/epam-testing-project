@@ -2,6 +2,8 @@ package com.epam.controller.user;
 
 import com.epam.db.dao.UserDao;
 import com.epam.db.entities.User;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +15,13 @@ import java.io.IOException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
+    private static Logger logger = null;
+
+    @Override
+    public void init() throws ServletException {
+        logger = LogManager.getLogger(LoginServlet.class);
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        resp.sendRedirect("login.jsp");
@@ -23,6 +32,11 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        logger.debug("logging debug msg");
+        logger.info("logging info msg");
+        logger.warn("logging warn msg");
+        logger.error("logging error msg");
+        logger.fatal("logging fatal msg");
         String username = req.getParameter("username");
         User user = UserDao.getUserDetailsByUserName(username);
         if (!UserDao.validateCredentials(user,req.getParameter("password"),username)) {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" strict="true" name="XMLConfigTest" packages="com.epam">
+
+    <!-- defining constants here    -->
+    <Properties>
+        <Property name="basedir">logs</Property>
+        <Property name="filename">${basedir}/app.log</Property>
+        <Property name="log_text_pattern">%d [%-5p] %-10.20c [%t] %m %ex%n</Property>
+        <Property name="rolling_file_name">${basedir}/rollingapp.log</Property>
+    </Properties>
+
+    <Appenders>
+        <Appender type="console" name="Console">
+            <Layout type="PatternLayout" pattern="${log_text_pattern}" />
+            <Filter>
+                <Filter type="MarkerFilter" marker="FLOW" onmatch="ACCEPT" onMismatch="NEUTRAL" />
+                <Filter type="MarkerFilter" marker="EXCEPTION" onmatch="DENY" onMismatch="ACCEPT" />
+            </Filter>
+        </Appender>
+        <Appender type="RollingFile" name="RollingFile" fileName="${rollingfilename}" filepattern="${basedir}/%d{yyyy-MM}/app-%d{yyyy-MM-dd}.%i.log">
+            <Layout type="PatternLayout">
+                <Pattern>${log_text_pattern}</Pattern>
+            </Layout>
+            <Policies>
+                <SizeBasedTriggerPolicy size="25 MB" /> <!-- max size per file -->
+                <TimeBasedTriggerPolicy /> <!-- specified in file pattern -->
+            </Policies>
+            <DefaultRollOverStrategy max="10000" /> <!-- max num of files -->
+        </Appender>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.epam" level="debug" additivity="true">
+            <AppenderRef ref="RollingFile" />
+        </Logger>
+    </Loggers>
+
+
+
+
+
+</Configuration>

@@ -1,9 +1,9 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.QuestionDao;
-import com.epam.db.dao.TestDao;
-import com.epam.db.entities.Question;
-import com.epam.db.entities.Test;
+import com.epam.db.dao.sql.QuestionDaoSql;
+import com.epam.db.dao.sql.TestDaoSql;
+import com.epam.db.model.Question;
+import com.epam.db.model.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,8 +24,8 @@ public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int testId = Integer.parseInt(req.getParameter("id"));
-        List<Question> questions = QuestionDao.getQuestionsAndAnswersByTestId(testId);
-        Test test = TestDao.getTestById(testId);
+        List<Question> questions = QuestionDaoSql.getQuestionsAndAnswersByTestId(testId);
+        Test test = TestDaoSql.getTestById(testId);
         req.setAttribute("questions",questions);
         req.setAttribute("test",test);
         req.getRequestDispatcher("/test.jsp").forward(req,resp);

@@ -1,7 +1,7 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.PassedTestsDao;
-import com.epam.db.entities.PassedTest;
+import com.epam.db.dao.sql.PassedTestsDao;
+import com.epam.db.model.PassedTest;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

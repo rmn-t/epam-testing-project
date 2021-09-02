@@ -1,7 +1,7 @@
-package com.epam.db.dao;
+package com.epam.db.dao.sql;
 
 import com.epam.db.DBUtil;
-import com.epam.db.entities.PassedTest;
+import com.epam.db.model.PassedTest;
 
 import java.sql.*;
 import java.util.ArrayList;

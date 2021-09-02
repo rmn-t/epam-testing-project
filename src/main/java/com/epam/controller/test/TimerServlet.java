@@ -1,6 +1,6 @@
 package com.epam.controller.test;
 
-import com.epam.db.entities.Test;
+import com.epam.db.model.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,0 +1,392 @@
+03:41:08,114 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+03:41:08,117 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+03:41:08,118 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+java.lang.Exception
+	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+03:41:08,121 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+13:38:02,626 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+13:38:02,650 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+13:38:02,650 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+java.lang.Exception
+	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+13:38:02,671 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+14:55:53,958 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+14:55:53,961 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+14:55:53,962 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+java.lang.Exception
+	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+14:55:53,965 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+15:02:08,862 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+15:02:08,864 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+15:02:08,864 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+java.lang.Exception
+	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+15:02:08,865 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+15:03:43,984 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+15:03:43,985 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+15:03:43,985 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+java.lang.Exception
+	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+15:03:43,987 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:25:58,227 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - org.apache.catalina.core.ApplicationContextFacade@3013125c
+07:26:01,239 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:26:01,241 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:26:01,241 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+java.lang.Exception
+	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:43)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+07:26:01,244 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:27:01,032 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - org.apache.catalina.core.ApplicationContextFacade@4d7258ea
+07:27:02,379 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:27:02,381 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:27:02,381 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:27:02,381 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:29:11,048 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/passed/tests
+07:29:12,215 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:29:12,216 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:29:12,217 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:29:12,217 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:30:46,037 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
+07:30:46,057 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/login
+07:30:47,315 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/login
+07:30:47,319 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:30:47,320 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:30:47,320 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:30:47,320 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:30:47,790 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
+07:30:49,082 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/users
+07:30:50,177 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
+07:30:51,031 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/createTest.jsp
+07:30:51,784 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
+07:33:52,741 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:33:52,757 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:33:54,908 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:33:54,910 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:33:54,910 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:33:54,910 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:33:54,911 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:33:55,278 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:33:59,385 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:00,336 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:01,671 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:02,897 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:03,654 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:05,002 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:06,549 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:07,439 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:34:08,057 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
+07:35:45,334 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /tests
+07:35:45,353 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /login
+07:35:46,644 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /login
+07:35:46,645 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:35:46,645 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:35:46,645 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:35:46,646 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:35:47,027 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /tests
+07:35:48,493 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
+07:35:50,475 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
+07:35:51,575 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
+07:35:52,236 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
+07:35:52,818 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
+07:36:54,200 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
+07:36:54,205 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=5&sort=username
+07:36:54,222 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
+07:36:54,222 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
+07:36:55,452 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
+07:36:55,452 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
+07:36:55,454 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:36:55,454 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:36:55,455 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:36:55,455 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:36:56,058 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /tests
+07:36:56,059 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1
+07:36:57,197 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
+07:36:57,197 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1&sort=username
+07:36:59,377 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
+07:36:59,377 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=2&sort=username
+07:37:00,257 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
+07:37:00,258 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=3&sort=username
+07:39:45,131 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
+07:39:45,135 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=3&sort=username
+07:39:45,150 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
+07:39:45,151 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
+07:39:46,368 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
+07:39:46,368 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
+07:39:46,369 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:39:46,369 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:39:46,369 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:39:46,369 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:39:46,758 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /tests
+07:39:46,759 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1
+07:39:48,521 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
+07:39:48,522 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1&sort=username
+07:39:49,726 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
+07:39:49,726 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=2&sort=username
+07:43:12,609 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=2&sort=username | method : GET
+07:43:12,633 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
+07:43:13,626 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+07:43:13,626 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+07:43:13,627 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+07:43:13,627 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+07:43:13,627 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+07:43:14,034 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+07:43:15,381 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
+07:43:17,399 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=2&sort=username | method : GET
+07:43:20,417 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1 | method : POST
+07:43:20,425 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=status | method : GET
+08:37:53,439 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+08:37:53,444 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
+08:37:55,916 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+08:37:55,917 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+08:37:55,918 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+08:37:55,918 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+08:37:55,918 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+08:37:55,927 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+08:37:58,328 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
+08:38:01,849 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : POST
+08:38:12,097 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
+08:38:18,763 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+08:38:20,837 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
+08:38:20,846 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+08:38:25,553 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
+08:38:27,361 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1 | method : POST
+08:38:27,368 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=status | method : GET
+08:38:35,529 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+08:38:36,851 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
+08:38:38,778 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+08:38:40,728 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=47 | method : GET
+08:38:42,666 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=47 | method : GET
+10:34:36,559 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
+10:34:41,457 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
+10:35:07,988 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+10:35:07,993 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+10:35:07,993 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+10:35:07,993 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+10:35:07,993 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+10:35:08,459 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:35:19,930 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=2 | method : GET
+10:35:21,810 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:36:03,018 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
+10:36:03,050 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:37:51,613 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
+10:37:51,628 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:37:53,076 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
+10:37:53,085 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:37:54,792 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
+10:37:54,807 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:38:01,191 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
+10:38:01,202 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:38:14,867 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=43 | method : GET
+10:38:22,318 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:38:24,813 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=7 | method : GET
+10:39:04,175 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:39:08,385 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /createTest.jsp| query : null | method : GET
+10:39:12,708 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:39:14,605 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
+10:39:40,863 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:39:42,733 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /createTest.jsp| query : null | method : GET
+10:39:51,916 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /createTest| query : null | method : POST
+10:39:51,942 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=53 | method : GET
+10:39:57,296 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /questionForm.jsp| query : null | method : GET
+10:40:44,978 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/question| query : id= | method : POST
+10:40:45,006 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=53 | method : GET
+10:40:49,538 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:40:59,661 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=44 | method : GET
+10:41:01,684 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:41:03,644 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
+10:41:03,652 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:41:05,752 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
+10:41:20,326 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /delete/question| query : id=115 | method : POST
+10:41:20,340 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
+10:41:25,746 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:41:39,356 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
+10:41:41,919 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : GET
+10:41:43,556 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : POST
+10:41:43,571 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
+10:41:47,016 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : GET
+10:41:49,762 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:41:51,793 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
+10:41:59,859 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
+10:42:02,448 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
+10:42:07,640 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : POST
+10:42:07,684 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
+10:42:51,141 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:42:53,482 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
+10:42:56,608 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:43:00,501 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
+10:43:03,172 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:43:14,198 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
+10:43:15,485 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : POST
+10:43:15,499 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
+10:43:22,671 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:43:35,221 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
+10:43:43,470 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
+10:43:43,474 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
+10:43:46,620 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+10:43:46,620 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+10:43:46,620 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+10:43:46,621 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+10:43:46,621 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+10:43:49,124 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+10:43:49,124 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+10:43:49,125 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+10:43:49,125 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+10:43:49,125 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+10:43:49,138 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:43:56,371 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/user| query : id=3&page=1&sort=username | method : POST
+10:43:56,401 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
+10:43:59,805 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
+10:43:59,816 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login.jsp| query : null | method : GET
+10:44:31,457 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:44:37,751 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /logout| query :  | method : GET
+10:44:37,759 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login.jsp| query : null | method : GET
+10:44:39,385 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+10:44:39,386 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+10:44:39,386 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+10:44:39,386 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+10:44:39,386 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+10:44:39,396 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:44:41,525 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET

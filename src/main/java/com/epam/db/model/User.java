@@ -1,4 +1,4 @@
-package com.epam.db.entities;
+package com.epam.db.model;
 
 public class User {
     private int id;
@@ -12,9 +12,9 @@ public class User {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.salt = salt;
         this.role = role;
         this.status = status;
-        this.salt = salt;
     }
 
     public User() {
@@ -66,5 +66,48 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public static class Builder {
+        private int id;
+        private String username;
+        private String password;
+        private int salt;
+        private String role;
+        private String status;
+
+        public Builder setId(int id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+
+        public Builder setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+
+        public Builder setSalt(int salt) {
+            this.salt = salt;
+            return this;
+        }
+
+        public Builder setRole(String role) {
+            this.role = role;
+            return this;
+        }
+
+        public Builder setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public User build() {
+            return new User(this.id,this.username,this.password,this.salt,this.role,this.status);
+        }
     }
 }

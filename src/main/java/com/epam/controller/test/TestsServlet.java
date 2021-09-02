@@ -1,7 +1,7 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.TestDao;
-import com.epam.db.entities.Test;
+import com.epam.db.dao.sql.TestDaoSql;
+import com.epam.db.model.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,7 +19,6 @@ public class TestsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
         session.setAttribute("testsSorting",req.getParameter("testsSorting"));
-//        doGet(req,resp);
         /**
          * PRG over here BOOOOY
          */
@@ -34,8 +33,8 @@ public class TestsServlet extends HttpServlet {
             pageId = (pageId -1) * recordsPerPage + 1;
         }
         HttpSession session = req.getSession(false);
-        List<Test> tests = TestDao.getTestsLimitedSorted(pageId,recordsPerPage,session.getAttribute("testsSorting").toString());
-        int totalTests = TestDao.getTestsNumber();
+        List<Test> tests = TestDaoSql.getTestsLimitedSorted(pageId,recordsPerPage,session.getAttribute("testsSorting").toString());
+        int totalTests = TestDaoSql.getTestsNumber();
         int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
         req.setAttribute("tests",tests);
         req.setAttribute("lastPage",lastPage);

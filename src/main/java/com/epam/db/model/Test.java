@@ -1,4 +1,4 @@
-package com.epam.db.entities;
+package com.epam.db.model;
 
 public class Test {
     private int id;
@@ -19,6 +19,7 @@ public class Test {
 
     public Test() {
     }
+
 
     public int getId() {
         return id;
@@ -66,5 +67,48 @@ public class Test {
 
     public void setQuestionsNum(int questionsNum) {
         this.questionsNum = questionsNum;
+    }
+
+    public static class Builder {
+        private int id;
+        private String name;
+        private String subject;
+        private String complexity;
+        private int duration;
+        private int questionsNum;
+
+        public Builder setId(int id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setSubject(String subject) {
+            this.subject = subject;
+            return this;
+        }
+
+        public Builder setComplexity(String complexity) {
+            this.complexity = complexity;
+            return this;
+        }
+
+        public Builder setDuration(int duration) {
+            this.duration = duration;
+            return this;
+        }
+
+        public Builder setQuestionsNum(int questionsNum) {
+            this.questionsNum = questionsNum;
+            return this;
+        }
+
+        public Test build() {
+            return new Test(this.id,this.name,this.subject,this.complexity,this.duration,this.questionsNum);
+        }
     }
 }

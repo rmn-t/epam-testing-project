@@ -1,14 +1,14 @@
-package com.epam.db.dao;
+package com.epam.db.dao.sql;
 
 import com.epam.db.DBUtil;
-import com.epam.db.entities.Answer;
-import com.epam.db.entities.Question;
+import com.epam.db.model.Answer;
+import com.epam.db.model.Question;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuestionDao {
+public class QuestionDaoSql {
 
     public static int insertQuestion(String text,int testId) {
         int res = -1;
@@ -115,7 +115,7 @@ public class QuestionDao {
 
     public static Question mapQuestionAndAnswers(ResultSet rs) {
         Question q = mapQuestion(rs);
-        q.setAnswers(AnswerDao.getAnswersByQuestionId(q.getId()));
+        q.setAnswers(AnswerDaoSql.getAnswersByQuestionId(q.getId()));
         return q;
     }
 
@@ -128,7 +128,7 @@ public class QuestionDao {
             System.out.println("con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);()");
             updateQuestionTextById(con,questionText,id);
             System.out.println("updateQuestionTextById(con,questionText,id);()");
-            AnswerDao.updateAnswersByQuestionId(con,id,answers);
+            AnswerDaoSql.updateAnswersByQuestionId(con,id,answers);
             System.out.println("AnswerDao.updateAnswersByQuestionId(con,id,answers);()");
             con.commit();
         } catch (SQLException exception) {

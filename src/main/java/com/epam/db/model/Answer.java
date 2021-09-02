@@ -1,4 +1,4 @@
-package com.epam.db.entities;
+package com.epam.db.model;
 
 public class Answer {
     private int id;
@@ -56,5 +56,36 @@ public class Answer {
                 ", text='" + text + '\'' +
                 ", isCorrect=" + isCorrect +
                 '}';
+    }
+
+    public static class Builder {
+        private int id;
+        private int questionId;
+        private String text;
+        private boolean isCorrect;
+
+        public Builder setId(int id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setQuestionId(int questionId) {
+            this.questionId = questionId;
+            return this;
+        }
+
+        public Builder setText(String text) {
+            this.text = text;
+            return this;
+        }
+
+        public Builder setCorrect(boolean correct) {
+            this.isCorrect = correct;
+            return this;
+        }
+
+        public Answer build() {
+            return new Answer(this.id,this.questionId,this.text,this.isCorrect);
+        }
     }
 }

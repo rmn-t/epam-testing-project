@@ -1,9 +1,9 @@
 package com.epam.controller.question;
 
-import com.epam.db.dao.AnswerDao;
-import com.epam.db.dao.QuestionDao;
-import com.epam.db.entities.Answer;
-import com.epam.db.entities.Question;
+import com.epam.db.dao.sql.QuestionDaoSql;
+import com.epam.db.dao.sql.AnswerDaoSql;
+import com.epam.db.model.Answer;
+import com.epam.db.model.Question;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,8 +25,8 @@ public class EditQuestionServlet extends HttpServlet {
         System.out.println(session.getAttribute("currentTestId"));
         if (req.getParameterMap().containsKey("id")) {
             int questionId = Integer.parseInt(req.getParameter("id"));
-            Question q = QuestionDao.getQuestionById(questionId);
-            q.setAnswers(AnswerDao.getAnswersByQuestionId(questionId));
+            Question q = QuestionDaoSql.getQuestionById(questionId);
+            q.setAnswers(AnswerDaoSql.getAnswersByQuestionId(questionId));
             req.setAttribute("question",q);
         }
         req.setAttribute("currentTestId",req.getParameter("currentTestId"));
@@ -51,13 +51,13 @@ public class EditQuestionServlet extends HttpServlet {
         int questionId;
         if (req.getParameterMap().containsKey("id") && !"".equals(req.getParameter("id"))) {
             questionId = Integer.parseInt(req.getParameter("id"));
-            QuestionDao.updateQuestionAndItsAnswers(questionId, questionText, answers);
+            QuestionDaoSql.updateQuestionAndItsAnswers(questionId, questionText, answers);
             System.out.println("param values names " + Arrays.toString(names));
             System.out.println("param values is correct " + Arrays.toString(isCorrect));
         } else {
-            questionId = QuestionDao.insertQuestion(questionText,testId);
+            questionId = QuestionDaoSql.insertQuestion(questionText,testId);
             if (questionId != -1) {
-                AnswerDao.insertAnswersByQuestionId(questionId,answers);
+                AnswerDaoSql.insertAnswersByQuestionId(questionId,answers);
             }
         }
         resp.sendRedirect("/epam/test?id=" + testId);

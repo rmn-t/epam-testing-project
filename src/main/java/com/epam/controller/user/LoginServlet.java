@@ -1,7 +1,7 @@
 package com.epam.controller.user;
 
-import com.epam.db.dao.UserDao;
-import com.epam.db.entities.User;
+import com.epam.db.dao.sql.UserDaoSql;
+import com.epam.db.model.User;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -15,12 +15,7 @@ import java.io.IOException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-    private static Logger logger = null;
-
-    @Override
-    public void init() throws ServletException {
-        logger = LogManager.getLogger(LoginServlet.class);
-    }
+    private static Logger logger = LogManager.getLogger(LoginServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,8 +33,8 @@ public class LoginServlet extends HttpServlet {
         logger.error("logging error msg");
         logger.fatal("logging fatal msg");
         String username = req.getParameter("username");
-        User user = UserDao.getUserDetailsByUserName(username);
-        if (!UserDao.validateCredentials(user,req.getParameter("password"),username)) {
+        User user = UserDaoSql.getUserDetailsByUserName(username);
+        if (!UserDaoSql.validateCredentials(user,req.getParameter("password"),username)) {
             req.setAttribute("loginStatus","Incorrect credentials");
             req.getRequestDispatcher("/login.jsp").forward(req,resp);
         } else if (user.getStatus().equals("banned")) {

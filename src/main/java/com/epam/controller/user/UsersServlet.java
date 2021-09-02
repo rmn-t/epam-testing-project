@@ -1,7 +1,7 @@
 package com.epam.controller.user;
 
-import com.epam.db.dao.UserDao;
-import com.epam.db.entities.User;
+import com.epam.db.dao.sql.UserDaoSql;
+import com.epam.db.model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,8 +21,8 @@ public class UsersServlet extends HttpServlet {
         if (pageId > 1) {
             pageId = (pageId -1) * recordsPerPage + 1;
         }
-        List<User> users = UserDao.getAllUsersLimitedSorted(pageId,recordsPerPage,sorting + " ASC");
-        int usersNum = UserDao.getNumOfUsers();
+        List<User> users = UserDaoSql.getAllUsersLimitedSorted(pageId,recordsPerPage,sorting + " ASC");
+        int usersNum = UserDaoSql.getNumOfUsers();
         int lastPage = usersNum / recordsPerPage + ((usersNum % recordsPerPage == 0) ? 0 : 1);
         req.setAttribute("users",users);
         req.setAttribute("lastPage",lastPage);

@@ -1,6 +1,6 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.TestDao;
+import com.epam.db.dao.sql.TestDaoSql;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +18,7 @@ public class CreateTestServlet extends HttpServlet {
         String subject = req.getParameter("subject");
         String complexity = req.getParameter("complexity");
         int duration = Integer.parseInt(req.getParameter("duration"));
-        int id = TestDao.insertNewTest(name,subject,complexity,duration);
+        int id = TestDaoSql.insertNewTest(name,subject,complexity,duration);
         resp.sendRedirect("/epam/test?id="+id);
     }
 }

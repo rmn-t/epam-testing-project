@@ -1,7 +1,7 @@
-package com.epam.db.dao;
+package com.epam.db.dao.sql;
 
 import com.epam.db.DBUtil;
-import com.epam.db.entities.Test;
+import com.epam.db.model.Test;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -11,7 +11,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestDao {
+public class TestDaoSql {
     private static final String ID = "id";
     private static final String NAME = "name";
     private static final String SUBJECT = "subject";
@@ -21,7 +21,7 @@ public class TestDao {
 
     private static final String queryAllTests = "SELECT id,name,subject,complexity,duration_sec,questionsNum FROM test;";
 
-    private TestDao() {
+    private TestDaoSql() {
     }
 
     public static Test getTestById(int testId) {
@@ -76,7 +76,6 @@ public class TestDao {
             prepStmt = con.prepareStatement("DELETE FROM test WHERE id = ?;");
             prepStmt.setInt(1,id);
             prepStmt.executeUpdate();
-            System.out.println("Deleted test by id");
         } catch (SQLException exception) {
             exception.printStackTrace();
         } finally {
@@ -120,7 +119,6 @@ public class TestDao {
             prepStmt = con.prepareStatement("SELECT id,name,subject,complexity,duration_sec,questionsNum FROM test ORDER BY " + orderBy + " LIMIT ?, ?;");
             prepStmt.setInt(1,offset-1);
             prepStmt.setInt(2,limit);
-            System.out.println(prepStmt);
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 results.add(mapTest(rs));
@@ -155,8 +153,7 @@ public class TestDao {
                 throw new SQLException("Creating user failed, no ID obtained.");
             }
         } catch (SQLException exception) {
-            System.out.println("adding new test failed");
-            System.out.println(exception.getMessage());
+            exception.printStackTrace();
         } finally {
             DBUtil.closeAllInOrder(generatedKeys,prepStmt,con);
         }

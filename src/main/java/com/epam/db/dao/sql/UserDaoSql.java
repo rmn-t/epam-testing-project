@@ -1,16 +1,16 @@
-package com.epam.db.dao;
+package com.epam.db.dao.sql;
 
 import com.epam.db.DBUtil;
-import com.epam.db.entities.User;
+import com.epam.db.model.User;
 import com.epam.util.Encrypt;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDao {
+public class UserDaoSql {
 
-    public UserDao() {
+    public UserDaoSql() {
     }
 
     /**

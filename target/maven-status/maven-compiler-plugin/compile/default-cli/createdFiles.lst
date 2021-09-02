@@ -1,2 +1,7 @@
 com\epam\controller\user\EditUserServlet.class
 com\epam\controller\user\UsersServlet.class
+com\epam\db\model\Answer.class
+com\epam\db\model\Question.class
+com\epam\db\model\Test.class
+com\epam\db\model\PassedTest.class
+com\epam\db\model\User.class

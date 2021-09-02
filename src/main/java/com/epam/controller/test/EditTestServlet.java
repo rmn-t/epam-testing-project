@@ -1,7 +1,7 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.TestDao;
-import com.epam.db.entities.Test;
+import com.epam.db.dao.sql.TestDaoSql;
+import com.epam.db.model.Test;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,7 +16,7 @@ public class EditTestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int testId = Integer.parseInt(req.getParameter("id"));
-        Test test = TestDao.getTestById(testId);
+        Test test = TestDaoSql.getTestById(testId);
         req.setAttribute("test",test);
         req.getRequestDispatcher("/editTest.jsp").forward(req,resp);
     }
@@ -28,7 +28,7 @@ public class EditTestServlet extends HttpServlet {
         String subject = req.getParameter("subject");
         String complexity = req.getParameter("complexity");
         int duration = Integer.parseInt(req.getParameter("duration"));
-        TestDao.updateTestById(testId,name,subject,complexity,duration);
+        TestDaoSql.updateTestById(testId,name,subject,complexity,duration);
         resp.sendRedirect("/epam/test?id="+testId);
     }
 }

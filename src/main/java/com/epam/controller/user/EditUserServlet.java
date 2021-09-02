@@ -1,6 +1,6 @@
 package com.epam.controller.user;
 
-import com.epam.db.dao.UserDao;
+import com.epam.db.dao.sql.UserDaoSql;
 import com.epam.util.Encrypt;
 
 import javax.servlet.ServletException;
@@ -25,7 +25,7 @@ public class EditUserServlet extends HttpServlet {
         }
         String role = req.getParameter("role");
         String status = req.getParameter("status");
-        UserDao.updateUserById(userId, newPass, role, status,salt);
+        UserDaoSql.updateUserById(userId, newPass, role, status,salt);
         resp.sendRedirect("/epam/users?page=" + page + "&sort=" + sort);
     }
 }

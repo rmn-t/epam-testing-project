@@ -42,7 +42,7 @@
         Here is the list of available tests
         <br>
              <br>
-        <form action="/epam/tests?page=1" method="POST">
+        <form action="/epam/tests?page=1?" method="POST">
             <label for="testsSorting">Sorting:</label>
             <select name="testsSorting" id="testsSorting">
                 <option value="name ASC">Name ascending</option>

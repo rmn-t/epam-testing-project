@@ -1,6 +1,6 @@
 package com.epam.controller.question;
 
-import com.epam.db.dao.QuestionDao;
+import com.epam.db.dao.sql.QuestionDaoSql;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +15,7 @@ public class DeleteQuestionServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int questionId = Integer.parseInt(req.getParameter("id"));
-        QuestionDao.deleteQuestionById(questionId);
+        QuestionDaoSql.deleteQuestionById(questionId);
         HttpSession session = req.getSession(false);
         int testId = Integer.parseInt("" + session.getAttribute("currentTestId"));
         resp.sendRedirect("/epam/test?id=" + testId);

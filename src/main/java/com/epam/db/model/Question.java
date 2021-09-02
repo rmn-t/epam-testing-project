@@ -1,4 +1,4 @@
-package com.epam.db.entities;
+package com.epam.db.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,10 +10,11 @@ public class Question {
     private int testId;
     private List<Answer> answers;
 
-    public Question(int id, String text, int testId) {
+    public Question(int id, String text, int testId,List<Answer> answers) {
         this.id = id;
         this.text = text;
         this.testId = testId;
+        this.answers = answers;
     }
 
     public Question() {
@@ -69,6 +70,38 @@ public class Question {
                 ", testId=" + testId +
                 ", answers=" + answers +
                 '}';
+    }
+
+    public static class Builder {
+        private int id;
+        private String text;
+        private int testId;
+        private List<Answer> answers;
+
+        public Builder setId(int id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setText(String text) {
+            this.text = text;
+            return this;
+        }
+
+        public Builder setTestId(int testId) {
+            this.testId = testId;
+            return this;
+        }
+
+        public Builder setAnswers(List<Answer> answers) {
+            this.answers = answers;
+            return this;
+        }
+
+        public Question build() {
+            return new Question(this.id,this.text,this.testId,this.answers);
+        }
+
     }
 
     public boolean validateAnswers(String[] userAnswers) {

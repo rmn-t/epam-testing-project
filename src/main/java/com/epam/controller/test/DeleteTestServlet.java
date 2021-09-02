@@ -1,6 +1,6 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.TestDao;
+import com.epam.db.dao.sql.TestDaoSql;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +15,7 @@ public class DeleteTestServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("id"));
-        TestDao.deleteTestById(id);
+        TestDaoSql.deleteTestById(id);
         resp.sendRedirect("/epam/tests?page=1");
     }
 }

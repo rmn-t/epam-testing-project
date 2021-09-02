@@ -1,7 +1,11 @@
 package com.epam.controller.user;
 
+import com.epam.db.DBException;
+import com.epam.db.dao.UserDao;
 import com.epam.db.dao.sql.UserDaoSql;
 import com.epam.util.Encrypt;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +16,14 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/edit/user"})
 public class EditUserServlet extends HttpServlet {
+    private static Logger logger = LogManager.getLogger(EditUserServlet.class);
+    private UserDao userDao;
+
+    @Override
+    public void init() throws ServletException {
+        userDao = new UserDaoSql();
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int userId = Integer.parseInt(req.getParameter("id"));
@@ -25,7 +37,11 @@ public class EditUserServlet extends HttpServlet {
         }
         String role = req.getParameter("role");
         String status = req.getParameter("status");
-        UserDaoSql.updateUserById(userId, newPass, role, status,salt);
+        try {
+            userDao.updateUserById(userId, newPass, role, status,salt);
+        } catch (DBException e) {
+            logger.error("Edit user servlet post.",e);
+        }
         resp.sendRedirect("/epam/users?page=" + page + "&sort=" + sort);
     }
 }

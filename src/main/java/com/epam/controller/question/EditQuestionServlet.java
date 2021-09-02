@@ -1,9 +1,14 @@
 package com.epam.controller.question;
 
+import com.epam.db.DBException;
+import com.epam.db.dao.AnswerDao;
+import com.epam.db.dao.QuestionDao;
 import com.epam.db.dao.sql.QuestionDaoSql;
 import com.epam.db.dao.sql.AnswerDaoSql;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,15 +23,26 @@ import java.util.List;
 
 @WebServlet(urlPatterns = {"/edit/question"})
 public class EditQuestionServlet extends HttpServlet {
+    private Logger logger = LoggerFactory.getLogger(EditQuestionServlet.class);
+    private QuestionDao questionDao = new QuestionDaoSql();
+    private AnswerDao answerDao = new AnswerDaoSql();
+
+    @Override
+    public void init() throws ServletException {
+        super.init();
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("EditQuestionServlet()");
-        HttpSession session = req.getSession(false);
-        System.out.println(session.getAttribute("currentTestId"));
         if (req.getParameterMap().containsKey("id")) {
             int questionId = Integer.parseInt(req.getParameter("id"));
-            Question q = QuestionDaoSql.getQuestionById(questionId);
-            q.setAnswers(AnswerDaoSql.getAnswersByQuestionId(questionId));
+            Question q = null;
+            try {
+                q = questionDao.getQuestionById(questionId);
+                q.setAnswers(answerDao.getAnswersByQuestionId(questionId));
+            } catch (DBException e) {
+                logger.error("Edit servlet exception - get",e);
+            }
             req.setAttribute("question",q);
         }
         req.setAttribute("currentTestId",req.getParameter("currentTestId"));
@@ -51,13 +67,21 @@ public class EditQuestionServlet extends HttpServlet {
         int questionId;
         if (req.getParameterMap().containsKey("id") && !"".equals(req.getParameter("id"))) {
             questionId = Integer.parseInt(req.getParameter("id"));
-            QuestionDaoSql.updateQuestionAndItsAnswers(questionId, questionText, answers);
+            try {
+                questionDao.updateQuestionAndItsAnswers(questionId, questionText, answers);
+            } catch (DBException e) {
+                logger.error("Edit servlet exception - post",e);
+            }
             System.out.println("param values names " + Arrays.toString(names));
             System.out.println("param values is correct " + Arrays.toString(isCorrect));
         } else {
-            questionId = QuestionDaoSql.insertQuestion(questionText,testId);
-            if (questionId != -1) {
-                AnswerDaoSql.insertAnswersByQuestionId(questionId,answers);
+            try {
+                questionId = questionDao.insertQuestionByTestId(questionText,testId);
+                if (questionId != -1) {
+                    answerDao.insertAnswersByQuestionId(questionId,answers);
+                }
+            } catch (DBException e) {
+                logger.error("Edit servlet exception - post",e);
             }
         }
         resp.sendRedirect("/epam/test?id=" + testId);

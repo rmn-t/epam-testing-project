@@ -76,8 +76,9 @@ public class PassedTest {
         private int timeSpent;
         private String date;
 
-        public void setId(int id) {
+        public Builder setId(int id) {
             this.id = id;
+            return this;
         }
 
         public Builder setUserId(int userId) {

@@ -1,7 +1,11 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.sql.PassedTestsDao;
+import com.epam.db.DBException;
+import com.epam.db.dao.PassedTestsDao;
+import com.epam.db.dao.sql.PassedTestsDaoSql;
 import com.epam.db.model.PassedTest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +18,14 @@ import java.util.List;
 
 @WebServlet(urlPatterns = {"/passed/tests"})
 public class PassedTestsServlet extends HttpServlet {
+    private Logger logger = LoggerFactory.getLogger(PassedTestsServlet.class);
+    private PassedTestsDao passedTestsDao;
+
+    @Override
+    public void init() throws ServletException {
+        passedTestsDao = new PassedTestsDaoSql();
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int pageId = Integer.parseInt(req.getParameter("page"));
@@ -23,11 +35,16 @@ public class PassedTestsServlet extends HttpServlet {
         }
         HttpSession session = req.getSession(false);
         int userId = Integer.parseInt("" + session.getAttribute("userId"));
-        List<PassedTest> passedTests = PassedTestsDao.getPassedTestsByUserIdOrderedLimited(userId,pageId,recordsPerPage,session.getAttribute("passedTestsSorting").toString());
-        int totalTests = PassedTestsDao.getPassedTestsNumberByUserId(userId);
-        int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
-        req.setAttribute("passedTests",passedTests);
-        req.setAttribute("lastPage",lastPage);
+        List<PassedTest> passedTests = null;
+        try {
+            passedTests = passedTestsDao.getPassedTestsByUserIdOrderedLimited(userId,pageId,recordsPerPage,session.getAttribute("passedTestsSorting").toString());
+            int totalTests = passedTestsDao.getPassedTestsNumberByUserId(userId);
+            int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
+            req.setAttribute("passedTests",passedTests);
+            req.setAttribute("lastPage",lastPage);
+        } catch (DBException e) {
+            logger.error("Passed tests servlet get",e);
+        }
         req.getRequestDispatcher("/passedTests.jsp").forward(req,resp);
     }
 

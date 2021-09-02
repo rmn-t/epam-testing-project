@@ -1,5 +1,7 @@
 package com.epam.controller.user;
 
+import com.epam.db.DBException;
+import com.epam.db.dao.UserDao;
 import com.epam.db.dao.sql.UserDaoSql;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -14,10 +16,11 @@ import java.io.IOException;
 @WebFilter("/*")
 public class LoginFilter implements Filter {
     private Logger logger = LogManager.getLogger(LoginFilter.class);
+    private UserDao userDao;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        //init
+        userDao = new UserDaoSql();
     }
 
     @Override
@@ -34,11 +37,15 @@ public class LoginFilter implements Filter {
         boolean loginRequest2 = req.getRequestURI().equals(loginJsp);
         
         if (loggedIn){
-            if (UserDaoSql.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("banned")) {
-                req.setAttribute("loginStatus","User is banned (filter proc)");
-                req.getRequestDispatcher("/logout").forward(req,resp);
-            } else {
-                filterChain.doFilter(req, resp);
+            try {
+                if (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("banned")) {
+                    req.setAttribute("loginStatus","User is banned (filter proc)");
+                    req.getRequestDispatcher("/logout").forward(req,resp);
+                } else {
+                    filterChain.doFilter(req, resp);
+                }
+            } catch (DBException e) {
+                logger.error("Login filter.",e);
             }
         } else if (loginRequest || loginRequest2) {
             filterChain.doFilter(req, resp);

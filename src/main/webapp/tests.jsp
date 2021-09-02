@@ -2,7 +2,7 @@
     language ="java"
     contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
-    import="java.util.Arrays,java.util.List,com.epam.db.entities.Test"
+    import="java.util.Arrays,java.util.List,com.epam.db.model.Test"
 
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -31,7 +31,7 @@
         <a href="/epam/passed/tests?page=1">My tests</a>
         <br>
         <br>
-        <a href="/epam/users?page=1&sort=username">Users</a>
+        <a href="/epam/users?page=1">Users</a>
         <br>
         <br>
         <form action="logout">
@@ -42,7 +42,7 @@
         Here is the list of available tests
         <br>
              <br>
-        <form action="/epam/tests?page=1?" method="POST">
+        <form action="/epam/tests?page=1" method="POST">
             <label for="testsSorting">Sorting:</label>
             <select name="testsSorting" id="testsSorting">
                 <option value="name ASC">Name ascending</option>

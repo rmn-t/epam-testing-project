@@ -1,5 +1,7 @@
 package com.epam.controller.user;
 
+import com.epam.db.DBException;
+import com.epam.db.dao.UserDao;
 import com.epam.db.dao.sql.UserDaoSql;
 import com.epam.db.model.User;
 import org.apache.log4j.LogManager;
@@ -16,6 +18,12 @@ import java.io.IOException;
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
     private static Logger logger = LogManager.getLogger(LoginServlet.class);
+    private UserDao userDao;
+
+    @Override
+    public void init() throws ServletException {
+        userDao = new UserDaoSql();
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -27,14 +35,14 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.debug("logging debug msg");
-        logger.info("logging info msg");
-        logger.warn("logging warn msg");
-        logger.error("logging error msg");
-        logger.fatal("logging fatal msg");
         String username = req.getParameter("username");
-        User user = UserDaoSql.getUserDetailsByUserName(username);
-        if (!UserDaoSql.validateCredentials(user,req.getParameter("password"),username)) {
+        User user = null;
+        try {
+            user = userDao.getUserDetailsByUserName(username);
+        } catch (DBException e) {
+            logger.error("Login servlet post.",e);
+        }
+        if (!userDao.validateCredentials(user,req.getParameter("password"),username)) {
             req.setAttribute("loginStatus","Incorrect credentials");
             req.getRequestDispatcher("/login.jsp").forward(req,resp);
         } else if (user.getStatus().equals("banned")) {

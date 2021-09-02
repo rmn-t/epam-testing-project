@@ -390,3 +390,94 @@ java.lang.Exception
 10:44:39,386 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
 10:44:39,396 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
 10:44:41,525 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
+10:51:41,571 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+10:51:41,572 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+10:51:41,572 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+10:51:41,572 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+10:51:41,572 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+10:51:41,579 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:51:44,958 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+10:51:48,875 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
+10:51:54,887 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : GET
+10:52:00,515 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /questionForm.jsp| query : null | method : GET
+10:52:13,980 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/question| query : id=155 | method : GET
+10:53:04,447 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/question| query : id=155 | method : GET
+11:01:34,599 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+11:01:47,451 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+11:01:53,168 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
+11:01:54,526 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+11:01:54,528 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+11:01:54,528 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+11:01:54,528 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+11:01:54,528 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+11:01:54,540 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+19:40:05,388 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
+19:40:05,405 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
+19:40:07,087 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:40:07,088 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+19:40:07,088 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+19:40:07,088 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+19:40:07,088 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+19:40:07,438 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:40:08,808 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:40:08,809 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+19:40:08,809 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+19:40:08,809 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+19:40:08,809 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+19:40:08,812 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:40:10,223 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:40:10,224 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+19:40:10,225 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+19:40:10,225 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+19:40:10,225 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+19:40:10,227 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:40:12,720 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:40:12,720 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+19:40:12,721 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+19:40:12,721 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+19:40:12,721 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+19:40:12,723 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:41:02,702 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:41:02,702 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+19:41:02,702 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+19:41:02,702 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+19:41:02,702 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+19:41:02,705 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 3.
+19:41:09,292 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:41:09,292 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+19:41:09,292 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+19:41:09,292 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+19:41:09,292 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+19:41:09,294 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:41:17,843 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:41:17,844 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
+19:41:17,844 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
+19:41:17,844 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
+19:41:17,844 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
+19:41:17,845 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:43:22,775 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:43:23,150 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:43:23,153 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
+19:43:25,192 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:43:25,195 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:43:25,195 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
+19:45:12,931 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:45:13,350 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:45:13,352 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
+19:45:13,353 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 9c81c054444fe4e373fc48b29a29383da66e3ae6ba5fcefe77f2c7d58775b5dc8e1f96872b526476d51a19ffc0ad46811a54cfc56e623c9f6ce74e1166f42312
+19:45:13,353 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 0de1291c63e4d51d58f4b80cc580bcfcb52461a68bde40336d0593e45c91d7341a72eb9a956bda176a4229eb8c067fe385de64ba87bc44110fcc4c334defc3a7
+19:45:15,004 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:45:15,008 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:45:15,010 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
+19:45:15,010 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 9c81c054444fe4e373fc48b29a29383da66e3ae6ba5fcefe77f2c7d58775b5dc8e1f96872b526476d51a19ffc0ad46811a54cfc56e623c9f6ce74e1166f42312
+19:45:15,010 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 0de1291c63e4d51d58f4b80cc580bcfcb52461a68bde40336d0593e45c91d7341a72eb9a956bda176a4229eb8c067fe385de64ba87bc44110fcc4c334defc3a7
+19:45:26,212 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:45:26,214 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 2.
+19:45:26,214 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
+19:45:26,214 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 065688035a57ffee92d48e8765bda333a94aa1e07211ca31888ae308b6e6a6ad9b1462cd775771caf43aabb89314bdeff7a42f010989aa7acd5f4a1f2daaa35e
+19:45:26,215 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 4d6ec1108cf7698acec889e8c8ac8223171deef686421ec73e9a58aad51502bfd13c5a4a46ef5f6c9cb300ee907a41502db37bc202a10c886fcb11941d8b16a5
+19:47:29,858 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
+19:47:29,860 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 2.
+19:47:29,860 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
+19:47:29,861 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 065688035a57ffee92d48e8765bda333a94aa1e07211ca31888ae308b6e6a6ad9b1462cd775771caf43aabb89314bdeff7a42f010989aa7acd5f4a1f2daaa35e
+19:47:29,861 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 4d6ec1108cf7698acec889e8c8ac8223171deef686421ec73e9a58aad51502bfd13c5a4a46ef5f6c9cb300ee907a41502db37bc202a10c886fcb11941d8b16a5

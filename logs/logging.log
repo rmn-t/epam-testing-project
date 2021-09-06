@@ -5568,3 +5568,396 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 19:38:23,234 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
 19:38:23,236 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
 19:38:23,243 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+19:42:52,828 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:43:13,841 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:43:27,728 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:43:28,764 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:43:29,900 [ INFO|com.epam.controller.user.RegisterServlet|RegisterServlet] - RegisterServlet doGet()
+19:43:32,144 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:43:33,025 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doPos()
+19:43:33,492 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:43:33,525 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:43:33,526 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+19:43:33,533 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+19:43:33,534 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - Tried to supply not valid number format as subject id. (0)
+19:43:33,535 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+19:43:33,542 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+19:43:33,544 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+19:44:51,236 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:44:53,720 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:44:53,721 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+19:44:53,729 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+19:44:53,730 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - Tried to supply not valid number format as subject id. (0)
+19:44:53,731 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+19:44:53,734 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+19:44:53,736 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+19:45:54,951 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:45:56,354 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doPos()
+19:45:56,779 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:45:56,807 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:45:56,808 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+19:45:56,815 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+19:45:56,816 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - Tried to supply not valid number format as subject id. (0)
+19:45:56,817 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+19:45:56,824 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+19:45:56,830 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+19:45:59,188 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:48:38,905 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:48:40,332 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doPos()
+19:48:40,773 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:48:40,825 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:48:40,826 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+19:48:40,832 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+19:48:40,833 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - Tried to supply not valid number format as subject id. (0)
+19:48:40,835 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+19:48:40,843 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+19:48:40,845 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+19:48:51,563 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:48:51,563 [ INFO|com.epam.controller.test.CreateTestServlet|CreateTestServlet] - http://localhost:8080/epam/tests?page=1&sort=name%20ASC&subject=0
+19:50:41,572 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+19:50:43,303 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doPos()
+19:50:43,776 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:50:43,807 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:50:43,812 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+19:50:43,819 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+19:50:43,819 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - Tried to supply not valid number format as subject id. (0)
+19:50:43,820 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+19:50:43,832 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+19:50:43,834 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+19:50:45,252 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+19:50:45,253 [ INFO|com.epam.controller.test.CreateTestServlet|CreateTestServlet] - tests?page=1&sort=name%20ASC&subject=0
+20:09:33,702 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+20:09:35,339 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doPos()
+20:09:35,941 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:09:35,975 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:09:35,976 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+20:09:35,988 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:09:35,988 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - Tried to supply not valid number format as subject id. (0)
+20:09:35,990 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+20:09:35,998 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+20:09:36,004 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+20:09:37,624 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:09:37,626 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:09:37,630 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:10:36,547 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:10:36,551 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:10:36,559 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:11:27,376 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:11:27,380 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:11:27,382 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:12:44,004 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:12:44,007 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:12:44,009 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:12:45,142 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:12:45,151 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:12:45,153 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:13:32,266 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:13:32,268 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:13:32,270 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:13:33,432 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:13:33,435 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:13:33,436 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:14:07,624 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:14:07,624 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+20:14:07,626 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:14:07,627 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+20:14:07,630 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+20:14:07,638 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+20:17:35,580 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:17:35,582 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:17:35,584 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:17:59,554 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:17:59,557 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:17:59,558 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:18:19,143 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:18:19,146 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:18:19,148 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:18:21,078 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:18:21,080 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:18:21,083 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:18:22,260 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:18:22,263 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:18:22,265 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:18:47,682 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:18:47,684 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:18:47,686 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:18:49,764 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:18:49,767 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:18:49,768 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:18:59,622 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:18:59,624 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:18:59,625 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:19:05,892 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:19:05,894 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:19:05,898 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:19:23,942 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:19:23,944 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:19:23,946 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:19:38,490 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:19:38,492 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:19:38,493 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:22:09,030 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:22:09,033 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:22:09,035 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:22:26,817 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:22:26,818 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:22:26,825 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:22:36,429 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:22:36,431 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:22:36,433 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:22:37,403 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:22:37,405 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:22:37,406 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:23:48,607 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:23:48,621 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:23:48,623 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:23:49,707 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:23:49,708 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:23:49,709 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:24:21,950 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:24:21,951 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:24:21,952 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:24:22,924 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:24:22,927 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:24:22,929 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:24:24,109 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:24:24,110 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:24:24,112 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:24:36,497 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:24:36,501 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:24:36,504 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:25:38,212 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:25:38,214 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:25:38,216 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:27:40,588 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:27:40,594 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:27:40,597 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:27:41,654 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:27:41,655 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:27:41,657 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:27:59,671 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:27:59,672 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:27:59,673 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:28:15,179 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:28:15,181 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:28:15,185 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:28:25,763 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:28:25,764 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:28:25,765 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:29:39,608 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:29:39,610 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:29:39,612 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:29:40,744 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:29:40,746 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:29:40,747 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:29:41,650 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:29:41,652 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:29:41,653 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:31:41,024 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:31:41,026 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:31:41,028 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:04,086 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:04,089 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:04,090 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:18,782 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:18,783 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:18,785 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:44,551 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:44,552 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:44,553 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:45,855 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:45,857 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:45,859 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:46,967 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:46,969 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:46,971 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:47,736 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:47,737 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:47,738 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:48,336 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:48,337 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:48,338 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:52,730 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:52,732 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:52,734 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:53,968 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:53,969 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:53,970 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:55,227 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:55,228 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:55,229 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:58,225 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:58,226 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:58,227 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:32:59,352 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:32:59,353 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:32:59,354 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:02,930 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:02,931 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:02,933 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:04,342 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:04,344 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:04,344 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:05,037 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:05,038 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:05,039 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:05,963 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:05,965 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:05,966 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:07,076 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:07,077 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:07,079 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:12,691 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:12,693 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:12,694 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:31,358 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:31,361 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:31,362 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:32,118 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:32,119 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:32,120 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:33:52,837 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:52,851 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully created new test.
+20:33:52,863 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:52,867 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 0 questions for test_id 51.
+20:33:52,868 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - []
+20:33:52,870 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : arch hard test
+20:33:59,424 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:33:59,424 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+20:33:59,425 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:33:59,426 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+20:33:59,431 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+20:33:59,434 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
+20:34:03,105 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:34:03,107 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:34:03,108 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:34:23,039 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:34:23,042 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:34:23,045 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:34:46,075 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:34:46,076 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:34:46,077 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
+20:34:55,032 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:34:55,034 [ INFO|com.epam.db.dao.sql.PassedTestsDaoSql|PassedTestsDaoSql] - Successfully obtained passed tests. Query : SELECT id,user_id,test_id,grade,time_spent,date FROM passed_tests WHERE user_id = 1 ORDER BY date LIMIT 0,10;
+20:34:55,035 [ INFO|com.epam.db.dao.sql.PassedTestsDaoSql|PassedTestsDaoSql] - Total number of obtained passed tests by user_id 1 is 0.
+20:34:57,777 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:34:57,777 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+20:34:57,778 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:34:57,778 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+20:34:57,781 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+20:34:57,782 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
+20:35:05,427 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:35:05,445 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 7.
+20:35:05,446 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 177.
+20:35:05,449 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+20:35:05,451 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 274.
+20:35:05,451 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 7.
+20:35:05,484 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=7, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=7, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=307, questionId=7, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=607, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=907, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=177, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=177, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=477, questionId=177, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=777, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=1077, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=202, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=202, questionId=202, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=502, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=802, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1102, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}, Question{id=274, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=274, questionId=274, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=574, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=874, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1174, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}]
+20:35:05,492 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 7, result name : A Hundred and Ten Percent
+20:40:24,737 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:40:24,739 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 7.
+20:40:24,741 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 177.
+20:40:24,742 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+20:40:24,744 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 274.
+20:40:24,744 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 7.
+20:40:24,744 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=7, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=7, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=307, questionId=7, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=607, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=907, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=177, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=177, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=477, questionId=177, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=777, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=1077, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=202, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=202, questionId=202, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=502, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=802, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1102, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}, Question{id=274, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=274, questionId=274, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=574, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=874, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1174, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}]
+20:40:24,746 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 7, result name : A Hundred and Ten Percent
+20:42:10,372 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:42:10,375 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 7.
+20:42:10,376 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 177.
+20:42:10,378 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+20:42:10,379 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 274.
+20:42:10,379 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 7.
+20:42:10,380 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=7, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=7, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=307, questionId=7, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=607, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=907, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=177, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=177, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=477, questionId=177, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=777, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=1077, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=202, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=202, questionId=202, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=502, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=802, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1102, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}, Question{id=274, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=274, questionId=274, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=574, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=874, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1174, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}]
+20:42:10,390 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 7, result name : A Hundred and Ten Percent
+20:43:23,230 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:43:23,232 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 7.
+20:43:23,233 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 177.
+20:43:23,234 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+20:43:23,235 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 274.
+20:43:23,235 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 7.
+20:43:23,236 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=7, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=7, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=307, questionId=7, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=607, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=907, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=177, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=177, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=477, questionId=177, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=777, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=1077, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=202, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=202, questionId=202, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=502, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=802, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1102, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}, Question{id=274, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=274, questionId=274, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=574, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=874, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1174, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}]
+20:43:23,237 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 7, result name : A Hundred and Ten Percent
+20:43:24,779 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:43:24,780 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 7.
+20:43:24,781 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 177.
+20:43:24,782 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+20:43:24,783 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 274.
+20:43:24,784 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 7.
+20:43:24,784 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=7, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=7, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=307, questionId=7, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=607, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=907, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=177, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=177, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=477, questionId=177, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=777, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=1077, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=202, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=202, questionId=202, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=502, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=802, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1102, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}, Question{id=274, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=274, questionId=274, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=574, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=874, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1174, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}]
+20:43:24,786 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 7, result name : A Hundred and Ten Percent
+20:43:25,721 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:43:25,724 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 7.
+20:43:25,725 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 177.
+20:43:25,726 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+20:43:25,727 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 274.
+20:43:25,728 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 7.
+20:43:25,728 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=7, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=7, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=307, questionId=7, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=607, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=907, questionId=7, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=177, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=177, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=477, questionId=177, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=777, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=1077, questionId=177, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}]}, Question{id=202, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=202, questionId=202, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=502, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=802, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1102, questionId=202, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}, Question{id=274, text='Q for test: A Hundred and Ten Percent', testId=7, answers=[Answer{id=274, questionId=274, text='CorAns for: Q for test: A Hundred and Ten Percent', isCorrect=true}, Answer{id=574, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=874, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}, Answer{id=1174, questionId=274, text='IncorAns for: Q for test: A Hundred and Ten Percent', isCorrect=false}]}]
+20:43:25,730 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 7, result name : A Hundred and Ten Percent
+20:43:51,884 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doGet()
+20:43:53,222 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - doPos()
+20:43:53,661 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:43:53,690 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:43:53,693 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+20:43:53,705 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 21 subjects from database.
+20:43:53,705 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - Tried to supply not valid number format as subject id. (0)
+20:43:53,709 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Where subject id : .
+20:43:53,732 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+20:43:53,734 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
+20:43:56,585 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:43:56,615 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 3.
+20:43:56,617 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 90.
+20:43:56,618 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 220.
+20:43:56,620 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 236.
+20:43:56,621 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 3.
+20:43:56,646 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=3, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=3, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=303, questionId=3, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=603, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=903, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}, Question{id=90, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=90, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=390, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=690, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=990, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=220, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=220, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=520, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=820, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1120, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=236, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=236, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=536, questionId=236, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=836, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1136, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}]
+20:43:56,648 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 3, result name : A Fool and His Money are Soon Parted
+20:44:13,781 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:44:13,784 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 3.
+20:44:13,786 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 90.
+20:44:13,787 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 220.
+20:44:13,790 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 236.
+20:44:13,791 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 3.
+20:44:13,791 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=3, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=3, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=303, questionId=3, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=603, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=903, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}, Question{id=90, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=90, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=390, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=690, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=990, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=220, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=220, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=520, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=820, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1120, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=236, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=236, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=536, questionId=236, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=836, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1136, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}]
+20:44:13,797 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 3, result name : A Fool and His Money are Soon Parted
+20:44:14,805 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:44:14,812 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 3.
+20:44:14,813 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 90.
+20:44:14,815 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 220.
+20:44:14,817 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 236.
+20:44:14,817 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 3.
+20:44:14,817 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=3, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=3, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=303, questionId=3, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=603, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=903, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}, Question{id=90, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=90, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=390, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=690, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=990, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=220, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=220, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=520, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=820, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1120, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=236, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=236, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=536, questionId=236, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=836, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1136, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}]
+20:44:14,820 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 3, result name : A Fool and His Money are Soon Parted
+20:44:27,218 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:44:27,221 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 3.
+20:44:27,232 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 90.
+20:44:27,237 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 220.
+20:44:27,241 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 236.
+20:44:27,241 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 3.
+20:44:27,241 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=3, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=3, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=303, questionId=3, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=603, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=903, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}, Question{id=90, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=90, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=390, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=690, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=990, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=220, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=220, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=520, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=820, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1120, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=236, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=236, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=536, questionId=236, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=836, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1136, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}]
+20:44:27,252 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 3, result name : A Fool and His Money are Soon Parted
+20:44:28,149 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:44:28,151 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 3.
+20:44:28,154 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 90.
+20:44:28,156 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 220.
+20:44:28,158 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 236.
+20:44:28,158 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 3.
+20:44:28,159 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=3, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=3, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=303, questionId=3, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=603, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=903, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}, Question{id=90, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=90, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=390, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=690, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=990, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=220, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=220, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=520, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=820, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1120, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=236, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=236, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=536, questionId=236, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=836, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1136, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}]
+20:44:28,164 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 3, result name : A Fool and His Money are Soon Parted
+20:44:28,964 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:44:28,966 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 3.
+20:44:28,968 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 90.
+20:44:28,969 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 220.
+20:44:28,975 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 236.
+20:44:28,977 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 3.
+20:44:28,978 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=3, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=3, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=303, questionId=3, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=603, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=903, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}, Question{id=90, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=90, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=390, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=690, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=990, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=220, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=220, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=520, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=820, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1120, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=236, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=236, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=536, questionId=236, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=836, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1136, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}]
+20:44:28,980 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 3, result name : A Fool and His Money are Soon Parted
+20:44:30,436 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+20:44:30,438 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 3.
+20:44:30,440 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 90.
+20:44:30,445 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 220.
+20:44:30,447 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 236.
+20:44:30,447 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 4 questions for test_id 3.
+20:44:30,447 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=3, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=3, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=303, questionId=3, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=603, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=903, questionId=3, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}, Question{id=90, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=90, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=390, questionId=90, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=690, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=990, questionId=90, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=220, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=220, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=520, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=820, questionId=220, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1120, questionId=220, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}]}, Question{id=236, text='Q for test: A Fool and His Money are Soon Parted', testId=3, answers=[Answer{id=236, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=536, questionId=236, text='IncorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=false}, Answer{id=836, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}, Answer{id=1136, questionId=236, text='CorAns for: Q for test: A Fool and His Money are Soon Parted', isCorrect=true}]}]
+20:44:30,450 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 3, result name : A Fool and His Money are Soon Parted
+20:45:20,815 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.

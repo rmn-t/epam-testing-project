@@ -24,33 +24,65 @@
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
-        <c:set var="params" value="${requestScope['javax.servlet.forward.query_string']}"/>
-        <c:set var="requestPath" value="${requestScope['javax.servlet.forward.request_uri']}"/>
-        <strong><c:out value="${params}">empty params</c:out></strong><br>
-        <strong><c:out value="${requestScope['javax.servlet.forward.request_uri']}${empty params ? '' : '?'}${requestScope['javax.servlet.forward.query_string']}">abc</c:out></strong><br>
-    <form action="/epam/createTest" method="POST">
-        <label for="testName">Name: </label>
-        <input name="testName" id="testName">
-        <br><br>
-        <label for="subject">Subject: </label>
-        <input name="subject" id="subject">
-        <br>
-        <br>
-        <label for="complexity">Complexity:</label>
-        <select name="complexity" id="complexity">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-            <option value="advanced">Advanced</option>
-        </select>
-        <br>
-        <br>
-        <label for="duration">Duration:</label>
-        <input type="number" name="duration" id="duration">
-        <br>
-        <br>
-        <input type="submit" value="Create test">
-    </form>
+        <div style="margin-top: 2%;"class="container">
+            <div class="row align-items-center">
+                <div class="col"></div>
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="card">
+                        <article class="card-body">
+                            <h4 class="card-title text-center mb-4 mt-1">///Fill in test info</h4>
+                            <hr>
+                            <c:if test="${not empty loginStatus}">
+                                <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+                                    <strong><fmt:message key="msg.${loginStatus}" /></strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            </c:if>
+                            <form action="/epam/createTest" method="POST">
+                            <div class="mb-2 text-center">
+                                <label for="testName" class="form-label">///Test name</label>
+                                <input type="text" class="form-control" name="testName" id="testName" placeholder="///Test name">
+                            </div>
+                            <div class="mb-2 text-center">
+                                <div class="form-floating">
+                                    <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="subject" name="subject">
+                                        <c:forEach items="${requestScope['subjects']}" var="element">
+                                            <option class="align-middle" value="${element.id}">///${element.name}</option>
+                                        </c:forEach>
+                                     </select>
+                                     <label class="text-center text-muted" for="subject">///Subject:</label>
+                                </div>
+                            </div>
+                            <div class="mb-2 text-center">
+                                <div class="form-floating">
+                                    <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="complexity" name="complexity">
+                                        <c:forEach items="${requestScope['complexities']}" var="element">
+                                            <option class="align-middle" value="${element.id}">///${element.name}</option>
+                                        </c:forEach>
+                                    </select>
+                                    <label class="text-center text-muted" for="complexity">///Subject:</label>
+                                </div>
+                            </div>
+                            <div class="mb-2 text-center">
+                                <label for="duration" class="form-label">///Test duration</label>
+                                <input type="number" class="form-control" name="duration" id="duration" placeholder="///Test duration">
+                            </div>
+
+                            <div class="mt-3 container text-center">
+                                <div class="row">
+                                    <div class="col"></div>
+                                    <div class="col-sm-5 mb-1"><button type="submit" class="btn btn-success btn-block">///Create test</button></div>
+                                    <div class="col"></div>
+                                </div>
+                            </div>
+
+                            </form>
+                        </article>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
 
         </fmt:bundle>
     </body>

@@ -1940,7 +1940,7 @@ java.sql.SQLException: Illegal operation on empty result set.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 09:31:27,042 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - Login servlet post.
-com.epam.db.DBException: Failed to obtain user by username
+com.epam.exceptions.DBException: Failed to obtain user by username
 	at com.epam.db.dao.sql.UserDaoSql.getUserDetailsByUserName(UserDaoSql.java:51)
 	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:40)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
@@ -2075,7 +2075,7 @@ java.sql.SQLException: Illegal operation on empty result set.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 09:32:30,694 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - Login servlet post.
-com.epam.db.DBException: Failed to obtain user by username
+com.epam.exceptions.DBException: Failed to obtain user by username
 	at com.epam.db.dao.sql.UserDaoSql.getUserDetailsByUserName(UserDaoSql.java:51)
 	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:40)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
@@ -2273,7 +2273,7 @@ java.sql.SQLException: Illegal operation on empty result set.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 09:43:08,765 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - Login servlet post.
-com.epam.db.DBException: Failed to obtain user by username
+com.epam.exceptions.DBException: Failed to obtain user by username
 	at com.epam.db.dao.sql.UserDaoSql.getUserDetailsByUserName(UserDaoSql.java:51)
 	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:40)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
@@ -2446,7 +2446,7 @@ java.sql.SQLException: Illegal operation on empty result set.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 10:13:08,624 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - Login servlet post.
-com.epam.db.DBException: Failed to obtain user by username
+com.epam.exceptions.DBException: Failed to obtain user by username
 	at com.epam.db.dao.sql.UserDaoSql.getUserDetailsByUserName(UserDaoSql.java:51)
 	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:44)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
@@ -2539,7 +2539,7 @@ java.sql.SQLException: Illegal operation on empty result set.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 10:14:50,790 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - Login servlet post.
-com.epam.db.DBException: Failed to obtain user by username
+com.epam.exceptions.DBException: Failed to obtain user by username
 	at com.epam.db.dao.sql.UserDaoSql.getUserDetailsByUserName(UserDaoSql.java:51)
 	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:44)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
@@ -4647,7 +4647,7 @@ java.sql.SQLException: Illegal operation on empty result set.
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 11:03:00,958 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - Login servlet post.
-com.epam.db.DBException: Failed to obtain user by username
+com.epam.exceptions.DBException: Failed to obtain user by username
 	at com.epam.db.dao.sql.UserDaoSql.getUserDetailsByUserName(UserDaoSql.java:51)
 	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:44)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)

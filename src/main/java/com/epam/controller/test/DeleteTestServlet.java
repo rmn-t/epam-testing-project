@@ -1,6 +1,6 @@
 package com.epam.controller.test;
 
-import com.epam.db.DBException;
+import com.epam.exceptions.DBException;
 import com.epam.db.dao.TestDao;
 import com.epam.db.dao.sql.TestDaoSql;
 import org.slf4j.Logger;

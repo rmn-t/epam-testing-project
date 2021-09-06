@@ -1,6 +1,6 @@
 package com.epam.db.dao.sql;
 
-import com.epam.db.DBException;
+import com.epam.exceptions.DBException;
 import com.epam.db.DBUtil;
 import com.epam.db.dao.PassedTestsDao;
 import com.epam.db.model.PassedTest;

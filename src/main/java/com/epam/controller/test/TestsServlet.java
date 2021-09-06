@@ -1,6 +1,6 @@
 package com.epam.controller.test;
 
-import com.epam.db.DBException;
+import com.epam.exceptions.DBException;
 import com.epam.db.dao.SubjectDao;
 import com.epam.db.dao.TestDao;
 import com.epam.db.dao.sql.SubjectDaoSql;
@@ -67,7 +67,7 @@ public class TestsServlet extends HttpServlet {
         }
 
         try {
-            List<Subject> subjects = subjectDao.getAllSubjects();
+            List<Subject> subjects = subjectDao.getAllRecords();
             req.setAttribute("subjects",subjects);
         } catch (DBException e) {
             logger.error("Test servlet do get");

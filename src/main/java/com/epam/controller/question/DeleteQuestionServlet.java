@@ -1,6 +1,6 @@
 package com.epam.controller.question;
 
-import com.epam.db.DBException;
+import com.epam.exceptions.DBException;
 import com.epam.db.dao.QuestionDao;
 import com.epam.db.dao.sql.QuestionDaoSql;
 import org.slf4j.Logger;

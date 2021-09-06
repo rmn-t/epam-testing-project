@@ -2,6 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+<fmt:setLocale value="${cookie.lang.value}"/>
+<fmt:bundle basename="messages">
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,8 +14,7 @@
     <title><fmt:message key="login.sign-in" /></title>
 </head>
     <body>
-    <fmt:setLocale value="${cookie.lang.value}"/>
-    <fmt:bundle basename="messages">
+
         <div style="margin-top: 5%;"class="container">
             <div class="row align-items-center">
                 <div class="col"></div>

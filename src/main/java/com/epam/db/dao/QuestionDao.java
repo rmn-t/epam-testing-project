@@ -1,6 +1,6 @@
 package com.epam.db.dao;
 
-import com.epam.db.DBException;
+import com.epam.exceptions.DBException;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
 

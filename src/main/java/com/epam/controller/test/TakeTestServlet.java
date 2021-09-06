@@ -1,6 +1,6 @@
 package com.epam.controller.test;
 
-import com.epam.db.DBException;
+import com.epam.exceptions.DBException;
 import com.epam.db.dao.PassedTestsDao;
 import com.epam.db.dao.QuestionDao;
 import com.epam.db.dao.TestDao;
@@ -61,6 +61,9 @@ public class TakeTestServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        /**
+         * add time to session if it is about to run out
+         */
         int testId = Integer.parseInt(req.getParameter("id"));
         List<Question> questions = null;
         int testDuration = 0;

@@ -1,6 +1,6 @@
 package com.epam.db.dao.sql;
 
-import com.epam.db.DBException;
+import com.epam.exceptions.DBException;
 import com.epam.db.DBUtil;
 import com.epam.db.dao.SubjectDao;
 import com.epam.db.model.Subject;
@@ -15,7 +15,7 @@ public class SubjectDaoSql implements SubjectDao {
     private final Logger logger = LoggerFactory.getLogger(SubjectDaoSql.class);
 
     @Override
-    public List<Subject> getAllSubjects() throws DBException {
+    public List<Subject> getAllRecords() throws DBException {
         List<Subject> subjects = new ArrayList<>();
         Connection con = null;
         Statement stmt = null;

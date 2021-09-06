@@ -17,6 +17,11 @@ public class LocaleUpdateServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        /**
+         *         String abc = req.getHeader("referer");
+         *         String[] zz = abc.split("/epam/");
+         *         logger.info(zz[1]);
+         */
         logger.debug(req.getParameter("lang"));
         logger.debug(req.getPathInfo());
         Cookie langCookie = new Cookie("lang",req.getParameter("lang"));

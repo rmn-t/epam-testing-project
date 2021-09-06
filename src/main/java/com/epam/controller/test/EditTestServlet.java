@@ -1,9 +1,14 @@
 package com.epam.controller.test;
 
-import com.epam.db.DBException;
+import com.epam.db.dao.ComplexityDao;
+import com.epam.db.dao.SubjectDao;
 import com.epam.db.dao.TestDao;
+import com.epam.db.dao.sql.ComplexityDaoSql;
+import com.epam.db.dao.sql.SubjectDaoSql;
 import com.epam.db.dao.sql.TestDaoSql;
 import com.epam.db.model.Test;
+import com.epam.exceptions.DBException;
+import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,10 +23,14 @@ import java.io.IOException;
 public class EditTestServlet extends HttpServlet {
     private Logger logger = LoggerFactory.getLogger(EditTestServlet.class);
     private TestDao testDao;
+    private SubjectDao subjectDao;
+    private ComplexityDao complexityDao;
 
     @Override
     public void init() throws ServletException {
         testDao = new TestDaoSql();
+        subjectDao = new SubjectDaoSql();
+        complexityDao = new ComplexityDaoSql();
     }
 
     @Override
@@ -34,7 +43,7 @@ public class EditTestServlet extends HttpServlet {
             logger.error("Edit servlet get");
         }
         req.setAttribute("test",test);
-        req.getRequestDispatcher("/editTest.jsp").forward(req,resp);
+        req.getRequestDispatcher(Views.EDIT_TEST_JSP).forward(req,resp);
     }
 
     @Override

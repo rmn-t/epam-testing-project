@@ -1,3 +1,5 @@
+com\epam\db\model\Complexity$Builder.class
+com\epam\db\dao\sql\ComplexityDaoSql.class
 com\epam\controller\user\EditUserServlet.class
 com\epam\db\dao\sql\QuestionDaoSql.class
 com\epam\util\Consts.class
@@ -13,9 +15,10 @@ com\epam\db\model\User$Builder.class
 com\epam\db\model\Test.class
 com\epam\controller\user\LoginFilter.class
 com\epam\db\model\Subject$Builder.class
+com\epam\exceptions\DBException.class
 com\epam\db\model\PassedTest.class
+com\epam\db\dao\ComplexityDao.class
 com\epam\db\model\Subject.class
-com\epam\db\DBException.class
 com\epam\util\MyTag.class
 com\epam\controller\user\UsersServlet.class
 com\epam\db\model\Answer.class
@@ -27,4 +30,5 @@ com\epam\db\model\Question$Builder.class
 com\epam\db\dao\sql\AnswerDaoSql.class
 com\epam\controller\user\RegisterServlet.class
 com\epam\db\model\User.class
+com\epam\db\model\Complexity.class
 com\epam\db\dao\sql\UserDaoSql.class

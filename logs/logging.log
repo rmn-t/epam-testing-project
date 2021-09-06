@@ -1,483 +1,1307 @@
-03:41:08,114 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-03:41:08,117 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-03:41:08,118 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-java.lang.Exception
-	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-03:41:08,121 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-13:38:02,626 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-13:38:02,650 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-13:38:02,650 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-java.lang.Exception
-	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-13:38:02,671 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-14:55:53,958 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-14:55:53,961 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-14:55:53,962 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-java.lang.Exception
-	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-14:55:53,965 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-15:02:08,862 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-15:02:08,864 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-15:02:08,864 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-java.lang.Exception
-	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-15:02:08,865 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-15:03:43,984 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-15:03:43,985 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-15:03:43,985 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-java.lang.Exception
-	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:39)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-15:03:43,987 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:25:58,227 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - org.apache.catalina.core.ApplicationContextFacade@3013125c
-07:26:01,239 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:26:01,241 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:26:01,241 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-java.lang.Exception
-	at com.epam.controller.user.LoginServlet.doPost(LoginServlet.java:33)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.user.LoginFilter.doFilter(LoginFilter.java:43)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-07:26:01,244 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:27:01,032 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - org.apache.catalina.core.ApplicationContextFacade@4d7258ea
-07:27:02,379 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:27:02,381 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:27:02,381 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:27:02,381 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:29:11,048 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/passed/tests
-07:29:12,215 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:29:12,216 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:29:12,217 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:29:12,217 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:30:46,037 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
-07:30:46,057 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/login
-07:30:47,315 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/login
-07:30:47,319 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:30:47,320 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:30:47,320 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:30:47,320 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:30:47,790 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
-07:30:49,082 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/users
-07:30:50,177 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
-07:30:51,031 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/createTest.jsp
-07:30:51,784 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : http://localhost:8080/epam/tests
-07:33:52,741 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:33:52,757 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:33:54,908 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:33:54,910 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:33:54,910 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:33:54,910 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:33:54,911 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:33:55,278 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:33:59,385 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:00,336 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:01,671 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:02,897 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:03,654 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:05,002 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:06,549 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:07,439 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:34:08,057 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : null
-07:35:45,334 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /tests
-07:35:45,353 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /login
-07:35:46,644 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /login
-07:35:46,645 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:35:46,645 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:35:46,645 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:35:46,646 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:35:47,027 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /tests
-07:35:48,493 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
-07:35:50,475 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
-07:35:51,575 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
-07:35:52,236 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
-07:35:52,818 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is : /users
-07:36:54,200 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
-07:36:54,205 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=5&sort=username
-07:36:54,222 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
-07:36:54,222 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
-07:36:55,452 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
-07:36:55,452 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
-07:36:55,454 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:36:55,454 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:36:55,455 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:36:55,455 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:36:56,058 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /tests
-07:36:56,059 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1
-07:36:57,197 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
-07:36:57,197 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1&sort=username
-07:36:59,377 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
-07:36:59,377 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=2&sort=username
-07:37:00,257 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
-07:37:00,258 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=3&sort=username
-07:39:45,131 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
-07:39:45,135 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=3&sort=username
-07:39:45,150 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
-07:39:45,151 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
-07:39:46,368 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /login
-07:39:46,368 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : null
-07:39:46,369 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:39:46,369 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:39:46,369 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:39:46,369 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:39:46,758 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /tests
-07:39:46,759 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1
-07:39:48,521 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
-07:39:48,522 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=1&sort=username
-07:39:49,726 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, request url is  : /users
-07:39:49,726 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, query string is : page=2&sort=username
-07:43:12,609 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=2&sort=username | method : GET
-07:43:12,633 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
-07:43:13,626 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-07:43:13,626 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-07:43:13,627 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-07:43:13,627 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-07:43:13,627 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-07:43:14,034 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-07:43:15,381 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
-07:43:17,399 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=2&sort=username | method : GET
-07:43:20,417 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1 | method : POST
-07:43:20,425 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=status | method : GET
-08:37:53,439 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-08:37:53,444 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
-08:37:55,916 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-08:37:55,917 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-08:37:55,918 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-08:37:55,918 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-08:37:55,918 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-08:37:55,927 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-08:37:58,328 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
-08:38:01,849 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : POST
-08:38:12,097 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
-08:38:18,763 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-08:38:20,837 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
-08:38:20,846 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-08:38:25,553 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
-08:38:27,361 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1 | method : POST
-08:38:27,368 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=status | method : GET
-08:38:35,529 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-08:38:36,851 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
-08:38:38,778 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-08:38:40,728 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=47 | method : GET
-08:38:42,666 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=47 | method : GET
-10:34:36,559 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
-10:34:41,457 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
-10:35:07,988 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-10:35:07,993 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-10:35:07,993 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-10:35:07,993 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-10:35:07,993 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-10:35:08,459 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:35:19,930 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=2 | method : GET
-10:35:21,810 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:36:03,018 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
-10:36:03,050 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:37:51,613 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
-10:37:51,628 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:37:53,076 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
-10:37:53,085 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:37:54,792 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
-10:37:54,807 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:38:01,191 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
-10:38:01,202 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:38:14,867 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=43 | method : GET
-10:38:22,318 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:38:24,813 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=7 | method : GET
-10:39:04,175 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:39:08,385 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /createTest.jsp| query : null | method : GET
-10:39:12,708 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:39:14,605 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
-10:39:40,863 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:39:42,733 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /createTest.jsp| query : null | method : GET
-10:39:51,916 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /createTest| query : null | method : POST
-10:39:51,942 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=53 | method : GET
-10:39:57,296 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /questionForm.jsp| query : null | method : GET
-10:40:44,978 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/question| query : id= | method : POST
-10:40:45,006 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=53 | method : GET
-10:40:49,538 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:40:59,661 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=44 | method : GET
-10:41:01,684 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:41:03,644 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : POST
-10:41:03,652 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:41:05,752 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
-10:41:20,326 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /delete/question| query : id=115 | method : POST
-10:41:20,340 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
-10:41:25,746 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:41:39,356 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
-10:41:41,919 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : GET
-10:41:43,556 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : POST
-10:41:43,571 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
-10:41:47,016 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : GET
-10:41:49,762 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:41:51,793 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
-10:41:59,859 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
-10:42:02,448 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
-10:42:07,640 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : POST
-10:42:07,684 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
-10:42:51,141 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:42:53,482 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
-10:42:56,608 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:43:00,501 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
-10:43:03,172 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:43:14,198 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : GET
-10:43:15,485 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /take/test| query : id=35 | method : POST
-10:43:15,499 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
-10:43:22,671 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:43:35,221 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
-10:43:43,470 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
-10:43:43,474 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
-10:43:46,620 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-10:43:46,620 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-10:43:46,620 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-10:43:46,621 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-10:43:46,621 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-10:43:49,124 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-10:43:49,124 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-10:43:49,125 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-10:43:49,125 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-10:43:49,125 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-10:43:49,138 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:43:56,371 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/user| query : id=3&page=1&sort=username | method : POST
-10:43:56,401 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /users| query : page=1&sort=username | method : GET
-10:43:59,805 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
-10:43:59,816 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login.jsp| query : null | method : GET
-10:44:31,457 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:44:37,751 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /logout| query :  | method : GET
-10:44:37,759 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login.jsp| query : null | method : GET
-10:44:39,385 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-10:44:39,386 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-10:44:39,386 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-10:44:39,386 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-10:44:39,386 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-10:44:39,396 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:44:41,525 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /passed/tests| query : page=1 | method : GET
-10:51:41,571 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-10:51:41,572 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-10:51:41,572 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-10:51:41,572 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-10:51:41,572 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-10:51:41,579 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:51:44,958 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-10:51:48,875 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /test| query : id=35 | method : GET
-10:51:54,887 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /editTest| query : id=35 | method : GET
-10:52:00,515 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /questionForm.jsp| query : null | method : GET
-10:52:13,980 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/question| query : id=155 | method : GET
-10:53:04,447 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /edit/question| query : id=155 | method : GET
-11:01:34,599 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-11:01:47,451 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-11:01:53,168 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
-11:01:54,526 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-11:01:54,528 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-11:01:54,528 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-11:01:54,528 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-11:01:54,528 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-11:01:54,540 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-19:40:05,388 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /tests| query : page=1 | method : GET
-19:40:05,405 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : GET
-19:40:07,087 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:40:07,088 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-19:40:07,088 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-19:40:07,088 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-19:40:07,088 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-19:40:07,438 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:40:08,808 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:40:08,809 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-19:40:08,809 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-19:40:08,809 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-19:40:08,809 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-19:40:08,812 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:40:10,223 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:40:10,224 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-19:40:10,225 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-19:40:10,225 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-19:40:10,225 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-19:40:10,227 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:40:12,720 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:40:12,720 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-19:40:12,721 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-19:40:12,721 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-19:40:12,721 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-19:40:12,723 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:41:02,702 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:41:02,702 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-19:41:02,702 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-19:41:02,702 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-19:41:02,702 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-19:41:02,705 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 3.
-19:41:09,292 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:41:09,292 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-19:41:09,292 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-19:41:09,292 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-19:41:09,292 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-19:41:09,294 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:41:17,843 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:41:17,844 [ INFO|com.epam.controller.user.LoginServlet|LoginServlet] - logging info msg
-19:41:17,844 [ WARN|com.epam.controller.user.LoginServlet|LoginServlet] - logging warn msg
-19:41:17,844 [ERROR|com.epam.controller.user.LoginServlet|LoginServlet] - logging error msg
-19:41:17,844 [FATAL|com.epam.controller.user.LoginServlet|LoginServlet] - logging fatal msg
-19:41:17,845 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:43:22,775 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:43:23,150 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:43:23,153 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
-19:43:25,192 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:43:25,195 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:43:25,195 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
-19:45:12,931 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:45:13,350 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:45:13,352 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
-19:45:13,353 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 9c81c054444fe4e373fc48b29a29383da66e3ae6ba5fcefe77f2c7d58775b5dc8e1f96872b526476d51a19ffc0ad46811a54cfc56e623c9f6ce74e1166f42312
-19:45:13,353 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 0de1291c63e4d51d58f4b80cc580bcfcb52461a68bde40336d0593e45c91d7341a72eb9a956bda176a4229eb8c067fe385de64ba87bc44110fcc4c334defc3a7
-19:45:15,004 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:45:15,008 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
-19:45:15,010 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
-19:45:15,010 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 9c81c054444fe4e373fc48b29a29383da66e3ae6ba5fcefe77f2c7d58775b5dc8e1f96872b526476d51a19ffc0ad46811a54cfc56e623c9f6ce74e1166f42312
-19:45:15,010 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 0de1291c63e4d51d58f4b80cc580bcfcb52461a68bde40336d0593e45c91d7341a72eb9a956bda176a4229eb8c067fe385de64ba87bc44110fcc4c334defc3a7
-19:45:26,212 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:45:26,214 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 2.
-19:45:26,214 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
-19:45:26,214 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 065688035a57ffee92d48e8765bda333a94aa1e07211ca31888ae308b6e6a6ad9b1462cd775771caf43aabb89314bdeff7a42f010989aa7acd5f4a1f2daaa35e
-19:45:26,215 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 4d6ec1108cf7698acec889e8c8ac8223171deef686421ec73e9a58aad51502bfd13c5a4a46ef5f6c9cb300ee907a41502db37bc202a10c886fcb11941d8b16a5
-19:47:29,858 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - logger, url : /login| query : null | method : POST
-19:47:29,860 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 2.
-19:47:29,860 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - false
-19:47:29,861 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 065688035a57ffee92d48e8765bda333a94aa1e07211ca31888ae308b6e6a6ad9b1462cd775771caf43aabb89314bdeff7a42f010989aa7acd5f4a1f2daaa35e
-19:47:29,861 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - 4d6ec1108cf7698acec889e8c8ac8223171deef686421ec73e9a58aad51502bfd13c5a4a46ef5f6c9cb300ee907a41502db37bc202a10c886fcb11941d8b16a5
+08:09:33,049 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:09:33,116 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:09:33,117 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:09:40,874 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:09:40,875 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:09:41,318 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:09:41,319 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+08:09:41,332 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:09:41,343 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:09:41,371 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:09:41,374 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:09:48,248 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:09:48,253 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:09:48,261 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:09:48,264 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:09:48,267 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:09:48,274 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:09:51,330 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:09:51,333 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:09:51,339 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:09:51,341 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:09:51,343 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:09:51,345 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:13:21,962 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:13:21,963 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:13:21,974 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:13:21,978 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:13:23,756 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:13:23,758 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:13:23,763 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:13:23,772 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:13:52,209 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:13:52,211 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:13:52,213 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:13:52,215 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:02,617 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:02,619 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:02,623 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:02,625 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:16,723 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:16,724 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:16,727 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:16,731 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:18,588 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:18,590 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:18,593 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:18,594 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:19,501 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:19,503 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:19,505 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:19,509 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:20,326 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:20,328 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:20,331 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:20,337 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:40,974 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:40,975 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:40,977 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:40,980 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:42,493 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:42,495 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:42,497 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:42,500 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:43,839 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:43,840 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:43,844 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:43,845 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:44,572 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:44,574 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:44,576 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:44,578 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:45,364 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:45,365 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:45,367 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:45,368 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:46,525 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:46,527 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:46,529 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:46,530 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:47,405 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:47,406 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:47,408 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:47,411 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:48,926 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:48,928 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:48,930 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:48,932 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:15:50,234 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:15:50,237 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:15:50,239 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:15:50,241 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:17:33,319 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:17:33,322 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:17:33,325 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:17:33,327 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:17:59,591 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:17:59,593 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:17:59,596 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:17:59,597 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:18:16,165 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:18:16,168 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:18:16,171 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:18:16,172 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:18:33,024 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:18:33,026 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:18:33,028 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:18:33,030 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:18:34,253 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:18:34,254 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:18:34,256 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:18:34,257 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:20:09,426 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:20:09,428 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:20:09,430 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:20:09,433 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:20:16,855 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:20:16,856 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:20:16,857 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:20:16,858 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:20:18,016 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:20:18,017 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:20:18,020 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:20:18,022 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:20:18,842 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:20:18,843 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:20:18,849 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:20:18,851 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:20:19,963 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:20:19,965 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:20:19,967 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:20:19,968 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:20:53,580 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:20:53,581 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:20:53,583 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:20:53,584 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:21:00,665 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:21:00,667 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:21:00,668 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:21:00,669 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:21:07,962 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:21:07,964 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:21:07,967 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:21:07,968 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:21:20,822 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:21:20,823 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:21:20,825 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:21:20,826 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:21:32,620 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:21:32,621 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:21:32,622 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:21:32,623 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:24:36,517 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:24:36,518 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:24:36,519 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:24:36,521 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:25:08,587 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:25:08,588 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:25:08,590 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:25:08,591 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:25:11,507 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:25:11,508 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:25:11,511 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:25:11,514 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:25:14,056 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:25:14,057 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:25:14,060 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:25:14,062 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:25:53,446 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:25:53,451 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:25:53,456 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:25:53,457 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:25:54,945 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:25:54,947 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:25:54,951 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:25:54,952 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:25:59,531 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:25:59,532 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:25:59,535 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:25:59,536 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:26:01,828 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:26:01,829 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:26:01,830 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:26:01,831 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:26:23,728 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:26:23,730 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:26:23,732 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:26:23,733 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:27:07,173 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:27:07,174 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:27:07,176 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:27:07,177 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:27:23,862 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:27:23,863 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:27:23,865 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:27:23,866 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:27:25,279 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:27:25,280 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:27:25,282 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:27:25,283 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:27:29,658 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:27:29,659 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:27:29,661 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:27:29,662 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:27:32,787 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:27:32,789 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:27:32,794 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:27:32,795 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:27:34,665 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:27:34,666 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:27:34,668 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:27:34,669 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:28:27,328 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:28:27,330 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:28:27,332 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:28:27,334 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:32:01,397 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:01,402 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:01,404 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username ASC LIMIT ?, ?;
+08:32:01,405 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:01,406 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:04,479 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:04,480 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:04,489 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:04,490 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:04,490 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:04,491 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:04,492 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:08,273 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:08,274 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:08,279 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:08,280 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:08,280 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:08,281 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:08,282 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:13,120 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:13,121 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:13,128 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:13,129 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:13,130 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username LIMIT ?, ?;
+08:32:13,131 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:13,132 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:20,456 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/edit/user
+08:32:20,457 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:20,466 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully updated user info by id 8.
+08:32:20,493 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:20,504 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:20,508 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username LIMIT ?, ?;
+08:32:20,509 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:20,510 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:22,480 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/edit/user
+08:32:22,481 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:22,483 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully updated user info by id 8.
+08:32:22,489 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:22,490 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:22,491 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username LIMIT ?, ?;
+08:32:22,492 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:22,497 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:24,828 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/edit/user
+08:32:24,829 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:24,832 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully updated user info by id 6.
+08:32:24,837 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:24,838 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:24,839 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username LIMIT ?, ?;
+08:32:24,840 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:24,843 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:26,667 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:26,668 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:26,675 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:26,676 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:26,677 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:26,677 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:26,678 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:33,341 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:33,342 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:33,343 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:33,344 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:33,345 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:35,336 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:35,338 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:35,339 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:35,340 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:35,341 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:36,084 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:36,085 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:36,086 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:36,086 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:36,088 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:36,721 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:36,722 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:36,723 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:36,723 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:36,724 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:37,356 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:37,358 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:37,358 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:37,359 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 3 users limited and sorted.
+08:32:37,360 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:40,964 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:40,966 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:40,966 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:40,967 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:40,968 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:42,574 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:42,575 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:42,575 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:42,576 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:42,577 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:43,947 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:43,948 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:43,948 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:43,949 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:43,949 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:44,624 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:44,625 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:44,625 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:44,626 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:44,627 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:45,242 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:45,243 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:45,243 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:45,244 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:45,245 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:50,693 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/edit/user
+08:32:50,694 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:50,698 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully updated user info by id 7.
+08:32:50,703 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:50,704 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:50,705 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:50,705 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:50,706 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:55,359 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:55,360 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:55,361 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:55,361 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:55,362 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:57,315 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:57,316 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:57,317 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:57,317 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:57,318 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:32:59,157 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:32:59,158 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:32:59,159 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:32:59,160 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:32:59,161 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:00,175 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:00,176 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:00,176 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:00,177 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:00,178 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:02,691 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:02,693 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:02,699 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:02,700 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:02,701 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:02,702 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:02,703 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:04,856 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:04,857 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:04,858 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:04,859 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:04,860 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:05,844 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:05,845 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:05,846 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:05,847 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:05,847 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:06,541 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:06,542 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:06,542 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:06,543 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:06,544 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:07,428 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:07,429 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:07,430 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:07,431 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:07,432 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:08,532 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:08,533 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:08,533 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:08,534 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 3 users limited and sorted.
+08:33:08,535 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:10,112 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:10,113 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:10,114 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:10,115 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:10,115 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:11,388 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:11,391 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:11,392 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:11,392 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:11,393 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:13,069 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:13,070 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:13,070 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:13,071 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:13,074 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:18,063 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:18,064 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:18,070 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:18,071 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:18,071 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:18,072 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:18,073 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:20,228 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:20,229 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:20,230 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:20,230 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:20,231 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:21,114 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:21,115 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:21,115 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:21,116 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:21,117 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:21,990 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:21,991 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:21,992 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:21,993 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:21,994 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:22,853 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:22,855 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:22,855 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:22,857 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 10 users limited and sorted.
+08:33:22,858 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:33:23,673 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:33:23,674 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:33:23,675 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY status LIMIT ?, ?;
+08:33:23,676 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 3 users limited and sorted.
+08:33:23,678 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:39:18,616 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:39:18,640 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:18,641 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:20,503 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:20,504 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:20,887 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:39:20,887 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+08:39:20,904 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:39:20,916 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:39:20,923 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:39:20,927 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:39:22,637 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:39:22,638 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:39:22,642 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username ASC LIMIT ?, ?;
+08:39:22,647 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 50 users limited and sorted.
+08:39:22,649 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:39:26,234 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:39:26,242 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:39:26,243 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username ASC LIMIT ?, ?;
+08:39:26,244 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 3 users limited and sorted.
+08:39:26,246 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:39:27,666 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:39:27,668 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:39:27,669 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username ASC LIMIT ?, ?;
+08:39:27,671 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 50 users limited and sorted.
+08:39:27,673 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:39:56,544 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:39:56,568 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:56,569 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:58,068 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:58,069 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:39:58,451 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:39:58,452 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+08:39:58,466 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:39:58,477 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:39:58,484 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:39:58,486 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:40:01,164 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/users
+08:40:01,166 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:40:01,167 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - SELECT id,username,salt,role,status,password FROM user ORDER BY username ASC LIMIT ?, ?;
+08:40:01,170 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained 53 users limited and sorted.
+08:40:01,172 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained total number of users : 53.
+08:45:11,095 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:45:11,103 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:45:11,106 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:45:11,108 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:46:26,166 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:46:26,183 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:46:26,184 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:46:27,568 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:46:27,568 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:46:27,938 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:46:27,939 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+08:46:27,951 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:46:27,962 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:46:27,973 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 50 tests.
+08:46:27,975 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:57:05,804 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:57:05,826 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:57:05,827 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:57:07,127 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:57:07,128 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:57:07,513 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:57:07,514 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+08:57:07,526 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:57:07,536 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:58:26,904 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:58:26,926 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:58:26,926 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:58:28,258 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:58:28,259 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:58:28,597 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:58:28,598 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+08:58:28,609 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:58:28,621 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:58:28,622 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - sorting values null
+08:58:28,628 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:58:28,631 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+08:59:30,321 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:59:30,344 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:59:30,345 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:59:31,587 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:59:31,587 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+08:59:31,907 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:59:31,907 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+08:59:31,916 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+08:59:31,930 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+08:59:31,931 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - sorting values null
+08:59:31,937 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+08:59:31,940 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:00:10,415 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:00:10,443 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:00:10,444 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:00:12,096 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:00:12,096 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:00:12,452 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:00:12,452 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:00:12,461 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:00:12,473 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:00:12,482 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:00:12,485 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:00:16,759 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:00:16,760 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:00:16,768 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:00:16,770 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:00:16,774 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:00:16,776 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:00:18,671 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:00:18,678 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:00:18,695 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:00:18,696 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:00:18,700 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:00:18,702 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:01:07,073 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:01:07,074 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:01:07,081 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:01:07,082 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:01:07,085 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:01:07,086 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:11:34,123 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:11:34,145 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:11:34,146 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:11:35,725 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:11:35,726 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:11:36,117 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:11:36,118 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:11:36,128 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:11:36,140 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:11:36,149 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:11:36,153 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:11:41,817 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:11:41,818 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:11:41,825 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:11:41,826 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:11:41,830 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:11:41,832 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:12:17,973 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:12:17,975 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:12:17,985 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:12:17,987 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:12:17,992 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:12:17,993 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:13:43,456 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:13:43,478 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:13:43,478 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:13:45,312 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:13:45,313 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:13:45,650 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:13:45,651 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:13:45,662 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:13:45,672 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:13:45,681 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:13:45,684 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:14:51,867 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:14:51,890 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:14:51,890 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:14:53,326 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:14:53,327 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:14:53,769 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:14:53,770 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:14:53,784 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:14:53,795 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:14:53,804 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:14:53,807 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:14:57,431 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:14:57,435 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:14:57,442 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:14:57,443 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:14:57,448 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:14:57,450 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:15:00,727 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:15:00,731 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:15:00,740 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:15:00,742 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:15:00,746 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:15:00,750 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:15:04,487 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:15:04,488 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:15:04,494 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:15:04,495 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:15:04,499 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:15:04,500 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:15:50,695 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:15:50,721 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:15:50,721 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:15:52,157 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:15:52,158 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:15:52,551 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:15:52,553 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:15:52,576 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:15:52,590 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:15:52,597 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:15:52,605 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:15:52,608 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:16:01,314 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:01,316 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:01,326 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:01,328 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:01,330 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:16:01,332 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:16:01,335 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:16:10,748 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:10,750 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:10,756 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:10,758 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:10,759 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:16:10,760 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:16:10,762 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:16:18,207 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:18,210 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:18,219 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:18,221 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:18,222 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:16:18,225 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:16:18,226 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:16:34,354 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:34,355 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:34,357 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:16:34,358 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:16:34,359 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:16:45,955 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:16:45,957 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:16:45,958 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:16:45,959 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:16:45,961 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:17:57,197 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:17:57,220 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:17:57,220 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:17:59,448 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:17:59,449 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:17:59,824 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:17:59,825 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:17:59,835 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:17:59,847 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:17:59,848 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:17:59,851 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:17:59,856 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:17:59,858 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:18:14,631 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:18:14,634 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:18:14,642 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:18:14,644 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:18:14,645 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:18:14,647 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:18:14,649 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:18:14,651 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:19:18,147 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:19:18,150 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:19:18,151 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:19:18,152 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:19:18,161 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:19:18,163 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:19:20,439 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:19:20,440 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:19:20,440 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:19:20,441 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:19:20,442 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:19:20,444 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:19:23,327 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:19:23,330 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:19:23,330 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:19:23,331 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:19:23,333 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:19:23,335 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:19:25,953 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:19:25,954 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:19:25,955 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:19:25,955 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:19:25,957 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:19:25,958 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:19:28,130 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:19:28,132 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:19:28,133 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:19:28,134 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:19:28,135 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:19:28,140 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:19:38,996 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:19:38,997 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:19:38,998 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:19:38,998 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:19:39,002 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:19:39,005 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:19:48,288 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:19:48,290 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:19:48,290 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:19:48,291 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:19:48,293 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:19:48,294 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:20:24,561 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:20:24,563 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:20:24,564 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:20:24,565 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:20:24,567 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:20:24,569 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:20:25,877 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:20:25,878 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:20:25,878 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:20:25,879 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:20:25,881 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:20:25,882 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:20:27,430 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:20:27,432 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:20:27,432 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexityDESC ____
+12:20:27,433 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:20:27,435 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:20:27,437 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:20:33,005 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:20:33,006 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:20:33,007 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:20:33,008 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:20:33,009 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:20:33,012 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:20:43,322 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:20:43,324 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:20:43,324 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:20:43,325 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:20:43,326 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:20:43,328 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:20:50,237 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:20:50,239 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:20:50,239 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexityDESC ____
+12:20:50,240 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:20:50,243 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:20:50,244 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:25:35,490 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:25:35,510 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:25:35,510 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:25:36,689 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:25:36,690 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:25:37,065 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:25:37,066 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:25:37,079 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:25:37,094 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:25:37,095 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:25:37,098 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:25:37,103 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:25:37,106 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:25:39,242 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:25:39,243 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:25:39,244 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:25:39,245 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:25:39,248 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:25:39,249 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:26:47,363 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:26:47,365 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:26:47,365 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+12:26:47,366 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:26:47,369 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:26:47,372 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:26:49,946 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:26:49,947 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:26:49,948 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexityDESC ____
+12:26:49,949 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:26:49,952 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:26:49,956 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:26:52,674 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:26:52,676 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:26:52,676 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexityASC ____
+12:26:52,677 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:26:52,680 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:26:52,682 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:26:54,721 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:26:54,722 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:26:54,723 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:26:54,723 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:26:54,725 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:26:54,727 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:28:58,401 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:28:58,428 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:28:58,428 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:29:01,369 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:29:01,370 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:29:01,732 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:29:01,733 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:29:01,739 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:29:01,766 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:29:01,769 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:29:01,776 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:29:01,782 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:29:01,785 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:30:36,789 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:30:36,810 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:30:36,811 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:30:38,526 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:30:38,526 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:30:38,847 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:38,848 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:30:38,861 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:30:38,874 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:38,875 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:30:38,876 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:30:38,882 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:30:38,884 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:30:45,314 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:30:45,316 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:45,317 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+12:30:45,376 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:30:45,378 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:30:45,380 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:30:47,612 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:30:47,613 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:47,614 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:30:47,615 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:30:47,617 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:30:47,618 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:30:51,588 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/test
+12:30:51,590 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:51,609 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 1.
+12:30:51,611 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 51.
+12:30:51,612 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 101.
+12:30:51,615 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 151.
+12:30:51,617 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 201.
+12:30:51,618 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 251.
+12:30:51,619 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 6 questions for test_id 1.
+12:30:51,643 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=1, text='Q#1 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=1, questionId=1, text='CorAns for: Q#1 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=301, questionId=1, text='IncorAns for: Q#1 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=601, questionId=1, text='IncorAns for: Q#1 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=901, questionId=1, text='IncorAns for: Q#1 for test: A Cold Day in Hell', isCorrect=false}]}, Question{id=51, text='Q#2 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=51, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=351, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=651, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=951, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}]}, Question{id=101, text='Q#3 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=101, questionId=101, text='CorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=401, questionId=101, text='CorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=701, questionId=101, text='IncorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=1001, questionId=101, text='CorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=true}]}, Question{id=151, text='Q#4 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=151, questionId=151, text='CorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=451, questionId=151, text='IncorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=751, questionId=151, text='IncorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=1051, questionId=151, text='CorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=true}]}, Question{id=201, text='Q#5 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=201, questionId=201, text='CorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=501, questionId=201, text='CorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=801, questionId=201, text='CorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=1101, questionId=201, text='IncorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=false}]}, Question{id=251, text='Q#6 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=251, questionId=251, text='CorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=551, questionId=251, text='CorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=851, questionId=251, text='IncorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=1151, questionId=251, text='IncorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=false}]}]
+12:30:51,646 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 1, result name : A Cold Day in Hell
+12:30:53,736 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/delete/question
+12:30:53,738 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:53,745 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully deleted question_id 1
+12:30:53,753 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/test
+12:30:53,755 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:53,759 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 51.
+12:30:53,761 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 101.
+12:30:53,766 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 151.
+12:30:53,769 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 201.
+12:30:53,780 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 251.
+12:30:53,780 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 5 questions for test_id 1.
+12:30:53,781 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=51, text='Q#2 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=51, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=351, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=651, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=951, questionId=51, text='CorAns for: Q#2 for test: A Cold Day in Hell', isCorrect=true}]}, Question{id=101, text='Q#3 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=101, questionId=101, text='CorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=401, questionId=101, text='CorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=701, questionId=101, text='IncorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=1001, questionId=101, text='CorAns for: Q#3 for test: A Cold Day in Hell', isCorrect=true}]}, Question{id=151, text='Q#4 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=151, questionId=151, text='CorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=451, questionId=151, text='IncorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=751, questionId=151, text='IncorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=1051, questionId=151, text='CorAns for: Q#4 for test: A Cold Day in Hell', isCorrect=true}]}, Question{id=201, text='Q#5 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=201, questionId=201, text='CorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=501, questionId=201, text='CorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=801, questionId=201, text='CorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=1101, questionId=201, text='IncorAns for: Q#5 for test: A Cold Day in Hell', isCorrect=false}]}, Question{id=251, text='Q#6 for test: A Cold Day in Hell', testId=1, answers=[Answer{id=251, questionId=251, text='CorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=551, questionId=251, text='CorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=true}, Answer{id=851, questionId=251, text='IncorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=false}, Answer{id=1151, questionId=251, text='IncorAns for: Q#6 for test: A Cold Day in Hell', isCorrect=false}]}]
+12:30:53,782 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 1, result name : A Cold Day in Hell
+12:30:55,618 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:30:55,620 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:30:55,620 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:30:55,621 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:30:55,622 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:30:55,624 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:00,226 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:00,228 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:00,228 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:31:00,229 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:31:00,231 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:00,232 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:02,585 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:02,587 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:02,588 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:31:02,591 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:31:02,593 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:02,594 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:12,979 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:12,984 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:12,984 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+12:31:12,985 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+12:31:12,986 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:12,988 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:24,002 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:24,004 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:24,004 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+12:31:24,005 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:31:24,007 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:24,008 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:28,386 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:28,388 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:28,388 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:31:28,389 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:31:28,390 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:28,391 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:35,093 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:35,095 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:35,095 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+12:31:35,096 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+12:31:35,097 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:35,098 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:41,263 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:41,264 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:41,265 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:31:41,265 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:31:41,271 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:41,274 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:44,826 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:44,828 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:44,828 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:31:44,830 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:31:44,832 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:44,837 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:31:48,148 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:31:48,149 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:31:48,149 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:31:48,150 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:31:48,152 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:31:48,153 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:32:38,467 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:32:38,485 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:32:38,486 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:32:40,133 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:32:40,133 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:32:40,426 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:32:40,427 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:32:40,435 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:32:40,445 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:32:40,446 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:32:40,448 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:32:40,453 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:32:40,456 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:32:44,159 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:32:44,160 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:32:44,161 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:32:44,162 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:32:44,164 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:32:44,166 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:32:46,474 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:32:46,477 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:32:46,477 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:32:46,478 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:32:46,481 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:32:46,483 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:32:49,656 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:32:49,658 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:32:49,661 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:32:49,662 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:32:49,665 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:32:49,668 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:32:55,954 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:32:55,957 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:32:55,957 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+12:32:55,958 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+12:32:55,959 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:32:55,960 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:33:00,031 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:33:00,035 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:33:00,036 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:33:00,037 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:33:00,043 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:33:00,046 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:33:38,166 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:33:38,168 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:33:38,169 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:33:38,170 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:33:38,172 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:33:38,174 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:33:57,305 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:33:57,307 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:33:57,308 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:33:57,309 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:33:57,311 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:33:57,312 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:34:40,345 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/logout
+12:34:40,347 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:34:40,358 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login.jsp
+12:34:40,365 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:34:40,366 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:34:41,791 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:34:41,792 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:34:41,793 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:34:41,793 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:34:41,805 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:34:41,806 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:34:41,806 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:34:41,807 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:34:41,808 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:34:41,812 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:34:45,704 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:34:45,706 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:34:45,706 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:34:45,707 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:34:45,709 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:34:45,711 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:35:48,749 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:35:48,751 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:35:48,751 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+12:35:48,752 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+12:35:48,753 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:35:48,754 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:35:50,750 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:35:50,753 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:35:50,753 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:35:50,754 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:35:50,755 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:35:50,757 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:02,082 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:02,084 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:02,084 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:36:02,085 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:36:02,086 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:02,088 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:04,218 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:04,220 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:04,221 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:36:04,221 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:36:04,223 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:04,225 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:06,039 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:06,040 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:06,040 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:36:06,041 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:36:06,043 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:06,045 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:07,730 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:07,733 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:07,733 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:36:07,734 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:36:07,735 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:07,736 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:09,401 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:09,402 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:09,403 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:36:09,403 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:36:09,406 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:09,407 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:12,321 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:12,323 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:12,323 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:36:12,323 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:36:12,325 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:12,326 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:54,317 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:54,319 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:54,319 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:36:54,322 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:36:54,328 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:54,329 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:36:55,703 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:36:55,705 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:36:55,705 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:36:55,706 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:36:55,708 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:36:55,709 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:06,206 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:06,208 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:06,208 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:37:06,209 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:37:06,210 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:06,211 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:12,102 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:12,103 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:12,104 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:37:12,104 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:12,105 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:12,106 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:14,692 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:14,693 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:14,693 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:37:14,694 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:14,695 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:14,696 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:17,665 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:17,666 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:17,667 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:37:17,667 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:17,670 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:17,671 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:24,957 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/test
+12:37:24,958 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:24,970 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 2.
+12:37:24,973 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 52.
+12:37:24,974 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 102.
+12:37:24,976 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 152.
+12:37:24,977 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+12:37:24,978 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 252.
+12:37:24,979 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 6 questions for test_id 2.
+12:37:25,006 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=2, text='Q#1 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=2, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=302, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=602, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=902, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}]}, Question{id=52, text='Q#2 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=52, questionId=52, text='CorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=352, questionId=52, text='CorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=652, questionId=52, text='IncorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=false}, Answer{id=952, questionId=52, text='IncorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=false}]}, Question{id=102, text='Q#3 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=102, questionId=102, text='CorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=402, questionId=102, text='IncorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=false}, Answer{id=702, questionId=102, text='CorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1002, questionId=102, text='CorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=true}]}, Question{id=152, text='Q#4 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=152, questionId=152, text='CorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=452, questionId=152, text='CorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=752, questionId=152, text='CorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1052, questionId=152, text='IncorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=false}]}, Question{id=202, text='Q#5 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=202, questionId=202, text='CorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=502, questionId=202, text='CorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=802, questionId=202, text='CorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1102, questionId=202, text='IncorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=false}]}, Question{id=252, text='Q#6 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=252, questionId=252, text='CorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=552, questionId=252, text='IncorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=false}, Answer{id=852, questionId=252, text='CorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1152, questionId=252, text='IncorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=false}]}]
+12:37:25,010 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 2, result name : A Day Late and a Dollar Short
+12:37:28,082 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/questionForm.jsp
+12:37:28,083 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:31,531 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/edit/question
+12:37:31,532 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:31,544 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully added new question to test_id 2.
+12:37:31,554 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/test
+12:37:31,557 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:31,560 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 2.
+12:37:31,562 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 52.
+12:37:31,563 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 102.
+12:37:31,564 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 152.
+12:37:31,566 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 202.
+12:37:31,567 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 252.
+12:37:31,569 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 301.
+12:37:31,570 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 7 questions for test_id 2.
+12:37:31,570 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - [Question{id=2, text='Q#1 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=2, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=302, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=602, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=902, questionId=2, text='CorAns for: Q#1 for test: A Day Late and a Dollar Short', isCorrect=true}]}, Question{id=52, text='Q#2 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=52, questionId=52, text='CorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=352, questionId=52, text='CorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=652, questionId=52, text='IncorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=false}, Answer{id=952, questionId=52, text='IncorAns for: Q#2 for test: A Day Late and a Dollar Short', isCorrect=false}]}, Question{id=102, text='Q#3 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=102, questionId=102, text='CorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=402, questionId=102, text='IncorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=false}, Answer{id=702, questionId=102, text='CorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1002, questionId=102, text='CorAns for: Q#3 for test: A Day Late and a Dollar Short', isCorrect=true}]}, Question{id=152, text='Q#4 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=152, questionId=152, text='CorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=452, questionId=152, text='CorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=752, questionId=152, text='CorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1052, questionId=152, text='IncorAns for: Q#4 for test: A Day Late and a Dollar Short', isCorrect=false}]}, Question{id=202, text='Q#5 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=202, questionId=202, text='CorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=502, questionId=202, text='CorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=802, questionId=202, text='CorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1102, questionId=202, text='IncorAns for: Q#5 for test: A Day Late and a Dollar Short', isCorrect=false}]}, Question{id=252, text='Q#6 for test: A Day Late and a Dollar Short', testId=2, answers=[Answer{id=252, questionId=252, text='CorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=552, questionId=252, text='IncorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=false}, Answer{id=852, questionId=252, text='CorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=true}, Answer{id=1152, questionId=252, text='IncorAns for: Q#6 for test: A Day Late and a Dollar Short', isCorrect=false}]}, Question{id=301, text='casdcsadca', testId=2, answers=[]}]
+12:37:31,572 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 2, result name : A Day Late and a Dollar Short
+12:37:33,667 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:33,670 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:33,671 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ null ____
+12:37:33,671 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:33,673 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:33,675 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:38,282 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:38,284 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:38,284 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:37:38,285 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:38,287 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:38,289 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:40,968 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:40,969 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:40,970 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:37:40,970 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:37:40,972 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:40,973 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:43,694 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:43,695 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:43,696 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:37:43,696 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:43,697 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:43,698 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:47,630 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:47,631 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:47,631 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:37:47,631 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:37:47,633 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:47,634 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:50,459 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:50,460 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:50,460 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:37:50,461 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:50,462 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:50,463 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:54,568 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:54,570 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:54,570 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:37:54,571 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:54,573 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:54,574 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:56,928 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:56,929 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:56,930 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+12:37:56,930 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:37:56,932 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:56,933 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:37:58,769 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:37:58,771 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:37:58,772 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:37:58,772 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:37:58,773 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:37:58,775 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:38:00,593 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:38:00,595 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:38:00,595 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+12:38:00,596 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+12:38:00,598 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:38:00,600 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:38:03,451 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:38:03,452 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:38:03,453 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:38:03,456 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:38:03,458 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:38:03,459 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:38:05,599 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:38:05,600 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:38:05,601 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:38:05,601 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:38:05,603 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:38:05,605 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:43:48,135 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:43:48,153 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:43:48,154 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:43:49,633 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:43:49,634 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:43:50,028 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:43:50,029 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:43:50,042 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:43:50,052 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:43:50,053 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:43:50,057 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:43:50,063 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:43:50,066 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:43:53,202 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:43:53,204 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:43:53,204 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:43:53,208 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:43:53,210 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:43:53,211 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:44:48,640 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:44:48,665 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:44:48,665 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:44:49,973 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:44:49,973 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+12:44:50,371 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:44:50,372 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+12:44:50,386 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:44:50,398 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:44:50,399 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+12:44:50,401 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+12:44:50,420 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:44:50,422 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:44:53,483 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:44:53,487 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:44:53,488 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+12:44:53,491 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:44:53,494 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:44:53,495 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:44:55,644 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:44:55,645 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:44:55,646 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+12:44:55,647 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+12:44:55,653 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:44:55,657 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:44:57,436 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:44:57,438 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:44:57,438 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:44:57,439 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:44:57,445 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:44:57,447 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:45:00,481 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:45:00,483 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:45:00,483 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+12:45:00,484 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+12:45:00,486 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:45:00,487 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:45:02,168 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:45:02,169 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:45:02,170 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+12:45:02,170 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+12:45:02,171 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:45:02,173 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:45:04,205 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:45:04,207 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:45:04,208 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+12:45:04,208 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ questionsNum ASC ____
+12:45:04,210 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:45:04,211 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:45:07,028 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:45:07,030 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:45:07,030 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+12:45:07,032 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ questionsNum DESC ____
+12:45:07,034 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:45:07,035 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+12:45:09,150 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+12:45:09,152 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+12:45:09,152 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+12:45:09,153 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+12:45:09,159 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+12:45:09,161 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+13:30:03,955 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:03,982 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+13:30:03,982 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+13:30:05,758 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+13:30:05,759 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/login
+13:30:06,106 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:06,107 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - password - testqq
+13:30:06,120 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:06,131 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:06,132 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name ASC ____
+13:30:06,134 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name ASC ____
+13:30:06,141 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+13:30:06,143 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+13:30:08,818 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:08,819 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:08,819 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ name DESC ____
+13:30:08,822 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ name DESC ____
+13:30:08,825 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+13:30:08,827 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+13:30:10,484 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:10,489 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:10,489 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+13:30:10,490 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+13:30:10,494 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+13:30:10,496 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+13:30:13,085 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:13,088 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:13,089 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity DESC ____
+13:30:13,090 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity DESC ____
+13:30:13,092 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+13:30:13,094 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+13:30:21,211 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:21,213 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:21,214 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ complexity ASC ____
+13:30:21,216 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ complexity ASC ____
+13:30:21,218 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+13:30:21,222 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+13:30:25,014 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:25,016 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:25,016 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum ASC ____
+13:30:25,017 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ questionsNum ASC ____
+13:30:25,020 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+13:30:25,026 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
+13:30:28,815 [ INFO|com.epam.controller.user.LoginFilter|LoginFilter] - /epam/tests
+13:30:28,816 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Successfully obtained user by username, id is 1.
+13:30:28,817 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - ____ questionsNum DESC ____
+13:30:28,817 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - ____ questionsNum DESC ____
+13:30:28,819 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully obtained 10 tests.
+13:30:28,822 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.

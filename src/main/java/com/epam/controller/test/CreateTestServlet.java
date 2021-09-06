@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @WebServlet("/createTest")
 public class CreateTestServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(CreateTestServlet.class);
+    private final Logger logger = LoggerFactory.getLogger(CreateTestServlet.class);
     private TestDao testDao;
 
     @Override
@@ -24,14 +24,19 @@ public class CreateTestServlet extends HttpServlet {
     }
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("/views/createTest.jsp").forward(req,resp);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("testName");
-        String subject = req.getParameter("subject");
-        String complexity = req.getParameter("complexity");
+        int subjectId = Integer.parseInt(req.getParameter("subject"));
+        int complexityId = Integer.parseInt(req.getParameter("complexity"));
         int duration = Integer.parseInt(req.getParameter("duration"));
         int id = 0;
         try {
-            id = testDao.insertNewTest(name,subject,complexity,duration);
+            id = testDao.insertNewTest(name,subjectId,complexityId,duration);
         } catch (DBException e) {
             logger.error("Create test servlet post",e);
         }

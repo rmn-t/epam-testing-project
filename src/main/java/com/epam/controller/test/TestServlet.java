@@ -41,6 +41,7 @@ public class TestServlet extends HttpServlet {
         List<Question> questions = null;
         try {
             questions = questionDao.getQuestionsAndAnswersByTestId(testId);
+            logger.info(String.valueOf(questions));
         } catch (DBException e) {
             logger.error("Test servlet - get.",e);
         }

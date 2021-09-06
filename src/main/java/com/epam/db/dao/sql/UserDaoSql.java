@@ -10,10 +10,20 @@ import org.slf4j.LoggerFactory;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class UserDaoSql implements UserDao {
     private Logger logger = LoggerFactory.getLogger(UserDaoSql.class);
+    private final String ID = "id";
+    private final String USERNAME = "username";
+    private final String PASSWORD = "password";
+    private final String SALT = "salt";
+    private final String ROLE = "role";
+    private final String STATUS = "status";
+    private final String DEFAULT_STATUS = "active";
+    private final String DEFAULT_ROLE = "user";
+    private final String[] VALID_COLUMNS_FOR_ORDER_BY = {ID, USERNAME, PASSWORD, SALT, ROLE, STATUS};
 
     public UserDaoSql() {
     }
@@ -30,12 +40,12 @@ public class UserDaoSql implements UserDao {
             rs = prepStmt.executeQuery();
             rs.next();
             user = new User.Builder()
-                    .setId(rs.getInt("id"))
-                    .setUsername(rs.getString("username"))
-                    .setRole(rs.getString("role"))
-                    .setStatus(rs.getString("status"))
-                    .setPassword(rs.getString("password"))
-                    .setSalt(rs.getInt("salt"))
+                    .setId(rs.getInt(ID))
+                    .setUsername(rs.getString(USERNAME))
+                    .setRole(rs.getString(ROLE))
+                    .setStatus(rs.getString(STATUS))
+                    .setPassword(rs.getString(PASSWORD))
+                    .setSalt(rs.getInt(SALT))
                     .build();
             logger.info("Successfully obtained user by username, id is {}.",user.getId());
         } catch (SQLException e) {
@@ -45,6 +55,40 @@ public class UserDaoSql implements UserDao {
             DBUtil.closeAllInOrder(rs,prepStmt,con);
         }
         return user;
+    }
+
+    public int addNewUser(String userName,String password,String firstName,String lastName) throws DBException {
+        int id = 0;
+        Connection con = null;
+        PreparedStatement prepStmt = null;
+        int salt = Encrypt.generateSalt();
+        String securePassword = Encrypt.getSecurePassword(password,salt);
+        try {
+            con = DBUtil.getConnection();
+            prepStmt = con.prepareStatement("INSERT INTO user VALUES(id,?,?,?,?,?,?,?);",Statement.RETURN_GENERATED_KEYS);
+            int k = 1;
+            prepStmt.setString(k++,userName);
+            prepStmt.setString(k++,securePassword);
+            prepStmt.setInt(k++,salt);
+            prepStmt.setString(k++,firstName);
+            prepStmt.setString(k++,lastName);
+            prepStmt.setString(k++,DEFAULT_ROLE);
+            prepStmt.setString(k++,DEFAULT_STATUS);
+            id = prepStmt.executeUpdate();
+//            if (generatedKeys.next()) {
+//                id = generatedKeys.getInt("id");
+//            } else {
+//                logger.error("Creation of user failed.");
+//                throw new DBException("Creating user failed.",new Throwable());
+//            }
+            logger.info("Inserted new user with username {}.",userName);
+        } catch (SQLException e) {
+            logger.error("Couldn't insert a new user with username: {}.",userName,e);
+            throw new DBException("Couldn't insert a new user",e);
+        } finally {
+            DBUtil.closeAllInOrder(prepStmt,con);
+        }
+        return id;
     }
 
     public void updateUserById(int id, String password,String role, String status,int salt) throws DBException {
@@ -76,18 +120,20 @@ public class UserDaoSql implements UserDao {
         ResultSet rs = null;
         try {
             con = DBUtil.getConnection();
+            orderBy = Arrays.asList(VALID_COLUMNS_FOR_ORDER_BY).contains(orderBy) ? orderBy : VALID_COLUMNS_FOR_ORDER_BY[1] + " ASC";
             prepStmt = con.prepareStatement("SELECT id,username,salt,role,status,password FROM user ORDER BY " + orderBy + " LIMIT ?, ?;");
+            logger.info("SELECT id,username,salt,role,status,password FROM user ORDER BY " + orderBy + " LIMIT ?, ?;");
             int k = 1;
             prepStmt.setInt(k++,offset-1);
             prepStmt.setInt(k++,limit);
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 users.add(new User.Builder()
-                        .setId(rs.getInt("id"))
-                        .setUsername(rs.getString("username"))
-                        .setRole(rs.getString("role"))
-                        .setStatus(rs.getString("status"))
-                        .setPassword(rs.getString("password"))
+                        .setId(rs.getInt(ID))
+                        .setUsername(rs.getString(USERNAME))
+                        .setRole(rs.getString(ROLE))
+                        .setStatus(rs.getString(STATUS))
+                        .setPassword(rs.getString(PASSWORD))
                         .build());
             }
             logger.info("Successfully obtained {} users limited and sorted.",users.size());
@@ -122,13 +168,11 @@ public class UserDaoSql implements UserDao {
     }
 
     public boolean validateCredentials(User userFromDb,String password,String userName) {
-        if (!userName.equals(userFromDb.getUsername()) || userFromDb.getPassword() == null) {
+        logger.info("password - {}",password);
+        if (userFromDb == null || !userName.equals(userFromDb.getUsername())) {
             logger.info("Failed to validate credentials, either user name is incorrect or password is null.");
             return false;
         }
-        logger.info(String.valueOf(userFromDb.getPassword().equals(Encrypt.getSecurePassword(password,userFromDb.getSalt()))));
-        logger.info(Encrypt.getSecurePassword(password,userFromDb.getSalt()));
-        logger.info(userFromDb.getPassword());
         return userFromDb.getPassword().equals(Encrypt.getSecurePassword(password,userFromDb.getSalt()));
     }
 

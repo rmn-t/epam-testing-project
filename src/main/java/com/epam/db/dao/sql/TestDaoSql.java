@@ -7,13 +7,8 @@ import com.epam.db.model.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class TestDaoSql implements TestDao {
@@ -22,9 +17,7 @@ public class TestDaoSql implements TestDao {
     private static final String SUBJECT = "subject";
     private static final String COMPLEXITY = "complexity";
     private static final String DURATION = "duration_sec";
-    private static final String QUESTIONS_NUM = "questionsNum";
-    private Logger logger = LoggerFactory.getLogger(TestDaoSql.class);
-    private final String[] VALID_COLUMNS_FOR_ORDER_BY = {ID, NAME, SUBJECT, COMPLEXITY, DURATION, QUESTIONS_NUM};
+    private final Logger logger = LoggerFactory.getLogger(TestDaoSql.class);
 
     public TestDaoSql() {
     }
@@ -36,8 +29,13 @@ public class TestDaoSql implements TestDao {
         ResultSet rs = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("SELECT test.id as id,test.name as name,subject complexity,duration_sec,count(question.test_id) as questionsNum" +
-                    " FROM TEST left join question on test.id = question.test_id group by test.id; where id = ?;");
+            prepStmt = con.prepareStatement("" +
+                    "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum " +
+                    "FROM test LEFT JOIN question ON test.id = question.test_id " +
+                    "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
+                    "LEFT JOIN subject ON subject.id = test.subject_id " +
+                    "WHERE test.id = ?;"
+            );
             prepStmt.setInt(1, testId);
             rs = prepStmt.executeQuery();
             rs.next();
@@ -47,7 +45,7 @@ public class TestDaoSql implements TestDao {
                     .setSubject(rs.getString(SUBJECT))
                     .setComplexity(rs.getString(COMPLEXITY))
                     .setDuration(rs.getInt(DURATION))
-                    .setQuestionsNum(rs.getInt(QUESTIONS_NUM))
+                    .setQuestionsNum(rs.getInt("questionsNum"))
                     .build();
             logger.info("Requested test by id {}, result name : {}", testId, test.getName());
         } catch (SQLException e) {
@@ -59,16 +57,16 @@ public class TestDaoSql implements TestDao {
         return test;
     }
 
-    public void updateTestById(int id, String name, String subject, String complexity, int duration) throws DBException {
+    public void updateTestById(int id, String name, int subjectId, int complexityId, int duration) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("UPDATE test SET name = ?, subject = ?, complexity = ?, duration_sec = ? WHERE id = ?;");
+            prepStmt = con.prepareStatement("UPDATE test SET name = ?, subject_id = ?, complexity_id = ?, duration_sec = ? WHERE id = ?;");
             int k = 1;
             prepStmt.setString(k++, name);
-            prepStmt.setString(k++, subject);
-            prepStmt.setString(k++, complexity);
+            prepStmt.setInt(k++, subjectId);
+            prepStmt.setInt(k++, complexityId);
             prepStmt.setInt(k++, duration);
             prepStmt.setInt(k++, id);
             prepStmt.executeUpdate();
@@ -98,29 +96,6 @@ public class TestDaoSql implements TestDao {
         }
     }
 
-    public List<Test> getAllTests() {
-        List<Test> results = new ArrayList<>();
-        Connection con = null;
-        PreparedStatement prepStmt = null;
-        ResultSet rs = null;
-        try {
-            Context context = (Context) new InitialContext().lookup("java:/comp/env");
-            DataSource dataSource = (DataSource) context.lookup("jdbc/mysql");
-            con = dataSource.getConnection();
-            prepStmt = con.prepareStatement("SELECT id,name,subject,complexity,duration_sec,questionsNum FROM test;");
-            rs = prepStmt.executeQuery();
-            while (rs.next()) {
-
-            }
-        } catch (NamingException | SQLException e) {
-            //add logger
-            e.printStackTrace();
-        } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
-        }
-        return results;
-    }
-
     public List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy) throws DBException {
         List<Test> results = new ArrayList<>();
         Connection con = null;
@@ -128,8 +103,15 @@ public class TestDaoSql implements TestDao {
         ResultSet rs = null;
         try {
             con = DBUtil.getConnection();
-            orderBy = Arrays.asList(VALID_COLUMNS_FOR_ORDER_BY).contains(orderBy) ? orderBy : VALID_COLUMNS_FOR_ORDER_BY[1];
-            prepStmt = con.prepareStatement("SELECT id,name,subject,complexity,duration_sec,questionsNum FROM test ORDER BY " + orderBy + " LIMIT ?, ?;");
+            logger.info("____ {} ____",orderBy);
+            prepStmt = con.prepareStatement("" +
+                    "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum " +
+                    "FROM test " +
+                    "LEFT JOIN question ON test.id = question.test_id " +
+                    "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
+                    "LEFT JOIN subject ON subject.id = test.subject_id " +
+                    "GROUP BY test.id ORDER BY " + orderBy + " LIMIT ?, ?;"
+            );
             prepStmt.setInt(1, offset - 1);
             prepStmt.setInt(2, limit);
             rs = prepStmt.executeQuery();
@@ -140,7 +122,7 @@ public class TestDaoSql implements TestDao {
                         .setSubject(rs.getString(SUBJECT))
                         .setComplexity(rs.getString(COMPLEXITY))
                         .setDuration(rs.getInt(DURATION))
-                        .setQuestionsNum(rs.getInt(QUESTIONS_NUM))
+                        .setQuestionsNum(rs.getInt("questionsNum"))
                         .build());
             }
             logger.info("Successfully obtained {} tests.",results.size());
@@ -153,18 +135,18 @@ public class TestDaoSql implements TestDao {
         return results;
     }
 
-    public int insertNewTest(String name, String subject, String complexity, int durationSec) throws DBException {
+    public int insertNewTest(String name, int subjectId, int complexityId, int durationSec) throws DBException {
         int res = 0;
         Connection con = null;
         PreparedStatement prepStmt = null;
         ResultSet generatedKeys = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("INSERT INTO test(name,subject,complexity,duration_sec) values(?,?,?,?);", Statement.RETURN_GENERATED_KEYS);
+            prepStmt = con.prepareStatement("INSERT INTO test(name,subject_id,complexity_id,duration_sec) values(?,?,?,?);", Statement.RETURN_GENERATED_KEYS);
             int k = 0;
             prepStmt.setString(++k, name);
-            prepStmt.setString(++k, subject);
-            prepStmt.setString(++k, complexity);
+            prepStmt.setInt(++k, subjectId);
+            prepStmt.setInt(++k, complexityId);
             prepStmt.setInt(++k, durationSec);
             prepStmt.executeUpdate();
             generatedKeys = prepStmt.getGeneratedKeys();

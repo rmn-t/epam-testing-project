@@ -2,6 +2,7 @@ package com.epam.db.dao.sql;
 
 import com.epam.db.DBException;
 import com.epam.db.DBUtil;
+import com.epam.db.dao.AnswerDao;
 import com.epam.db.dao.QuestionDao;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
@@ -95,14 +96,17 @@ public class QuestionDaoSql implements QuestionDao {
             prepStmt = con.prepareStatement("SELECT id,text,test_id FROM question WHERE test_id = ?;");
             prepStmt.setInt(1, testId);
             rs = prepStmt.executeQuery();
+            AnswerDao answerDao = new AnswerDaoSql();
             while (rs.next()) {
-                results.add(new Question.Builder()
-                        .setId(rs.getInt("id"))
-                        .setTestId(rs.getInt("test_id"))
-                        .setText(rs.getString("text"))
-                        .setAnswers(new AnswerDaoSql().getAnswersByQuestionId(testId))
-                        .build());
+                Question q = new Question.Builder()
+                            .setId(rs.getInt("id"))
+                            .setTestId(rs.getInt("test_id"))
+                            .setText(rs.getString("text"))
+                            .build();
+                q.setAnswers(answerDao.getAnswersByQuestionId(q.getId()));
+                results.add(q);
             }
+            logger.info("Successfully obtained {} questions for test_id {}.",results.size(),testId);
         } catch (DBException | SQLException e) {
             logger.error("Couldn't obtain questions and answers by test_id {}.",testId,e);
             throw new DBException("Couldn't obtain questions and answers by test_id",e);

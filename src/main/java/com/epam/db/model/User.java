@@ -5,14 +5,18 @@ public class User {
     private String username;
     private String password;
     private int salt;
+    private String firstName;
+    private String lastName;
     private String role;
     private String status;
 
-    public User(int id, String username, String password, int salt, String role, String status) {
+    public User(int id, String username, String password, int salt, String firstName, String lastName, String role, String status) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.salt = salt;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.role = role;
         this.status = status;
     }
@@ -52,6 +56,22 @@ public class User {
         this.salt = salt;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getRole() {
         return role;
     }
@@ -73,6 +93,8 @@ public class User {
         private String username;
         private String password;
         private int salt;
+        private String firstName;
+        private String lastName;
         private String role;
         private String status;
 
@@ -96,6 +118,16 @@ public class User {
             return this;
         }
 
+        public Builder setFirstName(String firstName) {
+            this.firstName = firstName;
+            return this;
+        }
+
+        public Builder setLastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
+
         public Builder setRole(String role) {
             this.role = role;
             return this;
@@ -107,7 +139,7 @@ public class User {
         }
 
         public User build() {
-            return new User(this.id,this.username,this.password,this.salt,this.role,this.status);
+            return new User(this.id,this.username,this.password,this.salt,this.firstName,this.lastName,this.role,this.status);
         }
     }
 }

@@ -1,11 +1,6 @@
-<%@ page
-    language ="java"
-    contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"
-    import="java.util.Arrays,java.util.List,com.epam.db.entities.Test"
-
-%>
+<%@ page language ="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +10,9 @@
 </head>
 <body>
     <a href="tests?page=1">Tests</a>
+    <i><c:out value="${cookie.lang}"></c:out></i>
     <c:set var="currentTestId" value="${param.id}" scope="session"/>
     <br>
-    <c:out value="${sessionScope.currentTestId}">abc</c:out>
     <h1> Test name:  <c:out value="${test.name}"></c:out>  </h1>
         <a href="/epam/editTest?id=${sessionScope.currentTestId}">Edit test</a>
         <br>

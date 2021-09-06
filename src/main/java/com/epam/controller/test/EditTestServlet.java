@@ -41,11 +41,11 @@ public class EditTestServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int testId = Integer.parseInt(req.getParameter("id"));
         String name = req.getParameter("name");
-        String subject = req.getParameter("subject");
-        String complexity = req.getParameter("complexity");
+        int subjectId = Integer.parseInt(req.getParameter("subject"));
+        int complexityId = Integer.parseInt(req.getParameter("complexity"));
         int duration = Integer.parseInt(req.getParameter("duration"));
         try {
-            testDao.updateTestById(testId,name,subject,complexity,duration);
+            testDao.updateTestById(testId,name,subjectId,complexityId,duration);
         } catch (DBException e) {
             logger.error("Edit servlet post");
         }

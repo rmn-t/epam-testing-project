@@ -1,72 +1,33 @@
-<%@ page
-    language ="java"
-    contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"
-    import="java.util.Arrays,java.util.List"
-%>
-
-<%@ taglib prefix="core" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="ISO-8859-1">
-    <title>Insert title here</title>
-</head>
-    <body>
-
-        <core:forEach items="${students}" var="s">
-            ${s}<br>
-        </core:forEach>
-
-        <sql:setDataSource var="db" driver="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/p8test" user="root" password="testqq"/>
-
-        <sql:query var="rs" dataSource="${db}">select * from users</sql:query>
-
-        <core:forEach items="${rs.rows}" var="row">
-            <core:out value="${row.id}"></core:out> : <core:out value="${row.login}"></core:out><br>
-        </core:forEach>
-
-        <core:set var="str" value="Pepepaga acdamck afvcak java" />
-            Length : ${fn:length(str)}
-
-        <core:forEach items="${fn:split(str,' ')}" var="s">
-            <br>${s}
-        </core:forEach>
-
-        index : ${fn:indexOf(str,"ga")} <br>
-
-        <core:if test="${fn:contains(str,'java')}">
-            java found
-        </core:if>
-
-
-        <c:out value="<a href='tests?page=${lastPage}'>Previous</a>"></c:out>
-        <a href="/csv/downloadIntentCSV?id=${lastPage}">Previous</a>
-        <hr>
-                <c:out value="${param.page}"></c:out>
-        <hr>
-    </body>
-</html>
-
-
-
-
-    <%
-        List<Test> list = (List) request.getAttribute("tests");
-        if (list == null) {
-            System.out.println("list is null");
-        } else {
-            for (Test t : list) {
-    %>
-    <tr>
-        <td>
-            <%= t.getName() %>
-        </td>
-    </tr>
-    <% }} %>
-
-    reading request attributes
-    https://www.javatips.net/blog/reading-request-attributes-using-jstl
+ <%@ page pageEncoding="UTF-8" %>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+ <c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+ <fmt:setLocale value="${language}" />
+ <fmt:setBundle basename="com.example.i18n.text" />
+ <!DOCTYPE html>
+ <html lang="${language}">
+     <head>
+         <title>JSP/JSTL i18n demo</title>
+     </head>
+     <body>
+         <form>
+             <select id="language" name="language" onchange="submit()">
+                 <option value="en" ${language == 'en' ? 'selected' : ''}>English</option>
+                 <option value="nl" ${language == 'nl' ? 'selected' : ''}>Nederlands</option>
+                 <option value="es" ${language == 'es' ? 'selected' : ''}>Español</option>
+             </select>
+         </form>
+         <form method="post">
+             <label for="username"><fmt:message key="login.label.username" />:</label>
+             <input type="text" id="username" name="username">
+             <br>
+             <label for="password"><fmt:message key="login.label.password" />:</label>
+             <input type="password" id="password" name="password">
+             <br>
+             <fmt:message key="login.button.submit" var="buttonValue" />
+             <input type="submit" name="submit" value="${buttonValue}">
+         </form>
+         <p>${requestScope['javax.servlet.forward.query_string']}</p>
+         <hr>
+     </body>
+ </html>

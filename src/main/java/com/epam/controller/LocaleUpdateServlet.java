@@ -24,6 +24,7 @@ public class LocaleUpdateServlet extends HttpServlet {
         langCookie.setPath("/");
         resp.addCookie(langCookie);
         req.setAttribute("lang",req.getParameter("lang"));
-        resp.sendRedirect("/epam/login");
+//        resp.sendRedirect("/epam/login");
+        resp.sendRedirect(req.getParameter("prevUrl"));
     }
 }

@@ -18,7 +18,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="tests?page=1">///My tests</a>
+                        <a class="nav-link" aria-current="page" href="/epam/passed/tests?page=1">///My tests</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Account">///Account-Личный кабинет</a>
@@ -32,9 +32,8 @@
                         </li>
                     </c:if>
                 </ul>
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0 align-bottom">
-                    <li class="nav-item align-bottom">
-                        <div class="align-bottom">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
                         <form class="align-bottom" action="/epam/locale/edit" method="POST">
                              <input type="hidden" name="prevUrl" value="${requestPath}${empty queryString ? '' : '?'}${queryString}">
                              <select class="form-select bg-light text-dark text-center" aria-label="Default select example" id="lang" name="lang" onchange="submit()">
@@ -42,7 +41,6 @@
                                  <option class="align-middle" value="ru" ${cookie.lang.value == 'ru' ? 'selected' : ''}><fmt:message key="lang.ru" /></option>
                              </select>
                         </form>
-                        </div>
                     </li>
                    <!-- <li class="nav-item"><a class="nav-link btn-light text-dark active mr-2" aria-current="page">//Logged in as: <c:out value="${sessionScope.username}" /> </a>                   </li> -->
                     <li class="nav-item">

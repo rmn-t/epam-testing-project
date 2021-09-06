@@ -32,12 +32,19 @@ public class LoginServlet extends HttpServlet {
         Cookie logStatus = new Cookie("loginStatus","incorrectCredentials");
         logStatus.setMaxAge(0);
         resp.addCookie(logStatus);
+        logger.info("doGet()");
+        if (req.getSession(false) != null) {
+//            req.getRequestDispatcher("logout").forward(req,resp);
+            req.getSession().invalidate();
+        }
         req.getRequestDispatcher("/views/users/login.jsp").forward(req,resp);
+
 //        resp.sendRedirect("views/users/login.jsp");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        logger.info("doPos()");
         String username = req.getParameter("username");
         User user = null;
         try {
@@ -71,7 +78,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("userStatus",user.getStatus());
             session.setAttribute("userRole",user.getRole());
             session.setAttribute("passedTestsSorting","date DESC");
-            resp.sendRedirect("tests?page=1&sort=name ASC");
+            resp.sendRedirect("tests?page=1&sort=name ASC&subject=0");
         }
     }
 }

@@ -75,12 +75,6 @@ public class UserDaoSql implements UserDao {
             prepStmt.setString(k++,DEFAULT_ROLE);
             prepStmt.setString(k++,DEFAULT_STATUS);
             id = prepStmt.executeUpdate();
-//            if (generatedKeys.next()) {
-//                id = generatedKeys.getInt("id");
-//            } else {
-//                logger.error("Creation of user failed.");
-//                throw new DBException("Creating user failed.",new Throwable());
-//            }
             logger.info("Inserted new user with username {}.",userName);
         } catch (SQLException e) {
             logger.error("Couldn't insert a new user with username: {}.",userName,e);
@@ -122,7 +116,7 @@ public class UserDaoSql implements UserDao {
             con = DBUtil.getConnection();
             orderBy = Arrays.asList(VALID_COLUMNS_FOR_ORDER_BY).contains(orderBy) ? orderBy : VALID_COLUMNS_FOR_ORDER_BY[1] + " ASC";
             prepStmt = con.prepareStatement("SELECT id,username,salt,role,status,password FROM user ORDER BY " + orderBy + " LIMIT ?, ?;");
-            logger.info("SELECT id,username,salt,role,status,password FROM user ORDER BY " + orderBy + " LIMIT ?, ?;");
+            logger.debug("SELECT id,username,salt,role,status,password FROM user ORDER BY " + orderBy + " LIMIT ?, ?;");
             int k = 1;
             prepStmt.setInt(k++,offset-1);
             prepStmt.setInt(k++,limit);
@@ -168,7 +162,6 @@ public class UserDaoSql implements UserDao {
     }
 
     public boolean validateCredentials(User userFromDb,String password,String userName) {
-        logger.info("password - {}",password);
         if (userFromDb == null || !userName.equals(userFromDb.getUsername())) {
             logger.info("Failed to validate credentials, either user name is incorrect or password is null.");
             return false;

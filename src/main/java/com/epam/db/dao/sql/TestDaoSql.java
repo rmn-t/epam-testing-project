@@ -96,21 +96,22 @@ public class TestDaoSql implements TestDao {
         }
     }
 
-    public List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy) throws DBException {
+    public List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy, int subjectId) throws DBException {
         List<Test> results = new ArrayList<>();
         Connection con = null;
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
+        String whereSubjectId = subjectId == 0 ? "" : " WHERE subject_id = " + subjectId;
         try {
             con = DBUtil.getConnection();
-            logger.info("____ {} ____",orderBy);
+            logger.info("Where subject id : {}.",whereSubjectId);
             prepStmt = con.prepareStatement("" +
                     "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum " +
                     "FROM test " +
                     "LEFT JOIN question ON test.id = question.test_id " +
                     "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
-                    "LEFT JOIN subject ON subject.id = test.subject_id " +
-                    "GROUP BY test.id ORDER BY " + orderBy + " LIMIT ?, ?;"
+                    "LEFT JOIN subject ON subject.id = test.subject_id " + whereSubjectId +
+                    " GROUP BY test.id ORDER BY " + orderBy + " LIMIT ?, ?;"
             );
             prepStmt.setInt(1, offset - 1);
             prepStmt.setInt(2, limit);
@@ -182,6 +183,28 @@ public class TestDaoSql implements TestDao {
             throw new DBException("Failed to get the total tests number.",e);
         } finally {
             DBUtil.closeAllInOrder(rs, stmt, con);
+        }
+        return res;
+    }
+
+    public int getTotalTestsNumForPagination(int subjectId) throws DBException {
+        int res;
+        String whereSubjectId = subjectId == 0 ? "" : " WHERE subject_id = " + subjectId;
+        Connection con = null;
+        PreparedStatement prepStmt = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtil.getConnection();
+            prepStmt = con.prepareStatement("SELECT COUNT(*) AS total FROM test " + whereSubjectId + ";");
+            rs = prepStmt.executeQuery();
+            rs.next();
+            res = rs.getInt("total");
+            logger.info("Total number of tests in test table is {}.",res);
+        } catch (SQLException e) {
+            logger.error("Failed to get the total tests number.",e);
+            throw new DBException("Failed to get the total tests number.",e);
+        } finally {
+            DBUtil.closeAllInOrder(rs, prepStmt, con);
         }
         return res;
     }

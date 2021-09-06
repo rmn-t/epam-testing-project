@@ -21,6 +21,12 @@ public class Consts {
         ID + " DESC", NAME + " DESC", SUBJECT  + " DESC", COMPLEXITY + " DESC", DURATION + " DESC", COUNT + " DESC"
     };
 
+    public static final Integer[] VALID_PER_PAGE_VALUES = { 10, 25 ,50 };
+
+    public static List<Integer> getValidPerPageValues() {
+        return Arrays.asList(VALID_PER_PAGE_VALUES);
+    }
+
     public static List<String> getVALID_COLUMNS_FOR_TEST_ORDER_BY() {
         return Arrays.asList(VALID_COLUMNS_FOR_ORDER_BY);
     }

@@ -37,7 +37,7 @@ public class LoginFilter implements Filter {
             resp.addCookie(langCookie);
         }
         logger.debug("logger, url : " + req.getServletPath() + "| query : " + req.getQueryString() + " | method : " + req.getMethod());
-        logger.info(req.getRequestURI());
+        logger.debug(req.getRequestURI());
         if (session != null && session.getAttribute("username") != null){
             try {
                 if (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("banned")) {
@@ -50,7 +50,7 @@ public class LoginFilter implements Filter {
                 logger.error("Login filter.",e);
             }
         } else if (req.getRequestURI().equals("/epam/login") || req.getRequestURI().equals("/epam/locale/edit") || req.getRequestURI().equals("/epam/" + Views.REGISTER_JSP) || req.getRequestURI().equals("/epam/register")) {
-            logger.info(req.getRequestURI());
+            logger.debug(req.getRequestURI());
             filterChain.doFilter(req, resp);
         } else {
             resp.sendRedirect("/epam/login");

@@ -1,8 +1,11 @@
 package com.epam.controller.test;
 
 import com.epam.db.DBException;
+import com.epam.db.dao.SubjectDao;
 import com.epam.db.dao.TestDao;
+import com.epam.db.dao.sql.SubjectDaoSql;
 import com.epam.db.dao.sql.TestDaoSql;
+import com.epam.db.model.Subject;
 import com.epam.db.model.Test;
 import com.epam.util.Consts;
 import com.epam.util.Views;
@@ -21,10 +24,12 @@ import java.util.List;
 public class TestsServlet extends HttpServlet {
     private Logger logger = LoggerFactory.getLogger(TestsServlet.class);
     private TestDao testDao;
+    private SubjectDao subjectDao;
 
     @Override
     public void init() throws ServletException {
         testDao = new TestDaoSql();
+        subjectDao = new SubjectDaoSql();
     }
 
     @Override
@@ -40,6 +45,17 @@ public class TestsServlet extends HttpServlet {
             pageId = Integer.parseInt(req.getParameter("page"));
         }
         int recordsPerPage = 10;
+        if (req.getParameter("perPage") != null) {
+            try {
+                int test = Integer.parseInt(req.getParameter("perPage"));
+                if (Consts.getValidPerPageValues().contains(Integer.parseInt(req.getParameter("perPage")))) {
+                    recordsPerPage = test;
+                }
+            } catch (NumberFormatException e) {
+                logger.info("Couldn't convert records page.");
+            }
+        }
+
         if (pageId > 1) {
             pageId = (pageId -1) * recordsPerPage + 1;
         }
@@ -50,10 +66,30 @@ public class TestsServlet extends HttpServlet {
             sorting = "name ASC";
         }
 
+        try {
+            List<Subject> subjects = subjectDao.getAllSubjects();
+            req.setAttribute("subjects",subjects);
+        } catch (DBException e) {
+            logger.error("Test servlet do get");
+        }
+
+        int subjectId = 0;
+        if (req.getParameter("subject") != null) {
+            try {
+                int test = Integer.parseInt(req.getParameter("subject"));
+                if (test >= 0 && test <= Integer.parseInt(req.getParameter("subjectNum"))) {
+                    subjectId = test;
+                }
+            } catch (NumberFormatException e) {
+                logger.info("Tried to supply not valid number format as subject id. ({})",req.getParameter("subject"));
+            }
+        }
+        logger.debug("Subject id : {}.",subjectId);
+
         List<Test> tests = null;
         try {
-            tests = testDao.getTestsLimitedSorted(pageId,recordsPerPage,sorting);
-            int totalTests = testDao.getTestsNumber();
+            tests = testDao.getTestsLimitedSorted(pageId,recordsPerPage,sorting,subjectId);
+            int totalTests = testDao.getTotalTestsNumForPagination(subjectId);
             int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
             req.setAttribute("tests",tests);
             req.setAttribute("lastPage",lastPage);

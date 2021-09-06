@@ -23,7 +23,7 @@ public class SubjectDaoSql implements SubjectDao {
         try {
             con = DBUtil.getConnection();
             stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT (id,name) FROM subject;");
+            rs = stmt.executeQuery("SELECT id,name FROM subject ORDER BY name ASC;");
             while (rs.next()) {
                 subjects.add(new Subject.Builder().setId(rs.getInt("id")).setName(rs.getString("name")).build());
             }

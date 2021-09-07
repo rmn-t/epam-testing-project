@@ -8,7 +8,6 @@ com\epam\db\dao\PassedTestsDao.class
 com\epam\db\DBUtil.class
 com\epam\controller\user\AdminFilter.class
 com\epam\db\dao\QuestionDao.class
-com\epam\controller\test\CreateTestServlet.class
 com\epam\db\dao\AnswerDao.class
 com\epam\controller\test\DeleteTestServlet.class
 com\epam\controller\user\LoginServlet.class

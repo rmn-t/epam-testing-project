@@ -1,10 +1,4 @@
-<%@ page
-    language ="java"
-    contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"
-    import="java.util.Arrays,java.util.List,com.epam.db.entities.Test"
-
-%>
+<%@ page language ="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
@@ -13,12 +7,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Add or Remove Input Fields Dynamically using jQuery - MyNotePaper</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<form action="/epam/edit/question?id=${param.id}" onsubmit="return validateForm()" method="POST">
-    <c:out value="${sessionScope.currentTestId}"></c:out>
+<form action="/epam/edit/question?id=${param.id}&testId=${param.testId}" onsubmit="return validateForm()" method="POST">
     <br>
     <div class="containerErr">
     <label for="questionText">Question: </label>

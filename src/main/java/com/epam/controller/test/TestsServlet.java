@@ -77,11 +77,13 @@ public class TestsServlet extends HttpServlet {
         if (req.getParameter("subject") != null) {
             try {
                 int test = Integer.parseInt(req.getParameter("subject"));
-                if (test >= 0 && test <= Integer.parseInt(req.getParameter("subjectNum"))) {
+                if (test >= 0 && test <= subjectDao.getRecordsNum()) {
                     subjectId = test;
                 }
             } catch (NumberFormatException e) {
-                logger.info("Tried to supply not valid number format as subject id. ({})",req.getParameter("subject"));
+                logger.info("Tried to supply not valid number format as subject id. ({})",req.getParameter("subject"),e);
+            } catch (DBException err) {
+                logger.info("Failed to obtain subjects number to validate entered subject id.",err);
             }
         }
         logger.debug("Subject id : {}.",subjectId);

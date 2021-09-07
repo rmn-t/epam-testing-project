@@ -66,7 +66,6 @@
                 </div>
                 <div class="col"></div>
             </div>
-            <input type="hidden" name="subjectNum" value="${subjects.size()}">
         </form>
         </div>
         <br>
@@ -93,7 +92,7 @@
                         <td class="align-middle">${element.name}</td>
                         <td class="text-center align-middle">///${element.subject}</td>
                         <td class="text-center align-middle">///${element.complexity}</td>
-                        <td class="text-center align-middle"><fmt:formatNumber value='${element.duration/60}' maxFractionDigits="0"/> ///min:${element.duration%60} ///sec</td>
+                        <td class="text-center align-middle"><fmt:formatNumber value='${element.duration/60-0.49}' maxFractionDigits="0"/> ///min:${element.duration%60} ///sec</td>
                         <td class="text-center align-middle">${element.questionsNum}</td>
                         <c:if test="${sessionScope.userRole == 'admin'}">
                             <td class="text-center align-middle"><a class="btn btn-warning" href="/epam/test?id=${element.id}">///Details</a></td>

@@ -19,6 +19,7 @@ com\epam\exceptions\DBException.class
 com\epam\db\model\PassedTest.class
 com\epam\db\dao\ComplexityDao.class
 com\epam\db\model\Subject.class
+com\epam\controller\test\AddTestServlet.class
 com\epam\util\MyTag.class
 com\epam\controller\user\UsersServlet.class
 com\epam\db\model\Answer.class
@@ -26,6 +27,7 @@ com\epam\controller\CookieUtil.class
 com\epam\util\Views.class
 com\epam\db\model\Test$Builder.class
 com\epam\controller\test\TakeTestServlet.class
+com\epam\controller\question\AddQuestionServlet.class
 com\epam\db\model\Question$Builder.class
 com\epam\db\dao\sql\AnswerDaoSql.class
 com\epam\controller\user\RegisterServlet.class

@@ -1,8 +1,8 @@
 package com.epam.controller.question;
 
-import com.epam.exceptions.DBException;
 import com.epam.db.dao.QuestionDao;
 import com.epam.db.dao.sql.QuestionDaoSql;
+import com.epam.exceptions.DBException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +11,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/delete/question"})
@@ -32,8 +31,7 @@ public class DeleteQuestionServlet extends HttpServlet {
         } catch (DBException e) {
             logger.error("Delete question servlet - post",e);
         }
-        HttpSession session = req.getSession(false);
-        int testId = Integer.parseInt("" + session.getAttribute("currentTestId"));
+        int testId = Integer.parseInt(req.getParameter("testId"));
         resp.sendRedirect("/epam/test?id=" + testId);
     }
 }

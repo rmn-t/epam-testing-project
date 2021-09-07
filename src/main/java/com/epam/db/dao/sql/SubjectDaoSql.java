@@ -36,4 +36,26 @@ public class SubjectDaoSql implements SubjectDao {
         }
         return subjects;
     }
+
+    @Override
+    public int getRecordsNum() throws DBException {
+        int res = 0;
+        Connection con = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtil.getConnection();
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM subject");
+            rs.next();
+            res = rs.getInt("total");
+            logger.info("Total number of records in subject table is {}.",res);
+        } catch (SQLException e) {
+            logger.error("Failed to get the total subjects number.",e);
+            throw new DBException("Failed to get the total subjects number.",e);
+        } finally {
+            DBUtil.closeAllInOrder(rs, stmt, con);
+        }
+        return res;
+    }
 }

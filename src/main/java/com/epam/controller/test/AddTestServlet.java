@@ -23,8 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/createTest")
-public class CreateTestServlet extends HttpServlet {
-    private final Logger logger = LoggerFactory.getLogger(CreateTestServlet.class);
+public class AddTestServlet extends HttpServlet {
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private TestDao testDao;
     private SubjectDao subjectDao;
     private ComplexityDao complexityDao;

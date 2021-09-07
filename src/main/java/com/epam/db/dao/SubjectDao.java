@@ -8,5 +8,7 @@ import java.util.List;
 public interface SubjectDao {
     List<Subject> getAllRecords() throws DBException;
 
+    int getRecordsNum() throws DBException;
+
 
 }

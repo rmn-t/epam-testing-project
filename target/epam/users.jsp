@@ -2,7 +2,6 @@
     language ="java"
     contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="java.util.Arrays,java.util.List,com.epam.db.entities.Test"
 
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

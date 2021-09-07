@@ -2,7 +2,6 @@
     language ="java"
     contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
-    import="java.util.Arrays,java.util.List,com.epam.db.entities.Test"
 
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -17,7 +16,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<form action="/epam/edit/question?id=${param.id}" onsubmit="return validateForm()" method="POST">
+<form action="/epam/edit/question?id=${param.id}&testId=${question.testId}" onsubmit="return validateForm()" method="POST">
     <c:out value="${sessionScope.currentTestId}"></c:out>
     <br>
     <div class="containerErr">

@@ -20,19 +20,26 @@ public class QuestionDaoSql implements QuestionDao {
         int res = -1;
         Connection con = null;
         PreparedStatement prepStmt = null;
+        ResultSet generatedKeys = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("INSERT INTO question(text,test_id) VALUES(?,?);");
+            prepStmt = con.prepareStatement("INSERT INTO question(text,test_id) VALUES(?,?);",Statement.RETURN_GENERATED_KEYS);
             int k = 1;
             prepStmt.setString(k++, text);
             prepStmt.setInt(k++, testId);
             prepStmt.executeUpdate();
+            generatedKeys = prepStmt.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                res = generatedKeys.getInt(1);
+            } else {
+                throw new DBException("Creating question failed, no ID obtained.",new Throwable());
+            }
             logger.info("Successfully added new question to test_id {}.", testId);
         } catch (SQLException e) {
             logger.error("Couldn't add question with text : {} , for test_id {}.", text, testId);
             throw new DBException("Couldn't add question", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt, con);
+            DBUtil.closeAllInOrder(generatedKeys,prepStmt, con);
         }
         return res;
     }

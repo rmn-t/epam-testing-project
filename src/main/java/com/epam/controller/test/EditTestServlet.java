@@ -8,7 +8,6 @@ import com.epam.db.dao.sql.SubjectDaoSql;
 import com.epam.db.dao.sql.TestDaoSql;
 import com.epam.db.model.Test;
 import com.epam.exceptions.DBException;
-import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,7 +42,8 @@ public class EditTestServlet extends HttpServlet {
             logger.error("Edit servlet get");
         }
         req.setAttribute("test",test);
-        req.getRequestDispatcher(Views.EDIT_TEST_JSP).forward(req,resp);
+//        req.getRequestDispatcher(Views.EDIT_TEST_JSP).forward(req,resp);
+        logger.info("doGet()");
     }
 
     @Override
@@ -52,7 +52,7 @@ public class EditTestServlet extends HttpServlet {
         String name = req.getParameter("name");
         int subjectId = Integer.parseInt(req.getParameter("subject"));
         int complexityId = Integer.parseInt(req.getParameter("complexity"));
-        int duration = Integer.parseInt(req.getParameter("duration"));
+        int duration = Integer.parseInt(req.getParameter("durationMin")) * 60 + Integer.parseInt(req.getParameter("durationSec"));
         try {
             testDao.updateTestById(testId,name,subjectId,complexityId,duration);
         } catch (DBException e) {

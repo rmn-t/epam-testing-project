@@ -1,12 +1,13 @@
 package com.epam.controller.question;
 
-import com.epam.exceptions.DBException;
 import com.epam.db.dao.AnswerDao;
 import com.epam.db.dao.QuestionDao;
-import com.epam.db.dao.sql.QuestionDaoSql;
 import com.epam.db.dao.sql.AnswerDaoSql;
+import com.epam.db.dao.sql.QuestionDaoSql;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
+import com.epam.exceptions.DBException;
+import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +16,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,18 +46,18 @@ public class EditQuestionServlet extends HttpServlet {
             req.setAttribute("question",q);
         }
         req.setAttribute("currentTestId",req.getParameter("currentTestId"));
-        req.getRequestDispatcher("/questionForm.jsp").forward(req,resp);
+        req.getRequestDispatcher("/"+Views.QUESTION_FORM_JSP).forward(req,resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("test edit servlet");
+        logger.info(req.getParameter("id"));
         String[] names = req.getParameterValues("name");
         String[] isCorrect = req.getParameterValues("isCorrect");
         String questionText = req.getParameter("questionText");
         List<Answer> answers = new ArrayList<>();
-        HttpSession session = req.getSession(false);
-        int testId = Integer.parseInt("" + session.getAttribute("currentTestId"));
+//        HttpSession session = req.getSession(false);
+        int testId = Integer.parseInt("" + req.getParameter("testId"));
         for (int i = 0; i < names.length; i++) {
             Answer a = new Answer();
             a.setText(names[i]);
@@ -66,6 +66,7 @@ public class EditQuestionServlet extends HttpServlet {
         }
         int questionId;
         if (req.getParameterMap().containsKey("id") && !"".equals(req.getParameter("id"))) {
+            logger.info(req.getParameter("id"));
             questionId = Integer.parseInt(req.getParameter("id"));
             try {
                 questionDao.updateQuestionAndItsAnswers(questionId, questionText, answers);
@@ -77,6 +78,7 @@ public class EditQuestionServlet extends HttpServlet {
         } else {
             try {
                 questionId = questionDao.insertQuestionByTestId(questionText,testId);
+                logger.info(String.valueOf(questionId));
                 if (questionId != -1) {
                     answerDao.insertAnswersByQuestionId(questionId,answers);
                 }

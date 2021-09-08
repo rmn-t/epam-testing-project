@@ -96,13 +96,13 @@
         <div class="container text-center mt-2">
             <div class="row">
                 <form action="/epam/delete/test?id=${test.id}" method="POST">
-                    <input class="btn btn-danger justify-content-center text-center" type="submit" value="Delete test">
+                    <input class="btn btn-danger justify-content-center text-center" type="submit" value="///Delete test">
                 </form>
             </div>
         </div>
 
             <p class="fs-2 text-center mt-3 align-middle align-items-center">
-                Number of questions: <c:out value="${test.questionsNum}"></c:out>
+                ///Number of questions: <c:out value="${test.questionsNum}"></c:out>
                 <a class="btn btn-warning justify-content-center text-center" role="button" href="/epam/add/question?testId=${test.id}">///Add question</a>
             </p>
             <hr>
@@ -114,11 +114,11 @@
                     <div class="col-sm-10">
                         <div class="card text-dark bg-light mb-3 text-left">
                             <div class="card-header">
-                                Question: ${question.text}
+                                ${question.text}
                                 <form style="display: inline;" class="float-end align-self-end" action="/epam/delete/question?id=${question.id}&testId=${param.id}" method="POST">
                                     <input class="btn btn-danger" type="submit" value="Delete">
                                 </form>
-                                <a class="btn btn-warning justify-content-center text-center float-end align-self-end" role="button" href="/epam/edit/question?id=${question.id}">Edit</a>
+                                <a class="btn btn-warning justify-content-center text-center float-end align-self-end" role="button" href="/epam/edit/question?id=${question.id}&testId=${param.id}">Edit</a>
                             </div>
                             <div class="card-body">
                                 <c:forEach items="${question.answers}" var="answer">

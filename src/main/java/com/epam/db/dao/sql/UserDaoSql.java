@@ -21,6 +21,8 @@ public class UserDaoSql implements UserDao {
     private final String SALT = "salt";
     private final String ROLE = "role";
     private final String STATUS = "status";
+    private final String FIRST_NAME = "first_name";
+    private final String LAST_NAME = "last_name";
     private final String DEFAULT_STATUS = "active";
     private final String DEFAULT_ROLE = "user";
     private final String[] VALID_COLUMNS_FOR_ORDER_BY = {ID, USERNAME, PASSWORD, SALT, ROLE, STATUS};
@@ -35,7 +37,7 @@ public class UserDaoSql implements UserDao {
         ResultSet rs = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("SELECT id,username,role,password,salt,status FROM user where username = ?;");
+            prepStmt = con.prepareStatement("SELECT id,username,role,password,salt,status,first_name,last_name FROM user where username = ?;");
             prepStmt.setString(1,username);
             rs = prepStmt.executeQuery();
             rs.next();
@@ -46,6 +48,8 @@ public class UserDaoSql implements UserDao {
                     .setStatus(rs.getString(STATUS))
                     .setPassword(rs.getString(PASSWORD))
                     .setSalt(rs.getInt(SALT))
+                    .setFirstName(rs.getString(FIRST_NAME))
+                    .setLastName(rs.getString(LAST_NAME))
                     .build();
             logger.info("Successfully obtained user by username, id is {}.",user.getId());
         } catch (SQLException e) {
@@ -85,17 +89,19 @@ public class UserDaoSql implements UserDao {
         return id;
     }
 
-    public void updateUserById(int id, String password,String role, String status,int salt) throws DBException {
+    public void updateUserById(int id, String password,String role, String status,String firstName,String lastName,int salt) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("UPDATE user SET password = ?, role = ?, status = ?, salt = ? WHERE id = ?;");
+            prepStmt = con.prepareStatement("UPDATE user SET password = ?, role = ?, status = ?, salt = ?, first_name = ?, last_name = ? WHERE id = ?;");
             int k = 1;
             prepStmt.setString(k++,password);
             prepStmt.setString(k++,role);
             prepStmt.setString(k++,status);
             prepStmt.setInt(k++,salt);
+            prepStmt.setString(k++,firstName);
+            prepStmt.setString(k++,lastName);
             prepStmt.setInt(k++,id);
             prepStmt.executeUpdate();
             logger.info("Successfully updated user info by id {}.",id);

@@ -1,10 +1,10 @@
 com\epam\db\model\Complexity$Builder.class
 com\epam\db\dao\sql\ComplexityDaoSql.class
-com\epam\controller\user\EditUserServlet.class
 com\epam\db\dao\sql\QuestionDaoSql.class
 com\epam\util\Consts.class
 com\epam\controller\LocaleUpdateServlet.class
 com\epam\db\dao\sql\TestDaoSql.class
+com\epam\controller\user\EditUsersServlet.class
 com\epam\db\dao\SubjectDao.class
 com\epam\db\model\Question.class
 com\epam\db\dao\sql\SubjectDaoSql.class
@@ -30,6 +30,7 @@ com\epam\controller\test\TakeTestServlet.class
 com\epam\controller\question\AddQuestionServlet.class
 com\epam\db\model\Question$Builder.class
 com\epam\db\dao\sql\AnswerDaoSql.class
+com\epam\controller\user\AccountServlet.class
 com\epam\controller\user\RegisterServlet.class
 com\epam\db\model\User.class
 com\epam\db\model\Complexity.class

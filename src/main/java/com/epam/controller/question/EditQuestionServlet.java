@@ -45,7 +45,6 @@ public class EditQuestionServlet extends HttpServlet {
             }
             req.setAttribute("question",q);
         }
-        req.setAttribute("currentTestId",req.getParameter("currentTestId"));
         req.getRequestDispatcher("/"+Views.QUESTION_FORM_JSP).forward(req,resp);
     }
 

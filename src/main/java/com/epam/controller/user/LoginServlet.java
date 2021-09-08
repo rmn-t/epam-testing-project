@@ -78,6 +78,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("userStatus",user.getStatus());
             session.setAttribute("userRole",user.getRole());
             session.setAttribute("passedTestsSorting","date DESC");
+            session.setAttribute("currentUser",user);
             resp.sendRedirect("tests?page=1&sort=name ASC&subject=0&perPage=10");
         }
     }

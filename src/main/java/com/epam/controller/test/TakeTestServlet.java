@@ -9,6 +9,7 @@ import com.epam.db.dao.sql.QuestionDaoSql;
 import com.epam.db.dao.sql.TestDaoSql;
 import com.epam.db.model.Question;
 import com.epam.db.model.Test;
+import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,7 +45,7 @@ public class TakeTestServlet extends HttpServlet {
             questions = questionDao.getQuestionsAndAnswersByTestId(testId);
             test = testDao.getTestById(testId);
         } catch (DBException e) {
-            logger.error("Take test servlet get",e);
+            logger.error("Take test servlet get", e);
         }
         req.setAttribute("questions", questions);
         req.setAttribute("test", test);
@@ -56,7 +57,7 @@ public class TakeTestServlet extends HttpServlet {
         }
         long currentTime = System.currentTimeMillis() / 1000L;
         session.setAttribute("timeLeft" + testId, test.getDuration() - (currentTime - startTime));
-        req.getRequestDispatcher("/takeTest.jsp").forward(req, resp);
+        req.getRequestDispatcher("/" + Views.TAKE_TEST_JSP).forward(req, resp);
     }
 
     @Override
@@ -71,7 +72,7 @@ public class TakeTestServlet extends HttpServlet {
             testDuration = testDao.getTestById(testId).getDuration();
             questions = questionDao.getQuestionsAndAnswersByTestId(testId);
         } catch (DBException e) {
-            logger.error("Take test servlet post",e);
+            logger.error("Take test servlet post", e);
         }
         double questionsNum = questions.size();
         int correctAnswers = 0;
@@ -89,9 +90,9 @@ public class TakeTestServlet extends HttpServlet {
         session.removeAttribute("timeLeft" + testId);
         int userId = Integer.parseInt("" + session.getAttribute("userId"));
         try {
-            passedTestsDao.insertPassedTest(testId,userId, correctAnswers * 100 / questionsNum, timeSpent);
+            passedTestsDao.insertPassedTest(testId, userId, correctAnswers * 100 / questionsNum, timeSpent);
         } catch (DBException e) {
-            logger.error("Take test servlet post",e);
+            logger.error("Take test servlet post", e);
         }
         resp.sendRedirect("/epam/passed/tests?page=1");
     }

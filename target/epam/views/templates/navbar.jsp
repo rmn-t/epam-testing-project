@@ -21,7 +21,7 @@
                         <a class="nav-link" aria-current="page" href="/epam/passed/tests?page=1">///My tests</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Account">///Account-Личный кабинет</a>
+                        <a class="nav-link" href="/epam/account">///Account-Личный кабинет</a>
                     </li>
                     <c:if test="${sessionScope.userRole == 'admin'}">
                         <li class="nav-item">
@@ -47,7 +47,7 @@
                         <a class="nav-link active mr-2" aria-current="page">  </a>
                     </li>
                     <li class="nav-item ml-2">
-                        <form action="logout">
+                        <form action="/epam/logout">
                             <input type="submit" class="btn btn-light" value="///Logout">
                         </form>
                     </li>

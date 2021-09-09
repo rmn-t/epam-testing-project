@@ -1,5 +1,8 @@
 package com.epam.db;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -8,13 +11,14 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class DBUtil {
+    private static final Logger logger = LoggerFactory.getLogger(DBUtil.class);
     private static DataSource dataSource;
 
     static {
         try {
             initDataSource();
         } catch (NamingException e) {
-            e.printStackTrace();
+            logger.error("Couldn't create connection to the DB.",e);
         }
     }
 

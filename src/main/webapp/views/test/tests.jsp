@@ -25,58 +25,54 @@
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
         <p class="fs-1 text-center mt-3">///Currently available tests<p>
+
         <div class="container-fluid">
-        <form action="/epam/tests" method="GET">
-            <div class="row">
-                <input type="hidden" name="page" value="1">
-                <div class="col"></div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="form-floating">
-                         <select size="1" class="form-select bg-light text-dark text-center" aria-label="sort" id="sort" name="sort" onchange="submit()">
-                            <option class="align-middle" value="name ASC" ${param.sort == 'name ASC' ? 'selected' : ''}>///Name A-Z</option>
-                            <option class="align-middle" value="name DESC" ${param.sort == 'name DESC' ? 'selected' : ''}>///Name Z-A</option>
-                            <option class="align-middle" value="scale ASC" ${param.sort == 'scale ASC' ? 'selected' : ''}>///Easy to hard</option>
-                            <option class="align-middle" value="scale DESC" ${param.sort == 'scale DESC' ? 'selected' : ''}>///Hard to easy</option>
-                            <option class="align-middle" value="questionsNum ASC" ${param.sort == 'questionsNum ASC' ? 'selected' : ''}>///Questions number A-Z</option>
-                            <option class="align-middle" value="questionsNum DESC" ${param.sort == 'questionsNum DESC' ? 'selected' : ''}>///Questions number Z-A</option>
-                         </select>
-                         <label class="text-center text-muted" for="sort">///Sorting:</label>
+            <form action="/epam/tests" method="GET">
+                <div class="row">
+                    <input type="hidden" name="page" value="1">
+                    <div class="col"></div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="form-floating">
+                             <select size="1" class="form-select bg-light text-dark text-center" aria-label="sort" id="sort" name="sort" onchange="submit()">
+                                <option class="align-middle" value="name ASC" ${param.sort == 'name ASC' ? 'selected' : ''}>///Name A-Z</option>
+                                <option class="align-middle" value="name DESC" ${param.sort == 'name DESC' ? 'selected' : ''}>///Name Z-A</option>
+                                <option class="align-middle" value="scale ASC" ${param.sort == 'scale ASC' ? 'selected' : ''}>///Easy to hard</option>
+                                <option class="align-middle" value="scale DESC" ${param.sort == 'scale DESC' ? 'selected' : ''}>///Hard to easy</option>
+                                <option class="align-middle" value="questionsNum ASC" ${param.sort == 'questionsNum ASC' ? 'selected' : ''}>///Questions number A-Z</option>
+                                <option class="align-middle" value="questionsNum DESC" ${param.sort == 'questionsNum DESC' ? 'selected' : ''}>///Questions number Z-A</option>
+                             </select>
+                             <label class="text-center text-muted" for="sort">///Sorting:</label>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="form-floating">
-                        <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="subject" name="subject" onchange="submit()">
-                            <option class="align-middle" value="0" ${param.subject == 0 ? 'selected' : ''}>///All subjects</option>
-                            <c:forEach items="${requestScope['subjects']}" var="element">
-                                <option class="align-middle" value="${element.id}" ${param.subject == element.id ? 'selected' : ''}>///${element.name}</option>
-                            </c:forEach>
-                         </select>
-                         <label class="text-center text-muted" for="subject">///Subject:</label>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="form-floating">
+                            <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="subject" name="subject" onchange="submit()">
+                                <option class="align-middle" value="0" ${param.subject == 0 ? 'selected' : ''}>///All subjects</option>
+                                <c:forEach items="${requestScope['subjects']}" var="element">
+                                    <option class="align-middle" value="${element.id}" ${param.subject == element.id ? 'selected' : ''}>///${element.name}</option>
+                                </c:forEach>
+                             </select>
+                             <label class="text-center text-muted" for="subject">///Subject:</label>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-lg-2">
-                    <div class="form-floating">
-                        <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="perPage" name="perPage" onchange="submit()">
-                            <option class="align-middle" value="10" ${param.perPage == 10 ? 'selected' : ''}>10</option>
-                            <option class="align-middle" value="25" ${param.perPage == 25 ? 'selected' : ''}>25</option>
-                            <option class="align-middle" value="50" ${param.perPage == 50 ? 'selected' : ''}>50</option>
-                        </select>
-                        <label class="text-center text-muted" for="subject">///Records per page:</label>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="form-floating">
+                            <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="perPage" name="perPage" onchange="submit()">
+                                <option class="align-middle" value="10" ${param.perPage == 10 ? 'selected' : ''}>10</option>
+                                <option class="align-middle" value="25" ${param.perPage == 25 ? 'selected' : ''}>25</option>
+                                <option class="align-middle" value="50" ${param.perPage == 50 ? 'selected' : ''}>50</option>
+                            </select>
+                            <label class="text-center text-muted" for="subject">///Records per page:</label>
+                        </div>
                     </div>
+                    <div class="col"></div>
                 </div>
-                <div class="col"></div>
-            </div>
-        </form>
+            </form>
         </div>
         <br>
-
-        <c:if test="${sessionScope.userRole == 'admin'}">
-
-        </c:if>
-
         <table class="table table-light border">
             <thead class="table-dark">
-                <th>///name</th>
+                <th>///Test name</th>
                 <th class="text-center">///subject</th>
                 <th class="text-center">///complexity</th>
                 <th class="text-center">///duration</th>
@@ -99,7 +95,7 @@
                         </c:if>
                         <td class="text-center">
                             <div>
-                            <a class="btn btn-success" href="/epam/take/test?id=${element.id}">///Start</a>
+                            <a class="btn btn-success" href="/epam/take/test?id=${element.id}" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">///Start</a>
                             </div>
                         </td>
                     </tr>
@@ -138,6 +134,14 @@
                 </li>
             </ul>
         </nav>
+
+        <script>
+            let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+              return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+
+        </script>
 
         </fmt:bundle>
     </body>

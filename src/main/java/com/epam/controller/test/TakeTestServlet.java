@@ -90,7 +90,7 @@ public class TakeTestServlet extends HttpServlet {
         session.removeAttribute("timeLeft" + testId);
         int userId = Integer.parseInt("" + session.getAttribute("userId"));
         try {
-            passedTestsDao.insertPassedTest(testId, userId, correctAnswers * 100 / questionsNum, timeSpent);
+            passedTestsDao.insertPassedTest(testId, userId,(int) questionsNum,correctAnswers, correctAnswers * 100 / questionsNum, timeSpent);
         } catch (DBException e) {
             logger.error("Take test servlet post", e);
         }

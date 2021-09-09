@@ -1,6 +1,6 @@
-package com.epam.controller.user;
+package com.epam.controller.auth;
 
-import com.epam.controller.CookieUtil;
+import com.epam.util.CookieUtil;
 import com.epam.exceptions.DBException;
 import com.epam.db.dao.UserDao;
 import com.epam.db.dao.sql.UserDaoSql;
@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
 //            resp.sendRedirect("login");
             resp.addCookie(logStatus);
             resp.sendRedirect(Views.LOGIN_JSP);
-        } else if ("banned".equals(user.getStatus())) {
+        } else if ("Banned".equals(user.getStatus())) {
             req.setAttribute("loginStatus","userWasBanned");
 //            resp.sendRedirect("login");
 //            req.getRequestDispatcher(Views.LOGIN_JSP).include(req,resp);

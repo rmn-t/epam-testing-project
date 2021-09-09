@@ -56,10 +56,12 @@ public class AddTestServlet extends HttpServlet {
         String name = req.getParameter("testName");
         int subjectId = Integer.parseInt(req.getParameter("subject"));
         int complexityId = Integer.parseInt(req.getParameter("complexity"));
-        int duration = Integer.parseInt(req.getParameter("duration"));
+        int durationMin = Integer.parseInt(req.getParameter("durationMin")) * 60;
+        int durationSec = Integer.parseInt(req.getParameter("durationSec"));
+        int totalDuration = durationMin + durationSec == 0 ? 1 : durationMin + durationSec;
         int id = 0;
         try {
-            id = testDao.insertNewTest(name,subjectId,complexityId,duration);
+            id = testDao.insertNewTest(name,subjectId,complexityId,totalDuration);
         } catch (DBException e) {
             logger.error("Create test servlet post",e);
         }

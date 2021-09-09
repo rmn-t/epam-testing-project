@@ -51,7 +51,7 @@ public class AccountServlet extends HttpServlet {
         }
         logger.info("New password '{}'",newPass);
         try {
-            userDao.updateUserById(user.getId(), newPass, user.getRole(), user.getStatus(), firstName, lastName, salt);
+            userDao.updateUserById(user.getId(), newPass, user.getRoleId(), user.getStatusId(), firstName, lastName, salt);
             session.setAttribute("currentUser",userDao.getUserDetailsByUserName(user.getUsername()));
         } catch (DBException e) {
             logger.error("Couldn't update the user information.", e);

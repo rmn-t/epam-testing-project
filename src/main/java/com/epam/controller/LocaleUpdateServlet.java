@@ -28,8 +28,11 @@ public class LocaleUpdateServlet extends HttpServlet {
         langCookie.setMaxAge(60*60*24);
         langCookie.setPath("/");
         resp.addCookie(langCookie);
-        req.setAttribute("lang",req.getParameter("lang"));
+        /**
+         * req.setAttribute("lang",req.getParameter("lang"));
+         */
 //        resp.sendRedirect("/epam/login");
         resp.sendRedirect(req.getParameter("prevUrl"));
+        logger.info(req.getParameter("prevUrl"));
     }
 }

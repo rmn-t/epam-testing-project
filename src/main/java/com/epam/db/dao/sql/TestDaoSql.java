@@ -104,7 +104,6 @@ public class TestDaoSql implements TestDao {
         String whereSubjectId = subjectId == 0 ? "" : " WHERE subject_id = " + subjectId;
         try {
             con = DBUtil.getConnection();
-            logger.info("Where subject id : {}.",whereSubjectId);
             prepStmt = con.prepareStatement("" +
                     "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum " +
                     "FROM test " +
@@ -113,8 +112,9 @@ public class TestDaoSql implements TestDao {
                     "LEFT JOIN subject ON subject.id = test.subject_id " + whereSubjectId +
                     " GROUP BY test.id ORDER BY " + orderBy + " LIMIT ?, ?;"
             );
-            prepStmt.setInt(1, offset - 1);
-            prepStmt.setInt(2, limit);
+            int k = 1;
+            prepStmt.setInt(k++, offset - 1);
+            prepStmt.setInt(k++, limit);
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 results.add(new Test.Builder()
@@ -126,7 +126,7 @@ public class TestDaoSql implements TestDao {
                         .setQuestionsNum(rs.getInt("questionsNum"))
                         .build());
             }
-            logger.info("Successfully obtained {} tests.",results.size());
+            logger.debug("Successfully obtained {} tests.",results.size());
         } catch (SQLException e) {
             logger.error("Failed to obtain tests (limited,sorted,ordered).",e);
             throw new DBException("Failed to obtain tests (limited,sorted,ordered).",e);
@@ -166,28 +166,7 @@ public class TestDaoSql implements TestDao {
         return res;
     }
 
-    public int getTestsNumber() throws DBException {
-        int res;
-        Connection con = null;
-        Statement stmt = null;
-        ResultSet rs = null;
-        try {
-            con = DBUtil.getConnection();
-            stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM test;");
-            rs.next();
-            res = rs.getInt("total");
-            logger.info("Total number of tests in test table is {}.",res);
-        } catch (SQLException e) {
-            logger.error("Failed to get the total tests number.",e);
-            throw new DBException("Failed to get the total tests number.",e);
-        } finally {
-            DBUtil.closeAllInOrder(rs, stmt, con);
-        }
-        return res;
-    }
-
-    public int getTotalTestsNumForPagination(int subjectId) throws DBException {
+    public int getRecordsNumBySubjectId(int subjectId) throws DBException {
         int res;
         String whereSubjectId = subjectId == 0 ? "" : " WHERE subject_id = " + subjectId;
         Connection con = null;

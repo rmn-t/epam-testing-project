@@ -16,15 +16,17 @@ public class PassedTestsDaoSql implements PassedTestsDao {
     private Logger logger = LoggerFactory.getLogger(PassedTestsDaoSql.class);
     private final String[] VALID_COLUMNS_FOR_ORDER_BY = {"user_id", "test_id", "grade", "time_spent", "date"};
 
-    public void insertPassedTest(int testId, int userId, double grade, int timeSpent) throws DBException {
+    public void insertPassedTest(int testId, int userId, int questionNum, int correctAnswers, double grade, int timeSpent) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("INSERT INTO passed_tests(user_id,test_id,grade,time_spent) VALUES(?,?,?,?);");
+            prepStmt = con.prepareStatement("INSERT INTO passed_tests(user_id,test_id,question_num,correct_answers,grade,time_spent) VALUES(?,?,?,?,?,?);");
             int k = 1;
             prepStmt.setInt(k++, userId);
             prepStmt.setInt(k++, testId);
+            prepStmt.setInt(k++, questionNum);
+            prepStmt.setInt(k++, correctAnswers);
             prepStmt.setDouble(k++, grade);
             prepStmt.setInt(k++, timeSpent);
             prepStmt.executeUpdate();
@@ -45,7 +47,10 @@ public class PassedTestsDaoSql implements PassedTestsDao {
         try {
             con = DBUtil.getConnection();
             orderBy = Arrays.asList(VALID_COLUMNS_FOR_ORDER_BY).contains(orderBy) ? orderBy : VALID_COLUMNS_FOR_ORDER_BY[4];
-            prepStmt = con.prepareStatement("SELECT id,user_id,test_id,grade,time_spent,date FROM passed_tests WHERE user_id = ? ORDER BY " + orderBy + " LIMIT ?,?;");
+            prepStmt = con.prepareStatement("" +
+                    "SELECT passed_tests.id as id,user_id,test_id, test.name as testName,question_num,grade,correct_answers,time_spent,date FROM passed_tests " +
+                    "INNER JOIN test ON passed_tests.test_id = test.id " +
+                    "WHERE user_id = ? ORDER BY " + orderBy + " LIMIT ?,?;");
             int k = 1;
             prepStmt.setInt(k++, userId);
             prepStmt.setInt(k++, offset - 1);
@@ -56,9 +61,13 @@ public class PassedTestsDaoSql implements PassedTestsDao {
                         .setId(rs.getInt("id"))
                         .setUserId(rs.getInt("user_id"))
                         .setTestId(rs.getInt("test_id"))
+                        .setTestName(rs.getString("testName"))
+                        .setQuestionNum(rs.getInt("question_num"))
+                        .setCorrectAnswers(rs.getInt("correct_answers"))
                         .setGrade(rs.getDouble("grade"))
                         .setTimeSpent(rs.getInt("time_spent"))
-                        .setDate(rs.getString("date")).build());
+                        .setDate(rs.getString("date"))
+                        .build());
             }
             logger.info("Successfully obtained passed tests. Query : SELECT id,user_id,test_id,grade,time_spent,date FROM passed_tests WHERE user_id = {} ORDER BY {} LIMIT {},{};",userId,orderBy,offset-1,limit);
         } catch (SQLException e) {

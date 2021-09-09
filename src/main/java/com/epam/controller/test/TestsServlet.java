@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/tests","/en/tests"})
@@ -40,10 +41,6 @@ public class TestsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int pageId = 1;
-        if (req.getParameter("page") != null) {
-            pageId = Integer.parseInt(req.getParameter("page"));
-        }
         int recordsPerPage = 10;
         if (req.getParameter("perPage") != null) {
             try {
@@ -56,18 +53,22 @@ public class TestsServlet extends HttpServlet {
             }
         }
 
+        int pageId = 1;
+        if (req.getParameter("page") != null) {
+            pageId = Integer.parseInt(req.getParameter("page"));
+        }
         if (pageId > 1) {
             pageId = (pageId -1) * recordsPerPage + 1;
         }
 
         String sorting = req.getParameter("sort");
-        logger.info("____ {} ____",sorting);
         if (sorting == null || !Consts.getVALID_COLUMNS_FOR_TEST_ORDER_BY().contains(sorting)) {
-            sorting = "name ASC";
+            sorting = Consts.TESTS_DEFAULT_SORT;
         }
 
+        List<Subject> subjects = new ArrayList<>();
         try {
-            List<Subject> subjects = subjectDao.getAllRecords();
+            subjects = subjectDao.getAllRecords();
             req.setAttribute("subjects",subjects);
         } catch (DBException e) {
             logger.error("Test servlet do get");
@@ -77,21 +78,17 @@ public class TestsServlet extends HttpServlet {
         if (req.getParameter("subject") != null) {
             try {
                 int test = Integer.parseInt(req.getParameter("subject"));
-                if (test >= 0 && test <= subjectDao.getRecordsNum()) {
+                if (test >= 0 && test <= subjects.size()) {
                     subjectId = test;
                 }
             } catch (NumberFormatException e) {
                 logger.info("Tried to supply not valid number format as subject id. ({})",req.getParameter("subject"),e);
-            } catch (DBException err) {
-                logger.info("Failed to obtain subjects number to validate entered subject id.",err);
             }
         }
-        logger.debug("Subject id : {}.",subjectId);
 
-        List<Test> tests = null;
         try {
-            tests = testDao.getTestsLimitedSorted(pageId,recordsPerPage,sorting,subjectId);
-            int totalTests = testDao.getTotalTestsNumForPagination(subjectId);
+            List<Test> tests = testDao.getTestsLimitedSorted(pageId,recordsPerPage,sorting,subjectId);
+            int totalTests = testDao.getRecordsNumBySubjectId(subjectId);
             int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
             req.setAttribute("tests",tests);
             req.setAttribute("lastPage",lastPage);

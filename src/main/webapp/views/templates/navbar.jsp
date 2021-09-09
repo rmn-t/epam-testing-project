@@ -11,7 +11,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="tests?page=1">///Home+Главная</a>
+            <a class="navbar-brand" href="/epam/tests?page=1">///Home+Главная</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,7 +28,7 @@
                             <a class="nav-link" aria-current="page" href="/epam/createTest">///Add test</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/epam/users?page=1">///Users</a>
+                            <a class="nav-link" aria-current="page" href="/epam/users?page=1&sort=id ASC&statusId=0&perPage=10">///Users</a>
                         </li>
                     </c:if>
                 </ul>
@@ -36,7 +36,7 @@
                     <li class="nav-item">
                         <form class="align-bottom" action="/epam/locale/edit" method="POST">
                              <input type="hidden" name="prevUrl" value="${requestPath}${empty queryString ? '' : '?'}${queryString}">
-                             <select class="form-select bg-light text-dark text-center" aria-label="Default select example" id="lang" name="lang" onchange="submit()">
+                             <select class="form-select text-dark text-center" aria-label="Default select example" id="lang" name="lang" onchange="submit()">
                                  <option class="align-middle" value="en" ${cookie.lang.value == 'en' ? 'selected' : ''}><fmt:message key="lang.en" /></option>
                                  <option class="align-middle" value="ru" ${cookie.lang.value == 'ru' ? 'selected' : ''}><fmt:message key="lang.ru" /></option>
                              </select>

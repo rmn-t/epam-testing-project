@@ -1,4 +1,4 @@
-package com.epam.controller.user;
+package com.epam.controller.auth;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

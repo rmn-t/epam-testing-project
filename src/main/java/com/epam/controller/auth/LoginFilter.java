@@ -1,4 +1,4 @@
-package com.epam.controller.user;
+package com.epam.controller.auth;
 
 import com.epam.exceptions.DBException;
 import com.epam.db.dao.UserDao;
@@ -40,7 +40,7 @@ public class LoginFilter implements Filter {
         logger.debug(req.getRequestURI());
         if (session != null && session.getAttribute("username") != null){
             try {
-                if (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("banned")) {
+                if (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned")) {
                     req.setAttribute("loginStatus","User is banned (filter proc)");
                     req.getRequestDispatcher("/logout").forward(req,resp);
                 } else {

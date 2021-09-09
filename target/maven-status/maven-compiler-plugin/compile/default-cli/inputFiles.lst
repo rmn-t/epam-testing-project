@@ -5,9 +5,10 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\QuestionDao.j
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\User.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\question\DeleteQuestionServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\TestsServlet.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\EditUserServlet.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\CreateTestServlet.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\question\AddQuestionServlet.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\DeleteUserServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\exceptions\DBException.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\CookieUtil.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\DBUtil.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\DeleteTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\LogoutServlet.java
@@ -20,9 +21,11 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\UserDao.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\EditTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Question.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\RegisterServlet.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\EditUsersServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\sql\SubjectDaoSql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\TestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\Encrypt.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\AddTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\sql\AnswerDaoSql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\sql\ComplexityDaoSql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\LoginFilter.java
@@ -31,7 +34,6 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Subject.jav
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Complexity.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\Consts.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\sql\QuestionDaoSql.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\CookieUtil.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\SubjectDao.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\AnswerDao.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\sql\PassedTestsDaoSql.java
@@ -42,4 +44,5 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\ComplexityDao
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\sql\UserDaoSql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\PassedTest.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\LocaleUpdateServlet.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\AccountServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\TestDao.java

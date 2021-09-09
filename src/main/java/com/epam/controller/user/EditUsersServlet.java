@@ -2,6 +2,7 @@ package com.epam.controller.user;
 
 import com.epam.db.dao.UserDao;
 import com.epam.db.dao.sql.UserDaoSql;
+import com.epam.exceptions.DBException;
 import com.epam.util.Encrypt;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -26,21 +27,21 @@ public class EditUsersServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int userId = Integer.parseInt(req.getParameter("id"));
-        int page = Integer.parseInt(req.getParameter("page"));
-        String sort = req.getParameter("sort");
         int salt = Integer.parseInt(req.getParameter("salt"));
         String newPass = req.getParameter("newPass");
         String oldPass = req.getParameter("oldPass");
         if (newPass != null && !oldPass.equals(newPass) && !("".equals(newPass))) {
             newPass = Encrypt.getSecurePassword(newPass,salt);
         }
-        String role = req.getParameter("role");
-        String status = req.getParameter("status");
-//        try {
-//            userDao.updateUserById(userId, newPass, role, status,salt);
-//        } catch (DBException e) {
-//            logger.error("Edit user servlet post.",e);
-//        }
-        resp.sendRedirect("/epam/users?page=" + page + "&sort=" + sort);
+        int roleId = Integer.parseInt(req.getParameter("roleId"));
+        int statusId = Integer.parseInt(req.getParameter("statusId"));
+        String firstName = req.getParameter("firstName");
+        String lastName = req.getParameter("lastName");
+        try {
+            userDao.updateUserById(userId, newPass, roleId, statusId,firstName,lastName,salt);
+        } catch (DBException e) {
+            logger.error("Edit user servlet post.",e);
+        }
+        resp.sendRedirect(req.getParameter("prevUrl"));
     }
 }

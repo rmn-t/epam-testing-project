@@ -1,6 +1,6 @@
 package com.epam.controller.user;
 
-import com.epam.controller.CookieUtil;
+import com.epam.util.CookieUtil;
 import com.epam.exceptions.DBException;
 import com.epam.db.dao.UserDao;
 import com.epam.db.dao.sql.UserDaoSql;

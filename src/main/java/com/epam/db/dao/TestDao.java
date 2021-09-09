@@ -17,8 +17,6 @@ public interface TestDao {
 
     int insertNewTest(String name, int subjectId, int complexityId, int durationSec) throws DBException;
 
-    int getTestsNumber() throws DBException;
-
-    int getTotalTestsNumForPagination(int subjectId) throws DBException;
+    int getRecordsNumBySubjectId(int subjectId) throws DBException;
 
 }

@@ -8,13 +8,15 @@ import java.util.List;
 public interface UserDao {
     User getUserDetailsByUserName(String username) throws DBException;
 
-    int addNewUser(String userName, String password, String firstName, String lastName) throws DBException;
+    int addNewUser(String userName,String password,String firstName,String lastName) throws DBException;
 
-    void updateUserById(int id, String password, String role, String status, String firstName, String lastName, int salt) throws DBException;
+    void updateUserById(int id, String password,int roleId, int statusId,String firstName,String lastName,int salt) throws DBException;
 
-    List<User> getAllUsersLimitedSorted(int offset, int limit, String orderBy) throws DBException;
+    void deleteUserById(int id) throws DBException;
 
-    int getNumOfUsers() throws DBException;
+    List<User> getRecordsLimitedSortedFiltered(int offset, int limit, String orderBy,int statusId) throws DBException;
+
+    int getRecordsNumByStatusId(int subjectId) throws DBException;
 
     boolean validateCredentials(User userFromDb, String password, String userName);
 }

@@ -4,6 +4,7 @@ import com.epam.db.dao.PassedTestsDao;
 import com.epam.db.dao.sql.PassedTestsDaoSql;
 import com.epam.db.model.PassedTest;
 import com.epam.exceptions.DBException;
+import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,21 +32,21 @@ public class PassedTestsServlet extends HttpServlet {
         int pageId = Integer.parseInt(req.getParameter("page"));
         int recordsPerPage = 1000000;
         if (pageId > 1) {
-            pageId = (pageId -1) * recordsPerPage + 1;
+            pageId = (pageId - 1) * recordsPerPage + 1;
         }
         HttpSession session = req.getSession(false);
         int userId = Integer.parseInt("" + session.getAttribute("userId"));
         List<PassedTest> passedTests;
         try {
-            passedTests = passedTestsDao.getPassedTestsByUserIdOrderedLimited(userId,pageId,recordsPerPage,session.getAttribute("passedTestsSorting").toString());
+            passedTests = passedTestsDao.getPassedTestsByUserIdOrderedLimited(userId, pageId, recordsPerPage, session.getAttribute("passedTestsSorting").toString());
             int totalTests = passedTestsDao.getPassedTestsNumberByUserId(userId);
             int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
-            req.setAttribute("passedTests",passedTests);
-            req.setAttribute("lastPage",lastPage);
+            req.setAttribute("passedTests", passedTests);
+            req.setAttribute("lastPage", lastPage);
         } catch (DBException e) {
-            logger.error("Passed tests servlet get",e);
+            logger.error("Passed tests servlet get", e);
         }
-        req.getRequestDispatcher("/passedTests.jsp").forward(req,resp);
+        req.getRequestDispatcher("/" + Views.PASSED_TESTS_JSP).forward(req, resp);
     }
 
     @Override

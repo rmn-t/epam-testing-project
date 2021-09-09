@@ -5,6 +5,9 @@
 <fmt:setLocale value="${cookie.lang.value}"/>
 <fmt:bundle basename="messages">
 
+<c:set var="requestPath" value="${requestScope['javax.servlet.forward.request_uri']}"/>
+<c:set var="queryString" value="${requestScope['javax.servlet.forward.query_string']}"/>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +17,6 @@
     <title><fmt:message key="login.sign-in" /></title>
 </head>
     <body>
-
         <div style="margin-top: 5%;"class="container">
             <div class="row align-items-center">
                 <div class="col"></div>
@@ -59,9 +61,10 @@
                 <div class="col"></div>
                 <div class="col-lg-2 col-md-6 col-sm-8">
                     <form action="/epam/locale/edit" method="POST">
+                         <input type="hidden" name="prevUrl" value="${requestPath}${empty queryString ? '' : '?'}${queryString}">
                          <select class="form-select text-center" aria-label="Default select example" id="lang" name="lang" onchange="submit()">
-                             <option value="en" ${lang == 'en' ? 'selected' : ''}><fmt:message key="lang.en" /></option>
-                             <option value="ru" ${lang == 'ru' ? 'selected' : ''}><fmt:message key="lang.ru" /></option>
+                             <option value="en" ${cookie.lang.value == 'en' ? 'selected' : ''}><fmt:message key="lang.en" /></option>
+                             <option value="ru" ${cookie.lang.value == 'ru' ? 'selected' : ''}><fmt:message key="lang.ru" /></option>
                          </select>
                     </form>
                 </div>

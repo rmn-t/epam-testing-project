@@ -8,9 +8,11 @@ public class User {
     private String firstName;
     private String lastName;
     private String role;
+    private int roleId;
     private String status;
+    private int statusId;
 
-    public User(int id, String username, String password, int salt, String firstName, String lastName, String role, String status) {
+    public User(int id, String username, String password, int salt, String firstName, String lastName, String role, int roleId,String status, int statusId) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -18,7 +20,9 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.role = role;
+        this.roleId = roleId;
         this.status = status;
+        this.statusId = statusId;
     }
 
     public User() {
@@ -80,6 +84,22 @@ public class User {
         this.role = role;
     }
 
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
+    }
+
+    public int getStatusId() {
+        return statusId;
+    }
+
+    public void setStatusId(int statusId) {
+        this.statusId = statusId;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -96,7 +116,9 @@ public class User {
         private String firstName;
         private String lastName;
         private String role;
+        private int roleId;
         private String status;
+        private int statusId;
 
         public Builder setId(int id) {
             this.id = id;
@@ -133,13 +155,23 @@ public class User {
             return this;
         }
 
+        public Builder setRoleId(int roleId) {
+            this.roleId = roleId;
+            return this;
+        }
+
         public Builder setStatus(String status) {
             this.status = status;
             return this;
         }
 
+        public Builder setStatusId(int statusId) {
+            this.statusId = statusId;
+            return this;
+        }
+
         public User build() {
-            return new User(this.id,this.username,this.password,this.salt,this.firstName,this.lastName,this.role,this.status);
+            return new User(this.id,this.username,this.password,this.salt,this.firstName,this.lastName,this.role,this.roleId,this.status,this.statusId);
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.epam.controller;
+package com.epam.util;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

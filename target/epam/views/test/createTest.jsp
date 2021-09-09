@@ -39,42 +39,55 @@
                                 </div>
                             </c:if>
                             <form action="/epam/createTest" method="POST">
-                            <div class="mb-2 text-center">
-                                <label for="testName" class="form-label">///Test name</label>
-                                <input type="text" class="form-control" name="testName" id="testName" placeholder="///Test name" required>
-                            </div>
-                            <div class="mb-2 text-center">
-                                <div class="form-floating">
-                                    <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="subject" name="subject" required>
-                                        <c:forEach items="${requestScope['subjects']}" var="element">
-                                            <option class="align-middle" value="${element.id}">///${element.name}</option>
-                                        </c:forEach>
-                                     </select>
-                                     <label class="text-center text-muted" for="subject">///Subject:</label>
-                                </div>
-                            </div>
-                            <div class="mb-2 text-center">
-                                <div class="form-floating">
-                                    <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="complexity" name="complexity" required>
-                                        <c:forEach items="${requestScope['complexities']}" var="element">
-                                            <option class="align-middle" value="${element.id}">///${element.name}</option>
-                                        </c:forEach>
-                                    </select>
-                                    <label class="text-center text-muted" for="complexity">///Subject:</label>
-                                </div>
-                            </div>
-                            <div class="mb-2 text-center">
-                                <label for="duration" class="form-label">///Test duration</label>
-                                <input type="number" class="form-control" name="duration" id="duration" placeholder="///Test duration" required>
-                            </div>
 
-                            <div class="mt-3 container text-center">
-                                <div class="row">
-                                    <div class="col"></div>
-                                    <div class="col-sm-5 mb-1"><button type="submit" class="btn btn-success btn-block">///Create test</button></div>
-                                    <div class="col"></div>
+                                <div class="mb-3 text-center">
+                                    <div class="form-floating text-center">
+                                        <input type="text" class="form-control" name="testName" id="testName" placeholder="///Test name" required>
+                                        <label for="testName" class="form-label text-center ">///Test name</label>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="mb-3 text-center">
+                                    <div class="form-floating">
+                                        <select size="1" class="form-select bg-light text-dark text-center" id="subject" name="subject" required>
+                                            <c:forEach items="${requestScope['subjects']}" var="element">
+                                                <option class="align-middle" value="${element.id}">///${element.name}</option>
+                                            </c:forEach>
+                                         </select>
+                                         <label class="text-center text-muted" for="subject">///Subject:</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3 text-center">
+                                    <div class="form-floating">
+                                        <select size="1" class="form-select bg-light text-dark text-center" id="complexity" name="complexity" required>
+                                            <c:forEach items="${requestScope['complexities']}" var="element">
+                                                <option class="align-middle" value="${element.id}">///${element.name}</option>
+                                            </c:forEach>
+                                        </select>
+                                        <label class="text-center text-muted" for="complexity">///Subject:</label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 text-center">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" name="durationMin" id="durationMin" min="0" step="1"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="///Test duration min" required>
+                                        <label for="durationMin" class="form-label">///Test duration min</label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 text-center">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" name="durationSec" id="durationSec" min="0" step="1"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' max="59" placeholder="///Test duration sec" required>
+                                        <label for="durationSec" class="form-label">///Test duration sec</label>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 container text-center">
+                                    <div class="row">
+                                        <div class="col"></div>
+                                        <div class="col-sm-5 mb-1"><button type="submit" class="btn btn-success btn-block">///Create test</button></div>
+                                        <div class="col"></div>
+                                    </div>
+                                </div>
 
                             </form>
                         </article>

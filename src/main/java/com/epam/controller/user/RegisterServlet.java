@@ -60,7 +60,6 @@ public class RegisterServlet extends HttpServlet {
             session.setAttribute("userStatus","active");
             session.setAttribute("userRole","user");
             session.setAttribute("testsSorting","name ASC");
-            session.setAttribute("passedTestsSorting","date DESC");
             logger.info("user created, redirecting to tests");
             resp.sendRedirect("tests?page=1");
         } catch (DBException e) {

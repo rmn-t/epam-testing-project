@@ -2,7 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="my" uri="/tld/MyTagDescriptor.tld"%>
+<%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +17,7 @@
     <body>
         <fmt:setLocale value="${cookie.lang.value}"/>
         <fmt:bundle basename="messages">
-        <%
-            response.setHeader("Cache-Control","no-cache, no-store, must-revalidate"); // HTTP 1.1
-            response.setHeader("Pragma","no-cache"); // HTTP 1.0
-            response.setHeader("Expires","0"); // if using a proxy server
-        %>
+        <my:preventBack />
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
@@ -70,7 +67,7 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-floating mb-2 text-center">
-                                        <input type="number" class="form-control bg-light text-center" name="durationMin" id="durationMin" placeholder="///Test duration min" min="0" step="1"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' value='<fmt:formatNumber value="${test.duration/60 - 0.49}" maxFractionDigits="0"/>' />
+                                        <input type="number" class="form-control bg-light text-center" name="durationMin" id="durationMin" placeholder="///Test duration min" min="0" step="1"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' value='<my:floor val="${test.duration/60}" />' maxFractionDigits="0"/>
                                         <label for="durationMin" class="form-label">///Test duration min</label>
                                     </div>
                                 </div>

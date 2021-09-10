@@ -26,45 +26,39 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        Cookie cookie = req.getCookies();]
-        String loginStatus = CookieUtil.getCookieValueByName(req.getCookies(),"loginStatus");
-        req.setAttribute("loginStatus",loginStatus);
-        Cookie logStatus = new Cookie("loginStatus","incorrectCredentials");
+        String loginStatus = CookieUtil.getCookieValueByName(req.getCookies(), "loginStatus");
+        req.setAttribute("loginStatus", loginStatus);
+        Cookie logStatus = new Cookie("loginStatus", "incorrectCredentials");
         logStatus.setMaxAge(0);
         resp.addCookie(logStatus);
-        logger.info("doGet()");
         if (req.getSession(false) != null) {
-//            req.getRequestDispatcher("logout").forward(req,resp);
             req.getSession().invalidate();
         }
-        req.getRequestDispatcher("/views/users/login.jsp").forward(req,resp);
-
-//        resp.sendRedirect("views/users/login.jsp");
+        req.getRequestDispatcher("/" + Views.LOGIN_JSP).forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("doPos()");
         String username = req.getParameter("username");
         User user = null;
         try {
             user = userDao.getUserDetailsByUserName(username);
         } catch (DBException e) {
-            logger.error("Login servlet post.",e);
+            logger.error("Login servlet post.", e);
         }
 
-        Cookie logStatus = new Cookie("loginStatus","incorrectCredentials");
+        Cookie logStatus = new Cookie("loginStatus", "incorrectCredentials");
         logStatus.setMaxAge(30);
         logStatus.setPath("login");
-        if (user == null || !userDao.validateCredentials(user,req.getParameter("password"),username)) {
-            req.setAttribute("loginStatus","incorrectCredentials");
-            req.getRequestDispatcher(Views.LOGIN_JSP).include(req,resp);
+        if (user == null || !userDao.validateCredentials(user, req.getParameter("password"), username)) {
+            req.setAttribute("loginStatus", "incorrectCredentials");
+            req.getRequestDispatcher(Views.LOGIN_JSP).include(req, resp);
 //            req.getRequestDispatcher("login").include(req,resp);
 //            resp.sendRedirect("login");
             resp.addCookie(logStatus);
             resp.sendRedirect(Views.LOGIN_JSP);
         } else if ("Banned".equals(user.getStatus())) {
-            req.setAttribute("loginStatus","userWasBanned");
+            req.setAttribute("loginStatus", "userWasBanned");
 //            resp.sendRedirect("login");
 //            req.getRequestDispatcher(Views.LOGIN_JSP).include(req,resp);
             logStatus.setValue("userWasBanned");
@@ -73,12 +67,11 @@ public class LoginServlet extends HttpServlet {
 //            req.getRequestDispatcher("login").include(req,resp);
         } else {
             HttpSession session = req.getSession();
-            session.setAttribute("username",user.getUsername());
-            session.setAttribute("userId",user.getId());
-            session.setAttribute("userStatus",user.getStatus());
-            session.setAttribute("userRole",user.getRole());
-            session.setAttribute("passedTestsSorting","date DESC");
-            session.setAttribute("currentUser",user);
+            session.setAttribute("username", user.getUsername());
+            session.setAttribute("userId", user.getId());
+            session.setAttribute("userStatus", user.getStatus());
+            session.setAttribute("userRole", user.getRole());
+            session.setAttribute("currentUser", user);
             resp.sendRedirect("tests?page=1&sort=name ASC&subject=0&perPage=10");
         }
     }

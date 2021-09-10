@@ -47,7 +47,7 @@ public class TestDaoSql implements TestDao {
                     .setDuration(rs.getInt(DURATION))
                     .setQuestionsNum(rs.getInt("questionsNum"))
                     .build();
-            logger.info("Requested test by id {}, result name : {}", testId, test.getName());
+            logger.debug("Requested test by id {}, result name : {}", testId, test.getName());
         } catch (SQLException e) {
             logger.error("Failed to get test by id {}.", testId, e);
             throw new DBException("Failed to get test by id.", e);
@@ -70,7 +70,7 @@ public class TestDaoSql implements TestDao {
             prepStmt.setInt(k++, duration);
             prepStmt.setInt(k++, id);
             prepStmt.executeUpdate();
-            logger.info("Successfully updated test by id {}.", id);
+            logger.debug("Successfully updated test by id {}.", id);
         } catch (SQLException e) {
             logger.error("Failed to update test by id {}.", id, e);
             throw new DBException("Failed to update test by id.", e);
@@ -87,7 +87,7 @@ public class TestDaoSql implements TestDao {
             prepStmt = con.prepareStatement("DELETE FROM test WHERE id = ?;");
             prepStmt.setInt(1, id);
             prepStmt.executeUpdate();
-            logger.info("Successfully deleted test by id {}.", id);
+            logger.debug("Successfully deleted test by id {}.", id);
         } catch (SQLException e) {
             logger.error("Failed to delete test by id {}.", id, e);
             throw new DBException("Failed to delete test by id.", e);
@@ -156,7 +156,7 @@ public class TestDaoSql implements TestDao {
             } else {
                 throw new DBException("Creating user failed, no ID obtained.",new Throwable());
             }
-            logger.info("Successfully created new test.");
+            logger.debug("Successfully created new test.");
         } catch (SQLException e) {
             logger.error("Failed to insert new test.");
             throw new DBException("Failed to insert new test.",e);
@@ -178,7 +178,7 @@ public class TestDaoSql implements TestDao {
             rs = prepStmt.executeQuery();
             rs.next();
             res = rs.getInt("total");
-            logger.info("Total number of tests in test table is {}.",res);
+            logger.debug("Total number of tests in test table is {}.",res);
         } catch (SQLException e) {
             logger.error("Failed to get the total tests number.",e);
             throw new DBException("Failed to get the total tests number.",e);

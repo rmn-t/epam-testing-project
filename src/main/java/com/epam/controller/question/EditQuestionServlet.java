@@ -50,7 +50,7 @@ public class EditQuestionServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info(req.getParameter("id"));
+        logger.debug(req.getParameter("id"));
         String[] names = req.getParameterValues("name");
         String[] isCorrect = req.getParameterValues("isCorrect");
         String questionText = req.getParameter("questionText");
@@ -65,7 +65,6 @@ public class EditQuestionServlet extends HttpServlet {
         }
         int questionId;
         if (req.getParameterMap().containsKey("id") && !"".equals(req.getParameter("id"))) {
-            logger.info(req.getParameter("id"));
             questionId = Integer.parseInt(req.getParameter("id"));
             try {
                 questionDao.updateQuestionAndItsAnswers(questionId, questionText, answers);

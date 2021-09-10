@@ -27,7 +27,7 @@ public class SubjectDaoSql implements SubjectDao {
             while (rs.next()) {
                 subjects.add(new Subject.Builder().setId(rs.getInt("id")).setName(rs.getString("name")).build());
             }
-            logger.info("Obtained {} subjects from database.",subjects.size());
+            logger.debug("Obtained {} subjects from database.",subjects.size());
         } catch (SQLException e) {
             logger.error("Couldn't obtain subjects from database.",e);
             throw new DBException("Couldn't obtain subjects from database.",e);
@@ -49,7 +49,7 @@ public class SubjectDaoSql implements SubjectDao {
             rs = stmt.executeQuery("SELECT COUNT(*) AS total FROM subject");
             rs.next();
             res = rs.getInt("total");
-            logger.info("Total number of records in subject table is {}.",res);
+            logger.debug("Total number of records in subject table is {}.",res);
         } catch (SQLException e) {
             logger.error("Failed to get the total subjects number.",e);
             throw new DBException("Failed to get the total subjects number.",e);

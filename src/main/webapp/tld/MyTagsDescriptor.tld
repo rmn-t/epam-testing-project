@@ -1,0 +1,28 @@
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>MyTag</short-name>
+
+    <tag>
+        <name>preventBack</name>
+        <tag-class>com.epam.tags.PreventGoingBack</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <name>getCurrUrl</name>
+        <tag-class>com.epam.tags.GetCurrentUrlTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+
+    <tag>
+        <name>floor</name>
+        <tag-class>com.epam.tags.FloorTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>val</name>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>

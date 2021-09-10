@@ -2,7 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="my" uri="/tld/MyTagDescriptor.tld"%>
+<%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,23 +17,56 @@
     <body>
         <fmt:setLocale value="${cookie.lang.value}"/>
         <fmt:bundle basename="messages">
-        <%
-            response.setHeader("Cache-Control","no-cache, no-store, must-revalidate"); // HTTP 1.1
-            response.setHeader("Pragma","no-cache"); // HTTP 1.0
-            response.setHeader("Expires","0"); // if using a proxy server
-        %>
+        <my:preventBack />
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
         <p class="fs-3 text-center mt-3">///Your finished tests<p>
+
+
+        <div class="container-fluid">
+            <form action="/epam/passed/tests" method="GET">
+                <div class="row">
+                    <input type="hidden" name="page" value="1">
+                    <div class="col"></div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="form-floating">
+                             <select size="1" class="form-select bg-light text-dark text-center" aria-label="sort" id="sort" name="sort" onchange="submit()">
+                                <option class="align-middle" value="testName ASC" ${param.sort == 'testName ASC' ? 'selected' : ''}>///Name A-Z</option>
+                                <option class="align-middle" value="testName DESC" ${param.sort == 'testName DESC' ? 'selected' : ''}>///Name Z-A</option>
+                                <option class="align-middle" value="question_num ASC" ${param.sort == 'question_num ASC' ? 'selected' : ''}>///Questions # A-Z</option>
+                                <option class="align-middle" value="question_num DESC" ${param.sort == 'question_num DESC' ? 'selected' : ''}>///Questions # Z-A</option>
+                                <option class="align-middle" value="grade ASC" ${param.sort == 'grade ASC' ? 'selected' : ''}>///Grades low to high</option>
+                                <option class="align-middle" value="grade DESC" ${param.sort == 'grade DESC' ? 'selected' : ''}>///Grades high to low</option>
+                                <option class="align-middle" value="date ASC" ${param.sort == 'date ASC' ? 'selected' : ''}>///New first</option>
+                                <option class="align-middle" value="date DESC" ${param.sort == 'date DESC' ? 'selected' : ''}>///Old first</option>
+                             </select>
+                             <label class="text-center text-muted" for="sort">///Sorting:</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-2">
+                        <div class="form-floating">
+                            <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="perPage" name="perPage" onchange="submit()">
+                                <option class="align-middle" value="10" ${param.perPage == 10 ? 'selected' : ''}>10</option>
+                                <option class="align-middle" value="25" ${param.perPage == 25 ? 'selected' : ''}>25</option>
+                                <option class="align-middle" value="50" ${param.perPage == 50 ? 'selected' : ''}>50</option>
+                            </select>
+                            <label class="text-center text-muted" for="subject">///Records per page:</label>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </form>
+        </div>
+        <hr>
 
         <table class="table table-light border border-2 align-middle">
             <thead class="table-dark">
                 <th class="text-center align-middle">///id</th>
                 <th class="text-center align-middle">///test name</th>
                 <th class="text-center align-middle">///time spent</th>
-                <th class="text-center align-middle">///number of questions</th>
-                <th class="text-center align-middle">///correctly answered</th>
+                <th class="text-center align-middle">///questions #</th>
+                <th class="text-center align-middle">///correct #</th>
                 <th class="text-center align-middle">///grade</th>
                 <th class="text-center align-middle">///date</th>
             </thead>
@@ -69,27 +103,36 @@
             </tbody>
         </table>
 
-
-
-        <br>
-        <br>
-        <c:out value="${testsSorting}"></c:out>
-        <br>
-        <c:if test="${param.page eq 1}">
-            <p>Previous</p>
-        </c:if>
-        <c:if test="${param.page gt 1}">
-            <a href="/epam/passed/tests?page=${param.page-1}">Previous</a>
-        </c:if>
-        <c:if test="${param.page eq lastPage}">
-            <p>Next</p>
-        </c:if>
-        <c:if test="${param.page lt lastPage}">
-            <a href="/epam/passed/tests?page=${param.page+1}">Next</a>
-        </c:if>
-
-        <br>
-        last page         <c:out value="${param.page}"></c:out>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link bg-success text-light" href="/epam/passed/tests?page=1&sort=${param.sort}&perPage=${param.perPage}" tabindex="-1" aria-disabled="true">///First</a>
+                </li>
+                <c:if test="${param.page eq 1}">
+                    <li class="page-item disabled">
+                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true">///Previous</a>
+                    </li>
+                </c:if>
+                <c:if test="${param.page gt 1}">
+                    <li class="page-item">
+                        <a class="page-link bg-dark text-light ml-2" href="/epam/passed/tests?page=${param.page-1}&sort=${param.sort}&perPage=${param.perPage}">///Previous</a>
+                    </li>
+                </c:if>
+                <c:if test="${param.page eq lastPage}">
+                    <li class="page-item disabled">
+                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true">///Next</a>
+                    </li>
+                </c:if>
+                <c:if test="${param.page lt lastPage}">
+                    <li class="page-item">
+                        <a class="page-link bg-dark text-light ml-2" href="/epam/passed/tests?page=${param.page+1}&sort=${param.sort}&perPage=${param.perPage}">///Next</a>
+                    </li>
+                </c:if>
+                <li class="page-item">
+                    <a class="page-link bg-success text-light" href="/epam/passed/tests?page=${lastPage}&sort=${param.sort}&perPage=${param.perPage}" tabindex="-1" aria-disabled="true">///Last</a>
+                </li>
+            </ul>
+        </nav>
 
         </fmt:bundle>
     </body>

@@ -2,23 +2,22 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
 
 
 <fmt:setLocale value="${cookie.lang.value}"/>
 <fmt:bundle basename="messages">
-<c:set var="requestPath" value="${requestScope['javax.servlet.forward.request_uri']}"/>
-<c:set var="queryString" value="${requestScope['javax.servlet.forward.query_string']}"/>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/epam/tests?page=1">///Home+Главная</a>
+            <a class="navbar-brand" href="/epam/tests?page=1&sort=name ASC&subject=0&perPage=10">///Home+Главная</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/epam/passed/tests?page=1">///My tests</a>
+                        <a class="nav-link" aria-current="page" href="/epam/passed/tests?page=1&sort=date DESC&perPage=10">///My tests</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/epam/account">///Account-Личный кабинет</a>
@@ -35,7 +34,7 @@
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <form class="align-bottom" action="/epam/locale/edit" method="POST">
-                             <input type="hidden" name="prevUrl" value="${requestPath}${empty queryString ? '' : '?'}${queryString}">
+                             <input type="hidden" name="prevUrl" value="<my:getCurrUrl />">
                              <select class="form-select text-dark text-center" aria-label="Default select example" id="lang" name="lang" onchange="submit()">
                                  <option class="align-middle" value="en" ${cookie.lang.value == 'en' ? 'selected' : ''}><fmt:message key="lang.en" /></option>
                                  <option class="align-middle" value="ru" ${cookie.lang.value == 'ru' ? 'selected' : ''}><fmt:message key="lang.ru" /></option>

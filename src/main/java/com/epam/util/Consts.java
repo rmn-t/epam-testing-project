@@ -40,6 +40,21 @@ public class Consts {
         return Arrays.asList(VALID_COLUMNS_FOR_USER_ORDER_BY);
     }
 
+    public static final String QUESTION_NUM = "question_num";
+    public static final String GRADE = "grade";
+    public static final String DATE = "date";
+    public static final String TEST_NAME = "testName";
+    public static final String PASSED_TESTS_DEFAULT_SORT = "testName ASC";
+
+    private static final String[] VALID_COLUMNS_FOR_PASSED_TESTS_ORDER_BY = {
+        QUESTION_NUM + " ASC", DATE + " ASC", GRADE + " ASC", TEST_NAME  + " ASC",
+        QUESTION_NUM + " DESC", DATE + " DESC", GRADE + " DESC", TEST_NAME  + " DESC",
+    };
+
+    public static List<String> getVALID_COLUMNS_FOR_PASSED_TESTS_ORDER_BY() {
+        return Arrays.asList(VALID_COLUMNS_FOR_PASSED_TESTS_ORDER_BY);
+    }
+
     private static final Integer[] VALID_PER_PAGE_VALUES = { 10, 25 ,50 };
 
     public static List<Integer> getValidPerPageValues() {

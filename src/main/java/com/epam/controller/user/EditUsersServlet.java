@@ -32,6 +32,8 @@ public class EditUsersServlet extends HttpServlet {
         String oldPass = req.getParameter("oldPass");
         if (newPass != null && !oldPass.equals(newPass) && !("".equals(newPass))) {
             newPass = Encrypt.getSecurePassword(newPass,salt);
+        } else {
+            newPass = oldPass;
         }
         int roleId = Integer.parseInt(req.getParameter("roleId"));
         int statusId = Integer.parseInt(req.getParameter("statusId"));

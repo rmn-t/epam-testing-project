@@ -2,7 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="my" uri="/tld/MyTagDescriptor.tld"%>
+<%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +17,7 @@
     <body>
         <fmt:setLocale value="${cookie.lang.value}"/>
         <fmt:bundle basename="messages">
-        <%
-            response.setHeader("Cache-Control","no-cache, no-store, must-revalidate"); // HTTP 1.1
-            response.setHeader("Pragma","no-cache"); // HTTP 1.0
-            response.setHeader("Expires","0"); // if using a proxy server
-        %>
+        <my:preventBack />
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
@@ -69,9 +66,10 @@
                 </div>
             </form>
         </div>
+
         <br>
         <table class="table table-light border">
-            <thead class="table-dark">
+            <thead class="table-primary">
                 <th>///Test name</th>
                 <th class="text-center">///subject</th>
                 <th class="text-center">///complexity</th>
@@ -80,7 +78,7 @@
                 <c:if test="${sessionScope.userRole == 'admin'}">
                     <th class="text-center">///details</th>
                 </c:if>
-                <th class="text-center">///Pass</th>
+                <th class="text-center">///Action</th>
             </thead>
             <tbody>
                 <c:forEach items="${requestScope['tests']}" var="element">
@@ -88,7 +86,7 @@
                         <td class="align-middle">${element.name}</td>
                         <td class="text-center align-middle">///${element.subject}</td>
                         <td class="text-center align-middle">///${element.complexity}</td>
-                        <td class="text-center align-middle"><fmt:formatNumber value='${element.duration/60-0.49}' maxFractionDigits="0"/> ///min:${element.duration%60} ///sec</td>
+                        <td class="text-center align-middle"><my:floor val='${element.duration/60}' /> ///min:${element.duration%60} ///sec</td>
                         <td class="text-center align-middle">${element.questionsNum}</td>
                         <c:if test="${sessionScope.userRole == 'admin'}">
                             <td class="text-center align-middle"><a class="btn btn-warning" href="/epam/test?id=${element.id}">///Details</a></td>

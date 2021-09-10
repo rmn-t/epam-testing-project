@@ -2,7 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="my" uri="/tld/MyTagDescriptor.tld"%>
+<%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,16 +22,9 @@
 </head>
     <body>
 
-        <c:set var="requestPath" value="${requestScope['javax.servlet.forward.request_uri']}"/>
-        <c:set var="queryString" value="${requestScope['javax.servlet.forward.query_string']}"/>
-
         <fmt:setLocale value="${cookie.lang.value}"/>
         <fmt:bundle basename="messages">
-        <%
-            response.setHeader("Cache-Control","no-cache, no-store, must-revalidate"); // HTTP 1.1
-            response.setHeader("Pragma","no-cache"); // HTTP 1.0
-            response.setHeader("Expires","0"); // if using a proxy server
-        %>
+        <my:preventBack />
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
@@ -136,12 +130,12 @@
                                 <input class="btn btn-success" type="submit" value="///Save">
                                 <input type="hidden" name="salt" value="${element.salt}"></td>
                                 <input type="hidden" name="oldPass" value="${element.password}">
-                                <input type="hidden" name="prevUrl" value="${requestPath}${empty queryString ? '' : '?'}${queryString}">
+                                <input type="hidden" name="prevUrl" value="<my:getCurrUrl />">
                             </form>
                             </td>
                             <td>
                                 <form method="POST" action="/epam/delete/user">
-                                    <input type="hidden" name="prevUrl" value="${requestPath}${empty queryString ? '' : '?'}${queryString}">
+                                    <input type="hidden" name="prevUrl" value="<my:getCurrUrl />">
                                     <input type="hidden" name="userId" value="${element.id}">
                                     <input class="btn btn-danger" type="submit" value="///Delete">
                                 </form>

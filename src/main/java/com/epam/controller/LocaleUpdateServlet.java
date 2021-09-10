@@ -33,6 +33,5 @@ public class LocaleUpdateServlet extends HttpServlet {
          */
 //        resp.sendRedirect("/epam/login");
         resp.sendRedirect(req.getParameter("prevUrl"));
-        logger.info(req.getParameter("prevUrl"));
     }
 }

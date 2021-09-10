@@ -1,11 +1,10 @@
 <%@ page language ="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
 
 <fmt:setLocale value="${cookie.lang.value}"/>
 <fmt:bundle basename="messages">
-<c:set var="requestPath" value="${requestScope['javax.servlet.forward.request_uri']}"/>
-<c:set var="queryString" value="${requestScope['javax.servlet.forward.query_string']}"/>
 
 <!DOCTYPE html>
 <html>
@@ -68,7 +67,7 @@
                 <div class="col"></div>
                 <div class="col-lg-2 col-md-6 col-sm-8">
                     <form action="/epam/locale/edit" method="POST">
-                         <input type="hidden" name="prevUrl" value="${requestPath}${empty queryString ? '' : '?'}${queryString}">
+                         <input type="hidden" name="prevUrl" value="<my:getCurrUrl />">
                          <select class="form-select text-center" aria-label="Default select example" id="lang" name="lang" onchange="submit()">
                              <option value="en" ${cookie.lang.value == 'en' ? 'selected' : ''}><fmt:message key="lang.en" /></option>
                              <option value="ru" ${cookie.lang.value == 'ru' ? 'selected' : ''}><fmt:message key="lang.ru" /></option>

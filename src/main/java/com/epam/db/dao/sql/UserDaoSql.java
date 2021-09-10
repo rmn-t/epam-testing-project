@@ -127,7 +127,7 @@ public class UserDaoSql implements UserDao {
             prepStmt = con.prepareStatement("DELETE FROM user WHERE id = ?;");
             prepStmt.setInt(1,id);
             prepStmt.executeUpdate();
-            logger.info("User by id {} was deleted.",id);
+            logger.debug("User by id {} was deleted.",id);
         } catch (SQLException e) {
             logger.error("Couldn't delete user by ID is {}.",id,e);
             throw new DBException("Couldn't delete user by id.",e);
@@ -189,7 +189,7 @@ public class UserDaoSql implements UserDao {
             rs = prepStmt.executeQuery();
             rs.next();
             res = rs.getInt("total");
-            logger.info("Total number of users in user table is {}.",res);
+            logger.debug("Total number of users in user table is {}.",res);
         } catch (SQLException e) {
             logger.error("Failed to get the total users number.",e);
             throw new DBException("Failed to get the total users number.",e);
@@ -201,7 +201,7 @@ public class UserDaoSql implements UserDao {
 
     public boolean validateCredentials(User userFromDb,String password,String userName) {
         if (userFromDb == null || !userName.equals(userFromDb.getUsername())) {
-            logger.info("Failed to validate credentials, either user name is incorrect or password is null.");
+            logger.debug("Failed to validate credentials, either user name is incorrect or password is null.");
             return false;
         }
         return userFromDb.getPassword().equals(Encrypt.getSecurePassword(password,userFromDb.getSalt()));

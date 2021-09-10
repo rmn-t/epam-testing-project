@@ -30,7 +30,7 @@ public class StatusDaoSql implements StatusDao {
             while (rs.next()) {
                 records.add(new Status.Builder().setId(rs.getInt("id")).setName(rs.getString("name")).build());
             }
-            logger.info("Successfully obtained {} statuses from the db.",records.size());
+            logger.debug("Successfully obtained {} statuses from the db.",records.size());
         } catch (SQLException e) {
             logger.error("Couldn't obtain the list of user statuses.",e);
             throw new DBException("Couldn't obtain the list of user statuses.",e);

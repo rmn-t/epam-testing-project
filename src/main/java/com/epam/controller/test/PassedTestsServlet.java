@@ -1,9 +1,11 @@
 package com.epam.controller.test;
 
+import com.epam.controller.IPaginatable;
 import com.epam.db.dao.PassedTestsDao;
 import com.epam.db.dao.sql.PassedTestsDaoSql;
 import com.epam.db.model.PassedTest;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,12 +15,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/passed/tests"})
-public class PassedTestsServlet extends HttpServlet {
+public class PassedTestsServlet extends HttpServlet implements IPaginatable {
     private Logger logger = LoggerFactory.getLogger(PassedTestsServlet.class);
     private PassedTestsDao passedTestsDao;
 
@@ -29,17 +30,13 @@ public class PassedTestsServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int pageId = Integer.parseInt(req.getParameter("page"));
-        int recordsPerPage = 1000000;
-        if (pageId > 1) {
-            pageId = (pageId - 1) * recordsPerPage + 1;
-        }
-        HttpSession session = req.getSession(false);
-        int userId = Integer.parseInt("" + session.getAttribute("userId"));
-        List<PassedTest> passedTests;
+        int recordsPerPage = calculateRecordsPerPageNum(req,logger,"perPage");
+        int pageNum = calculatePage(req,recordsPerPage,"page");
+        String sorting = getSortingValue(req,"sort",Consts.getVALID_COLUMNS_FOR_PASSED_TESTS_ORDER_BY(),Consts.PASSED_TESTS_DEFAULT_SORT);
+        int userId = Integer.parseInt("" + req.getSession(false).getAttribute("userId"));
         try {
-            passedTests = passedTestsDao.getPassedTestsByUserIdOrderedLimited(userId, pageId, recordsPerPage, session.getAttribute("passedTestsSorting").toString());
-            int totalTests = passedTestsDao.getPassedTestsNumberByUserId(userId);
+            List<PassedTest> passedTests = passedTestsDao.getRecordsByUserIdOrderedLimited(userId, pageNum, recordsPerPage, sorting);
+            int totalTests = passedTestsDao.getRecordsNumberByUserId(userId);
             int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
             req.setAttribute("passedTests", passedTests);
             req.setAttribute("lastPage", lastPage);

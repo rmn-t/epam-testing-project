@@ -1,14 +1,9 @@
 package com.epam.controller.test;
 
-import com.epam.exceptions.DBException;
-import com.epam.db.dao.PassedTestsDao;
-import com.epam.db.dao.QuestionDao;
-import com.epam.db.dao.TestDao;
-import com.epam.db.dao.sql.PassedTestsDaoSql;
-import com.epam.db.dao.sql.QuestionDaoSql;
-import com.epam.db.dao.sql.TestDaoSql;
 import com.epam.db.model.Question;
 import com.epam.db.model.Test;
+import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,21 +15,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/take/test"})
 public class TakeTestServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(TakeTestServlet.class);
-    private QuestionDao questionDao;
-    private PassedTestsDao passedTestsDao;
-    private TestDao testDao;
-
-    @Override
-    public void init() throws ServletException {
-        this.questionDao = new QuestionDaoSql();
-        this.passedTestsDao = new PassedTestsDaoSql();
-        this.testDao = new TestDaoSql();
-    }
+    private final Logger logger = LoggerFactory.getLogger(TakeTestServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -42,8 +28,8 @@ public class TakeTestServlet extends HttpServlet {
         List<Question> questions = null;
         Test test = null;
         try {
-            questions = questionDao.getQuestionsAndAnswersByTestId(testId);
-            test = testDao.getTestById(testId);
+            questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
+            test = Consts.TEST_DAO.getTestById(testId);
         } catch (DBException e) {
             logger.error("Take test servlet get", e);
         }
@@ -66,11 +52,11 @@ public class TakeTestServlet extends HttpServlet {
          * add time to session if it is about to run out
          */
         int testId = Integer.parseInt(req.getParameter("id"));
-        List<Question> questions = null;
+        List<Question> questions = new ArrayList<>();
         int testDuration = 0;
         try {
-            testDuration = testDao.getTestById(testId).getDuration();
-            questions = questionDao.getQuestionsAndAnswersByTestId(testId);
+            testDuration = Consts.TEST_DAO.getTestById(testId).getDuration();
+            questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
         } catch (DBException e) {
             logger.error("Take test servlet post", e);
         }
@@ -90,7 +76,7 @@ public class TakeTestServlet extends HttpServlet {
         session.removeAttribute("timeLeft" + testId);
         int userId = Integer.parseInt("" + session.getAttribute("userId"));
         try {
-            passedTestsDao.insertNew(testId, userId,(int) questionsNum,correctAnswers, correctAnswers * 100 / questionsNum, timeSpent);
+            Consts.PASSED_TESTS_DAO.insertNew(testId, userId,(int) questionsNum,correctAnswers, correctAnswers * 100 / questionsNum, timeSpent);
         } catch (DBException e) {
             logger.error("Take test servlet post", e);
         }

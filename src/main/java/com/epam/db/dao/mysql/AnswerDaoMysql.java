@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.exceptions.DBException;
 import com.epam.db.DBUtil;
@@ -12,13 +12,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnswerDaoSql implements AnswerDao {
+public class AnswerDaoMysql implements AnswerDao {
     //    private final Logger logger = Logger.getLogger(AnswerDaoSql.class);
 //    private Logger abc = (Logger) LoggerFactory.getLogger(AnswerDaoSql.class);
 //    private org.slf4j.Logger
-    private org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(AnswerDaoSql.class);
+    private org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(AnswerDaoMysql.class);
 
-    public AnswerDaoSql() {
+    public AnswerDaoMysql() {
     }
 
     public List<Answer> getAnswersByQuestionId(int questionId) throws DBException {
@@ -39,7 +39,7 @@ public class AnswerDaoSql implements AnswerDao {
                         .build()
                 );
             }
-            logger.info("Successfully obtained answers by question_id {}.",questionId);
+            logger.debug("Successfully obtained answers by question_id {}.",questionId);
         } catch (SQLException e) {
             logger.error("Collecting answers by question id failed.", e);
             throw new DBException("Collecting answers by question id failed.", e);

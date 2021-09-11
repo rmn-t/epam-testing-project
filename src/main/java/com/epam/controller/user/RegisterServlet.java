@@ -1,9 +1,8 @@
 package com.epam.controller.user;
 
-import com.epam.util.CookieUtil;
 import com.epam.exceptions.DBException;
-import com.epam.db.dao.UserDao;
-import com.epam.db.dao.sql.UserDaoSql;
+import com.epam.util.Consts;
+import com.epam.util.CookieUtil;
 import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,12 +15,6 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/register"})
 public class RegisterServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(RegisterServlet.class);
-    private static UserDao userDao;
-
-    @Override
-    public void init() throws ServletException {
-        userDao = new UserDaoSql();
-    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,7 +31,7 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String userName = req.getParameter("username");
         try {
-            if (userDao.getUserDetailsByUserName(userName).getId() != 0) {
+            if (Consts.USER_DAO.getUserDetailsByUserName(userName).getId() != 0) {
                 Cookie regStatus = new Cookie("regStatus","userExists");
                 regStatus.setMaxAge(30);
                 regStatus.setPath("register");
@@ -53,7 +46,7 @@ public class RegisterServlet extends HttpServlet {
         String firstName= req.getParameter("firstName");
         String lastName = req.getParameter("lastName");
         try {
-            int id = userDao.addNewUser(userName,password,firstName,lastName);
+            int id = Consts.USER_DAO.addNewUser(userName,password,firstName,lastName);
             HttpSession session = req.getSession();
             session.setAttribute("username",userName);
             session.setAttribute("userId",id);
@@ -63,7 +56,7 @@ public class RegisterServlet extends HttpServlet {
             logger.info("user created, redirecting to tests");
             resp.sendRedirect("tests?page=1");
         } catch (DBException e) {
-            e.printStackTrace();
+            logger.error("Couldn't register user",e);
         }
 
     }

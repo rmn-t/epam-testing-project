@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.db.DBUtil;
 import com.epam.db.dao.PassedTestsDao;
@@ -14,8 +14,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PassedTestsDaoSql implements PassedTestsDao {
-    private Logger logger = LoggerFactory.getLogger(PassedTestsDaoSql.class);
+public class PassedTestsDaoMysql implements PassedTestsDao {
+    private Logger logger = LoggerFactory.getLogger(PassedTestsDaoMysql.class);
 
     public void insertNew(int testId, int userId, int questionNum, int correctAnswers, double grade, int timeSpent) throws DBException {
         Connection con = null;

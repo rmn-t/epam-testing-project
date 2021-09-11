@@ -86,7 +86,7 @@
         <hr>
 
         <table class="table table-light border">
-            <thead class="table-dark border">
+            <thead class="table-info border">
                 <th class="text-center align-middle">///Id</th>
                 <th class="text-center align-middle">///username</th>
                 <th class="text-center align-middle">///first name</th>

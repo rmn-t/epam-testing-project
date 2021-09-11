@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.db.DBUtil;
 import com.epam.db.dao.StatusDao;
@@ -14,8 +14,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StatusDaoSql implements StatusDao {
-    private final Logger logger = LoggerFactory.getLogger(StatusDaoSql.class);
+public class StatusDaoMysql implements StatusDao {
+    private final Logger logger = LoggerFactory.getLogger(StatusDaoMysql.class);
 
     @Override
     public List<Status> getAllRecords() throws DBException {

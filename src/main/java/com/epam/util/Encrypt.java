@@ -14,8 +14,8 @@ public class Encrypt {
             MessageDigest md = MessageDigest.getInstance("SHA-512");
             md.update(intToByteArray(salt));
             byte[] bytes = md.digest(password.getBytes(StandardCharsets.UTF_8));
-            for (int i = 0; i < bytes.length; i++) {
-                res.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+            for (byte aByte : bytes) {
+                res.append(Integer.toString((aByte & 0xff) + 0x100, 16).substring(1));
             }
         } catch (NoSuchAlgorithmException e) {
             // add log
@@ -28,7 +28,7 @@ public class Encrypt {
         return new SecureRandom().nextInt(Integer.MAX_VALUE);
     }
 
-    private static final byte[] intToByteArray(int value) {
+    private static byte[] intToByteArray(int value) {
         return new byte[] {
                 (byte)(value >>> 24),
                 (byte)(value >>> 16),

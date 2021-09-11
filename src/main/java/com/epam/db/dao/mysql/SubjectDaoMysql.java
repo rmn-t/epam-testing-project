@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.exceptions.DBException;
 import com.epam.db.DBUtil;
@@ -11,8 +11,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubjectDaoSql implements SubjectDao {
-    private final Logger logger = LoggerFactory.getLogger(SubjectDaoSql.class);
+public class SubjectDaoMysql implements SubjectDao {
+    private final Logger logger = LoggerFactory.getLogger(SubjectDaoMysql.class);
 
     @Override
     public List<Subject> getAllRecords() throws DBException {

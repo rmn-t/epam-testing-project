@@ -1,5 +1,7 @@
 package com.epam.util;
 
+import com.epam.db.dao.*;
+import com.epam.db.dao.mysql.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,7 +64,15 @@ public class Consts {
     }
 
 
-
+    public static final AnswerDao ANSWER_DAO = new AnswerDaoMysql();
+    public static final ComplexityDao COMPLEXITY_DAO = new ComplexityDaoMysql();
+    public static final PassedTestsDao PASSED_TESTS_DAO = new PassedTestsDaoMysql();
+    public static final QuestionDao QUESTION_DAO = new QuestionDaoMysql();
+    public static final RoleDao ROLE_DAO = new RoleDaoMysql();
+    public static final StatusDao STATUS_DAO = new StatusDaoMysql();
+    public static final SubjectDao SUBJECT_DAO = new SubjectDaoMysql();
+    public static final TestDao TEST_DAO = new TestDaoMysql();
+    public static final UserDao USER_DAO = new UserDaoMysql();
 
 
 }

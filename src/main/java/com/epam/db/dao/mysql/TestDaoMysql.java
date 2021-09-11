@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.exceptions.DBException;
 import com.epam.db.DBUtil;
@@ -11,15 +11,15 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestDaoSql implements TestDao {
+public class TestDaoMysql implements TestDao {
     private static final String ID = "id";
     private static final String NAME = "name";
     private static final String SUBJECT = "subject";
     private static final String COMPLEXITY = "complexity";
     private static final String DURATION = "duration_sec";
-    private final Logger logger = LoggerFactory.getLogger(TestDaoSql.class);
+    private final Logger logger = LoggerFactory.getLogger(TestDaoMysql.class);
 
-    public TestDaoSql() {
+    public TestDaoMysql() {
     }
 
     public Test getTestById(int testId) throws DBException {

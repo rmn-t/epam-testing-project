@@ -1,9 +1,8 @@
 package com.epam.controller.user;
 
-import com.epam.db.dao.UserDao;
-import com.epam.db.dao.sql.UserDaoSql;
 import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import com.epam.util.Encrypt;
 import com.epam.util.Views;
 import org.slf4j.Logger;
@@ -20,13 +19,7 @@ import java.lang.invoke.MethodHandles;
 
 @WebServlet(urlPatterns = {"/account"})
 public class AccountServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
-    private UserDao userDao;
-
-    @Override
-    public void init() throws ServletException {
-        userDao = new UserDaoSql();
-    }
+    private final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -42,17 +35,14 @@ public class AccountServlet extends HttpServlet {
         String firstName = req.getParameter("firstName");
         String lastName = req.getParameter("lastName");
 
-        logger.info("New password '{}'",newPass);
-        logger.info(String.valueOf("".equals(newPass)));
         if (newPass != null && !user.getPassword().equals(newPass) && !("".equals(newPass))) {
             newPass = Encrypt.getSecurePassword(newPass, salt);
         } else {
             newPass = user.getPassword();
         }
-        logger.info("New password '{}'",newPass);
         try {
-            userDao.updateUserById(user.getId(), newPass, user.getRoleId(), user.getStatusId(), firstName, lastName, salt);
-            session.setAttribute("currentUser",userDao.getUserDetailsByUserName(user.getUsername()));
+            Consts.USER_DAO.updateUserById(user.getId(), newPass, user.getRoleId(), user.getStatusId(), firstName, lastName, salt);
+            session.setAttribute("currentUser",Consts.USER_DAO.getUserDetailsByUserName(user.getUsername()));
         } catch (DBException e) {
             logger.error("Couldn't update the user information.", e);
         }

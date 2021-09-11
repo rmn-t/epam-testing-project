@@ -1,6 +1,8 @@
 package com.epam.db.model;
 
-public class Answer {
+import java.io.Serializable;
+
+public class Answer implements Serializable {
     private int id;
     private int questionId;
     private String text;

@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.db.DBUtil;
 import com.epam.db.dao.RoleDao;
@@ -14,8 +14,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoleDaoSql implements RoleDao {
-    private final Logger logger = LoggerFactory.getLogger(RoleDaoSql.class);
+public class RoleDaoMysql implements RoleDao {
+    private final Logger logger = LoggerFactory.getLogger(RoleDaoMysql.class);
 
     @Override
     public List<Role> getAllRecords() throws DBException {

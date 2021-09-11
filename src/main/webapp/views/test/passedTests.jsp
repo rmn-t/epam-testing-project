@@ -38,8 +38,8 @@
                                 <option class="align-middle" value="question_num DESC" ${param.sort == 'question_num DESC' ? 'selected' : ''}>///Questions # Z-A</option>
                                 <option class="align-middle" value="grade ASC" ${param.sort == 'grade ASC' ? 'selected' : ''}>///Grades low to high</option>
                                 <option class="align-middle" value="grade DESC" ${param.sort == 'grade DESC' ? 'selected' : ''}>///Grades high to low</option>
-                                <option class="align-middle" value="date ASC" ${param.sort == 'date ASC' ? 'selected' : ''}>///New first</option>
-                                <option class="align-middle" value="date DESC" ${param.sort == 'date DESC' ? 'selected' : ''}>///Old first</option>
+                                <option class="align-middle" value="date ASC" ${param.sort == 'date ASC' ? 'selected' : ''}>///Old first</option>
+                                <option class="align-middle" value="date DESC" ${param.sort == 'date DESC' ? 'selected' : ''}>///New first</option>
                              </select>
                              <label class="text-center text-muted" for="sort">///Sorting:</label>
                         </div>
@@ -60,8 +60,8 @@
         </div>
         <hr>
 
-        <table class="table table-light border border-2 align-middle">
-            <thead class="table-dark">
+        <table class="table table-light border border-3 align-middle">
+            <thead class="table-info">
                 <th class="text-center align-middle">///id</th>
                 <th class="text-center align-middle">///test name</th>
                 <th class="text-center align-middle">///time spent</th>
@@ -75,7 +75,7 @@
                     <tr class="bg-light">
                         <td width="5%" class="text-center align-middle">${element.id}</td>
                         <td width="30%" class="text-left align-middle">${element.testName}</td>
-                        <td width="10%" class="text-center align-middle"><fmt:formatNumber value='${element.timeSpent/60-0.49}' maxFractionDigits="0"/> ///min:${element.timeSpent%60} ///sec</td>
+                        <td width="10%" class="text-center align-middle"><my:floor val='${element.timeSpent/60}' />///min:${element.timeSpent%60} ///sec</td>
                         <td width="10%" class="text-center align-middle">${element.questionNum}</td>
                         <td width="10%" class="text-center align-middle">${element.correctAnswers}</td>
                         <td width="25%" class="text-center align-middle">

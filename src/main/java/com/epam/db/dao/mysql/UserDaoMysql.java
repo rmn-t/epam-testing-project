@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.db.DBUtil;
 import com.epam.db.dao.UserDao;
@@ -12,8 +12,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDaoSql implements UserDao {
-    private Logger logger = LoggerFactory.getLogger(UserDaoSql.class);
+public class UserDaoMysql implements UserDao {
+    private Logger logger = LoggerFactory.getLogger(UserDaoMysql.class);
     private final String ID = "id";
     private final String USERNAME = "username";
     private final String PASSWORD = "password";
@@ -26,7 +26,7 @@ public class UserDaoSql implements UserDao {
     private final int DEFAULT_ROLE_ID = 2;
     private final String[] VALID_COLUMNS_FOR_ORDER_BY = {ID, USERNAME, PASSWORD, SALT, ROLE, STATUS};
 
-    public UserDaoSql() {
+    public UserDaoMysql() {
     }
 
     public User getUserDetailsByUserName(String username) throws DBException {

@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.exceptions.DBException;
 import com.epam.db.DBUtil;
@@ -13,8 +13,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuestionDaoSql implements QuestionDao {
-    private Logger logger = LoggerFactory.getLogger(QuestionDaoSql.class);
+public class QuestionDaoMysql implements QuestionDao {
+    private Logger logger = LoggerFactory.getLogger(QuestionDaoMysql.class);
 
     public int insertQuestionByTestId(String text, int testId) throws DBException {
         int res = -1;
@@ -103,7 +103,7 @@ public class QuestionDaoSql implements QuestionDao {
             prepStmt = con.prepareStatement("SELECT id,text,test_id FROM question WHERE test_id = ?;");
             prepStmt.setInt(1, testId);
             rs = prepStmt.executeQuery();
-            AnswerDao answerDao = new AnswerDaoSql();
+            AnswerDao answerDao = new AnswerDaoMysql();
             while (rs.next()) {
                 Question q = new Question.Builder()
                             .setId(rs.getInt("id"))
@@ -130,7 +130,7 @@ public class QuestionDaoSql implements QuestionDao {
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             updateQuestionTextById(con, questionText, id);
-            new AnswerDaoSql().updateAnswersByQuestionId(con, id, answers);
+            new AnswerDaoMysql().updateAnswersByQuestionId(con, id, answers);
             con.commit();
             logger.info("Successfully updated question_id {} and it's answers.",id);
         } catch (SQLException | DBException e) {
@@ -138,12 +138,13 @@ public class QuestionDaoSql implements QuestionDao {
                 if (con != null) {
                     con.rollback();
                     logger.error("Failed update for question_id {}.",id,e);
-                    throw new DBException("Failed update for question_id",e);
+//                    throw new DBException("Failed update for question_id",e);
                 }
             } catch (SQLException err) {
                 logger.error("Failed to execute rollback.",err);
-                throw new DBException("Failed to execute rollback.",err);
+//                throw new DBException("Failed to execute rollback.",err);
             }
+            throw new DBException("Failed update for question_id",e);
         } finally {
             DBUtil.closeAllInOrder(con);
         }

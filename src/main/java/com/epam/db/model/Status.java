@@ -1,6 +1,8 @@
 package com.epam.db.model;
 
-public class Status {
+import java.io.Serializable;
+
+public class Status implements Serializable {
     private int id;
     private String name;
 

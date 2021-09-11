@@ -3,11 +3,11 @@ package com.epam.controller.test;
 import com.epam.db.dao.ComplexityDao;
 import com.epam.db.dao.SubjectDao;
 import com.epam.db.dao.TestDao;
-import com.epam.db.dao.sql.ComplexityDaoSql;
-import com.epam.db.dao.sql.SubjectDaoSql;
-import com.epam.db.dao.sql.TestDaoSql;
+import com.epam.db.dao.mysql.ComplexityDaoMysql;
+import com.epam.db.dao.mysql.SubjectDaoMysql;
 import com.epam.db.model.Test;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,24 +20,14 @@ import java.io.IOException;
 
 @WebServlet("/editTest")
 public class EditTestServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(EditTestServlet.class);
-    private TestDao testDao;
-    private SubjectDao subjectDao;
-    private ComplexityDao complexityDao;
-
-    @Override
-    public void init() throws ServletException {
-        testDao = new TestDaoSql();
-        subjectDao = new SubjectDaoSql();
-        complexityDao = new ComplexityDaoSql();
-    }
+    private final Logger logger = LoggerFactory.getLogger(EditTestServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int testId = Integer.parseInt(req.getParameter("id"));
         Test test = null;
         try {
-            test = testDao.getTestById(testId);
+            test = Consts.TEST_DAO.getTestById(testId);
         } catch (DBException e) {
             logger.error("Edit servlet get");
         }
@@ -54,7 +44,7 @@ public class EditTestServlet extends HttpServlet {
         int complexityId = Integer.parseInt(req.getParameter("complexity"));
         int duration = Integer.parseInt(req.getParameter("durationMin")) * 60 + Integer.parseInt(req.getParameter("durationSec"));
         try {
-            testDao.updateTestById(testId,name,subjectId,complexityId,duration);
+            Consts.TEST_DAO.updateTestById(testId,name,subjectId,complexityId,duration);
         } catch (DBException e) {
             logger.error("Edit servlet post");
         }

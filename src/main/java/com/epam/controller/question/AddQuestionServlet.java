@@ -1,8 +1,8 @@
 package com.epam.controller.question;
 
 import com.epam.db.dao.TestDao;
-import com.epam.db.dao.sql.TestDaoSql;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,19 +16,13 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/add/question"} )
 public class AddQuestionServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-    private TestDao testDao;
-
-    @Override
-    public void init() throws ServletException {
-        testDao = new TestDaoSql();
-    }
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             int testId = Integer.parseInt(req.getParameter("testId"));
-            if (testDao.getTestById(testId) != null) {
+            if (Consts.TEST_DAO.getTestById(testId) != null) {
                 req.getRequestDispatcher("/"+Views.QUESTION_FORM_JSP).forward(req,resp);
             }
         } catch (NumberFormatException | DBException e) {

@@ -1,19 +1,14 @@
 package com.epam.controller.user;
 
-import com.epam.db.dao.RoleDao;
-import com.epam.db.dao.StatusDao;
-import com.epam.db.dao.UserDao;
-import com.epam.db.dao.sql.RoleDaoSql;
-import com.epam.db.dao.sql.StatusDaoSql;
-import com.epam.db.dao.sql.UserDaoSql;
+import com.epam.controller.IPaginatable;
 import com.epam.db.model.Role;
 import com.epam.db.model.Status;
 import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
 import com.epam.util.Views;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,50 +20,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/users"})
-public class UsersServlet extends HttpServlet {
-    private static Logger logger;
-    private UserDao userDao;
-    private StatusDao statusDao;
-    private RoleDao roleDao;
-
-    @Override
-    public void init() throws ServletException {
-        logger = LogManager.getLogger(UsersServlet.class);
-        userDao = new UserDaoSql();
-        statusDao = new StatusDaoSql();
-        roleDao = new RoleDaoSql();
-    }
+public class UsersServlet extends HttpServlet implements IPaginatable {
+    private final Logger logger = LoggerFactory.getLogger(UsersServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int recordsPerPage = 10;
-        if (req.getParameter("perPage") != null) {
-            try {
-                int test = Integer.parseInt(req.getParameter("perPage"));
-                if (Consts.getValidPerPageValues().contains(Integer.parseInt(req.getParameter("perPage")))) {
-                    recordsPerPage = test;
-                }
-            } catch (NumberFormatException e) {
-                logger.info("Couldn't convert records page.");
-            }
-        }
-
-        int pageId = 1;
-        if (req.getParameter("page") != null) {
-            pageId = Integer.parseInt(req.getParameter("page"));
-        }
-        if (pageId > 1) {
-            pageId = (pageId -1) * recordsPerPage + 1;
-        }
-
-        String sorting = req.getParameter("sort");
-        if (sorting == null || !Consts.getVALID_COLUMNS_FOR_USER_ORDER_BY().contains(sorting)) {
-            sorting = Consts.USER_DEFAULT_SORT; // default sort
-        }
+        int recordsPerPage = calculateRecordsPerPageNum(req,logger,"perPage");
+        int pageId = calculatePage(req,recordsPerPage,"page");
+        String sorting = getSortingValue(req,"sort",Consts.getVALID_COLUMNS_FOR_USER_ORDER_BY(),Consts.USER_DEFAULT_SORT);
 
         List<Status> statuses = new ArrayList<>();
         try {
-            statuses = statusDao.getAllRecords();
+            statuses = Consts.STATUS_DAO.getAllRecords();
             req.setAttribute("statuses",statuses);
         } catch (DBException e) {
             logger.error("Test servlet do get");
@@ -76,7 +39,7 @@ public class UsersServlet extends HttpServlet {
 
         List<Role> roles = new ArrayList<>();
         try {
-            roles = roleDao.getAllRecords();
+            roles = Consts.ROLE_DAO.getAllRecords();
             req.setAttribute("roles",roles);
         } catch (DBException e) {
             logger.error("Couldn't obtain roles list.");
@@ -95,8 +58,8 @@ public class UsersServlet extends HttpServlet {
         }
 
         try {
-            List<User> users = userDao.getRecordsLimitedSortedFiltered(pageId,recordsPerPage,sorting,statusId);
-            int usersNum = userDao.getRecordsNumByStatusId(statusId);
+            List<User> users = Consts.USER_DAO.getRecordsLimitedSortedFiltered(pageId,recordsPerPage,sorting,statusId);
+            int usersNum = Consts.USER_DAO.getRecordsNumByStatusId(statusId);
             int lastPage = usersNum / recordsPerPage + ((usersNum % recordsPerPage == 0) ? 0 : 1);
             req.setAttribute("users",users);
             req.setAttribute("lastPage",lastPage);

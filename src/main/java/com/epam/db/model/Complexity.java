@@ -1,6 +1,8 @@
 package com.epam.db.model;
 
-public class Complexity {
+import java.io.Serializable;
+
+public class Complexity implements Serializable {
     private int id;
     private String name;
 

@@ -1,4 +1,4 @@
-package com.epam.db.dao.sql;
+package com.epam.db.dao.mysql;
 
 import com.epam.db.DBUtil;
 import com.epam.db.dao.ComplexityDao;
@@ -14,8 +14,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ComplexityDaoSql implements ComplexityDao {
-    private final Logger logger = LoggerFactory.getLogger(ComplexityDaoSql.class);
+public class ComplexityDaoMysql implements ComplexityDao {
+    private final Logger logger = LoggerFactory.getLogger(ComplexityDaoMysql.class);
 
     @Override
     public List<Complexity> getAllRecords() throws DBException {

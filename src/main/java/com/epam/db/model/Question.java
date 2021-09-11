@@ -1,10 +1,11 @@
 package com.epam.db.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Question {
+public class Question implements Serializable {
     private int id;
     private String text;
     private int testId;

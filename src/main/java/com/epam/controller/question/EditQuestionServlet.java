@@ -1,12 +1,9 @@
 package com.epam.controller.question;
 
-import com.epam.db.dao.AnswerDao;
-import com.epam.db.dao.QuestionDao;
-import com.epam.db.dao.sql.AnswerDaoSql;
-import com.epam.db.dao.sql.QuestionDaoSql;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,14 +20,7 @@ import java.util.List;
 
 @WebServlet(urlPatterns = {"/edit/question"})
 public class EditQuestionServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(EditQuestionServlet.class);
-    private QuestionDao questionDao = new QuestionDaoSql();
-    private AnswerDao answerDao = new AnswerDaoSql();
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-    }
+    private final Logger logger = LoggerFactory.getLogger(EditQuestionServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -38,8 +28,8 @@ public class EditQuestionServlet extends HttpServlet {
             int questionId = Integer.parseInt(req.getParameter("id"));
             Question q = null;
             try {
-                q = questionDao.getQuestionById(questionId);
-                q.setAnswers(answerDao.getAnswersByQuestionId(questionId));
+                q = Consts.QUESTION_DAO.getQuestionById(questionId);
+                q.setAnswers(Consts.ANSWER_DAO.getAnswersByQuestionId(questionId));
             } catch (DBException e) {
                 logger.error("Edit servlet exception - get",e);
             }
@@ -67,7 +57,7 @@ public class EditQuestionServlet extends HttpServlet {
         if (req.getParameterMap().containsKey("id") && !"".equals(req.getParameter("id"))) {
             questionId = Integer.parseInt(req.getParameter("id"));
             try {
-                questionDao.updateQuestionAndItsAnswers(questionId, questionText, answers);
+                Consts.QUESTION_DAO.updateQuestionAndItsAnswers(questionId, questionText, answers);
             } catch (DBException e) {
                 logger.error("Edit servlet exception - post",e);
             }
@@ -75,10 +65,10 @@ public class EditQuestionServlet extends HttpServlet {
             System.out.println("param values is correct " + Arrays.toString(isCorrect));
         } else {
             try {
-                questionId = questionDao.insertQuestionByTestId(questionText,testId);
+                questionId = Consts.QUESTION_DAO.insertQuestionByTestId(questionText,testId);
                 logger.info(String.valueOf(questionId));
                 if (questionId != -1) {
-                    answerDao.insertAnswersByQuestionId(questionId,answers);
+                    Consts.ANSWER_DAO.insertAnswersByQuestionId(questionId,answers);
                 }
             } catch (DBException e) {
                 logger.error("Edit servlet exception - post",e);

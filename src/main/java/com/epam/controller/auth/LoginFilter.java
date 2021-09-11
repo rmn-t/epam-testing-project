@@ -1,8 +1,7 @@
 package com.epam.controller.auth;
 
-import com.epam.db.dao.UserDao;
-import com.epam.db.dao.sql.UserDaoSql;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,34 +16,35 @@ import java.io.IOException;
 @WebFilter("/*")
 public class LoginFilter implements Filter {
     private final Logger logger = LoggerFactory.getLogger(LoginFilter.class);
-    private UserDao userDao;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        userDao = new UserDaoSql();
+        //init
     }
 
     /**
      * add case insensitive check for username
+     *
+     * //        if (req.getCookies() == null) {
+     * //            Cookie langCookie = new Cookie("lang","en");
+     * //            langCookie.setMaxAge(60*60*24);
+     * //            langCookie.setPath("/");
+     * //            resp.addCookie(langCookie);
+     * //        }
      */
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
         HttpSession session = req.getSession(false);
-//        if (req.getCookies() == null) {
-//            Cookie langCookie = new Cookie("lang","en");
-//            langCookie.setMaxAge(60*60*24);
-//            langCookie.setPath("/");
-//            resp.addCookie(langCookie);
-//        }
         String reqUri = req.getRequestURI();
         if (session != null && session.getAttribute("username") != null){
             try {
-                if (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned")) {
+                if (Consts.USER_DAO.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned")) {
                     req.setAttribute("loginStatus","User is banned (filter proc)");
-                    req.getRequestDispatcher("/epam/logout").forward(req,resp);
+                    req.getRequestDispatcher("/logout").forward(req,resp);
                 } else {
+                    logger.info("ELSE");
                     filterChain.doFilter(req, resp);
                 }
             } catch (DBException e) {

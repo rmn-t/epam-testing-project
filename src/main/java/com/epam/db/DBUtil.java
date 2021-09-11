@@ -16,7 +16,8 @@ public class DBUtil {
 
     static {
         try {
-            initDataSource();
+            Context context = (Context) new InitialContext().lookup("java:/comp/env");
+            dataSource = (DataSource) context.lookup("jdbc/mysql");
         } catch (NamingException e) {
             logger.error("Couldn't create connection to the DB.",e);
         }
@@ -27,11 +28,6 @@ public class DBUtil {
     }
 
     private DBUtil() {    }
-
-    private static void initDataSource() throws NamingException {
-        Context context = (Context) new InitialContext().lookup("java:/comp/env");
-        dataSource = (DataSource) context.lookup("jdbc/mysql");
-    }
 
     public static void close(AutoCloseable ac) {
         if (ac != null) {

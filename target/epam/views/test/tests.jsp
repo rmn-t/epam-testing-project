@@ -69,7 +69,7 @@
 
         <br>
         <table class="table table-light border">
-            <thead class="table-primary">
+            <thead class="table-info">
                 <th>///Test name</th>
                 <th class="text-center">///subject</th>
                 <th class="text-center">///complexity</th>

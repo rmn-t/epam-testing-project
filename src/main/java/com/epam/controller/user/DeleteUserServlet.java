@@ -1,8 +1,7 @@
 package com.epam.controller.user;
 
-import com.epam.db.dao.UserDao;
-import com.epam.db.dao.sql.UserDaoSql;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,13 +14,7 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/delete/user"})
 public class DeleteUserServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(DeleteUserServlet.class);
-    private UserDao userDao;
-
-    @Override
-    public void init() throws ServletException {
-        userDao = new UserDaoSql();
-    }
+    private final Logger logger = LoggerFactory.getLogger(DeleteUserServlet.class);
 
     /**
      * redirect if no url supplied or what to do if no id
@@ -34,7 +27,7 @@ public class DeleteUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("userId"));
         try {
-            userDao.deleteUserById(id);
+            Consts.USER_DAO.deleteUserById(id);
         } catch (DBException e) {
             logger.error("Couldn't delete the user by id {}.",id);
         }

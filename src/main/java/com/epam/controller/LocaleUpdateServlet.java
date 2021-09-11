@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet( urlPatterns = { "/locale/edit" } )
+@WebServlet(urlPatterns = {"/locale/edit"})
 public class LocaleUpdateServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(LocaleUpdateServlet.class);
 
@@ -23,9 +23,9 @@ public class LocaleUpdateServlet extends HttpServlet {
          *         logger.info(zz[1]);
          */
         logger.debug(req.getParameter("lang"));
-        logger.debug(req.getPathInfo());
-        Cookie langCookie = new Cookie("lang",req.getParameter("lang"));
-        langCookie.setMaxAge(60*60*24);
+        logger.info(req.getHeader("referer"));
+        Cookie langCookie = new Cookie("lang", req.getParameter("lang"));
+        langCookie.setMaxAge(60 * 60 * 24);
         langCookie.setPath("/");
         resp.addCookie(langCookie);
         /**

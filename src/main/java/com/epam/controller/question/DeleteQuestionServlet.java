@@ -1,8 +1,7 @@
 package com.epam.controller.question;
 
-import com.epam.db.dao.QuestionDao;
-import com.epam.db.dao.sql.QuestionDaoSql;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,19 +14,13 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/delete/question"})
 public class DeleteQuestionServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(DeleteQuestionServlet.class);
-    private QuestionDao questionDao;
-
-    @Override
-    public void init() throws ServletException {
-        questionDao = new QuestionDaoSql();
-    }
+    private final Logger logger = LoggerFactory.getLogger(DeleteQuestionServlet.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int questionId = Integer.parseInt(req.getParameter("id"));
         try {
-            questionDao.deleteQuestionById(questionId);
+            Consts.QUESTION_DAO.deleteQuestionById(questionId);
         } catch (DBException e) {
             logger.error("Delete question servlet - post",e);
         }

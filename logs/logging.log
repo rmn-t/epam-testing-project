@@ -1,707 +1,267 @@
-12:59:04,925 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-12:59:07,512 [ INFO|com.epam.controller.LocaleUpdateServlet|LocaleUpdateServlet] - /epam/login
-12:59:07,518 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-12:59:08,554 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-12:59:09,077 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:09,113 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
-12:59:12,140 [ INFO|com.epam.controller.LocaleUpdateServlet|LocaleUpdateServlet] - /epam/tests?page=1&sort=name%20ASC&subject=0&perPage=10
-12:59:12,153 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:12,158 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 50.
-12:59:17,776 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:17,782 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 1.
-12:59:19,859 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:19,862 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-12:59:34,299 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:34,303 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-12:59:35,820 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:35,824 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-12:59:37,181 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:37,187 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-12:59:38,785 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:38,788 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-12:59:45,154 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:45,157 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-12:59:50,124 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-12:59:50,128 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-13:00:07,467 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:00:07,471 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-13:00:16,258 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:16,266 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-13:00:21,983 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:21,988 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 25.
-13:00:24,884 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:24,891 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 28.
-13:00:26,418 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:26,422 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 28.
-13:00:28,205 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:28,208 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 28.
-13:00:30,492 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:30,495 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 28.
-13:00:31,967 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:31,970 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 28.
-13:00:39,104 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:39,108 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 27.
-13:00:42,083 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:00:42,086 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 26.
-13:04:42,977 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:04:42,981 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:04:45,746 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-13:04:45,750 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 26.
-13:04:48,355 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:04:48,356 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:04:56,982 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Successfully created new test.
-13:04:57,013 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:04:57,014 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:04:57,016 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 0 questions for test_id 51.
-13:04:57,018 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:05:03,280 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:07:51,619 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:07:56,888 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:17:57,209 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:18:14,639 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:18:44,590 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:19:18,209 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:19:18,215 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-13:19:20,035 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:19:20,039 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:19:20,060 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 15.
-13:19:20,063 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 95.
-13:19:20,064 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 177.
-13:19:20,065 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 186.
-13:19:20,067 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 205.
-13:19:20,068 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 215.
-13:19:20,070 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 217.
-13:19:20,073 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 293.
-13:19:20,075 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 327.
-13:19:20,076 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 356.
-13:19:20,077 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 576.
-13:19:20,077 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 11 questions for test_id 15.
-13:19:20,108 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 15, result name : Test # 15
-13:19:22,261 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 15 with text : Question, id #15 for test: Test # 15.
-13:19:22,262 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 15.
-13:20:13,544 [ INFO|com.epam.controller.test.PassedTestsServlet|PassedTestsServlet] - String sorting: date DESC
-13:20:16,650 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:20:16,651 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:20:17,657 [ INFO|com.epam.controller.test.PassedTestsServlet|PassedTestsServlet] - String sorting: date DESC
-13:20:18,581 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:20:18,583 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-13:20:21,909 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:20:21,912 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-13:20:23,099 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:20:23,100 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:20:23,102 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 0 questions for test_id 51.
-13:20:23,103 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:20:24,217 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:21:38,972 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:25:13,376 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:25:15,658 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:26:01,605 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:26:02,700 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:26:12,378 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:26:13,347 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:28:42,986 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:28:44,269 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:29:53,031 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:30:32,582 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:30:34,249 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:30:34,882 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:30:45,864 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:30:47,154 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:31:38,730 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:31:40,420 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:34:33,952 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:34:45,803 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:35:48,738 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:35:49,719 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:36:43,632 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:36:44,855 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:36:53,683 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:37:16,131 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:37:17,022 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:37:37,883 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:37:38,822 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:37:45,642 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:37:46,304 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:38:30,403 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:38:31,357 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:38:31,903 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:38:36,719 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:38:45,512 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:38:46,230 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:39:07,866 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:39:47,403 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:40:19,057 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:41:01,151 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:41:13,437 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:41:37,631 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:41:39,203 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:42:08,313 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:42:09,117 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:43:24,083 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:43:25,100 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:43:40,056 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:47:27,954 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:47:29,260 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:47:30,116 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:48:25,633 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:48:26,501 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:48:32,452 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:48:37,180 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:49:11,794 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:52:59,500 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:55:51,568 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:55:52,745 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-13:55:57,735 [ INFO|com.epam.controller.test.PassedTestsServlet|PassedTestsServlet] - String sorting: date DESC
-13:55:58,495 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:55:58,497 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-13:55:59,943 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:55:59,944 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:55:59,946 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:55:59,947 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 54.
-13:55:59,948 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 99.
-13:55:59,949 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 145.
-13:55:59,951 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 185.
-13:55:59,953 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 231.
-13:55:59,954 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 241.
-13:55:59,955 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 255.
-13:55:59,956 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 262.
-13:55:59,957 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 263.
-13:55:59,959 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 281.
-13:55:59,960 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 352.
-13:55:59,961 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 382.
-13:55:59,962 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 410.
-13:55:59,963 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 449.
-13:55:59,965 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 517.
-13:55:59,967 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 538.
-13:55:59,968 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 592.
-13:55:59,969 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 18 questions for test_id 13.
-13:55:59,971 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 13, result name : Test # 13
-13:56:01,286 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-13:56:01,287 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:56:04,729 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:56:04,730 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:56:04,732 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:56:04,734 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 54.
-13:56:04,737 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 99.
-13:56:04,739 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 145.
-13:56:04,741 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 185.
-13:56:04,743 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 231.
-13:56:04,744 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 241.
-13:56:04,746 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 255.
-13:56:04,748 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 262.
-13:56:04,749 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 263.
-13:56:04,754 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 281.
-13:56:04,756 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 352.
-13:56:04,758 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 382.
-13:56:04,759 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 410.
-13:56:04,760 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 449.
-13:56:04,761 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 517.
-13:56:04,762 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 538.
-13:56:04,764 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 592.
-13:56:04,764 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 18 questions for test_id 13.
-13:56:04,767 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 13, result name : Test # 13
-13:56:45,914 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:56:45,914 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:56:45,916 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:56:45,918 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 54.
-13:56:45,919 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 99.
-13:56:45,920 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 145.
-13:56:45,921 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 185.
-13:56:45,922 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 231.
-13:56:45,924 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 241.
-13:56:45,925 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 255.
-13:56:45,926 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 262.
-13:56:45,927 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 263.
-13:56:45,928 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 281.
-13:56:45,930 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 352.
-13:56:45,931 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 382.
-13:56:45,932 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 410.
-13:56:45,933 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 449.
-13:56:45,935 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 517.
-13:56:45,936 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 538.
-13:56:45,937 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 592.
-13:56:45,938 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 18 questions for test_id 13.
-13:56:45,940 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 13, result name : Test # 13
-13:56:47,842 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-13:56:47,843 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:57:03,037 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-13:57:03,038 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:57:36,353 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-13:57:36,356 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:57:43,336 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-13:57:43,337 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:57:49,193 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-13:57:49,194 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:59:55,564 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-13:59:55,566 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:59:56,891 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 13
-13:59:56,892 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 13
-13:59:56,894 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully updated question_id 13.
-13:59:56,895 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - All questions for test_id 13 were deleted.
-13:59:56,897 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #13 for: Question, id #13 for test: Test # 13 | isCorrect : true
-13:59:56,898 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #794 for: Question, id #13 for test: Test # 13 | isCorrect : true
-13:59:56,900 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #1018 for: Question, id #13 for test: Test # 13 | isCorrect : false
-13:59:56,901 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2292 for: Question, id #13 for test: Test # 13 | isCorrect : false
-13:59:56,902 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #2332 for: Question, id #13 for test: Test # 13 | isCorrect : true
-13:59:56,903 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2412 for: Question, id #13 for test: Test # 13 | isCorrect : false
-13:59:56,904 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - $6 answers were successfully updated for 13 question_id.
-13:59:56,907 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully updated question_id 13 and it's answers.
-13:59:56,924 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-13:59:56,925 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-13:59:56,927 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-13:59:56,928 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 54.
-13:59:56,930 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 99.
-13:59:56,932 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 145.
-13:59:56,934 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 185.
-13:59:56,935 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 231.
-13:59:56,937 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 241.
-13:59:56,938 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 255.
-13:59:56,939 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 262.
-13:59:56,941 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 263.
-13:59:56,942 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 281.
-13:59:56,943 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 352.
-13:59:56,944 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 382.
-13:59:56,947 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 410.
-13:59:56,950 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 449.
-13:59:56,952 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 517.
-13:59:56,954 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 538.
-13:59:56,955 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 592.
-13:59:56,955 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 18 questions for test_id 13.
-13:59:56,956 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 13, result name : Test # 13
-14:00:01,592 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-14:00:01,594 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-14:00:04,447 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 13
-14:00:04,448 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 13
-14:00:04,450 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully updated question_id 13.
-14:00:04,451 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - All questions for test_id 13 were deleted.
-14:00:04,452 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #13 for: Question, id #13 for test: Test # 13 | isCorrect : true
-14:00:04,453 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #794 for: Question, id #13 for test: Test # 13 | isCorrect : true
-14:00:04,456 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #1018 for: Question, id #13 for test: Test # 13 | isCorrect : false
-14:00:04,457 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2292 for: Question, id #13 for test: Test # 13 | isCorrect : false
-14:00:04,459 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #2332 for: Question, id #13 for test: Test # 13 | isCorrect : true
-14:00:04,460 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2412 for: Question, id #13 for test: Test # 13 | isCorrect : false
-14:00:04,460 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - $6 answers were successfully updated for 13 question_id.
-14:00:04,463 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully updated question_id 13 and it's answers.
-14:00:04,472 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:00:04,473 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:00:04,474 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-14:00:04,475 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 54.
-14:00:04,476 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 99.
-14:00:04,477 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 145.
-14:00:04,478 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 185.
-14:00:04,480 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 231.
-14:00:04,481 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 241.
-14:00:04,483 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 255.
-14:00:04,484 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 262.
-14:00:04,485 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 263.
-14:00:04,486 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 281.
-14:00:04,488 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 352.
-14:00:04,489 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 382.
-14:00:04,492 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 410.
-14:00:04,493 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 449.
-14:00:04,495 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 517.
-14:00:04,497 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 538.
-14:00:04,498 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 592.
-14:00:04,501 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 18 questions for test_id 13.
-14:00:04,502 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 13, result name : Test # 13
-14:00:06,383 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 13 with text : Question, id #13 for test: Test # 13.
-14:00:06,384 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-14:00:11,727 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 13
-14:00:11,727 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 13
-14:00:11,728 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully updated question_id 13.
-14:00:11,731 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - All questions for test_id 13 were deleted.
-14:00:11,732 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #13 for: Question, id #13 for test: Test # 13 | isCorrect : true
-14:00:11,733 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #794 for: Question, id #13 for test: Test # 13 | isCorrect : true
-14:00:11,734 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #1018 for: Question, id #13 for test: Test # 13 | isCorrect : false
-14:00:11,734 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2292 for: Question, id #13 for test: Test # 13 | isCorrect : false
-14:00:11,735 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #2332 for: Question, id #13 for test: Test # 13 | isCorrect : true
-14:00:11,735 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2412 for: Question, id #13 for test: Test # 13 | isCorrect : false
-14:00:11,736 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - $6 answers were successfully updated for 13 question_id.
-14:00:11,738 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully updated question_id 13 and it's answers.
-14:00:11,745 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:00:11,747 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:00:11,751 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 13.
-14:00:11,752 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 54.
-14:00:11,752 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 99.
-14:00:11,753 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 145.
-14:00:11,754 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 185.
-14:00:11,755 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 231.
-14:00:11,757 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 241.
-14:00:11,758 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 255.
-14:00:11,759 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 262.
-14:00:11,760 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 263.
-14:00:11,761 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 281.
-14:00:11,762 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 352.
-14:00:11,763 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 382.
-14:00:11,765 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 410.
-14:00:11,770 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 449.
-14:00:11,771 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 517.
-14:00:11,772 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 538.
-14:00:11,774 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 592.
-14:00:11,774 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 18 questions for test_id 13.
-14:00:11,778 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 13, result name : Test # 13
-14:00:18,749 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:00:18,751 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:00:22,044 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:00:22,046 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:00:22,885 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:00:22,886 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:00:22,887 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 0 questions for test_id 51.
-14:00:22,887 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:00:24,554 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:00:30,675 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 
-14:00:30,680 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully added new question to test_id 51.
-14:00:30,680 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 601
-14:00:30,683 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 601 | text : casd | isCorrect : false
-14:00:30,684 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 601 | text : casd | isCorrect : false
-14:00:30,687 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted 2 answers for question_id 601.
-14:00:30,694 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:00:30,694 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:00:30,696 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 601.
-14:00:30,696 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 1 questions for test_id 51.
-14:00:30,703 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:00:35,540 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:02:12,044 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:02:12,997 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:02:42,600 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:03:06,241 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:04:50,166 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:04:51,149 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:05:33,775 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:05:34,755 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:05:44,199 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:05:47,809 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 
-14:05:47,813 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully added new question to test_id 51.
-14:05:47,814 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 602
-14:05:47,817 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 602 | text : casd | isCorrect : false
-14:05:47,818 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 602 | text : casd | isCorrect : false
-14:05:47,821 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted 2 answers for question_id 602.
-14:05:47,827 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:05:47,828 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:05:47,830 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 601.
-14:05:47,831 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 602.
-14:05:47,832 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 2 questions for test_id 51.
-14:05:47,833 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:05:57,352 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully deleted question_id 602
-14:05:57,366 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:05:57,368 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:05:57,370 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 601.
-14:05:57,370 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 1 questions for test_id 51.
-14:05:57,372 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:05:58,855 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully deleted question_id 601
-14:05:58,861 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:05:58,861 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:05:58,862 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 0 questions for test_id 51.
-14:05:58,863 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:05:59,396 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:09:08,058 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:10:38,000 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:10:56,934 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:12:50,265 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:13:10,217 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:13:32,051 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:13:55,121 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:15:58,050 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:15:58,832 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:18:51,164 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:18:52,308 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:19:32,200 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:19:43,742 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:19:44,848 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:21:28,675 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:21:29,406 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:21:38,847 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:21:47,657 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 
-14:21:47,661 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully added new question to test_id 51.
-14:21:47,662 [ INFO|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - 603
-14:21:47,664 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 603 | text : casd | isCorrect : false
-14:21:47,664 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted new record to answer table. question_id : 603 | text : csadca | isCorrect : false
-14:21:47,666 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Inserted 2 answers for question_id 603.
-14:21:47,676 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:21:47,677 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:21:47,678 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 603.
-14:21:47,678 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 1 questions for test_id 51.
-14:21:47,680 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:21:53,979 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully deleted question_id 603
-14:21:53,986 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:21:53,986 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:21:53,987 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 0 questions for test_id 51.
-14:21:53,988 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:21:55,292 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:23:02,924 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:23:52,302 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:24:30,325 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:25:13,665 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:25:27,459 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:26:11,902 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:26:13,306 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:26:14,226 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:26:14,899 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:26:45,188 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:27:11,562 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:27:51,196 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:28:33,958 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:28:52,997 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:28:55,675 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:09,596 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:48,539 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:49,537 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:53,747 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:56,826 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:57,665 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:58,746 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:29:59,736 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:30:00,625 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:30:02,050 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:30:03,025 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:30:19,283 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:30:39,228 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:30:42,771 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:30:44,322 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:03,461 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:04,272 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:20,518 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:24,883 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:25,985 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:27,089 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:28,193 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:29,410 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:31:55,074 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:36:44,396 [ INFO|com.epam.controller.test.PassedTestsServlet|PassedTestsServlet] - String sorting: date DESC
-14:36:45,038 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:36:45,040 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:36:46,339 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:36:46,340 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:36:46,343 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 11.
-14:36:46,344 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 72.
-14:36:46,345 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 103.
-14:36:46,347 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 113.
-14:36:46,348 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 196.
-14:36:46,348 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 233.
-14:36:46,349 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 307.
-14:36:46,350 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 324.
-14:36:46,351 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 482.
-14:36:46,352 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 486.
-14:36:46,353 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 564.
-14:36:46,354 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 569.
-14:36:46,355 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 571.
-14:36:46,355 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 13 questions for test_id 11.
-14:36:46,357 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 11, result name : Test # 11
-14:36:47,294 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained question by id 11 with text : Question, id #11 for test: Test # 11.
-14:36:47,295 [ INFO|com.epam.db.dao.sql.AnswerDaoSql|AnswerDaoSql] - Successfully obtained answers by question_id 11.
-14:36:57,126 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:36:57,128 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:44:57,482 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:44:57,485 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:44:58,246 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:44:58,246 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:44:58,247 [ INFO|com.epam.db.dao.sql.QuestionDaoSql|QuestionDaoSql] - Successfully obtained 0 questions for test_id 51.
-14:44:58,248 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:45:00,160 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:45:46,558 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:45:56,942 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:46:23,603 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:46:30,831 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:46:45,744 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:46:50,915 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:46:57,984 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Requested test by id 51, result name : test test test
-14:50:08,760 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:50:08,763 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:50:40,913 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:50:40,917 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:50:49,493 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:50:49,496 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:51:04,642 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:51:04,644 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:51:14,927 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:51:14,929 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:51:24,089 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:51:24,092 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:51:59,017 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:51:59,019 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:52:14,553 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:52:14,555 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-14:52:17,675 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:52:17,677 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-14:52:19,042 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:52:19,044 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 0.
-14:52:22,601 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:52:22,604 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 9.
-14:53:30,667 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:53:30,670 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:53:32,276 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:53:32,279 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:53:51,581 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:53:51,584 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:53:52,976 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:53:52,978 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:53:54,494 [ INFO|com.epam.controller.test.PassedTestsServlet|PassedTestsServlet] - String sorting: date DESC
-14:53:55,177 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:53:55,179 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-14:53:57,354 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-14:53:57,355 [ INFO|com.epam.db.dao.sql.ComplexityDaoSql|ComplexityDaoSql] - Successfully obtained 4 records from complexity table in DB.
-14:53:58,074 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-14:53:58,076 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-14:54:02,659 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-14:54:02,662 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:18:05,088 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:18:05,092 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:19:13,409 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:19:13,411 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:30:25,890 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:30:25,892 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:30:28,064 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:30:28,067 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:30:32,261 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:30:36,315 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:30:36,323 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:30:36,325 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:30:38,539 [ INFO|com.epam.controller.test.PassedTestsServlet|PassedTestsServlet] - String sorting: date DESC
-15:30:41,125 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:30:41,128 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:30:46,377 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:30:46,379 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:30:48,235 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:30:54,173 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:30:54,183 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:30:58,772 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:30:58,782 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:31:09,915 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:31:09,919 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:31:13,204 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:31:13,217 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:31:20,481 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:31:20,484 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:31:24,005 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:31:24,013 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:31:24,015 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:31:28,032 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:31:28,034 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:31:30,996 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:31:34,306 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:31:34,319 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:32:27,317 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:32:27,320 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:32:34,181 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:32:34,192 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:33:15,614 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:33:17,969 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:33:17,979 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:33:20,806 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:33:20,808 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:33:26,834 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:33:26,837 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:33:30,932 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:33:30,940 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:33:30,943 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:33:32,248 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:33:37,185 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:33:37,187 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:33:41,381 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:33:41,391 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:35:36,469 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:35:37,316 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:35:41,635 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:35:41,975 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:35:45,795 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:35:45,816 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:35:48,362 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:35:48,393 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:35:48,404 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:35:52,934 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:35:52,942 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:35:58,880 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:35:58,887 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:36:03,572 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:36:03,590 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:36:03,595 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:36:06,868 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:36:06,875 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:36:08,532 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:36:09,501 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:36:09,510 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:36:09,513 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:36:10,608 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:36:12,927 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:36:12,939 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:36:16,628 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:36:16,642 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:36:32,326 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:36:32,330 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 53.
-15:36:35,932 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:36:35,940 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:36:35,943 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:36:38,680 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:36:39,787 [ INFO|com.epam.controller.user.RegisterServlet|RegisterServlet] - RegisterServlet doGet()
-15:36:53,719 [ERROR|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Failed to obtain user by username : com.epam.db.model.User@783dc3a5.
-java.sql.SQLException: Illegal operation on empty result set.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.checkRowPos(ResultSetImpl.java:517)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1314)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:822)
-	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:843)
-	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.getInt(DelegatingResultSet.java:275)
-	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.getInt(DelegatingResultSet.java:275)
-	at com.epam.db.dao.sql.UserDaoSql.getUserDetailsByUserName(UserDaoSql.java:48)
-	at com.epam.controller.user.RegisterServlet.doPost(RegisterServlet.java:41)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:54)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-15:36:53,723 [ INFO|com.epam.controller.user.RegisterServlet|RegisterServlet] - Username: 'Joe already exists.'
-15:36:53,729 [ INFO|com.epam.controller.user.RegisterServlet|RegisterServlet] - user created, redirecting to tests
-15:36:53,739 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:36:53,744 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:37:17,214 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:37:17,217 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 54.
-15:37:19,498 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:37:19,505 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 54.
-15:37:24,765 [ INFO|com.epam.db.dao.sql.StatusDaoSql|StatusDaoSql] - Successfully obtained 2 statuses from the db.
-15:37:24,771 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Total number of users in user table is 54.
-15:37:26,317 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:37:29,912 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:37:29,916 [ INFO|com.epam.db.dao.sql.UserDaoSql|UserDaoSql] - Failed to validate credentials, either user name is incorrect or password is null.
-15:37:29,926 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:37:33,455 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:37:33,465 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:42:02,649 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:42:06,348 [ INFO|com.epam.controller.LocaleUpdateServlet|LocaleUpdateServlet] - /epam/login
-15:42:06,358 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doGet()
-15:42:08,175 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - doPos()
-15:42:08,601 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:42:08,609 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:42:10,494 [ INFO|com.epam.controller.LocaleUpdateServlet|LocaleUpdateServlet] - /epam/tests?page=1&sort=name%20ASC&subject=0&perPage=10
-15:42:10,504 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:42:10,509 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:42:13,201 [ INFO|com.epam.controller.LocaleUpdateServlet|LocaleUpdateServlet] - /epam/tests?page=1&sort=name%20ASC&subject=0&perPage=10
-15:42:13,217 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:42:13,224 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:42:14,587 [ INFO|com.epam.controller.LocaleUpdateServlet|LocaleUpdateServlet] - /epam/tests?page=1&sort=name%20ASC&subject=0&perPage=10
-15:42:14,599 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:42:14,606 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
-15:42:16,579 [ INFO|com.epam.controller.LocaleUpdateServlet|LocaleUpdateServlet] - /epam/tests?page=1&sort=name%20ASC&subject=0&perPage=10
-15:42:16,591 [ INFO|com.epam.db.dao.sql.SubjectDaoSql|SubjectDaoSql] - Obtained 12 subjects from database.
-15:42:16,595 [ INFO|com.epam.db.dao.sql.TestDaoSql|TestDaoSql] - Total number of tests in test table is 51.
+00:11:11,147 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:11:13,311 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:11:15,593 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:11:15,608 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:11:22,301 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:11:26,904 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:11:26,928 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:11:28,452 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:12:47,818 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:13:06,335 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:13:12,612 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:13:16,369 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:13:16,390 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:13:18,155 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:14:45,435 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:14:45,441 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:14:53,928 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:14:53,928 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:14:56,683 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:14:56,688 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:14:59,461 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:14:59,463 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:14:59,475 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:14:59,477 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:15:43,455 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:15:43,458 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:16,160 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:17:16,165 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:17:20,055 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:17:20,057 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:17:25,269 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:17:25,270 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:17:27,393 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:17:27,397 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:17:27,406 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:17:27,408 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:17:29,144 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,146 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,160 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,162 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,168 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,171 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,181 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,184 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,193 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,198 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,206 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,209 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,217 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,219 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,228 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,230 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,237 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,239 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,246 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,249 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,255 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,257 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,266 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,268 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,276 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,278 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,284 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,288 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,293 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,294 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,300 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,301 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,306 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,307 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,312 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,313 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,318 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,319 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:29,323 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:29,325 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,371 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,371 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,386 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,386 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,404 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,408 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,414 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,417 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,429 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,431 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,438 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,442 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,453 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,455 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,462 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,464 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,471 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,474 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,479 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,482 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,488 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,490 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,498 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,499 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,505 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,507 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,513 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,515 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,519 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,520 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,525 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,526 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,530 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,531 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,535 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,536 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,540 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,541 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:30,545 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:30,546 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,556 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,571 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,571 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,571 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,571 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,588 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,599 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,602 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,620 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,627 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,637 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,640 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,646 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,651 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,658 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,666 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,671 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,673 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,680 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,682 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,687 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,688 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,693 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,694 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,698 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,699 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,703 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,704 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,709 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,710 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,715 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,716 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,722 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,724 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,730 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,731 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,735 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,737 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:17:35,746 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:17:35,748 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,763 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,765 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,773 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,774 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,780 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,781 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,798 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,803 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,810 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,814 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,821 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,823 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,831 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,834 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,841 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,843 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,850 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,852 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,857 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,859 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,864 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,867 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,873 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,878 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,884 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,886 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,890 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,891 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,895 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,896 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,900 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,901 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,905 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,906 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,910 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,911 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,915 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,916 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:05,920 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:18:05,921 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:18:44,996 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:18:45,001 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:18:45,886 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:18:45,889 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:18:50,178 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:18:50,180 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:18:51,904 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:18:51,908 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:18:55,305 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:18:55,307 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:18:59,277 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:18:59,279 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:18:59,287 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:18:59,728 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:18:59,731 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:19:02,310 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:19:02,317 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:19:02,328 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:19:02,329 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:19:06,733 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:19:06,736 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+00:21:40,934 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:21:40,941 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:21:44,562 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:21:44,564 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:21:45,734 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:21:45,736 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:21:50,758 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:21:50,761 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:21:50,773 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+00:21:50,774 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+00:21:52,787 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Banned
+00:21:52,792 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - (userDao.getUserDetailsByUserName("" + session.getAttribute("username")).getStatus().equals("Banned"))
+13:25:52,815 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - 
+13:25:54,834 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - 
+13:26:31,996 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - 
+13:26:34,050 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - 
+15:16:53,616 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - 
+15:16:58,613 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - 
+15:17:09,208 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:17:13,825 [ INFO|com.epam.controller.auth.LoginServlet|LoginServlet] - 
+15:18:15,250 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:18:16,750 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:18:19,268 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:18:19,295 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:18:23,510 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:18:28,485 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:18:32,185 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:18:32,241 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:26:10,053 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:26:12,146 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:49:39,851 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:49:40,955 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:49:40,956 [ INFO|com.epam.controller.auth.LogoutServlet|LogoutServlet] - 
+15:49:40,956 [ INFO|com.epam.controller.auth.LogoutServlet|LogoutServlet] - 
+15:50:33,562 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:50:34,575 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+15:50:34,576 [ INFO|com.epam.controller.auth.LogoutServlet|LogoutServlet] - 
+15:50:34,576 [ INFO|com.epam.controller.auth.LogoutServlet|LogoutServlet] - 
+16:23:59,475 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:00,688 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:03,686 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:06,946 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:11,344 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:12,824 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:13,787 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:13,793 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+16:24:14,447 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:15,609 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:16,720 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE
+16:24:17,943 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ELSE

@@ -1,6 +1,8 @@
 package com.epam.db.model;
 
-public class Test {
+import java.io.Serializable;
+
+public class Test implements Serializable {
     private int id;
     private String name;
     private String subject;

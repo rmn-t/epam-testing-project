@@ -1,18 +1,11 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.ComplexityDao;
-import com.epam.db.dao.QuestionDao;
-import com.epam.db.dao.SubjectDao;
-import com.epam.db.dao.TestDao;
-import com.epam.db.dao.sql.ComplexityDaoSql;
-import com.epam.db.dao.sql.QuestionDaoSql;
-import com.epam.db.dao.sql.SubjectDaoSql;
-import com.epam.db.dao.sql.TestDaoSql;
 import com.epam.db.model.Complexity;
 import com.epam.db.model.Question;
 import com.epam.db.model.Subject;
 import com.epam.db.model.Test;
 import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,19 +21,7 @@ import java.util.List;
 
 @WebServlet("/test")
 public class TestServlet extends HttpServlet {
-    private Logger logger = LoggerFactory.getLogger(TestServlet.class);
-    private QuestionDao questionDao;
-    private TestDao testDao;
-    private SubjectDao subjectDao;
-    private ComplexityDao complexityDao;
-
-    @Override
-    public void init() throws ServletException {
-        questionDao = new QuestionDaoSql();
-        testDao = new TestDaoSql();
-        subjectDao = new SubjectDaoSql();
-        complexityDao = new ComplexityDaoSql();
-    }
+    private final Logger logger = LoggerFactory.getLogger(TestServlet.class);
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -52,9 +33,9 @@ public class TestServlet extends HttpServlet {
         List<Subject> subjects = new ArrayList<>();
         List<Complexity> complexities = new ArrayList<>();
         try {
-            subjects = subjectDao.getAllRecords();
+            subjects = Consts.SUBJECT_DAO.getAllRecords();
             req.setAttribute("subjects",subjects);
-            complexities = complexityDao.getAllRecords();
+            complexities = Consts.COMPLEXITY_DAO.getAllRecords();
             req.setAttribute("complexities",complexities);
         } catch (DBException e) {
             logger.error("Couldn't find options for test creation. Subjects {}. Complexities {}.",subjects.size(),complexities.size(),e);
@@ -63,14 +44,14 @@ public class TestServlet extends HttpServlet {
         int testId = Integer.parseInt(req.getParameter("id"));
         List<Question> questions = null;
         try {
-            questions = questionDao.getQuestionsAndAnswersByTestId(testId);
+            questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
             logger.debug(String.valueOf(questions));
         } catch (DBException e) {
             logger.error("Test servlet - get.",e);
         }
         Test test = null;
         try {
-            test = testDao.getTestById(testId);
+            test = Consts.TEST_DAO.getTestById(testId);
         } catch (DBException e) {
             logger.error("Test servlet get",e);
         }

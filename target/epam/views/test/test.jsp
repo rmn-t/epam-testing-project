@@ -46,7 +46,7 @@
                                         <div class="form-floating">
                                             <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="subject" name="subject">
                                                 <c:forEach items="${requestScope['subjects']}" var="element">
-                                                    <option class="align-middle" value="${element.id}">///${element.name}</option>
+                                                    <option class="align-middle" value="${element.id}" ${test.subjectId == element.id ? 'selected' : ''}>///${element.name}</option>
                                                 </c:forEach>
                                              </select>
                                              <label class="text-center text-muted" for="subject">///Subject:</label>
@@ -58,7 +58,7 @@
                                         <div class="form-floating">
                                             <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="complexity" name="complexity">
                                                 <c:forEach items="${requestScope['complexities']}" var="element">
-                                                    <option class="align-middle" value="${element.id}">///${element.name}</option>
+                                                    <option class="align-middle" value="${element.id}" ${test.complexityId == element.id ? 'selected' : ''}>///${element.name}</option>
                                                 </c:forEach>
                                             </select>
                                             <label class="text-center text-muted" for="complexity">///Subject:</label>
@@ -75,6 +75,17 @@
                                     <div class="form-floating mb-2 text-center">
                                         <input type="number" class="form-control bg-light text-center" name="durationSec" id="durationSec" placeholder="///Test duration sec" min="0" step="1"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' max="59" value="${test.duration%60}">
                                         <label for="durationSec" class="form-label">///Test duration sec</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="mb-2 text-center">
+                                        <div class="form-floating">
+                                            <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="isActive" name="isActive">
+                                                <option class="align-middle" value="true" ${test.isActive == true ? 'selected' : ''}>///Active</option>
+                                                <option class="align-middle" value="false" ${test.isActive == false ? 'selected' : ''}>///Inactive</option>
+                                            </select>
+                                            <label class="text-center text-muted" for="isActive">///Status:</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="mt-3 container text-center">

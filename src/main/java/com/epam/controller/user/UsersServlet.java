@@ -1,6 +1,6 @@
 package com.epam.controller.user;
 
-import com.epam.controller.IPaginatable;
+import com.epam.controller.util.IPaginatable;
 import com.epam.db.model.Role;
 import com.epam.db.model.Status;
 import com.epam.db.model.User;

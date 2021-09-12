@@ -54,11 +54,7 @@ public class LoginServlet extends HttpServlet {
             resp.sendRedirect(Views.LOGIN_JSP);
         } else {
             HttpSession session = req.getSession();
-            session.setAttribute("username", user.getUsername());
-            session.setAttribute("userId", user.getId());
-            session.setAttribute("userStatus", user.getStatus());
-            session.setAttribute("userRole", user.getRole());
-            session.setAttribute("currentUser", user);
+            session.setAttribute(Consts.CURRENT_USER, user);
             resp.sendRedirect("tests?page=1&sort=name ASC&subject=0&perPage=10");
         }
     }

@@ -9,14 +9,14 @@ public interface TestDao {
 
     Test getTestById(int testId) throws DBException;
 
-    void updateTestById(int id, String name, int subjectId, int complexityId, int duration) throws DBException;
+    void updateTestById(int id, String name, int subjectId, int complexityId, int duration, boolean isActive) throws DBException;
 
     void deleteTestById(int id) throws DBException;
 
-    List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy, int subjectId) throws DBException;
+    List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy, int subjectId, String isActive) throws DBException;
 
     int insertNewTest(String name, int subjectId, int complexityId, int durationSec) throws DBException;
 
-    int getRecordsNumBySubjectId(int subjectId) throws DBException;
+    int getRecordsNumBySubjectId(int subjectId, String isActive) throws DBException;
 
 }

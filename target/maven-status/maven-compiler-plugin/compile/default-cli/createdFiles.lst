@@ -7,6 +7,7 @@ com\epam\controller\user\EditUsersServlet.class
 com\epam\db\dao\mysql\RoleDaoMysql.class
 com\epam\db\dao\SubjectDao.class
 com\epam\db\model\Question.class
+com\epam\controller\CharsetFilter.class
 com\epam\tags\PreventGoingBack.class
 com\epam\db\model\PassedTest$Builder.class
 com\epam\db\model\Answer$Builder.class

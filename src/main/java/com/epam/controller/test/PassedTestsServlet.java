@@ -1,9 +1,8 @@
 package com.epam.controller.test;
 
-import com.epam.controller.IPaginatable;
-import com.epam.db.dao.PassedTestsDao;
-import com.epam.db.dao.mysql.PassedTestsDaoMysql;
+import com.epam.controller.util.IPaginatable;
 import com.epam.db.model.PassedTest;
+import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
 import com.epam.util.Views;
@@ -27,7 +26,8 @@ public class PassedTestsServlet extends HttpServlet implements IPaginatable {
         int recordsPerPage = calculateRecordsPerPageNum(req,logger,"perPage");
         int pageNum = calculatePage(req,recordsPerPage,"page");
         String sorting = getSortingValue(req,"sort",Consts.getVALID_COLUMNS_FOR_PASSED_TESTS_ORDER_BY(),Consts.PASSED_TESTS_DEFAULT_SORT);
-        int userId = Integer.parseInt("" + req.getSession(false).getAttribute("userId"));
+        User user = (User) req.getSession().getAttribute(Consts.CURRENT_USER);
+        int userId = user.getId();
         try {
             List<PassedTest> passedTests = Consts.PASSED_TESTS_DAO.getRecordsByUserIdOrderedLimited(userId, pageNum, recordsPerPage, sorting);
             int totalTests = Consts.PASSED_TESTS_DAO.getRecordsNumberByUserId(userId);

@@ -11,6 +11,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
+        .active-test {
+            color: green;
+            font-weight:600;
+        }
+        .inactive-test {
+            color: red;
+            font-weight:600;
+        }
     </style>
     <title>///Main</title>
 </head>
@@ -28,7 +36,7 @@
                 <div class="row">
                     <input type="hidden" name="page" value="1">
                     <div class="col"></div>
-                    <div class="col-md-4 col-lg-2">
+                    <div class="col-smd-3 col-lg-2">
                         <div class="form-floating">
                              <select size="1" class="form-select bg-light text-dark text-center" aria-label="sort" id="sort" name="sort" onchange="submit()">
                                 <option class="align-middle" value="name ASC" ${param.sort == 'name ASC' ? 'selected' : ''}>///Name A-Z</option>
@@ -41,7 +49,7 @@
                              <label class="text-center text-muted" for="sort">///Sorting:</label>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-2">
+                    <div class="col-smd-3 col-lg-2">
                         <div class="form-floating">
                             <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="subject" name="subject" onchange="submit()">
                                 <option class="align-middle" value="0" ${param.subject == 0 ? 'selected' : ''}>///All subjects</option>
@@ -52,7 +60,7 @@
                              <label class="text-center text-muted" for="subject">///Subject:</label>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-2">
+                    <div class="col-smd-3 col-lg-2">
                         <div class="form-floating">
                             <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="perPage" name="perPage" onchange="submit()">
                                 <option class="align-middle" value="10" ${param.perPage == 10 ? 'selected' : ''}>10</option>
@@ -62,6 +70,18 @@
                             <label class="text-center text-muted" for="subject">///Records per page:</label>
                         </div>
                     </div>
+                    <c:if test="${sessionScope.currentUser.role == 'admin'}">
+                        <div class="col-smd-3 col-lg-2">
+                            <div class="form-floating">
+                                <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="testStatus" name="testStatus" onchange="submit()">
+                                    <option class="align-middle" value="all" ${param.testStatus == 'all' ? 'selected' : ''}>///All</option>
+                                    <option class="align-middle" value="active" ${param.testStatus == 'active' ? 'selected' : ''}>///Active</option>
+                                    <option class="align-middle" value="inactive" ${param.testStatus == 'inactive' ? 'selected' : ''}>///Inactive</option>
+                                </select>
+                                <label class="text-center text-muted" for="subject">///Test status:</label>
+                            </div>
+                        </div>
+                    </c:if>
                     <div class="col"></div>
                 </div>
             </form>
@@ -75,7 +95,8 @@
                 <th class="text-center">///complexity</th>
                 <th class="text-center">///duration</th>
                 <th class="text-center">///questions</th>
-                <c:if test="${sessionScope.userRole == 'admin'}">
+                <c:if test="${sessionScope.currentUser.role == 'admin'}">
+                    <th class="text-center">///Status</th>
                     <th class="text-center">///details</th>
                 </c:if>
                 <th class="text-center">///Action</th>
@@ -88,7 +109,16 @@
                         <td class="text-center align-middle">///${element.complexity}</td>
                         <td class="text-center align-middle"><my:floor val='${element.duration/60}' /> ///min:${element.duration%60} ///sec</td>
                         <td class="text-center align-middle">${element.questionsNum}</td>
-                        <c:if test="${sessionScope.userRole == 'admin'}">
+                        <c:if test="${sessionScope.currentUser.role == 'admin'}">
+                            <c:if test="${element.isActive == true}">
+                                <td class="text-center align-middle active-test">
+                                ///Active
+                            </c:if>
+                            <c:if test="${element.isActive == false}">
+                                <td class="text-center align-middle inactive-test">
+                                ///Inactive
+                            </c:if>
+                            </td>
                             <td class="text-center align-middle"><a class="btn btn-warning" href="/epam/test?id=${element.id}">///Details</a></td>
                         </c:if>
                         <td class="text-center">
@@ -102,10 +132,11 @@
         </table>
         <br>
 
+        <c:set var = "role" scope = "request" value = "admin"/>
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
-                    <a class="page-link bg-success text-light" href="/epam/tests?page=1&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}" tabindex="-1" aria-disabled="true">///First</a>
+                    <a class="page-link bg-success text-light" href="/epam/tests?page=1&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>" tabindex="-1" aria-disabled="true">///First</a>
                 </li>
                 <c:if test="${param.page eq 1}">
                     <li class="page-item disabled">
@@ -114,7 +145,7 @@
                 </c:if>
                 <c:if test="${param.page gt 1}">
                     <li class="page-item">
-                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page-1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}">///Previous</a>
+                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page-1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>">///Previous</a>
                     </li>
                 </c:if>
                 <c:if test="${param.page eq lastPage}">
@@ -124,11 +155,11 @@
                 </c:if>
                 <c:if test="${param.page lt lastPage}">
                     <li class="page-item">
-                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page+1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}">///Next</a>
+                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page+1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>">///Next</a>
                     </li>
                 </c:if>
                 <li class="page-item">
-                    <a class="page-link bg-success text-light" href="/epam/tests?page=${lastPage}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}" tabindex="-1" aria-disabled="true">///Last</a>
+                    <a class="page-link bg-success text-light" href="/epam/tests?page=${lastPage}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>" tabindex="-1" aria-disabled="true">///Last</a>
                 </li>
             </ul>
         </nav>

@@ -22,7 +22,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/epam/account">///Account-Личный кабинет</a>
                     </li>
-                    <c:if test="${sessionScope.userRole == 'admin'}">
+                    <c:if test="${sessionScope.currentUser.role == 'admin'}">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/epam/createTest">///Add test</a>
                         </li>
@@ -41,7 +41,7 @@
                              </select>
                         </form>
                     </li>
-                   <!-- <li class="nav-item"><a class="nav-link btn-light text-dark active mr-2" aria-current="page">//Logged in as: <c:out value="${sessionScope.username}" /> </a>                   </li> -->
+                   <!-- <li class="nav-item"><a class="nav-link btn-light text-dark active mr-2" aria-current="page">//Logged in as: <c:out value="${sessionScope.currentUser.username}" /> </a>                   </li> -->
                     <li class="nav-item">
                         <a class="nav-link active mr-2" aria-current="page">  </a>
                     </li>

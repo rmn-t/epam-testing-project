@@ -1,10 +1,5 @@
 package com.epam.controller.test;
 
-import com.epam.db.dao.ComplexityDao;
-import com.epam.db.dao.SubjectDao;
-import com.epam.db.dao.TestDao;
-import com.epam.db.dao.mysql.ComplexityDaoMysql;
-import com.epam.db.dao.mysql.SubjectDaoMysql;
 import com.epam.db.model.Test;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
@@ -42,9 +37,10 @@ public class EditTestServlet extends HttpServlet {
         String name = req.getParameter("name");
         int subjectId = Integer.parseInt(req.getParameter("subject"));
         int complexityId = Integer.parseInt(req.getParameter("complexity"));
+        boolean isActive = Boolean.parseBoolean(req.getParameter("isActive"));
         int duration = Integer.parseInt(req.getParameter("durationMin")) * 60 + Integer.parseInt(req.getParameter("durationSec"));
         try {
-            Consts.TEST_DAO.updateTestById(testId,name,subjectId,complexityId,duration);
+            Consts.TEST_DAO.updateTestById(testId,name,subjectId,complexityId,duration,isActive);
         } catch (DBException e) {
             logger.error("Edit servlet post");
         }

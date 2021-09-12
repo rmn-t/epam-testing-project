@@ -30,6 +30,11 @@ public class TakeTestServlet extends HttpServlet {
         try {
             questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
             test = Consts.TEST_DAO.getTestById(testId);
+            if (!test.getIsActive()) {
+                req.setAttribute("error","You are not allowed to pass this test.");
+                req.getRequestDispatcher("/error").forward(req,resp);
+                return;
+            }
         } catch (DBException e) {
             logger.error("Take test servlet get", e);
         }
@@ -74,7 +79,7 @@ public class TakeTestServlet extends HttpServlet {
         int timeSpent = (int) ((finishTime - startTime) > testDuration ? testDuration : finishTime - startTime);
         session.removeAttribute("startTime" + testId);
         session.removeAttribute("timeLeft" + testId);
-        int userId = Integer.parseInt("" + session.getAttribute("userId"));
+        int userId = Integer.parseInt("" + session.getAttribute(Consts.CURRENT_USER));
         try {
             Consts.PASSED_TESTS_DAO.insertNew(testId, userId,(int) questionsNum,correctAnswers, correctAnswers * 100 / questionsNum, timeSpent);
         } catch (DBException e) {

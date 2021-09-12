@@ -24,7 +24,6 @@ public class UserDaoMysql implements UserDao {
     private final String LAST_NAME = "last_name";
     private final int DEFAULT_STATUS_ID = 1;
     private final int DEFAULT_ROLE_ID = 2;
-    private final String[] VALID_COLUMNS_FOR_ORDER_BY = {ID, USERNAME, PASSWORD, SALT, ROLE, STATUS};
 
     public UserDaoMysql() {
     }
@@ -42,7 +41,11 @@ public class UserDaoMysql implements UserDao {
                     "INNER JOIN role ON user.role_id = role.id " +
                     "where username = ?;");
             prepStmt.setString(1,username);
+            logger.info(prepStmt.toString());
             rs = prepStmt.executeQuery();
+            if (!rs.isBeforeFirst()) {
+                return user;
+            }
             rs.next();
             user = new User.Builder()
                     .setId(rs.getInt(ID))
@@ -58,7 +61,7 @@ public class UserDaoMysql implements UserDao {
                     .build();
             logger.debug("Successfully obtained user by username, id is {}.",user.getId());
         } catch (SQLException e) {
-            logger.error("Failed to obtain user by username : {}.",user,e);
+            logger.error("Failed to obtain user by username : {}.",user.getUsername(),e);
             throw new DBException("Failed to obtain user by username",e);
         } finally {
             DBUtil.closeAllInOrder(rs,prepStmt,con);

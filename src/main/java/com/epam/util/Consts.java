@@ -74,5 +74,7 @@ public class Consts {
     public static final TestDao TEST_DAO = new TestDaoMysql();
     public static final UserDao USER_DAO = new UserDaoMysql();
 
+    public static final String CURRENT_USER = "currentUser";
+
 
 }

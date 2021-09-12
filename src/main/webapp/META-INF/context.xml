@@ -45,7 +45,7 @@ Data source and connection pool configuration
         driverClassName="com.mysql.cj.jdbc.Driver"
         defaultAutoCommit="true"
         defaultTransactionIsolation="READ_COMMITTED"
-        url="jdbc:mysql://localhost:3306/epam_project?useSSL=false"
+        url="jdbc:mysql://localhost:3306/epam_project?useSSL=false&amp;useEncoding=true&amp;characterEncoding=UTF-8"
     />
 
 </Context>

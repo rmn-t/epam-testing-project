@@ -29,7 +29,7 @@ public class AccountServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession(false);
-        User user = (User) session.getAttribute("currentUser");
+        User user = (User) session.getAttribute(Consts.CURRENT_USER);
         int salt = user.getSalt();
         String newPass = req.getParameter("password");
         String firstName = req.getParameter("firstName");
@@ -42,7 +42,7 @@ public class AccountServlet extends HttpServlet {
         }
         try {
             Consts.USER_DAO.updateUserById(user.getId(), newPass, user.getRoleId(), user.getStatusId(), firstName, lastName, salt);
-            session.setAttribute("currentUser",Consts.USER_DAO.getUserDetailsByUserName(user.getUsername()));
+            session.setAttribute(Consts.CURRENT_USER,Consts.USER_DAO.getUserDetailsByUserName(user.getUsername()));
         } catch (DBException e) {
             logger.error("Couldn't update the user information.", e);
         }

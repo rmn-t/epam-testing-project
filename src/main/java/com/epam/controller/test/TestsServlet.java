@@ -1,8 +1,9 @@
 package com.epam.controller.test;
 
-import com.epam.controller.IPaginatable;
+import com.epam.controller.util.IPaginatable;
 import com.epam.db.model.Subject;
 import com.epam.db.model.Test;
+import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
 import com.epam.util.Views;
@@ -14,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,8 +57,11 @@ public class TestsServlet extends HttpServlet implements IPaginatable {
         }
 
         try {
-            List<Test> tests = Consts.TEST_DAO.getTestsLimitedSorted(pageId,recordsPerPage,sorting,subjectId);
-            int totalTests = Consts.TEST_DAO.getRecordsNumBySubjectId(subjectId);
+            HttpSession session = req.getSession();
+            User user = (User) session.getAttribute(Consts.CURRENT_USER);
+            String isActive = user.getRoleId() == 2 ? "active" : req.getParameter("testStatus");
+            List<Test> tests = Consts.TEST_DAO.getTestsLimitedSorted(pageId,recordsPerPage,sorting,subjectId,isActive);
+            int totalTests = Consts.TEST_DAO.getRecordsNumBySubjectId(subjectId,isActive);
             int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
             req.setAttribute("tests",tests);
             req.setAttribute("lastPage",lastPage);

@@ -46,13 +46,11 @@ public class RegisterServlet extends HttpServlet {
         String firstName= req.getParameter("firstName");
         String lastName = req.getParameter("lastName");
         try {
-            int id = Consts.USER_DAO.addNewUser(userName,password,firstName,lastName);
+            Consts.USER_DAO.addNewUser(userName,password,firstName,lastName);
+            logger.info(userName);
             HttpSession session = req.getSession();
-            session.setAttribute("username",userName);
-            session.setAttribute("userId",id);
-            session.setAttribute("userStatus","active");
-            session.setAttribute("userRole","user");
-            session.setAttribute("testsSorting","name ASC");
+            session.setAttribute(Consts.CURRENT_USER,Consts.USER_DAO.getUserDetailsByUserName(userName));
+            logger.info(Consts.USER_DAO.getUserDetailsByUserName(userName).getStatus());
             logger.info("user created, redirecting to tests");
             resp.sendRedirect("tests?page=1");
         } catch (DBException e) {

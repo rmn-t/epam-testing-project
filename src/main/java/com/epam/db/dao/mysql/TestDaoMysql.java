@@ -15,8 +15,11 @@ public class TestDaoMysql implements TestDao {
     private static final String ID = "id";
     private static final String NAME = "name";
     private static final String SUBJECT = "subject";
+    private static final String SUBJECT_ID = "subject_id";
     private static final String COMPLEXITY = "complexity";
+    private static final String COMPLEXITY_ID = "complexity_id";
     private static final String DURATION = "duration_sec";
+    private static final String IS_ACTIVE = "is_active";
     private final Logger logger = LoggerFactory.getLogger(TestDaoMysql.class);
 
     public TestDaoMysql() {
@@ -30,7 +33,8 @@ public class TestDaoMysql implements TestDao {
         try {
             con = DBUtil.getConnection();
             prepStmt = con.prepareStatement("" +
-                    "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum " +
+                    "SELECT test.id,test.name,subject.name as subject,subject_id,complexity.name as complexity,complexity_id,duration_sec,is_active," +
+                    "count(question.test_id) AS questionsNum " +
                     "FROM test LEFT JOIN question ON test.id = question.test_id " +
                     "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
                     "LEFT JOIN subject ON subject.id = test.subject_id " +
@@ -43,10 +47,14 @@ public class TestDaoMysql implements TestDao {
                     .setId(rs.getInt(ID))
                     .setName(rs.getString(NAME))
                     .setSubject(rs.getString(SUBJECT))
+                    .setSubjectId(rs.getInt(SUBJECT_ID))
                     .setComplexity(rs.getString(COMPLEXITY))
+                    .setComplexityId(rs.getInt(COMPLEXITY_ID))
+                    .setIsActive(rs.getBoolean(IS_ACTIVE))
                     .setDuration(rs.getInt(DURATION))
                     .setQuestionsNum(rs.getInt("questionsNum"))
                     .build();
+            System.out.println(test.getIsActive() + " is active+");
             logger.debug("Requested test by id {}, result name : {}", testId, test.getName());
         } catch (SQLException e) {
             logger.error("Failed to get test by id {}.", testId, e);
@@ -57,17 +65,18 @@ public class TestDaoMysql implements TestDao {
         return test;
     }
 
-    public void updateTestById(int id, String name, int subjectId, int complexityId, int duration) throws DBException {
+    public void updateTestById(int id, String name, int subjectId, int complexityId, int duration, boolean isActive) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("UPDATE test SET name = ?, subject_id = ?, complexity_id = ?, duration_sec = ? WHERE id = ?;");
+            prepStmt = con.prepareStatement("UPDATE test SET name = ?, subject_id = ?, complexity_id = ?, duration_sec = ?,is_active = ? WHERE id = ?;");
             int k = 1;
             prepStmt.setString(k++, name);
             prepStmt.setInt(k++, subjectId);
             prepStmt.setInt(k++, complexityId);
             prepStmt.setInt(k++, duration);
+            prepStmt.setBoolean(k++, isActive);
             prepStmt.setInt(k++, id);
             prepStmt.executeUpdate();
             logger.debug("Successfully updated test by id {}.", id);
@@ -96,25 +105,29 @@ public class TestDaoMysql implements TestDao {
         }
     }
 
-    public List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy, int subjectId) throws DBException {
+    public List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy, int subjectId, String isActive) throws DBException {
         List<Test> results = new ArrayList<>();
         Connection con = null;
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
-        String whereSubjectId = subjectId == 0 ? "" : " WHERE subject_id = " + subjectId;
+        String subjectIdEquals = subjectId == 0 ? "" : " subject_id = " + subjectId;
+        String isActiveTrue = mapIsActiveForQuery(isActive);
+        String where = isActiveTrue.equals("") && subjectIdEquals.equals("") ? "" : " WHERE ";
+        String and = subjectIdEquals.equals("") || isActiveTrue.equals("") ? "" : " AND ";
         try {
             con = DBUtil.getConnection();
             prepStmt = con.prepareStatement("" +
-                    "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum " +
+                    "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active " +
                     "FROM test " +
                     "LEFT JOIN question ON test.id = question.test_id " +
                     "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
-                    "LEFT JOIN subject ON subject.id = test.subject_id " + whereSubjectId +
+                    "LEFT JOIN subject ON subject.id = test.subject_id " + where + subjectIdEquals + and + isActiveTrue +
                     " GROUP BY test.id ORDER BY " + orderBy + " LIMIT ?, ?;"
             );
             int k = 1;
             prepStmt.setInt(k++, offset - 1);
             prepStmt.setInt(k++, limit);
+            logger.info(prepStmt.toString());
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 results.add(new Test.Builder()
@@ -123,17 +136,31 @@ public class TestDaoMysql implements TestDao {
                         .setSubject(rs.getString(SUBJECT))
                         .setComplexity(rs.getString(COMPLEXITY))
                         .setDuration(rs.getInt(DURATION))
+                        .setIsActive(rs.getBoolean(IS_ACTIVE))
                         .setQuestionsNum(rs.getInt("questionsNum"))
                         .build());
             }
-            logger.debug("Successfully obtained {} tests.",results.size());
+            logger.debug("Successfully obtained {} tests.", results.size());
         } catch (SQLException e) {
-            logger.error("Failed to obtain tests (limited,sorted,ordered).",e);
-            throw new DBException("Failed to obtain tests (limited,sorted,ordered).",e);
+            logger.error("Failed to obtain tests (limited,sorted,ordered).", e);
+            throw new DBException("Failed to obtain tests (limited,sorted,ordered).", e);
         } finally {
             DBUtil.closeAllInOrder(rs, prepStmt, con);
         }
         return results;
+    }
+
+    private String mapIsActiveForQuery(String isActiveValue) {
+        if (isActiveValue == null) {
+            return "";
+        }
+        if ("active".equals(isActiveValue)) {
+            return " is_active = TRUE ";
+        }
+        if ("inactive".equals(isActiveValue)) {
+            return " is_active = FALSE ";
+        }
+        return "";
     }
 
     public int insertNewTest(String name, int subjectId, int complexityId, int durationSec) throws DBException {
@@ -143,7 +170,7 @@ public class TestDaoMysql implements TestDao {
         ResultSet generatedKeys = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("INSERT INTO test(name,subject_id,complexity_id,duration_sec) values(?,?,?,?);", Statement.RETURN_GENERATED_KEYS);
+            prepStmt = con.prepareStatement("INSERT INTO test(name,subject_id,complexity_id,duration_sec,is_active) values(?,?,?,?,FALSE);", Statement.RETURN_GENERATED_KEYS);
             int k = 0;
             prepStmt.setString(++k, name);
             prepStmt.setInt(++k, subjectId);
@@ -154,34 +181,37 @@ public class TestDaoMysql implements TestDao {
             if (generatedKeys.next()) {
                 res = generatedKeys.getInt(1);
             } else {
-                throw new DBException("Creating user failed, no ID obtained.",new Throwable());
+                throw new DBException("Creating user failed, no ID obtained.", new Throwable());
             }
             logger.debug("Successfully created new test.");
         } catch (SQLException e) {
             logger.error("Failed to insert new test.");
-            throw new DBException("Failed to insert new test.",e);
+            throw new DBException("Failed to insert new test.", e);
         } finally {
             DBUtil.closeAllInOrder(prepStmt, con);
         }
         return res;
     }
 
-    public int getRecordsNumBySubjectId(int subjectId) throws DBException {
+    public int getRecordsNumBySubjectId(int subjectId, String isActiveValue) throws DBException {
         int res;
-        String whereSubjectId = subjectId == 0 ? "" : " WHERE subject_id = " + subjectId;
+        String subjectIdEquals = subjectId == 0 ? "" : " subject_id = " + subjectId;
+        String isActiveTrue = mapIsActiveForQuery(isActiveValue);
+        String where = isActiveTrue.equals("") && subjectIdEquals.equals("") ? "" : " WHERE ";
+        String and = subjectIdEquals.equals("") || isActiveTrue.equals("") ? "" : " AND ";
         Connection con = null;
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         try {
             con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("SELECT COUNT(*) AS total FROM test " + whereSubjectId + ";");
+            prepStmt = con.prepareStatement("SELECT COUNT(*) AS total FROM test " + where + subjectIdEquals + and + isActiveTrue + ";");
             rs = prepStmt.executeQuery();
             rs.next();
             res = rs.getInt("total");
-            logger.debug("Total number of tests in test table is {}.",res);
+            logger.debug("Total number of tests in test table is {}.", res);
         } catch (SQLException e) {
-            logger.error("Failed to get the total tests number.",e);
-            throw new DBException("Failed to get the total tests number.",e);
+            logger.error("Failed to get the total tests number.", e);
+            throw new DBException("Failed to get the total tests number.", e);
         } finally {
             DBUtil.closeAllInOrder(rs, prepStmt, con);
         }

@@ -37,7 +37,7 @@
                             <div class="row align-items-bottom">
                                 <div class="col">
                                     <div class="form-floating mb-2 text-center">
-                                        <input type="text" class="form-control bg-light" name="name" id="name" placeholder="///Test name" value="${test.name}">
+                                        <input type="text" class="form-control bg-light" name="name" id="name" placeholder="///Test name" value="${test.name}" required maxlength="150">
                                         <label for="name" class="form-label">///Test name</label>
                                     </div>
                                 </div>

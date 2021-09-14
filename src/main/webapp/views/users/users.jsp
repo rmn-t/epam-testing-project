@@ -102,9 +102,24 @@
                         <form method="POST" action="/epam/edit/user?id=${element.id}">
                             <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="userId" value="${element.id}" disabled></td>
                             <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="username" value="${element.username}" disabled></td>
-                            <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="firstName" value="${element.firstName}"></td>
-                            <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="lastName" value="${element.lastName}"></td>
-                            <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="newPass" value="" placeholder="******"></td>
+                            <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="firstName" value="${element.firstName}"
+                                required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
+                                title="Must contain only latin, russian or ukranian letters, or -."
+                                maxlength="20"
+                                minlength="2">
+                            </td>
+                            <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="lastName" value="${element.lastName}"
+                                required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
+                                title="Must contain only latin, russian or ukranian letters, or -."
+                                maxlength="20"
+                                minlength="2"
+                            >
+                            </td>
+                            <td class="text-center align-middle"><input type="text" class="text-center align-middle" name="newPass" value="" placeholder="******"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+                                title="Must contain at least one number and one uppercase and lowercase letter, minimum 8 and maximum 20 characters."
+                                maxlength="20">
+                            </td>
                             <td class="text-center align-middle">
                                 <select class="form-select" name="roleId" id="roleId">
                                     <c:forEach items="${requestScope['roles']}" var="el">

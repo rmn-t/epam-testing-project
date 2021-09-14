@@ -34,10 +34,14 @@
                         <div class="mb-2 text-center">
                             <label for="questionText" class="form-label">///Question text</label>
                             <c:if test="${empty question}">
-                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="///question text" value="" required>
+                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="///question text" value="" required
+                                maxlength="400"
+                                >
                             </c:if>
                             <c:if test="${not empty question}">
-                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="///question text" value="${question.text}" required>
+                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="///question text" value="${question.text}" required
+                                maxlength="400"
+                                >
                             </c:if>
                         </div>
                     </div>
@@ -52,7 +56,7 @@
                         <c:if test="${empty question}">
                             <div class="row mb-2 text-center q-row">
                                 <div class="col">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required maxlength="400">
                                 </div>
                                 <div class="col-3">
                                     <select class="form-select text-center" name="isCorrect" id="isCorrect">
@@ -66,7 +70,7 @@
                             </div>
                             <div class="row mb-2 text-center q-row">
                                 <div class="col">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required maxlength="400">
                                 </div>
                                 <div class="col-3">
                                     <select class="form-select text-center" name="isCorrect" id="isCorrect">
@@ -84,7 +88,7 @@
                             <c:forEach items="${question.answers}" var="element">
                                 <div class="row mb-2 text-center q-row">
                                     <div class="col">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="${element.text}" required>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="${element.text}" required maxlength="400">
                                     </div>
                                     <div class="col-3">
                                         <select class="form-select text-center" name="isCorrect" id="isCorrect">
@@ -128,7 +132,7 @@
                         $(wrapper).append(
                             '<div class="row mb-2 text-center q-row">' +
                                 '<div class="col">' +
-                                    '<input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required>' +
+                                    '<input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required maxlength="400">' +
                                 '</div>' +
                                 '<div class="col-3">' +
                                     '<select class="form-select text-center" name="isCorrect" id="isCorrect">' +

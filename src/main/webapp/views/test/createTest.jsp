@@ -39,7 +39,7 @@
 
                                 <div class="mb-3 text-center">
                                     <div class="form-floating text-center">
-                                        <input type="text" class="form-control" name="testName" id="testName" placeholder="///Test name" required>
+                                        <input type="text" class="form-control" name="testName" id="testName" placeholder="///Test name" required maxlength="150">
                                         <label for="testName" class="form-label text-center ">///Test name</label>
                                     </div>
                                 </div>

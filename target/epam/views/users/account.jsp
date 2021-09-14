@@ -42,15 +42,29 @@
                                 </div>
                                 <div class="mb-2 text-center">
                                     <label for="password" class="form-label">///New <fmt:message key="user.password" /></label>
-                                    <input type="password" class="form-control" name="password" id="password" placeholder="">
+                                    <input type="password" class="form-control" name="password" id="password" placeholder=""
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+                                    title="Must contain at least one number and one uppercase and lowercase letter, minimum 8 and maximum 20 characters."
+                                    maxlength="20"
+                                    >
                                 </div>
                                 <div class="mb-2 text-center">
                                     <label for="firstName" class="form-label"><fmt:message key="user.firstName" /></label>
-                                    <input type="text" value="${sessionScope.currentUser.firstName}" class="form-control" name="firstName" id="firstName" placeholder="<fmt:message key="user.firstName" />" type="text" required>
+                                    <input type="text" value="${sessionScope.currentUser.firstName}" class="form-control" name="firstName" id="firstName" placeholder="<fmt:message key="user.firstName" />"
+                                    required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
+                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    maxlength="20"
+                                    minlength="2"
+                                    >
                                 </div>
                                 <div class="mb-2 text-center">
                                     <label for="lastName" class="form-label"><fmt:message key="user.lastName" /></label>
-                                    <input type="text" value="${sessionScope.currentUser.lastName}" class="form-control" name="lastName" id="lastName" placeholder="<fmt:message key="user.lastName" />" type="text" required>
+                                    <input type="text" value="${sessionScope.currentUser.lastName}" class="form-control" name="lastName" id="lastName" placeholder="<fmt:message key="user.lastName" />"
+                                    required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
+                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    maxlength="20"
+                                    minlength="2"
+                                    >
                                 </div>
                                 <div class="container text-center mt-3">
                                     <div class="row ">

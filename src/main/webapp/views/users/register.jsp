@@ -50,7 +50,7 @@
                                 <div class="mb-2 text-center">
                                     <label for="firstName" class="form-label"><fmt:message key="user.firstName" /></label>
                                     <input type="text" class="form-control" name="firstName" id="firstName" placeholder="<fmt:message key="user.firstName" />" type="text"
-                                    required pattern="[аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄє- A-Za-z]+"
+                                    required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
                                     title="Must contain only latin, russian or ukranian letters, or -."
                                     maxlength="20"
                                     minlength="2"
@@ -59,7 +59,7 @@
                                 <div class="mb-2 text-center">
                                     <label for="lastName" class="form-label"><fmt:message key="user.lastName" /></label>
                                     <input type="text" class="form-control" name="lastName" id="lastName" placeholder="<fmt:message key="user.lastName" />" type="text"
-                                    required pattern="[аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄє- A-Za-z]+"
+                                    required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
                                     title="Must contain only latin, russian or ukranian letters, or -."
                                     maxlength="20"
                                     minlength="2"

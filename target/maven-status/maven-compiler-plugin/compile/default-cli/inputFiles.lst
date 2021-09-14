@@ -15,6 +15,7 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\Edit
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\Encrypt.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\auth\AdminFilter.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Answer.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\CharsetFilter.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\TestDaoMysql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\RoleDaoMysql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\auth\LogoutServlet.java
@@ -31,10 +32,13 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\Dele
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\tags\FloorTag.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\exceptions\DBException.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\CookieUtil.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\IPaginatable.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\DeleteTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Test.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\LocaleUpdateServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Status.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\UserDao.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\HTMLSanitizer.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\EditTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\QuestionDaoMysql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Question.java
@@ -44,14 +48,12 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\AnswerD
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Subject.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Complexity.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\Consts.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\IPaginatable.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\tags\GetCurrentUrlTag.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\auth\LoginServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\TakeTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\ComplexityDao.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\PassedTest.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\auth\LoginFilter.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\LocaleUpdateServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\StatusDaoMysql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\tags\PreventGoingBack.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\UserDaoMysql.java

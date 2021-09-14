@@ -32,19 +32,38 @@
                             <form action="register" method="POST">
                                 <div class="mb-2 text-center">
                                     <label for="username" class="form-label"><fmt:message key="user.login" /></label>
-                                    <input type="text" class="form-control" name="username" id="username" placeholder="<fmt:message key="user.login" />" required pattern="[a-zA-Z0-9_-]{3,16}$" title="Must contain only latin letters, digits, _ or -. Length: 3 - 16 symbols." required maxlength="16">
+                                    <input type="text" class="form-control" name="username" id="username" placeholder="<fmt:message key="user.login" />"
+                                    required pattern="[a-zA-Z0-9_-]{3,16}$"
+                                    title="Must contain only latin letters, digits, _ or -. Length: 3 - 25 characters."
+                                    maxlength="25"
+                                    minlength="3"
+                                    >
                                 </div>
                                 <div class="mb-2 text-center">
                                     <label for="password" class="form-label"><fmt:message key="user.password" /></label>
-                                    <input  type="password" class="form-control" name="password" id="password" placeholder="******" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Must contain at least one number and one uppercase and lowercase letter, minimum 8 and maximum 20 characters." required maxlength="20">
+                                    <input  type="password" class="form-control" name="password" id="password" placeholder="******"
+                                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+                                    title="Must contain at least one number and one uppercase and lowercase letter, minimum 8 and maximum 20 characters."
+                                    maxlength="20"
+                                    >
                                 </div>
                                 <div class="mb-2 text-center">
                                     <label for="firstName" class="form-label"><fmt:message key="user.firstName" /></label>
-                                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="<fmt:message key="user.firstName" />" type="text" required pattern="[аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯ -A-Za-z]+">
+                                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="<fmt:message key="user.firstName" />" type="text"
+                                    required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
+                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    maxlength="20"
+                                    minlength="2"
+                                    >
                                 </div>
                                 <div class="mb-2 text-center">
                                     <label for="lastName" class="form-label"><fmt:message key="user.lastName" /></label>
-                                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="<fmt:message key="user.lastName" />" type="text" required pattern="[аАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯ -A-Za-z]+">
+                                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="<fmt:message key="user.lastName" />" type="text"
+                                    required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
+                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    maxlength="20"
+                                    minlength="2"
+                                    >
                                 </div>
                                 <div class="container text-center mt-3">
                                     <div class="row ">

@@ -6,7 +6,6 @@ import com.epam.db.model.Test;
 import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
-import com.epam.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +31,7 @@ public class TestsServlet extends HttpServlet implements IPaginatable {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         int recordsPerPage = calculateRecordsPerPageNum(req,logger,"perPage");
         int pageId = calculatePage(req,recordsPerPage,"page");
         String sorting = getSortingValue(req,"sort",Consts.getVALID_COLUMNS_FOR_TEST_ORDER_BY(),Consts.TESTS_DEFAULT_SORT);
@@ -68,6 +68,7 @@ public class TestsServlet extends HttpServlet implements IPaginatable {
         } catch (DBException e) {
             logger.error("Test servlet do get");
         }
-        req.getRequestDispatcher(Views.TESTS_JSP).forward(req,resp);
+        throw new ServletException("||This is the error message||");
+//        req.getRequestDispatcher(Views.TESTS_JSP).forward(req,resp);
     }
 }

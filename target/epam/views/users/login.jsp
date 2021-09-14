@@ -32,11 +32,11 @@
                             <form action="login" method="POST">
                             <div class="mb-2 text-center">
                                 <label for="username" class="form-label"><fmt:message key="user.login" /></label>
-                                <input type="text" class="form-control" name="username" id="username" placeholder="<fmt:message key="user.login" />" type="text" value="admin">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="<fmt:message key="user.login" />" value="admin" maxlength="25" minlength="3" required>
                             </div>
                             <div class="mb-2 text-center">
                                 <label for="password" class="form-label"><fmt:message key="user.password" /></label>
-                                <input class="form-control" id="password" placeholder="******" type="password" name="password" value="testqq">
+                                <input class="form-control" id="password" placeholder="******" type="password" name="password" value="testqq" maxlength="20" required>
                             </div>
                             <div class="container text-center">
                                 <div class="row">

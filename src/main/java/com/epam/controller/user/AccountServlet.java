@@ -4,7 +4,7 @@ import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
 import com.epam.util.Encrypt;
-import com.epam.util.Views;
+import com.epam.controller.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

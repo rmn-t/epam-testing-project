@@ -11,9 +11,13 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <style>
-        .error-card {
-            background-color: #ff7070;
-        }
+            .error-card {
+                background-color: #ff7070;
+            }
+            .container {
+                margin-top:10%;
+            }
+
         </style>
         <title>///Error</title>
     </head>
@@ -24,14 +28,16 @@
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
+        <strong>${requestScope['javax.servlet.error.exception'].getClass().getCanonicalName()}</strong>
+
         </br>
 
-        <div style="margin-top:12%;" class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-2"></div>
                     <div class="col">
-                        <div class="card text-white error-card mb-3">
-                            <div class="card-header">///An error occurred while processing your request. Please try again later or contact support support@test.com</div>
+                        <div class="card text-white bg-primary mb-3">
+                            <div class="card-header">///An error occurred while processing your request. Please try again later or contact support@test.com</div>
                             <div class="card-body">
                                 <h5 class="card-title">///Status code: <c:out value="${requestScope['javax.servlet.error.status_code']}" /></h5>
                                 <p class="card-text">${requestScope['javax.servlet.error.exception'].getMessage()}</p>

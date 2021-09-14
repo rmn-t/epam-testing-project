@@ -5,7 +5,7 @@ import com.epam.db.model.PassedTest;
 import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
-import com.epam.util.Views;
+import com.epam.controller.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,7 +37,7 @@ public class PassedTestsServlet extends HttpServlet implements IPaginatable {
         } catch (DBException e) {
             logger.error("Passed tests servlet get", e);
         }
-        req.getRequestDispatcher("/" + Views.PASSED_TESTS_JSP).forward(req, resp);
+        req.getRequestDispatcher(Views.PASSED_TESTS_JSP).forward(req, resp);
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.epam.db.model.Subject;
 import com.epam.db.model.Test;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
-import com.epam.util.Views;
+import com.epam.controller.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

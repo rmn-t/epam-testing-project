@@ -2,7 +2,7 @@ package com.epam.controller.auth;
 
 import com.epam.db.model.User;
 import com.epam.util.Consts;
-import com.epam.util.Views;
+import com.epam.controller.util.Routes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * This filter processes requests for the entire app.
+ * If the user is banned they get logged out of the system.
+ * If the user tries to access registration, login, or change language the request is transferred to the required resource.
+ * If the logged in user tries to access resource which requires to be logged in - they are successfully transferred to it,
+ * otherwise they are transferred to login page.
+ */
 @WebFilter("/*")
 public class LoginFilter implements Filter {
     private final Logger logger = LoggerFactory.getLogger(LoginFilter.class);
@@ -22,35 +29,22 @@ public class LoginFilter implements Filter {
         //init
     }
 
-    /**
-     * add case insensitive check for username
-     *
-     * //        if (req.getCookies() == null) {
-     * //            Cookie langCookie = new Cookie("lang","en");
-     * //            langCookie.setMaxAge(60*60*24);
-     * //            langCookie.setPath("/");
-     * //            resp.addCookie(langCookie);
-     * //        }
-     */
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        logger.info("filter");
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
         HttpSession session = req.getSession(false);
-        String reqUri = req.getRequestURI();
-        if (session != null && (User)session.getAttribute(Consts.CURRENT_USER) != null){
+        String reqPath = req.getServletPath();
+        if (session != null && session.getAttribute(Consts.CURRENT_USER) != null) {
             if (((User) session.getAttribute(Consts.CURRENT_USER)).getStatus().equals("Banned")) {
-                req.setAttribute("loginStatus","User is banned (filter proc)");
-                req.getRequestDispatcher("/logout").forward(req,resp);
+                req.getRequestDispatcher(Routes.LOGOUT).forward(req, resp);
             } else {
                 filterChain.doFilter(req, resp);
             }
-        } else if (reqUri.equals("/epam/login") || reqUri.equals("/epam/locale/edit") || reqUri.equals("/epam/" + Views.REGISTER_JSP) || reqUri.equals("/epam/register")) {
-            logger.debug(reqUri);
+        } else if (Routes.SLASH_LOGIN.equals(reqPath) || Routes.SLASH_LOCALE_EDIT.equals(reqPath) || Routes.SLASH_REGISTER.equals(reqPath)) {
             filterChain.doFilter(req, resp);
         } else {
-            resp.sendRedirect("/epam/login");
+            resp.sendRedirect(Routes.LOGIN);
         }
     }
 

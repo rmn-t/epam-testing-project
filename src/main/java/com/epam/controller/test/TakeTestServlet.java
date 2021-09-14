@@ -2,9 +2,10 @@ package com.epam.controller.test;
 
 import com.epam.db.model.Question;
 import com.epam.db.model.Test;
+import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
-import com.epam.util.Views;
+import com.epam.controller.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,7 +49,7 @@ public class TakeTestServlet extends HttpServlet {
         }
         long currentTime = System.currentTimeMillis() / 1000L;
         session.setAttribute("timeLeft" + testId, test.getDuration() - (currentTime - startTime));
-        req.getRequestDispatcher("/" + Views.TAKE_TEST_JSP).forward(req, resp);
+        req.getRequestDispatcher(Views.TAKE_TEST_JSP).forward(req, resp);
     }
 
     @Override
@@ -79,7 +80,8 @@ public class TakeTestServlet extends HttpServlet {
         int timeSpent = (int) ((finishTime - startTime) > testDuration ? testDuration : finishTime - startTime);
         session.removeAttribute("startTime" + testId);
         session.removeAttribute("timeLeft" + testId);
-        int userId = Integer.parseInt("" + session.getAttribute(Consts.CURRENT_USER));
+        User currentUser = (User) session.getAttribute(Consts.CURRENT_USER);
+        int userId = currentUser.getId();
         try {
             Consts.PASSED_TESTS_DAO.insertNew(testId, userId,(int) questionsNum,correctAnswers, correctAnswers * 100 / questionsNum, timeSpent);
         } catch (DBException e) {

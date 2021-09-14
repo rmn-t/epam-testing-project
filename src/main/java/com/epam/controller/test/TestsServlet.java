@@ -6,6 +6,7 @@ import com.epam.db.model.Test;
 import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
+import com.epam.controller.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +20,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(urlPatterns = {"/tests","/en/tests"})
+@WebServlet(urlPatterns = {"/tests"})
 public class TestsServlet extends HttpServlet implements IPaginatable {
     private final Logger logger = LoggerFactory.getLogger(TestsServlet.class);
 
@@ -68,7 +69,7 @@ public class TestsServlet extends HttpServlet implements IPaginatable {
         } catch (DBException e) {
             logger.error("Test servlet do get");
         }
-        throw new ServletException("||This is the error message||");
-//        req.getRequestDispatcher(Views.TESTS_JSP).forward(req,resp);
+//        throw new ServletException("||This is the error message||");
+        req.getRequestDispatcher(Views.TESTS_JSP).forward(req,resp);
     }
 }

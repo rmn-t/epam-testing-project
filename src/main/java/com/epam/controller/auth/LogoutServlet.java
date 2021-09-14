@@ -1,5 +1,6 @@
 package com.epam.controller.auth;
 
+import com.epam.controller.util.Routes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Enumeration;
 
+/**
+ * Processes all log out requests, before invaliding the session all session variables are destroyed.
+ */
 @WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
     private Logger logger = LoggerFactory.getLogger(LogoutServlet.class);
@@ -21,7 +25,7 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = req.getSession(false);
         removeAllSessionAttributes(req, session);
         session.invalidate();
-        resp.sendRedirect("/epam/login");
+        resp.sendRedirect(Routes.LOGOUT);
     }
 
     /**

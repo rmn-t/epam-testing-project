@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet processes all incoming requests for deleting a particular question.
+ */
 @WebServlet(urlPatterns = {"/delete/question"})
 public class DeleteQuestionServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(DeleteQuestionServlet.class);
@@ -22,7 +25,8 @@ public class DeleteQuestionServlet extends HttpServlet {
         try {
             Consts.QUESTION_DAO.deleteQuestionById(questionId);
         } catch (DBException e) {
-            logger.error("Delete question servlet - post",e);
+            logger.error("Couldn't delete the question.", e);
+            throw new ServletException("Couldn't delete the question.", e);
         }
         int testId = Integer.parseInt(req.getParameter("testId"));
         resp.sendRedirect("/epam/test?id=" + testId);

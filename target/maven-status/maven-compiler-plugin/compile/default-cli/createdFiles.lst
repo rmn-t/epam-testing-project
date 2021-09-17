@@ -12,6 +12,7 @@ com\epam\controller\util\HTMLSanitizer.class
 com\epam\tags\PreventGoingBack.class
 com\epam\db\model\PassedTest$Builder.class
 com\epam\db\model\Answer$Builder.class
+com\epam\controller\util\SessionActivitySetter.class
 com\epam\controller\util\CookieUtil.class
 com\epam\db\model\User$Builder.class
 com\epam\db\model\Test.class
@@ -23,15 +24,12 @@ com\epam\controller\auth\LoginServlet.class
 com\epam\db\dao\mysql\AnswerDaoMysql.class
 com\epam\db\dao\ComplexityDao.class
 com\epam\db\model\Subject.class
-com\epam\controller\test\AddTestServlet.class
 com\epam\db\dao\mysql\UserDaoMysql.class
 com\epam\db\dao\mysql\ComplexityDaoMysql.class
-com\epam\util\CookieUtil.class
 com\epam\tags\FloorTag.class
 com\epam\controller\user\UsersServlet.class
 com\epam\db\model\Answer.class
 com\epam\controller\auth\AdminFilter.class
-com\epam\util\HTMLSanitizer.class
 com\epam\db\model\Test$Builder.class
 com\epam\db\dao\mysql\TestDaoMysql.class
 com\epam\db\dao\mysql\PassedTestsDaoMysql.class

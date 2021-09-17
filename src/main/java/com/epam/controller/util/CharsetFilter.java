@@ -4,6 +4,10 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+/**
+ * Filter that processes all requests for the app and ensures the correct format is set on the page. Created in order
+ * to support proper displaying for multiple languages in the jsp.
+ */
 @WebFilter("/*")
 public class CharsetFilter implements Filter {
 
@@ -14,18 +18,12 @@ public class CharsetFilter implements Filter {
         if (encoding == null) encoding = "UTF-8";
     }
 
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain next)
-            throws IOException, ServletException {
-        // Respect the client-specified character encoding
-        // (see HTTP specification section 3.4.1)
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain next) throws IOException, ServletException {
         if (null == request.getCharacterEncoding()) {
             request.setCharacterEncoding(encoding);
         }
-
-        // Set the default response content type and encoding
         response.setContentType("text/html; charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
-
         next.doFilter(request, response);
     }
 

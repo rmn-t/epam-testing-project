@@ -18,7 +18,7 @@
            background-color: #faa2a2;
         }
     </style>
-    <title><c:out value="${test.name}"></c:out></title>
+    <title>///Users</title>
 </head>
     <body>
 
@@ -31,7 +31,7 @@
         </br>
 
         <p class="fs-1 text-center mt-3">///List of users in the system<p>
-
+        <p>${sessionScope.SESSION-COUNTER} Num of users </p>
         <hr>
 
         <div class="container-fluid">

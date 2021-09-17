@@ -26,7 +26,7 @@ public class DeleteQuestionServlet extends HttpServlet {
             Consts.QUESTION_DAO.deleteQuestionById(questionId);
         } catch (DBException e) {
             logger.error("Couldn't delete the question.", e);
-            throw new ServletException("Couldn't delete the question.", e);
+            throw new ServletException("Couldn't delete the question.");
         }
         int testId = Integer.parseInt(req.getParameter("testId"));
         resp.sendRedirect("/epam/test?id=" + testId);

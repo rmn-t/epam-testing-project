@@ -12,17 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet processes all incoming requests for deleting a specific user, from the "users" page of the application.
+ * Only admin is allowed to delete users. Get method is not implemented.
+ */
 @WebServlet(urlPatterns = {"/delete/user"})
 public class DeleteUserServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(DeleteUserServlet.class);
 
-    /**
-     * redirect if no url supplied or what to do if no id
-     * @param req
-     * @param resp
-     * @throws ServletException
-     * @throws IOException
-     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("userId"));
@@ -30,6 +27,7 @@ public class DeleteUserServlet extends HttpServlet {
             Consts.USER_DAO.deleteUserById(id);
         } catch (DBException e) {
             logger.error("Couldn't delete the user by id {}.",id);
+            throw new ServletException("Couldn't delete the user.");
         }
         resp.sendRedirect(req.getParameter("prevUrl"));
     }

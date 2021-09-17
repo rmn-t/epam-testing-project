@@ -24,7 +24,7 @@
                     </li>
                     <c:if test="${sessionScope.currentUser.role == 'admin'}">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/epam/createTest">///Add test</a>
+                            <a class="nav-link" aria-current="page" href="/epam/test?id=0">///Add test</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="/epam/users?page=1&sort=id ASC&statusId=0&perPage=10">///Users</a>

@@ -41,7 +41,7 @@ public class UserDaoMysql implements UserDao {
                     "INNER JOIN role ON user.role_id = role.id " +
                     "where username = ?;");
             prepStmt.setString(1,username);
-            logger.info(prepStmt.toString());
+            logger.debug(prepStmt.toString());
             rs = prepStmt.executeQuery();
             if (!rs.isBeforeFirst()) {
                 return user;

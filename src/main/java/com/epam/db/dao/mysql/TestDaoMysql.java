@@ -54,7 +54,6 @@ public class TestDaoMysql implements TestDao {
                     .setDuration(rs.getInt(DURATION))
                     .setQuestionsNum(rs.getInt("questionsNum"))
                     .build();
-            System.out.println(test.getIsActive() + " is active+");
             logger.debug("Requested test by id {}, result name : {}", testId, test.getName());
         } catch (SQLException e) {
             logger.error("Failed to get test by id {}.", testId, e);
@@ -111,9 +110,9 @@ public class TestDaoMysql implements TestDao {
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         String subjectIdEquals = subjectId == 0 ? "" : " subject_id = " + subjectId;
-        String isActiveTrue = mapIsActiveForQuery(isActive);
-        String where = isActiveTrue.equals("") && subjectIdEquals.equals("") ? "" : " WHERE ";
-        String and = subjectIdEquals.equals("") || isActiveTrue.equals("") ? "" : " AND ";
+        String isActiveValue = mapIsActiveForQuery(isActive);
+        String where = isActiveValue.equals("") && subjectIdEquals.equals("") ? "" : " WHERE ";
+        String and = subjectIdEquals.equals("") || isActiveValue.equals("") ? "" : " AND ";
         try {
             con = DBUtil.getConnection();
             prepStmt = con.prepareStatement("" +
@@ -121,13 +120,13 @@ public class TestDaoMysql implements TestDao {
                     "FROM test " +
                     "LEFT JOIN question ON test.id = question.test_id " +
                     "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
-                    "LEFT JOIN subject ON subject.id = test.subject_id " + where + subjectIdEquals + and + isActiveTrue +
+                    "LEFT JOIN subject ON subject.id = test.subject_id " + where + subjectIdEquals + and + isActiveValue +
                     " GROUP BY test.id ORDER BY " + orderBy + " LIMIT ?, ?;"
             );
             int k = 1;
             prepStmt.setInt(k++, offset - 1);
             prepStmt.setInt(k++, limit);
-            logger.info(prepStmt.toString());
+            logger.debug(prepStmt.toString());
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 results.add(new Test.Builder()

@@ -1,12 +1,12 @@
 package com.epam.controller.test;
 
+import com.epam.controller.util.Views;
 import com.epam.db.model.Complexity;
 import com.epam.db.model.Question;
 import com.epam.db.model.Subject;
 import com.epam.db.model.Test;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
-import com.epam.controller.util.Views;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,47 +16,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Servlet is responsible for rendering test information, it's questions and answers.
+ */
 @WebServlet("/test")
 public class TestServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(TestServlet.class);
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        System.out.println("doPost for /test");
-    }
-
-    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Subject> subjects = new ArrayList<>();
-        List<Complexity> complexities = new ArrayList<>();
         try {
-            subjects = Consts.SUBJECT_DAO.getAllRecords();
+            List<Subject> subjects = Consts.SUBJECT_DAO.getAllRecords();
             req.setAttribute("subjects",subjects);
-            complexities = Consts.COMPLEXITY_DAO.getAllRecords();
+            List<Complexity> complexities = Consts.COMPLEXITY_DAO.getAllRecords();
             req.setAttribute("complexities",complexities);
-        } catch (DBException e) {
-            logger.error("Couldn't find options for test creation. Subjects {}. Complexities {}.",subjects.size(),complexities.size(),e);
-        }
 
-        int testId = Integer.parseInt(req.getParameter("id"));
-        List<Question> questions = null;
-        try {
-            questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
-            logger.debug(String.valueOf(questions));
-        } catch (DBException e) {
-            logger.error("Test servlet - get.",e);
+            int testId = Integer.parseInt(req.getParameter("id"));
+            Test test = Consts.TEST_DAO.getTestById(testId);
+            List<Question> questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
+
+            req.setAttribute("questions",questions);
+            req.setAttribute("test",test);
+        } catch (DBException | NumberFormatException e) {
+            logger.error("Couldn't obtain the information for provided test id.",e);
+            throw new ServletException("Couldn't obtain the information for provided test id.");
         }
-        Test test = null;
-        try {
-            test = Consts.TEST_DAO.getTestById(testId);
-        } catch (DBException e) {
-            logger.error("Test servlet get",e);
-        }
-        req.setAttribute("questions",questions);
-        req.setAttribute("test",test);
         req.getRequestDispatcher(Views.VIEW_TEST_JSP).forward(req,resp);
     }
 }

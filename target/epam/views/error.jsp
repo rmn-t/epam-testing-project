@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-2"></div>
                     <div class="col">
-                        <div class="card text-white error-card mb-3">
+                        <div class="card text-white bg-primary mb-3">
                             <div class="card-header">///An error occurred while processing your request. Please try again later or contact support@test.com</div>
                             <div class="card-body">
                                 <h5 class="card-title">///Status code: <c:out value="${requestScope['javax.servlet.error.status_code']}" /></h5>

@@ -3,7 +3,7 @@ package com.epam.controller.auth;
 import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
-import com.epam.util.CookieUtil;
+import com.epam.controller.util.CookieUtil;
 import com.epam.controller.util.Routes;
 import com.epam.controller.util.Views;
 import org.slf4j.Logger;

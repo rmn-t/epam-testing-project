@@ -18,6 +18,13 @@
         <location>/views/error.jsp</location>
     </error-page>
 
+    <listener>
+        <description>sessionListener</description>
+        <listener-class>
+            com.epam.controller.util.SessionActivitySetter
+        </listener-class>
+    </listener>
+
     <resource-env-ref>
         <description>Provide access for DataSource</description>
         <resource-env-ref-name>jdbc/mysql</resource-env-ref-name>

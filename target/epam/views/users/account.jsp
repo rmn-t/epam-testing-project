@@ -29,9 +29,9 @@
                         <article class="card-body">
                             <h4 class="card-title text-center mb-4 mt-1">///Edit account details</h4>
                             <hr>
-                            <c:if test="${not empty regStatus}">
-                                <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-                                    <strong><fmt:message key="msg.${regStatus}" /></strong>
+                            <c:if test="${not empty updStatus}">
+                                <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
+                                    <strong>///Account info was successfully updated</strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </c:if>

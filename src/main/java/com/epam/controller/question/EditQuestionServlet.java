@@ -1,5 +1,6 @@
 package com.epam.controller.question;
 
+import com.epam.controller.util.HTMLSanitizer;
 import com.epam.controller.util.Views;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
@@ -35,7 +36,7 @@ public class EditQuestionServlet extends HttpServlet {
                 q.setAnswers(Consts.ANSWER_DAO.getAnswersByQuestionId(questionId));
             } catch (DBException e) {
                 logger.error("Failed to obtain the question and it's answers data.", e);
-                throw new ServletException("Failed to obtain the question and it's answers data.", e);
+                throw new ServletException("Failed to obtain the question and it's answers data.");
             }
             req.setAttribute("question", q);
         }
@@ -46,11 +47,11 @@ public class EditQuestionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String[] names = req.getParameterValues("name");
         String[] isCorrect = req.getParameterValues("isCorrect");
-        String questionText = req.getParameter("questionText");
+        String questionText = HTMLSanitizer.cleanLtMt(req.getParameter("questionText"));
         List<Answer> answers = new ArrayList<>();
         for (int i = 0; i < names.length; i++) {
             Answer a = new Answer();
-            a.setText(names[i]);
+            a.setText(HTMLSanitizer.cleanLtMt(names[i]));
             a.setIsCorrect(Boolean.parseBoolean(isCorrect[i]));
             answers.add(a);
         }
@@ -63,18 +64,17 @@ public class EditQuestionServlet extends HttpServlet {
                 Consts.QUESTION_DAO.updateQuestionAndItsAnswers(questionId, questionText, answers);
             } catch (DBException e) {
                 logger.error("Error while trying to update question and it's answers.", e);
-                throw new ServletException("Error while trying to update question and it's answers.", e);
+                throw new ServletException("Error while trying to update question and it's answers.");
             }
         } else {
             try {
                 questionId = Consts.QUESTION_DAO.insertQuestionByTestId(questionText, testId);
-                logger.info(String.valueOf(questionId));
                 if (questionId != -1) {
                     Consts.ANSWER_DAO.insertAnswersByQuestionId(questionId, answers);
                 }
             } catch (DBException e) {
                 logger.error("Error while trying to insert new question and it's answers.", e);
-                throw new ServletException("Error while trying to insert new question and it's answers.", e);
+                throw new ServletException("Error while trying to insert new question and it's answers.");
             }
         }
         resp.sendRedirect("/epam/test?id=" + testId);

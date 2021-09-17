@@ -29,7 +29,7 @@ public class AddQuestionServlet extends HttpServlet {
             }
         } catch (NumberFormatException | DBException e) {
             logger.error("Couldn't parse provided test id to add question to.");
-            throw new ServletException("Unable to process test id for new question.", e);
+            throw new ServletException("Unable to process test id for new question.");
         }
     }
 }

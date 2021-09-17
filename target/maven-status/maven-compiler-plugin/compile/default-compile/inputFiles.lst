@@ -27,11 +27,11 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\StatusDao.jav
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\AccountServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\TestDao.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\SubjectDaoMysql.java
+C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\SessionActivitySetter.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\TestsServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\user\DeleteUserServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\tags\FloorTag.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\exceptions\DBException.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\CookieUtil.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\IPaginatable.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\HTMLSanitizer.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\DeleteTestServlet.java
@@ -39,12 +39,10 @@ C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Test.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\LocaleUpdateServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Status.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\UserDao.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\util\HTMLSanitizer.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\EditTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\QuestionDaoMysql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Question.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\TestServlet.java
-C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\test\AddTestServlet.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\dao\mysql\AnswerDaoMysql.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\controller\util\CookieUtil.java
 C:\Users\Learning\Java\MyEpamProject\src\main\java\com\epam\db\model\Subject.java

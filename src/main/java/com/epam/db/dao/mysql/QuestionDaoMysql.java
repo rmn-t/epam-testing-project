@@ -34,7 +34,7 @@ public class QuestionDaoMysql implements QuestionDao {
             } else {
                 throw new DBException("Creating question failed, no ID obtained.",new Throwable());
             }
-            logger.info("Successfully added new question to test_id {}.", testId);
+            logger.debug("Successfully added new question to test_id {}.", testId);
         } catch (SQLException e) {
             logger.error("Couldn't add question with text : {} , for test_id {}.", text, testId);
             throw new DBException("Couldn't add question", e);
@@ -56,7 +56,7 @@ public class QuestionDaoMysql implements QuestionDao {
             rs = prepStmt.executeQuery();
             rs.next();
             q = new Question.Builder().setId(rs.getInt("id")).setTestId(rs.getInt("test_id")).setText(rs.getString("text")).build();
-            logger.info("Successfully obtained question by id {} with text : {}.",questionId,q.getText());
+            logger.debug("Successfully obtained question by id {} with text : {}.",questionId,q.getText());
         } catch (SQLException e) {
             logger.error("Failed to get question by id {}.",questionId,e);
             throw new DBException("Failed to get question by id",e);
@@ -83,7 +83,7 @@ public class QuestionDaoMysql implements QuestionDao {
                         .setTestId(rs.getInt("test_id"))
                         .build());
             }
-            logger.info("Obtained {} questions by test_id : {}.",results.size(),testId);
+            logger.debug("Obtained {} questions by test_id : {}.",results.size(),testId);
         } catch (SQLException e) {
             logger.error("Couldn't obtain questions by test_id {}.",testId,e);
             throw new DBException ("Couldn't obtain questions by test_id",e);
@@ -113,7 +113,7 @@ public class QuestionDaoMysql implements QuestionDao {
                 q.setAnswers(answerDao.getAnswersByQuestionId(q.getId()));
                 results.add(q);
             }
-            logger.info("Successfully obtained {} questions for test_id {}.",results.size(),testId);
+            logger.debug("Successfully obtained {} questions for test_id {}.",results.size(),testId);
         } catch (DBException | SQLException e) {
             logger.error("Couldn't obtain questions and answers by test_id {}.",testId,e);
             throw new DBException("Couldn't obtain questions and answers by test_id",e);
@@ -132,7 +132,7 @@ public class QuestionDaoMysql implements QuestionDao {
             updateQuestionTextById(con, questionText, id);
             new AnswerDaoMysql().updateAnswersByQuestionId(con, id, answers);
             con.commit();
-            logger.info("Successfully updated question_id {} and it's answers.",id);
+            logger.debug("Successfully updated question_id {} and it's answers.",id);
         } catch (SQLException | DBException e) {
             try {
                 if (con != null) {
@@ -158,7 +158,7 @@ public class QuestionDaoMysql implements QuestionDao {
             prepStmt.setString(k++, questionText);
             prepStmt.setInt(k++, questionId);
             prepStmt.executeUpdate();
-            logger.info("Successfully updated question_id {}.",questionId);
+            logger.debug("Successfully updated question_id {}.",questionId);
         } catch (SQLException e) {
             logger.error("Failed to update question_id {}.",questionId,e);
             throw new DBException("Failed to update question by id.",e);
@@ -175,7 +175,7 @@ public class QuestionDaoMysql implements QuestionDao {
             prepStmt = con.prepareStatement("DELETE FROM question WHERE id = ?;");
             prepStmt.setInt(1, id);
             prepStmt.executeUpdate();
-            logger.info("Successfully deleted question_id {}",id);
+            logger.debug("Successfully deleted question_id {}",id);
         } catch (SQLException e) {
             logger.error("Failed to delete question by id {}.",id,e);
             throw new DBException("Failed to delete question by id.",e);

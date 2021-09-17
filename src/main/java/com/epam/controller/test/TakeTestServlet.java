@@ -73,7 +73,7 @@ public class TakeTestServlet extends HttpServlet {
             HttpSession session = req.getSession(false);
             Long startTime = (Long) session.getAttribute("startTime" + testId);
             long finishTime = System.currentTimeMillis() / 1000L;
-            int timeSpent = (int) ((finishTime - startTime) > testDuration ? testDuration : finishTime - startTime);
+            double timeSpent = ((finishTime - startTime) > testDuration ? 100 : (finishTime  - startTime) * 100d /testDuration);
             session.removeAttribute("startTime" + testId);
             session.removeAttribute("timeLeft" + testId);
 

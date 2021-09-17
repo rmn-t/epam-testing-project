@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PassedTestsDao {
 
-    void insertNew(int testId, int userId, int questionNum, int correctAnswers, double grade, int timeSpent) throws DBException;
+    void insertNew(int testId, int userId, int questionNum, int correctAnswers, double grade, double timeSpent) throws DBException;
 
     List<PassedTest> getRecordsByUserIdOrderedLimited(int userId, int offset, int limit, String orderBy) throws DBException;
 

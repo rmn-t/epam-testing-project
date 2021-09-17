@@ -123,7 +123,7 @@
                         </c:if>
                         <td class="text-center">
                             <div>
-                                <a class="btn btn-success ${element.questionsNum == 0 ? 'disabled' : ''}" href="/epam/take/test?id=${element.id}" data-bs-toggle="tooltip" data-bs-placement="top" title="///Upon clicking start you will be redirected to page with questions and test timer will start." disabled >///Start</a>
+                                <a class="btn btn-success ${element.questionsNum == 0 ? 'disabled' : ''}" href="/epam/take/test?id=${element.id}" data-bs-toggle="tooltip" data-bs-placement="top" title="///Once clicked you will be redirected to page with questions and test timer will start." disabled >///Start</a>
                             </div>
                         </td>
                     </tr>

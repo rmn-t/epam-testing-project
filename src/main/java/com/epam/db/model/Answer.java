@@ -3,7 +3,7 @@ package com.epam.db.model;
 import java.io.Serializable;
 
 /**
- * Answer class represents the table "answer" in the database. Table fields in the DB are: id, question_id, text, isCorrect.
+ * Class represents the table "answer" in the database. Table fields in the DB are: id, question_id, text, isCorrect.
  */
 public class Answer implements Serializable {
     private int id;

@@ -2,6 +2,12 @@ package com.epam.db.model;
 
 import java.io.Serializable;
 
+/**
+ * Class represents the table "user" in the database. Table fields in the DB are: id, username, password, salt, first_name, last_name, role_id, status_id.
+ * <p>
+ * Rest of the class fields are used for convenience of displaying data in the variables jsp views etc., values for these properties are
+ * supplied through joining util table with related tables.
+ */
 public class User implements Serializable {
     private int id;
     private String username;
@@ -14,7 +20,23 @@ public class User implements Serializable {
     private String status;
     private int statusId;
 
-    public User(int id, String username, String password, int salt, String firstName, String lastName, String role, int roleId,String status, int statusId) {
+    /**
+     * Default constructor that uses all available fields of the class. It is also used in the builder nested class.
+     * <p>
+     * The names of the fields are same as in the DB, fields that have different names in DB and Java have notes inside brackets.
+     *
+     * @param id        id of the user in the db
+     * @param username  username that is set upon registration, unique, username change directly from app is not expected (max length 25 chars)
+     * @param password  hashed password for the user (max length 128 chars)
+     * @param salt      salt that was used upon hashing the password for the user
+     * @param firstName first name of the user (db field name first_name) (max length 25 chars)
+     * @param lastName  last name of the user (db field name last_name) (max length 25 chars)
+     * @param role      string representation of the role, taken from role table (db field role.name)
+     * @param roleId    id of the role of the user
+     * @param status    string representation of the status, taken from role table (db field status.name)
+     * @param statusId  id of the status of the user
+     */
+    public User(int id, String username, String password, int salt, String firstName, String lastName, String role, int roleId, String status, int statusId) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -173,7 +195,7 @@ public class User implements Serializable {
         }
 
         public User build() {
-            return new User(this.id,this.username,this.password,this.salt,this.firstName,this.lastName,this.role,this.roleId,this.status,this.statusId);
+            return new User(this.id, this.username, this.password, this.salt, this.firstName, this.lastName, this.role, this.roleId, this.status, this.statusId);
         }
     }
 }

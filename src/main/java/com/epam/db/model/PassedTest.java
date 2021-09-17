@@ -2,6 +2,9 @@ package com.epam.db.model;
 
 import java.io.Serializable;
 
+/**
+ * Class represents the table "passed_tests" in the database. Table fields in the DB are: id, user_id, test_id, questions_num, correct_answers, grade, time_spent, date.
+ */
 public class PassedTest implements Serializable {
     private int id;
     private int userId;
@@ -10,13 +13,27 @@ public class PassedTest implements Serializable {
     private int questionNum;
     private int correctAnswers;
     private double grade;
-    private int timeSpent;
+    private double timeSpent;
     private String date;
 
     public PassedTest() {
     }
 
-    public PassedTest(int id, int userId, int testId, String testName, int questionNum, int correctAnswers, double grade, int timeSpent, String date) {
+    /**
+     * Default constructor that uses all available fields of the class. It is also used in the builder nested class. Fields have same name in the DB,
+     * unless it is specified in brackets.
+     *
+     * @param id             id of the passed test in the DB
+     * @param userId         id of the user who passed the test (db field name: user_id)
+     * @param testId         id of the test that was passed (db field name: test_id)
+     * @param testName       name of the test that is taken from test table upon joining
+     * @param questionNum    number of the questions that were in the test at the time of passing it (db field name: question_num)
+     * @param correctAnswers numbers of the questions that were correctly answered by user (db field name: correct_answers)
+     * @param grade          grade that user received for the test (min 0 max 100), calculated based on the number of correctly answered questions to total number of questions
+     * @param timeSpent      % of the time that was spent while doing the test (db field name time_spent)
+     * @param date           date and time when the test was finished
+     */
+    public PassedTest(int id, int userId, int testId, String testName, int questionNum, int correctAnswers, double grade, double timeSpent, String date) {
         this.id = id;
         this.userId = userId;
         this.testId = testId;
@@ -84,11 +101,11 @@ public class PassedTest implements Serializable {
         this.grade = grade;
     }
 
-    public int getTimeSpent() {
+    public double getTimeSpent() {
         return timeSpent;
     }
 
-    public void setTimeSpent(int timeSpent) {
+    public void setTimeSpent(double timeSpent) {
         this.timeSpent = timeSpent;
     }
 
@@ -108,7 +125,7 @@ public class PassedTest implements Serializable {
         private int questionNum;
         private int correctAnswers;
         private double grade;
-        private int timeSpent;
+        private double timeSpent;
         private String date;
 
         public Builder setId(int id) {
@@ -146,7 +163,7 @@ public class PassedTest implements Serializable {
             return this;
         }
 
-        public Builder setTimeSpent(int timeSpent) {
+        public Builder setTimeSpent(double timeSpent) {
             this.timeSpent = timeSpent;
             return this;
         }
@@ -157,7 +174,7 @@ public class PassedTest implements Serializable {
         }
 
         public PassedTest build() {
-            return new PassedTest(this.id,this.userId,this.testId,this.testName,this.questionNum,this.correctAnswers,this.grade,this.timeSpent,this.date);
+            return new PassedTest(this.id, this.userId, this.testId, this.testName, this.questionNum, this.correctAnswers, this.grade, this.timeSpent, this.date);
         }
     }
 }

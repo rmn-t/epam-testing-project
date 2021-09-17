@@ -5,13 +5,25 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Class represents the table "question" in the database. Table fields in the DB are: id, text, test_id;
+ */
 public class Question implements Serializable {
     private int id;
     private String text;
     private int testId;
     private List<Answer> answers;
 
-    public Question(int id, String text, int testId,List<Answer> answers) {
+    /**
+     * Default constructor that uses all available fields of the class. It is also used in the builder nested class. Fields have same name in the DB,
+     * unless it is specified in brackets.
+     *
+     * @param id      id of the question in the DB
+     * @param text    text of the question (max length 400 chars)
+     * @param testId  id of the test that question is related to (db field name: test_id)
+     * @param answers a list of answers for the question, not present in db table
+     */
+    public Question(int id, String text, int testId, List<Answer> answers) {
         this.id = id;
         this.text = text;
         this.testId = testId;
@@ -100,7 +112,7 @@ public class Question implements Serializable {
         }
 
         public Question build() {
-            return new Question(this.id,this.text,this.testId,this.answers);
+            return new Question(this.id, this.text, this.testId, this.answers);
         }
 
     }

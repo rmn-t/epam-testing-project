@@ -25,14 +25,14 @@ public class PassedTestsServlet extends HttpServlet implements IPaginatable {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            int recordsPerPage = calculateRecordsPerPageNum(req, logger, "perPage");
-            int pageNum = calculatePage(req, recordsPerPage, "page");
+            int recordsPerPage = calculateRecordsPerPageNum(req, "perPage");
+            int recordsOffset = calculateRecordsOffset(req, recordsPerPage, "page");
             String sorting = getSortingValue(req, "sort", Consts.getVALID_COLUMNS_FOR_PASSED_TESTS_ORDER_BY(), Consts.PASSED_TESTS_DEFAULT_SORT);
             int userId = ((User) req.getSession().getAttribute(Consts.CURRENT_USER)).getId();
             int totalTests = Consts.PASSED_TESTS_DAO.getRecordsNumberByUserId(userId);
             int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
 
-            req.setAttribute("passedTests", Consts.PASSED_TESTS_DAO.getRecordsByUserIdOrderedLimited(userId, pageNum, recordsPerPage, sorting));
+            req.setAttribute("passedTests", Consts.PASSED_TESTS_DAO.getRecordsByUserIdOrderedLimited(userId, recordsOffset, recordsPerPage, sorting));
             req.setAttribute("lastPage", lastPage);
         } catch (DBException | NumberFormatException e) {
             logger.error("Couldn't obtain the list of finished tests.", e);

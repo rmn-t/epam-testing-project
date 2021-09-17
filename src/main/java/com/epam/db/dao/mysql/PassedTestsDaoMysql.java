@@ -17,7 +17,7 @@ import java.util.List;
 public class PassedTestsDaoMysql implements PassedTestsDao {
     private Logger logger = LoggerFactory.getLogger(PassedTestsDaoMysql.class);
 
-    public void insertNew(int testId, int userId, int questionNum, int correctAnswers, double grade, int timeSpent) throws DBException {
+    public void insertNew(int testId, int userId, int questionNum, int correctAnswers, double grade, double timeSpent) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
@@ -29,7 +29,7 @@ public class PassedTestsDaoMysql implements PassedTestsDao {
             prepStmt.setInt(k++, questionNum);
             prepStmt.setInt(k++, correctAnswers);
             prepStmt.setDouble(k++, grade);
-            prepStmt.setInt(k++, timeSpent);
+            prepStmt.setDouble(k++, timeSpent);
             prepStmt.executeUpdate();
             logger.debug("Successfully inserted a new passed test for test_id {} | user_id : {} | with grade: {} and time spent: {} ", testId, userId, grade, timeSpent);
         } catch (SQLException e) {
@@ -65,7 +65,7 @@ public class PassedTestsDaoMysql implements PassedTestsDao {
                         .setQuestionNum(rs.getInt("question_num"))
                         .setCorrectAnswers(rs.getInt("correct_answers"))
                         .setGrade(rs.getDouble("grade"))
-                        .setTimeSpent(rs.getInt("time_spent"))
+                        .setTimeSpent(rs.getDouble("time_spent"))
                         .setDate(rs.getString("date"))
                         .build());
             }

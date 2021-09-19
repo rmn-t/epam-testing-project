@@ -26,7 +26,7 @@ public class ComplexityDaoMysql implements ComplexityDao {
         try {
             con = DBUtil.getConnection();
             stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT * FROM complexity ORDER BY name ASC;");
+            rs = stmt.executeQuery("SELECT id,name,scale FROM complexity ORDER BY scale ASC;");
             while (rs.next()) {
                 records.add(new Complexity.Builder().setId(rs.getInt("id")).setName(rs.getString("name")).build());
             }

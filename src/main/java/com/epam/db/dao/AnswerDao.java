@@ -17,8 +17,4 @@ public interface AnswerDao {
 
     void deleteAnswersByQuestionId(Connection con, int questionId) throws DBException;
 
-
-
-
-
 }

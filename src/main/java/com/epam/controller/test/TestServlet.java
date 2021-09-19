@@ -1,5 +1,6 @@
 package com.epam.controller.test;
 
+import com.epam.controller.util.CookieUtil;
 import com.epam.controller.util.Views;
 import com.epam.db.model.Complexity;
 import com.epam.db.model.Question;
@@ -28,21 +29,22 @@ public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            List<Subject> subjects = Consts.SUBJECT_DAO.getAllRecords();
-            req.setAttribute("subjects",subjects);
+            String lang = CookieUtil.getCookieValueByName(req.getCookies(), "lang", "en");
+            List<Subject> subjects = Consts.SUBJECT_DAO.getAllRecords(lang);
+            req.setAttribute("subjects", subjects);
             List<Complexity> complexities = Consts.COMPLEXITY_DAO.getAllRecords();
-            req.setAttribute("complexities",complexities);
+            req.setAttribute("complexities", complexities);
 
             int testId = Integer.parseInt(req.getParameter("id"));
-            Test test = Consts.TEST_DAO.getTestById(testId);
+            Test test = Consts.TEST_DAO.getTestById(testId, lang);
             List<Question> questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
 
-            req.setAttribute("questions",questions);
-            req.setAttribute("test",test);
+            req.setAttribute("questions", questions);
+            req.setAttribute("test", test);
         } catch (DBException | NumberFormatException e) {
-            logger.error("Couldn't obtain the information for provided test id.",e);
+            logger.error("Couldn't obtain the information for provided test id.", e);
             throw new ServletException("Couldn't obtain the information for provided test id.");
         }
-        req.getRequestDispatcher(Views.VIEW_TEST_JSP).forward(req,resp);
+        req.getRequestDispatcher(Views.VIEW_TEST_JSP).forward(req, resp);
     }
 }

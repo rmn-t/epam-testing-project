@@ -6,8 +6,10 @@ import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
 
+/**
+ * A custom tag that implements math floor function.
+ */
 public class FloorTag extends SimpleTagSupport {
-
     private double val;
 
     @Override

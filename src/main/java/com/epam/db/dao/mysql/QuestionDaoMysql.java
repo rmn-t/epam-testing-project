@@ -6,6 +6,7 @@ import com.epam.db.dao.AnswerDao;
 import com.epam.db.dao.QuestionDao;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
+import com.epam.util.Consts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,6 +43,32 @@ public class QuestionDaoMysql implements QuestionDao {
             DBUtil.closeAllInOrder(generatedKeys,prepStmt, con);
         }
         return res;
+    }
+
+    @Override
+    public void insertQuestionAndItsAnswersByTestId(String text, int testId, List<Answer> answers) throws DBException {
+        Connection con = null;
+        try {
+            con = DBUtil.getConnection();
+            con.setAutoCommit(false);
+            con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
+            int questionId = Consts.QUESTION_DAO.insertQuestionByTestId(text,testId);
+            Consts.ANSWER_DAO.insertAnswersByQuestionId(questionId,answers);
+            con.commit();
+            logger.debug("Successfully inserted question_id {} and it's answers.",questionId);
+        } catch (SQLException | DBException e) {
+            try {
+                if (con != null) {
+                    con.rollback();
+                    logger.error("Failed inserting question and it's answers",e);
+                }
+            } catch (SQLException err) {
+                logger.error("Failed to execute rollback.",err);
+            }
+            throw new DBException("Failed update for question_id",e);
+        } finally {
+            DBUtil.closeAllInOrder(con);
+        }
     }
 
     public Question getQuestionById(int questionId) throws DBException {
@@ -138,11 +165,9 @@ public class QuestionDaoMysql implements QuestionDao {
                 if (con != null) {
                     con.rollback();
                     logger.error("Failed update for question_id {}.",id,e);
-//                    throw new DBException("Failed update for question_id",e);
                 }
             } catch (SQLException err) {
                 logger.error("Failed to execute rollback.",err);
-//                throw new DBException("Failed to execute rollback.",err);
             }
             throw new DBException("Failed update for question_id",e);
         } finally {
@@ -167,7 +192,7 @@ public class QuestionDaoMysql implements QuestionDao {
         }
     }
 
-    public void deleteQuestionById(int id) throws DBException {
+    public void deleteQuestionById(int id, int testId, int questionsLeft) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
@@ -175,6 +200,9 @@ public class QuestionDaoMysql implements QuestionDao {
             prepStmt = con.prepareStatement("DELETE FROM question WHERE id = ?;");
             prepStmt.setInt(1, id);
             prepStmt.executeUpdate();
+            if (questionsLeft == 1) {
+                Consts.TEST_DAO.deactivateTestById(con,testId);
+            }
             logger.debug("Successfully deleted question_id {}",id);
         } catch (SQLException e) {
             logger.error("Failed to delete question by id {}.",id,e);

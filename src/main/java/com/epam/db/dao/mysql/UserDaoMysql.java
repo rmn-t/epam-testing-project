@@ -85,7 +85,7 @@ public class UserDaoMysql implements UserDao {
             prepStmt.setString(k++,firstName);
             prepStmt.setString(k++,lastName);
             prepStmt.setInt(k++,DEFAULT_ROLE_ID);
-            prepStmt.setInt(k++,DEFAULT_STATUS_ID);
+            prepStmt.setInt(k,DEFAULT_STATUS_ID);
             id = prepStmt.executeUpdate();
             logger.debug("Inserted new user with username {}.",userName);
         } catch (SQLException e) {
@@ -110,7 +110,7 @@ public class UserDaoMysql implements UserDao {
             prepStmt.setInt(k++,salt);
             prepStmt.setString(k++,firstName);
             prepStmt.setString(k++,lastName);
-            prepStmt.setInt(k++,id);
+            prepStmt.setInt(k,id);
             prepStmt.executeUpdate();
             logger.debug("Successfully updated user info by id {}.",id);
         } catch (SQLException e) {
@@ -154,7 +154,7 @@ public class UserDaoMysql implements UserDao {
                     " ORDER BY " + orderBy + " LIMIT ?, ?;");
             int k = 1;
             prepStmt.setInt(k++,offset-1);
-            prepStmt.setInt(k++,limit);
+            prepStmt.setInt(k,limit);
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 users.add(new User.Builder()

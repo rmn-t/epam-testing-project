@@ -10,24 +10,24 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/epam/tests?page=1&sort=name ASC&subject=0&perPage=10">///Home+Главная</a>
+            <a class="navbar-brand" href="/epam/tests?page=1&sort=name ASC&subject=0&perPage=10"><fmt:message key="tests" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/epam/passed/tests?page=1&sort=date DESC&perPage=10">///My tests</a>
+                        <a class="nav-link" aria-current="page" href="/epam/passed/tests?page=1&sort=date DESC&perPage=10"><fmt:message key="myTests" /></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/epam/account">///Account-Личный кабинет</a>
+                        <a class="nav-link" href="/epam/account"><fmt:message key="account" /></a>
                     </li>
                     <c:if test="${sessionScope.currentUser.role == 'admin'}">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/epam/test?id=0">///Add test</a>
+                            <a class="nav-link" aria-current="page" href="/epam/test?id=0"><fmt:message key="addTest" /></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/epam/users?page=1&sort=id ASC&statusId=0&perPage=10">///Users</a>
+                            <a class="nav-link" aria-current="page" href="/epam/users?page=1&sort=id ASC&statusId=0&perPage=10"><fmt:message key="users" /></a>
                         </li>
                     </c:if>
                 </ul>
@@ -47,7 +47,7 @@
                     </li>
                     <li class="nav-item ml-2">
                         <form action="/epam/logout">
-                            <input type="submit" class="btn btn-light" value="///Logout">
+                            <input type="submit" class="btn btn-light" value="<fmt:message key="login.logout" />">
                         </form>
                     </li>
                 </ul>

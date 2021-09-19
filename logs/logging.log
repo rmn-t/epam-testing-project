@@ -1,4 +1,1452 @@
-00:14:20,493 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
-00:14:23,182 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
-00:14:33,157 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
-00:14:35,379 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 50;
+00:02:12,163 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - All questions for test_id 13 were deleted.
+00:02:12,173 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #13 for: Question, id #13 for test: Test # 13 | isCorrect : true
+00:02:12,177 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #613 for: Question, id #13 for test: Test # 13 | isCorrect : true
+00:02:12,178 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #1288 for: Question, id #13 for test: Test # 13 | isCorrect : false
+00:02:12,179 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2044 for: Question, id #13 for test: Test # 13 | isCorrect : false
+00:02:12,181 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2093 for: Question, id #13 for test: Test # 13 | isCorrect : false
+00:02:12,182 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2150 for: Question, id #13 for test: Test # 13 | isCorrect : false
+00:02:12,185 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : IncorAns, id #2315 for: Question, id #13 for test: Test # 13 | isCorrect : false
+00:02:12,189 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 13 | text : CorAns, id #2398 for: Question, id #13 for test: Test # 13 | isCorrect : true
+00:02:12,191 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - $8 answers were successfully updated for 13 question_id.
+00:02:12,222 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:02:22,267 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 601 | text : casd | isCorrect : false
+00:02:22,268 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 601 | text : casd | isCorrect : false
+00:02:22,271 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 601.
+00:02:22,279 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:03:30,600 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 602 | text : casd | isCorrect : false
+00:03:30,601 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 602 | text : casd | isCorrect : false
+00:03:30,604 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 602.
+00:03:30,610 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:04:31,238 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 603 | text : csad | isCorrect : false
+00:04:31,239 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 603 | text : casd | isCorrect : false
+00:04:31,241 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 603.
+00:04:31,254 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:05:16,686 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 604 | text : cas | isCorrect : false
+00:05:16,687 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 604 | text : cas | isCorrect : false
+00:05:16,691 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 604.
+00:05:16,698 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:07:32,077 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 605 | text : cads | isCorrect : true
+00:07:32,078 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 605 | text : cad | isCorrect : false
+00:07:32,080 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 605.
+00:07:32,086 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:07:43,192 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:07:45,503 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:07:48,315 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:07:51,859 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:08:35,795 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+14:37:21,589 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:37:29,815 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:37:32,248 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:37:32,723 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:37:32,861 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+14:53:22,747 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:53:24,253 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:53:26,198 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:53:27,619 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:53:28,038 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:53:28,089 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+14:53:30,691 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:53:30,699 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:53:30,704 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:53:35,997 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:54:12,684 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:54:21,227 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:54:32,952 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:54:35,582 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:54:35,590 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:54:35,595 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+14:54:37,909 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:54:37,916 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:54:37,920 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:56:17,150 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+14:56:20,894 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:56:25,366 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:56:27,396 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+14:56:27,400 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+14:56:28,529 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+14:56:30,176 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+14:58:20,206 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:00:57,916 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:00:57,923 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:00:57,939 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:01:27,316 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:01:27,317 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:04:24,550 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:04:29,685 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:04:29,686 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:04:40,916 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:04:47,780 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:04:47,784 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:04:49,493 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:03,529 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:03,533 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:04,757 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:05,661 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:05,666 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:07,289 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:07,803 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:07,810 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:09,003 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:10,690 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:05:10,693 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:08:05,774 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:08:06,802 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:08:15,798 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:08:15,799 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:08:34,485 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:18:32,854 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:18:46,345 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:18:46,345 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:19:50,232 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:19:50,233 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:20:48,593 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:20:48,596 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:21:01,384 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - inside equals
+15:21:01,385 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:21:04,356 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:21:04,363 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:21:05,822 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:21:06,260 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:21:06,309 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:23:02,265 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:23:04,249 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:23:04,260 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:23:05,612 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:23:07,195 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:23:07,200 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:23:08,965 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:23:09,865 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:23:10,306 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:23:10,357 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:23:13,169 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:23:13,180 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:23:13,182 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:23:55,415 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:23:57,801 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:23:57,803 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:24:05,605 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:24:05,608 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 7 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:24:07,693 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:24:07,699 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:26:38,148 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:26:38,162 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:26:41,251 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:26:41,258 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:26:42,425 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:26:42,853 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:26:42,900 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:26:44,922 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:26:44,929 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:26:44,932 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:26:48,455 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:26:48,472 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:26:48,478 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:29:50,534 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:29:50,548 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:29:50,550 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:29:53,081 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:29:53,085 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 3 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:29:54,210 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:29:54,212 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 12 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:29:55,760 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:29:55,762 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:37:32,791 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+15:37:32,805 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:37:34,310 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:37:34,712 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:37:34,761 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:37:34,787 [ERROR|com.epam.db.dao.mysql.SubjectDaoMysql|SubjectDaoMysql] - Couldn't obtain subjects from database.
+java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'order clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1202)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.epam.db.dao.mysql.SubjectDaoMysql.getAllRecords(SubjectDaoMysql.java:26)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+15:37:34,791 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+com.epam.exceptions.DBException: Couldn't obtain subjects from database.
+	at com.epam.db.dao.mysql.SubjectDaoMysql.getAllRecords(SubjectDaoMysql.java:33)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'order clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1202)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.epam.db.dao.mysql.SubjectDaoMysql.getAllRecords(SubjectDaoMysql.java:26)
+	... 28 more
+15:38:36,576 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:38:36,590 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:38:38,125 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:38:38,540 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:38:38,593 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:38:38,623 [ERROR|com.epam.db.dao.mysql.SubjectDaoMysql|SubjectDaoMysql] - Couldn't obtain subjects from database.
+java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'order clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1202)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.epam.db.dao.mysql.SubjectDaoMysql.getAllRecords(SubjectDaoMysql.java:26)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+15:38:38,627 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+com.epam.exceptions.DBException: Couldn't obtain subjects from database.
+	at com.epam.db.dao.mysql.SubjectDaoMysql.getAllRecords(SubjectDaoMysql.java:33)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'name' in 'order clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1202)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at com.epam.db.dao.mysql.SubjectDaoMysql.getAllRecords(SubjectDaoMysql.java:26)
+	... 28 more
+15:39:29,944 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:29,962 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:30,895 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:31,344 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:31,400 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:39:43,373 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:43,378 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 10 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:39:45,272 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:45,275 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:39:46,193 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:46,195 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 8 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:39:52,230 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:39:52,232 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:49:45,966 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:49:45,987 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:49:47,127 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:49:47,575 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:49:47,640 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:49:47,651 [ERROR|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - Failed to obtain tests (limited,sorted,ordered).
+java.sql.SQLException: Column 'name_en' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:581)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:888)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.getString(DelegatingResultSet.java:263)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.getString(DelegatingResultSet.java:263)
+	at com.epam.db.dao.mysql.TestDaoMysql.getTestsLimitedSorted(TestDaoMysql.java:137)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+15:49:47,657 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+com.epam.exceptions.DBException: Failed to obtain tests (limited,sorted,ordered).
+	at com.epam.db.dao.mysql.TestDaoMysql.getTestsLimitedSorted(TestDaoMysql.java:147)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:47)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.SQLException: Column 'name_en' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:581)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getString(ResultSetImpl.java:888)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.getString(DelegatingResultSet.java:263)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingResultSet.getString(DelegatingResultSet.java:263)
+	at com.epam.db.dao.mysql.TestDaoMysql.getTestsLimitedSorted(TestDaoMysql.java:137)
+	... 28 more
+15:50:56,580 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:50:56,598 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:50:57,945 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:50:58,387 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:50:58,442 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:51:03,252 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:51:03,259 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:51:03,261 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:51:18,334 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:51:18,349 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 13 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:51:19,386 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:51:19,389 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:51:24,935 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:51:24,952 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+15:53:12,684 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:53:12,687 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:53:14,329 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:53:39,918 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:50,930 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:54,746 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:54,791 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:56,911 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:56,916 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:56,923 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:57,868 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:57,876 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:55:57,879 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:56:22,482 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:56:22,493 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:56:22,496 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:56:39,403 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:56:39,409 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:56:39,411 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:56:53,965 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:56:53,970 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:56:53,975 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:57:56,100 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:57:56,105 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:57:56,108 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:57:57,307 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:57:57,317 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:57:57,318 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:59:14,476 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:59:14,491 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:59:15,439 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:59:15,877 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:59:15,943 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:59:19,937 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:59:19,944 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:59:19,949 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+15:59:24,155 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - ru
+15:59:24,167 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+15:59:24,170 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+16:54:58,489 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:54:58,503 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:55:27,057 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:55:39,421 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:55:39,429 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:55:50,686 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:55:51,919 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:55:51,927 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:55:51,929 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+16:56:28,399 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:56:28,401 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 25;
+16:57:16,817 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+16:57:16,824 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:57:19,813 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:57:19,819 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:57:19,824 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+16:57:53,865 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:57:53,875 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+16:58:11,131 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:58:11,150 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:58:11,152 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+16:58:21,212 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:58:35,753 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:58:35,791 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 601 | text : casdc | isCorrect : true
+16:58:35,796 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 601 | text : acsda | isCorrect : false
+16:58:35,799 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 601.
+16:58:35,815 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:58:35,822 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+16:59:21,944 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:59:21,959 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:59:21,962 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+16:59:25,090 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:59:25,102 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:59:25,105 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+16:59:33,967 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+16:59:33,969 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:00:02,881 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:00:07,607 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:00:07,614 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 602 | text : casd | isCorrect : false
+17:00:07,616 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 602 | text : ccasd | isCorrect : true
+17:00:07,618 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 602.
+17:00:07,623 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:00:07,625 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+17:00:45,362 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:00:45,369 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:00:49,377 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:00:52,791 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:00:52,795 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:00:54,406 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:01:03,033 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:01:03,060 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:01:13,560 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:01:13,562 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:01:19,323 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:02:20,373 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:02:20,375 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:02:28,263 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:02:32,969 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:02:35,087 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:02:36,214 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:09,684 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:18,310 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:25,549 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:25,558 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:28,432 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:30,347 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:30,349 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:05:39,505 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:05:39,509 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:07:59,390 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:07:59,412 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:00,656 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:01,049 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:01,049 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:01,113 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:08:06,897 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:06,898 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:06,907 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:06,915 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:11,982 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:11,991 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:17,236 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:17,246 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:17,246 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:17,249 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:08:29,548 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:29,548 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:31,878 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:31,878 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:31,896 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:31,896 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:35,765 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:35,769 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:38,089 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:38,096 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:38,096 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:38,098 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:08:41,395 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:41,395 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:43,641 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:43,641 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:43,645 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:08:49,891 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:49,891 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:49,901 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:49,901 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:51,495 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:51,496 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:54,706 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:54,707 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:08:54,712 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:08:57,904 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:08:57,904 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - Active
+17:17:56,724 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:17:56,740 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:04,565 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:04,578 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:10,842 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:11,298 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:11,359 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:18:13,204 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:15,370 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:15,387 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:19,770 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:19,782 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:19,791 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:18:21,097 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:22,348 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:22,355 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:18:25,413 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:25,427 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:18:27,289 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:53:09,685 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:24,972 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:24,992 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:26,731 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:27,123 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:27,182 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:55:28,308 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:28,319 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:28,327 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:29,661 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:29,677 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:29,683 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:55:31,200 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:33,594 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:33,607 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:36,490 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:36,495 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:39,436 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:39,444 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:39,447 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+17:55:43,025 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:43,038 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:55:44,608 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:57:21,764 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+17:57:21,783 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:16:53,755 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:16:53,776 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:16:55,303 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:16:55,711 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:16:55,774 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:16:57,279 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:17:01,870 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - 
+18:17:01,881 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:17:05,660 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:17:05,670 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:17:05,678 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:17:07,237 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:17:10,216 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:17:10,234 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:17:12,105 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:38,115 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:38,129 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:41,581 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:41,588 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:42,726 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:43,138 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:43,199 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:18:44,446 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:47,116 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:18:47,130 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:04,958 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:04,966 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:04,970 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:19:10,938 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:10,947 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:10,951 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:13,178 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:13,185 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:13,190 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:19:27,112 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:27,131 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:29,310 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - en
+18:19:29,312 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:19,449 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:21:29,986 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:21:35,661 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,667 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,673 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,681 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,686 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,690 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,697 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,701 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,707 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,713 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,717 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,722 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,728 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,733 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,740 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,747 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,751 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,756 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,762 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:35,767 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,597 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,607 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,616 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,621 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,628 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,633 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,639 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,646 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,650 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,656 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,661 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,666 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,671 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,677 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,684 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,690 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,697 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,705 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,712 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:37,717 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,735 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,745 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,754 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,761 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,766 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,772 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,778 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,785 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,794 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,802 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,807 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,812 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,817 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,822 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,831 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,838 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,844 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,850 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,854 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:21:42,860 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:22:43,042 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:22:52,623 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:23:02,340 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:24:23,969 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:24:29,160 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:24:36,545 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:25:21,958 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:25:25,522 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:25:31,278 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:26:04,100 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:27:04,111 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:27:07,499 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:27:09,367 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:27:13,687 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:29:12,288 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:29:26,634 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:29:34,353 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:31:04,492 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:31:08,120 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:31:11,814 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:31:17,831 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:34:00,142 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:34:04,488 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:34:09,822 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+18:55:52,125 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:55:54,542 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:55:57,460 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+18:55:58,412 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:56:00,284 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:56:12,005 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 603 | text : acds | isCorrect : false
+18:56:12,006 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 603 | text : cas | isCorrect : true
+18:56:12,030 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 603.
+18:56:12,060 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:56:13,587 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:56:18,106 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:56:22,871 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 604 | text : cads | isCorrect : false
+18:56:22,873 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 604 | text : casdc | isCorrect : true
+18:56:22,874 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 604.
+18:56:22,888 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:56:25,123 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:57:15,929 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+18:57:17,926 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:12:01,099 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:12:12,894 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:12:31,110 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:14:39,167 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:14:49,965 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:14:56,691 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:15:02,281 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:15:37,247 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:15:52,194 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:16:15,289 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:16:30,320 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:17:17,577 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:17:26,244 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:17:43,571 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:17:50,585 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:18:24,575 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:18:34,105 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:18:44,102 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 605 | text : cas | isCorrect : true
+19:18:44,106 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 605 | text : csa | isCorrect : false
+19:18:44,122 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 605.
+19:18:44,144 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:18:47,112 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:18:48,642 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:19:12,887 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:19:14,608 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:20:04,147 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_en as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:20:05,279 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:37:23,824 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:37:53,281 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:38:01,403 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:38:56,743 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 606 | text : ca | isCorrect : false
+19:38:56,746 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 606 | text : dcsa | isCorrect : true
+19:38:56,748 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 606.
+19:38:56,809 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:39:01,769 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:39:14,373 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:40:17,597 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:40:19,436 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 50, 10;
+19:40:27,905 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 50, 10;
+19:40:29,219 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 40, 10;
+19:40:31,053 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 30, 10;
+19:40:33,087 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 11 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:40:34,682 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 7 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:40:37,453 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 7 GROUP BY test.id ORDER BY scale DESC LIMIT 0, 10;
+19:40:41,358 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 7 GROUP BY test.id ORDER BY scale ASC LIMIT 0, 10;
+19:40:47,455 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 13 GROUP BY test.id ORDER BY scale ASC LIMIT 0, 10;
+19:40:53,873 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY scale ASC LIMIT 0, 10;
+19:41:18,654 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:41:38,330 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:41:40,873 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:41:44,418 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:41:45,306 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:41:47,613 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:42:38,523 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:42:39,851 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:42:43,970 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:42:46,612 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:42:51,734 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:42:54,796 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:42:56,668 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:42:59,002 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:43:00,787 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:43:04,206 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:43:06,024 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:43:10,875 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:43:28,349 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:43:32,172 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+19:43:53,363 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:45:09,510 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:45:14,461 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 10, 10;
+19:46:00,891 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 10, 10;
+19:46:02,581 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 50, 10;
+19:46:09,254 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 3200, 10;
+19:46:17,376 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 50, 10;
+19:47:16,532 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  is_active = TRUE  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:54:04,505 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+19:54:20,055 [ERROR|com.epam.controller.user.UsersServlet|UsersServlet] - Couldn't obtain users information.
+java.lang.NumberFormatException: For input string: "21312c"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.util.IPaginatable.calculateRecordsOffset(IPaginatable.java:42)
+	at com.epam.controller.user.UsersServlet.doGet(UsersServlet.java:28)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:55:03,805 [ERROR|com.epam.db.dao.mysql.UserDaoMysql|UserDaoMysql] - Failed to obtain users limited and sorted order by id ASC, limit -312321,10.
+java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-312322, 10' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at com.epam.db.dao.mysql.UserDaoMysql.getRecordsLimitedSortedFiltered(UserDaoMysql.java:158)
+	at com.epam.controller.user.UsersServlet.doGet(UsersServlet.java:34)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+19:55:03,807 [ERROR|com.epam.controller.user.UsersServlet|UsersServlet] - Couldn't obtain users information.
+com.epam.exceptions.DBException: Failed to obtain users limited and sorted.
+	at com.epam.db.dao.mysql.UserDaoMysql.getRecordsLimitedSortedFiltered(UserDaoMysql.java:176)
+	at com.epam.controller.user.UsersServlet.doGet(UsersServlet.java:34)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-312322, 10' at line 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
+	at com.epam.db.dao.mysql.UserDaoMysql.getRecordsLimitedSortedFiltered(UserDaoMysql.java:158)
+	... 31 more
+20:01:46,292 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:01:46,385 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:01:53,740 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:01:53,743 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:01:58,661 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 11
+20:01:58,663 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 10, 10;
+20:02:00,971 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 51
+20:02:00,973 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 50, 10;
+20:02:06,829 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 5331
+20:02:06,831 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 5330, 10;
+20:04:19,606 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 5331
+20:04:19,609 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 5330, 10;
+20:04:46,061 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:04:48,091 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 50, 10;
+20:05:03,139 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 50, 10;
+20:06:37,641 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:06:39,921 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - User supplied invalid page number.
+20:06:41,108 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:06:45,938 [ERROR|com.epam.controller.test.PassedTestsServlet|PassedTestsServlet] - User supplied invalid page number.
+20:06:51,475 [ERROR|com.epam.controller.user.UsersServlet|UsersServlet] - User supplied invalid page number.
+20:17:34,471 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:17:37,606 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:17:46,587 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сы | isCorrect : false
+20:17:46,588 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сыв | isCorrect : true
+20:17:46,591 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 607.
+20:17:46,607 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:17:55,435 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 608 | text : фсвыс | isCorrect : false
+20:17:55,437 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 608 | text : фсвы | isCorrect : true
+20:17:55,438 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 608.
+20:17:55,453 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:17:58,880 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - All questions for test_id 607 were deleted.
+20:17:58,882 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сы | isCorrect : false
+20:17:58,883 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сыв | isCorrect : true
+20:17:58,884 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - $2 answers were successfully updated for 607 question_id.
+20:17:58,896 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:18:07,387 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - All questions for test_id 607 were deleted.
+20:18:07,392 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сы | isCorrect : false
+20:18:07,393 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сыв | isCorrect : true
+20:18:07,394 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : свфысыфсв | isCorrect : true
+20:18:07,395 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сфывс | isCorrect : true
+20:18:07,395 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 607 | text : сфсвфысфысфы | isCorrect : true
+20:18:07,396 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - $5 answers were successfully updated for 607 question_id.
+20:18:07,408 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:20:26,377 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:20:32,245 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:20:36,613 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : сфы | isCorrect : true
+20:20:36,641 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : всфысф | isCorrect : false
+20:20:36,647 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 609.
+20:20:36,666 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:20:42,131 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - All questions for test_id 609 were deleted.
+20:20:42,132 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : сфы | isCorrect : true
+20:20:42,134 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : всфысф | isCorrect : false
+20:20:42,135 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : сфв | isCorrect : false
+20:20:42,136 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : сфы | isCorrect : false
+20:20:42,137 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : всфы | isCorrect : false
+20:20:42,138 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 609 | text : всфс | isCorrect : false
+20:20:42,138 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - $6 answers were successfully updated for 609 question_id.
+20:20:42,152 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:20:48,184 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:20:50,985 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:21:29,207 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:21:29,208 [ERROR|com.epam.controller.test.TestServlet|TestServlet] - Couldn't obtain the information for provided test id.
+java.lang.NumberFormatException: For input string: "Ñ312Ñ31"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.test.TestServlet.doGet(TestServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:21:58,085 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:22:00,650 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+java.lang.NumberFormatException: For input string: "ÑÑÑ13"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.util.IPaginatable.calculateRecordsPerPageNum(IPaginatable.java:23)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:30)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:22:04,722 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+java.lang.NumberFormatException: For input string: "ÑÑÑ13"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.util.IPaginatable.calculateRecordsPerPageNum(IPaginatable.java:23)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:30)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:22:07,020 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:22:11,875 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+java.lang.NumberFormatException: For input string: "casdc13c12cax"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.util.IPaginatable.calculateRecordsOffset(IPaginatable.java:42)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:31)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:25:59,355 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+java.lang.NumberFormatException: For input string: "casdc13c12cax"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.util.IPaginatable.calculateRecordsOffset(IPaginatable.java:42)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:31)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:26:06,903 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - Couldn't obtain the list of tests.
+java.lang.NumberFormatException: For input string: "casdc13c12cax"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.util.IPaginatable.calculateRecordsOffset(IPaginatable.java:42)
+	at com.epam.controller.test.TestsServlet.doGet(TestsServlet.java:31)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:26:14,293 [ERROR|com.epam.controller.user.UsersServlet|UsersServlet] - Couldn't obtain users information.
+java.lang.NumberFormatException: For input string: "c13cqcasca"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.util.IPaginatable.calculateRecordsPerPageNum(IPaginatable.java:23)
+	at com.epam.controller.user.UsersServlet.doGet(UsersServlet.java:27)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+20:26:17,426 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:27:23,320 [ERROR|com.epam.controller.user.UsersServlet|UsersServlet] - User supplied invalid page number.
+20:27:48,815 [ERROR|com.epam.controller.user.UsersServlet|UsersServlet] - User supplied invalid page number.
+20:27:59,640 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:28:02,213 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 10 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:28:04,656 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - User supplied invalid page number.
+20:28:31,686 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 10 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:28:37,027 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 10 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:28:38,343 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - User supplied invalid page number.
+20:29:58,390 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:29:58,461 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:30:01,574 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:30:01,576 [ERROR|com.epam.controller.test.TestsServlet|TestsServlet] - User supplied invalid page number.
+20:32:30,568 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:32:30,639 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:32:34,007 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:32:34,012 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 13 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:33:50,948 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:33:50,950 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 13 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:37:49,834 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:37:49,836 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 13 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:38:14,975 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:38:14,979 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  WHERE  subject_id = 13 GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:38:33,890 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:38:36,118 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:38:42,848 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:38:48,390 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:40:51,574 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:40:51,642 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:40:53,029 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:41:41,641 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:41:51,480 [ERROR|com.epam.db.dao.mysql.QuestionDaoMysql|QuestionDaoMysql] - Couldn't add question with text : casdca , for test_id 0.
+20:41:51,483 [ERROR|com.epam.db.dao.mysql.QuestionDaoMysql|QuestionDaoMysql] - Failed inserting question and it's answers
+com.epam.exceptions.DBException: Couldn't add question
+	at com.epam.db.dao.mysql.QuestionDaoMysql.insertQuestionByTestId(QuestionDaoMysql.java:41)
+	at com.epam.db.dao.mysql.QuestionDaoMysql.insertQuestionAndItsAnswersByTestId(QuestionDaoMysql.java:55)
+	at com.epam.controller.question.EditQuestionServlet.doPost(EditQuestionServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`epam_project`.`question`, CONSTRAINT `question_ibfk_1` FOREIGN KEY (`test_id`) REFERENCES `test` (`id`) ON DELETE CASCADE)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1350)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at com.epam.db.dao.mysql.QuestionDaoMysql.insertQuestionByTestId(QuestionDaoMysql.java:31)
+	... 32 more
+20:41:51,491 [ERROR|com.epam.controller.question.EditQuestionServlet|EditQuestionServlet] - Error while trying to update question and it's answers.
+com.epam.exceptions.DBException: Failed update for question_id
+	at com.epam.db.dao.mysql.QuestionDaoMysql.insertQuestionAndItsAnswersByTestId(QuestionDaoMysql.java:68)
+	at com.epam.controller.question.EditQuestionServlet.doPost(EditQuestionServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: com.epam.exceptions.DBException: Couldn't add question
+	at com.epam.db.dao.mysql.QuestionDaoMysql.insertQuestionByTestId(QuestionDaoMysql.java:41)
+	at com.epam.db.dao.mysql.QuestionDaoMysql.insertQuestionAndItsAnswersByTestId(QuestionDaoMysql.java:55)
+	... 31 more
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`epam_project`.`question`, CONSTRAINT `question_ibfk_1` FOREIGN KEY (`test_id`) REFERENCES `test` (`id`) ON DELETE CASCADE)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1092)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1040)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1350)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1025)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at com.epam.db.dao.mysql.QuestionDaoMysql.insertQuestionByTestId(QuestionDaoMysql.java:31)
+	... 32 more
+20:42:43,171 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:42:44,500 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:42:45,901 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:43:08,793 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:43:09,723 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:44:51,337 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:44:51,403 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:44:53,842 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:46:10,698 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:46:10,758 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:46:15,380 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:46:16,975 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:46:18,788 [ INFO|com.epam.controller.test.TestsServlet|TestsServlet] - 1
+20:46:18,791 [ INFO|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT test.id,test.name,subject.name_ru as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active FROM test LEFT JOIN question ON test.id = question.test_id LEFT JOIN complexity ON complexity.id = test.complexity_id LEFT JOIN subject ON subject.id = test.subject_id  GROUP BY test.id ORDER BY name ASC LIMIT 0, 10;
+20:46:24,551 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:46:26,161 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:46:35,534 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 611 | text : casd | isCorrect : false
+20:46:35,540 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 611 | text : casdc | isCorrect : false
+20:46:35,546 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 611 | text : casd | isCorrect : true
+20:46:35,552 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 3 answers for question_id 611.
+20:46:35,582 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:50:10,682 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:50:10,683 [ERROR|com.epam.controller.test.TestServlet|TestServlet] - Couldn't obtain the information for provided test id.
+java.lang.NumberFormatException: For input string: "c132c"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Integer.parseInt(Integer.java:652)
+	at java.base/java.lang.Integer.parseInt(Integer.java:770)
+	at com.epam.controller.test.TestServlet.doGet(TestServlet.java:38)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:27)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)

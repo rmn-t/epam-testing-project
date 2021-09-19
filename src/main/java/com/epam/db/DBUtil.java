@@ -1,5 +1,6 @@
 package com.epam.db;
 
+import com.epam.exceptions.DBException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,17 +30,18 @@ public class DBUtil {
 
     private DBUtil() {    }
 
-    public static void close(AutoCloseable ac) {
+    public static void close(AutoCloseable ac) throws DBException {
         if (ac != null) {
             try {
                 ac.close();
             } catch (Exception e) {
-                e.printStackTrace();
+                logger.error("Couldn't close the item {}",ac.toString(),e);
+                throw new DBException("Couldn't close the autocloseable item.",e);
             }
         }
     }
 
-    public static void closeAllInOrder(AutoCloseable ...autoCloseables) {
+    public static void closeAllInOrder(AutoCloseable ...autoCloseables) throws DBException {
         for (AutoCloseable ac : autoCloseables) {
             close(ac);
         }

@@ -1,5 +1,6 @@
 package com.epam.controller.test;
 
+import com.epam.controller.util.CookieUtil;
 import com.epam.controller.util.IPaginatable;
 import com.epam.controller.util.Views;
 import com.epam.db.model.User;
@@ -25,17 +26,24 @@ public class TestsServlet extends HttpServlet implements IPaginatable {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+            String lang = CookieUtil.getCookieValueByName(req.getCookies(), "lang", "en");
             int recordsPerPage = calculateRecordsPerPageNum(req, "perPage");
             int recordsOffset = calculateRecordsOffset(req, recordsPerPage, "page");
+            logger.info(String.valueOf(recordsOffset));
             String sorting = getSortingValue(req, "sort", Consts.getVALID_COLUMNS_FOR_TEST_ORDER_BY(), Consts.TESTS_DEFAULT_SORT);
             int subjectId = Integer.parseInt(req.getParameter("subject"));
             User user = (User) req.getSession().getAttribute(Consts.CURRENT_USER);
             String isActive = user.getRoleId() == 2 ? "active" : req.getParameter("testStatus");
             int totalTests = Consts.TEST_DAO.getRecordsNumBySubjectId(subjectId, isActive);
 
-            req.setAttribute("tests", Consts.TEST_DAO.getTestsLimitedSorted(recordsOffset, recordsPerPage, sorting, subjectId, isActive));
+            if ((recordsOffset < 0 || recordsOffset > totalTests ) && recordsOffset != 1) {
+                logger.error("User supplied invalid page number.");
+                throw new ServletException("Couldn't obtain tests information.");
+            }
+
+            req.setAttribute("tests", Consts.TEST_DAO.getTestsLimitedSorted(recordsOffset, recordsPerPage, sorting, subjectId, isActive, lang));
             req.setAttribute("lastPage", totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1));
-            req.setAttribute("subjects", Consts.SUBJECT_DAO.getAllRecords());
+            req.setAttribute("subjects", Consts.SUBJECT_DAO.getAllRecords(lang));
         } catch (DBException | NumberFormatException e) {
             logger.error("Couldn't obtain the list of tests.", e);
             throw new ServletException("Couldn't obtain the list of tests.");

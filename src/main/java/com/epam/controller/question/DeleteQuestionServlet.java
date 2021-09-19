@@ -21,9 +21,11 @@ public class DeleteQuestionServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int questionId = Integer.parseInt(req.getParameter("id"));
         try {
-            Consts.QUESTION_DAO.deleteQuestionById(questionId);
+            int questionId = Integer.parseInt(req.getParameter("id"));
+            int testId = Integer.parseInt(req.getParameter("testId"));
+            int questionsLeft = Integer.parseInt(req.getParameter("questionsLeft"));
+            Consts.QUESTION_DAO.deleteQuestionById(questionId,testId,questionsLeft);
         } catch (DBException e) {
             logger.error("Couldn't delete the question.", e);
             throw new ServletException("Couldn't delete the question.");

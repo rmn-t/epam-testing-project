@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
 
-<fmt:setLocale value="${cookie.lang.value}"/>
+<fmt:setLocale value="${empty cookie.lang.value ? 'en' : cookie.lang.value }"/>
 <fmt:bundle basename="messages">
 
 <!DOCTYPE html>

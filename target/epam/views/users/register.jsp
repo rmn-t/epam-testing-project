@@ -34,7 +34,8 @@
                                     <label for="username" class="form-label"><fmt:message key="user.login" /></label>
                                     <input type="text" class="form-control" name="username" id="username" placeholder="<fmt:message key="user.login" />"
                                     required pattern="[a-zA-Z0-9_-]{3,16}$"
-                                    title="Must contain only latin letters, digits, _ or -. Length: 3 - 25 characters."
+                                    oninvalid="setCustomValidity('<fmt:message key='msg.loginValidation' />')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
                                     maxlength="25"
                                     minlength="3"
                                     >
@@ -43,7 +44,8 @@
                                     <label for="password" class="form-label"><fmt:message key="user.password" /></label>
                                     <input  type="password" class="form-control" name="password" id="password" placeholder="******"
                                     required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
-                                    title="Must contain at least one number and one uppercase and lowercase letter, minimum 8 and maximum 20 characters."
+                                    oninvalid="setCustomValidity('<fmt:message key='msg.passwordValidation' />')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
                                     maxlength="20"
                                     >
                                 </div>
@@ -51,7 +53,8 @@
                                     <label for="firstName" class="form-label"><fmt:message key="user.firstName" /></label>
                                     <input type="text" class="form-control" name="firstName" id="firstName" placeholder="<fmt:message key="user.firstName" />" type="text"
                                     required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
-                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    oninvalid="setCustomValidity('<fmt:message key='msg.firstLastNameValidation' />')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
                                     maxlength="20"
                                     minlength="2"
                                     >
@@ -60,7 +63,8 @@
                                     <label for="lastName" class="form-label"><fmt:message key="user.lastName" /></label>
                                     <input type="text" class="form-control" name="lastName" id="lastName" placeholder="<fmt:message key="user.lastName" />" type="text"
                                     required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
-                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    oninvalid="setCustomValidity('<fmt:message key='msg.firstLastNameValidation' />')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
                                     maxlength="20"
                                     minlength="2"
                                     >

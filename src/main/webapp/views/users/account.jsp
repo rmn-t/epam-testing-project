@@ -4,6 +4,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
 
+<fmt:setLocale value="${cookie.lang.value}"/>
+<fmt:bundle basename="messages">
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,11 +15,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
     </style>
-    <title><c:out value="${test.name}"></c:out></title>
+    <title><fmt:message key="account" /></title>
 </head>
     <body>
-        <fmt:setLocale value="${cookie.lang.value}"/>
-        <fmt:bundle basename="messages">
+
         <my:preventBack />
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
@@ -27,11 +29,11 @@
                 <div class="col-lg-4 col-md-6 col-sm-8">
                     <div class="card">
                         <article class="card-body">
-                            <h4 class="card-title text-center mb-4 mt-1">///Edit account details</h4>
+                            <h4 class="card-title text-center mb-4 mt-1"><fmt:message key="account.editDetails" /></h4>
                             <hr>
                             <c:if test="${not empty updStatus}">
                                 <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
-                                    <strong>///Account info was successfully updated</strong>
+                                    <strong><fmt:message key="msg.accountInfoUpdated" /></strong>
                                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>
                             </c:if>
@@ -41,10 +43,11 @@
                                     <input type="text" value="${sessionScope.currentUser.username}" class="form-control" name="username" id="username" placeholder="<fmt:message key="user.login" />" type="text" required disabled>
                                 </div>
                                 <div class="mb-2 text-center">
-                                    <label for="password" class="form-label">///New <fmt:message key="user.password" /></label>
+                                    <label for="password" class="form-label"><fmt:message key="user.newPassword" /></label>
                                     <input type="password" class="form-control" name="password" id="password" placeholder=""
                                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
-                                    title="Must contain at least one number and one uppercase and lowercase letter, minimum 8 and maximum 20 characters."
+                                    oninvalid="setCustomValidity('<fmt:message key='msg.passwordValidation' />')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
                                     maxlength="20"
                                     >
                                 </div>
@@ -52,7 +55,8 @@
                                     <label for="firstName" class="form-label"><fmt:message key="user.firstName" /></label>
                                     <input type="text" value="${sessionScope.currentUser.firstName}" class="form-control" name="firstName" id="firstName" placeholder="<fmt:message key="user.firstName" />"
                                     required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
-                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    oninvalid="setCustomValidity('<fmt:message key='msg.firstLastNameValidation' />')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
                                     maxlength="20"
                                     minlength="2"
                                     >
@@ -61,7 +65,8 @@
                                     <label for="lastName" class="form-label"><fmt:message key="user.lastName" /></label>
                                     <input type="text" value="${sessionScope.currentUser.lastName}" class="form-control" name="lastName" id="lastName" placeholder="<fmt:message key="user.lastName" />"
                                     required pattern="[-\sаАбБвВгГдДеЕёЁжЖзЗиИйЙкКлЛмМнНоОпПрРсСтТуУфФхХцЦчЧшШщЩъЪыЫьЬэЭюЮяЯҐґІіЇїЄєA-Za-z]+"
-                                    title="Must contain only latin, russian or ukranian letters, or -."
+                                    oninvalid="setCustomValidity('<fmt:message key='msg.firstLastNameValidation' />')"
+                                    onchange="try{setCustomValidity('')}catch(e){}"
                                     maxlength="20"
                                     minlength="2"
                                     >
@@ -69,7 +74,7 @@
                                 <div class="container text-center mt-3">
                                     <div class="row ">
                                         <div class="col"></div>
-                                        <div class="col-sm-7 mb-1"><button type="submit" class="btn btn-success btn-block">///Save changes &check;</button></a></div>
+                                        <div class="col-sm-7 mb-1"><button type="submit" class="btn btn-success btn-block"><fmt:message key="saveChanges" /> &check;</button></a></div>
                                         <div class="col"></div>
                                     </div>
                                 </div>

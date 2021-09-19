@@ -27,7 +27,7 @@ public class AccountServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute(UPDATE_STATUS, CookieUtil.getCookieValueByName(req.getCookies(), UPDATE_STATUS));
+        req.setAttribute(UPDATE_STATUS, CookieUtil.getCookieValueByName(req.getCookies(), UPDATE_STATUS,""));
         Cookie updStatusCookie = new Cookie(UPDATE_STATUS, "");
         updStatusCookie.setMaxAge(0);
         resp.addCookie(updStatusCookie);

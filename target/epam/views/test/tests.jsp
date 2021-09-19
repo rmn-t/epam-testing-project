@@ -4,6 +4,13 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
 
+<fmt:setLocale value="${cookie.lang.value}"/>
+<fmt:bundle basename="messages">
+
+<c:if test="${lastPage eq 0}">
+    <c:set var="lastPage" scope="request" value="1"></c:set>
+</c:if>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,16 +27,15 @@
             font-weight:600;
         }
     </style>
-    <title>///Main</title>
+    <title><fmt:message key="tests" /></title>
 </head>
     <body>
-        <fmt:setLocale value="${cookie.lang.value}"/>
-        <fmt:bundle basename="messages">
+
         <my:preventBack />
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
-        <p class="fs-1 text-center mt-3">///Currently available tests<p>
+        <p class="fs-1 text-center mt-3"><fmt:message key="msg.currentlyAvailableTests" /><p>
 
         <div class="container-fluid">
             <form action="/epam/tests" method="GET">
@@ -39,25 +45,25 @@
                     <div class="col-smd-3 col-lg-2">
                         <div class="form-floating">
                              <select size="1" class="form-select bg-light text-dark text-center" aria-label="sort" id="sort" name="sort" onchange="submit()">
-                                <option class="align-middle" value="name ASC" ${param.sort == 'name ASC' ? 'selected' : ''}>///Name A-Z</option>
-                                <option class="align-middle" value="name DESC" ${param.sort == 'name DESC' ? 'selected' : ''}>///Name Z-A</option>
-                                <option class="align-middle" value="scale ASC" ${param.sort == 'scale ASC' ? 'selected' : ''}>///Easy to hard</option>
-                                <option class="align-middle" value="scale DESC" ${param.sort == 'scale DESC' ? 'selected' : ''}>///Hard to easy</option>
-                                <option class="align-middle" value="questionsNum ASC" ${param.sort == 'questionsNum ASC' ? 'selected' : ''}>///Questions number A-Z</option>
-                                <option class="align-middle" value="questionsNum DESC" ${param.sort == 'questionsNum DESC' ? 'selected' : ''}>///Questions number Z-A</option>
+                                <option class="align-middle" value="name ASC" ${param.sort == 'name ASC' ? 'selected' : ''}><fmt:message key="sort.nameAtoZ" /></option>
+                                <option class="align-middle" value="name DESC" ${param.sort == 'name DESC' ? 'selected' : ''}><fmt:message key="sort.nameZtoA" /></option>
+                                <option class="align-middle" value="scale ASC" ${param.sort == 'scale ASC' ? 'selected' : ''}><fmt:message key="sort.easyToHard" /></option>
+                                <option class="align-middle" value="scale DESC" ${param.sort == 'scale DESC' ? 'selected' : ''}><fmt:message key="sort.hardToEasy" /></option>
+                                <option class="align-middle" value="questionsNum ASC" ${param.sort == 'questionsNum ASC' ? 'selected' : ''}><fmt:message key="sort.numberOfQuestionsAsc" /></option>
+                                <option class="align-middle" value="questionsNum DESC" ${param.sort == 'questionsNum DESC' ? 'selected' : ''}><fmt:message key="sort.numberOfQuestionsDesc" /></option>
                              </select>
-                             <label class="text-center text-muted" for="sort">///Sorting:</label>
+                             <label class="text-center text-muted" for="sort"><fmt:message key="sorting" /></label>
                         </div>
                     </div>
                     <div class="col-smd-3 col-lg-2">
                         <div class="form-floating">
                             <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="subject" name="subject" onchange="submit()">
-                                <option class="align-middle" value="0" ${param.subject == 0 ? 'selected' : ''}>///All subjects</option>
+                                <option class="align-middle" value="0" ${param.subject == 0 ? 'selected' : ''}><fmt:message key="subjects.all" /></option>
                                 <c:forEach items="${requestScope['subjects']}" var="element">
-                                    <option class="align-middle" value="${element.id}" ${param.subject == element.id ? 'selected' : ''}>///${element.name}</option>
+                                    <option class="align-middle" value="${element.id}" ${param.subject == element.id ? 'selected' : ''}>${element.name}</option>
                                 </c:forEach>
                              </select>
-                             <label class="text-center text-muted" for="subject">///Subject:</label>
+                             <label class="text-center text-muted" for="subject"><fmt:message key="subjects.subject" /></label>
                         </div>
                     </div>
                     <div class="col-smd-3 col-lg-2">
@@ -67,18 +73,18 @@
                                 <option class="align-middle" value="25" ${param.perPage == 25 ? 'selected' : ''}>25</option>
                                 <option class="align-middle" value="50" ${param.perPage == 50 ? 'selected' : ''}>50</option>
                             </select>
-                            <label class="text-center text-muted" for="subject">///Records per page:</label>
+                            <label class="text-center text-muted" for="subject"><fmt:message key="recordsPerPage" /></label>
                         </div>
                     </div>
                     <c:if test="${sessionScope.currentUser.role == 'admin'}">
                         <div class="col-smd-3 col-lg-2">
                             <div class="form-floating">
                                 <select size="1" class="form-select bg-light text-dark text-center" aria-label="Default select example" id="testStatus" name="testStatus" onchange="submit()">
-                                    <option class="align-middle" value="all" ${param.testStatus == 'all' ? 'selected' : ''}>///All</option>
-                                    <option class="align-middle" value="active" ${param.testStatus == 'active' ? 'selected' : ''}>///Active</option>
-                                    <option class="align-middle" value="inactive" ${param.testStatus == 'inactive' ? 'selected' : ''}>///Inactive</option>
+                                    <option class="align-middle" value="all" ${param.testStatus == 'all' ? 'selected' : ''}><fmt:message key="status.all" /></option>
+                                    <option class="align-middle" value="active" ${param.testStatus == 'active' ? 'selected' : ''}><fmt:message key="status.active" /></option>
+                                    <option class="align-middle" value="inactive" ${param.testStatus == 'inactive' ? 'selected' : ''}><fmt:message key="status.inactive" /></option>
                                 </select>
-                                <label class="text-center text-muted" for="subject">///Test status:</label>
+                                <label class="text-center text-muted" for="subject"><fmt:message key="status.testStatus" /></label>
                             </div>
                         </div>
                     </c:if>
@@ -90,40 +96,40 @@
         <br>
         <table class="table table-light border">
             <thead class="table-info">
-                <th>///Test name</th>
-                <th class="text-center">///subject</th>
-                <th class="text-center">///complexity</th>
-                <th class="text-center">///duration</th>
-                <th class="text-center">///questions</th>
+                <th><fmt:message key="tests.name" /></th>
+                <th class="text-center"><fmt:message key="subjects.subject" /></th>
+                <th class="text-center"><fmt:message key="tests.complexity" /></th>
+                <th class="text-center"><fmt:message key="tests.duration" /></th>
+                <th class="text-center"><fmt:message key="tests.questionsNum" /></th>
                 <c:if test="${sessionScope.currentUser.role == 'admin'}">
-                    <th class="text-center">///Status</th>
-                    <th class="text-center">///details</th>
+                    <th class="text-center"><fmt:message key="status" /></th>
+                    <th class="text-center"><fmt:message key="details" /></th>
                 </c:if>
-                <th class="text-center">///Action</th>
+                <th class="text-center"><fmt:message key="actions" /></th>
             </thead>
             <tbody>
                 <c:forEach items="${requestScope['tests']}" var="element">
                     <tr>
                         <td class="align-middle">${element.name}</td>
-                        <td class="text-center align-middle">///${element.subject}</td>
-                        <td class="text-center align-middle">///${element.complexity}</td>
-                        <td class="text-center align-middle"><my:floor val='${element.duration/60}' /> ///min:${element.duration%60} ///sec</td>
+                        <td class="text-center align-middle">${element.subject}</td>
+                        <td class="text-center align-middle"><fmt:message key="complexity.${element.complexity}" /></td>
+                        <td class="text-center align-middle"><my:floor val='${element.duration/60}' /><fmt:message key="time.min" /> : ${element.duration%60}<fmt:message key="time.sec" /></td>
                         <td class="text-center align-middle">${element.questionsNum}</td>
                         <c:if test="${sessionScope.currentUser.role == 'admin'}">
                             <c:if test="${element.isActive == true}">
                                 <td class="text-center align-middle active-test">
-                                ///Active
+                                <fmt:message key="status.active" />
                             </c:if>
                             <c:if test="${element.isActive == false}">
                                 <td class="text-center align-middle inactive-test">
-                                ///Inactive
+                                <fmt:message key="status.inactive" />
                             </c:if>
                             </td>
-                            <td class="text-center align-middle"><a class="btn btn-warning" href="/epam/test?id=${element.id}">///Details</a></td>
+                            <td class="text-center align-middle"><a class="btn btn-warning" href="/epam/test?id=${element.id}"><fmt:message key="edit" /></a></td>
                         </c:if>
                         <td class="text-center">
                             <div>
-                                <a class="btn btn-success ${element.questionsNum == 0 ? 'disabled' : ''}" href="/epam/take/test?id=${element.id}" data-bs-toggle="tooltip" data-bs-placement="top" title="///Once clicked you will be redirected to page with questions and test timer will start." disabled >///Start</a>
+                                <a class="btn btn-success ${element.questionsNum == 0 ? 'disabled' : ''}" href="/epam/take/test?id=${element.id}" data-bs-toggle="tooltip" data-bs-placement="top" title="<fmt:message key='msg.timerWillStart' />" disabled ><fmt:message key='start' /></a>
                             </div>
                         </td>
                     </tr>
@@ -135,34 +141,50 @@
         <c:set var = "role" scope = "request" value = "admin"/>
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
-                <li class="page-item">
-                    <a class="page-link bg-success text-light" href="/epam/tests?page=1&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>" tabindex="-1" aria-disabled="true">///First</a>
-                </li>
                 <c:if test="${param.page eq 1}">
                     <li class="page-item disabled">
-                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true">///Previous</a>
+                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true"><fmt:message key='first' /></a>
                     </li>
                 </c:if>
                 <c:if test="${param.page gt 1}">
                     <li class="page-item">
-                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page-1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>">///Previous</a>
+                        <a class="page-link bg-success text-light" href="/epam/tests?page=1&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>" tabindex="-1" aria-disabled="true"><fmt:message key='first' /></a>
+                    </li>
+                </c:if>
+                <c:if test="${param.page eq 1}">
+                    <li class="page-item disabled">
+                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true"><fmt:message key='previous' /></a>
+                    </li>
+                </c:if>
+                <c:if test="${param.page gt 1}">
+                    <li class="page-item">
+                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page-1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>"><fmt:message key='previous' /></a>
                     </li>
                 </c:if>
                 <c:if test="${param.page eq lastPage}">
                     <li class="page-item disabled">
-                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true">///Next</a>
+                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true"><fmt:message key='next' /></a>
                     </li>
                 </c:if>
                 <c:if test="${param.page lt lastPage}">
                     <li class="page-item">
-                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page+1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>">///Next</a>
+                        <a class="page-link bg-dark text-light ml-2" href="/epam/tests?page=${param.page+1}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>"><fmt:message key='next' /></a>
                     </li>
                 </c:if>
-                <li class="page-item">
-                    <a class="page-link bg-success text-light" href="/epam/tests?page=${lastPage}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>" tabindex="-1" aria-disabled="true">///Last</a>
-                </li>
+                <c:if test="${param.page eq lastPage}">
+                    <li class="page-item disabled">
+                        <a class="page-link bg-light text-dark ml-2" href="#" tabindex="-1" aria-disabled="true"><fmt:message key='last' /></a>
+                    </li>
+                </c:if>
+                <c:if test="${param.page lt lastPage}">
+                    <li class="page-item">
+                        <a class="page-link bg-success text-light" href="/epam/tests?page=${lastPage}&sort=${param.sort}&subject=${param.subject}&perPage=${param.perPage}<c:if test='${sessionScope.currentUser.role == role}'>&testStatus=${param.testStatus}</c:if>" tabindex="-1" aria-disabled="true"><fmt:message key='last' /></a>
+                    </li>
+                </c:if>
             </ul>
         </nav>
+
+        <strong>${lastPage}<strong>
 
         <script>
             let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))

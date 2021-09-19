@@ -27,7 +27,7 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String loginStatus = CookieUtil.getCookieValueByName(req.getCookies(), REG_STATUS);
+        String loginStatus = CookieUtil.getCookieValueByName(req.getCookies(), REG_STATUS,"");
         req.setAttribute(REG_STATUS, loginStatus);
         Cookie logStatus = new Cookie(REG_STATUS, USER_EXISTS);
         logStatus.setMaxAge(0);

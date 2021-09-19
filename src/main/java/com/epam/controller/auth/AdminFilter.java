@@ -17,10 +17,7 @@ import java.io.IOException;
  * This filter protects the routes which should only be accessible by the user with role "admin".
  * If user has other role their request will be processed by @see com.epam.controller.auth.LoginFilter.
  */
-@WebFilter(urlPatterns = {
-        "/createTest", "/add/question", "/delete/question", "/edit/question",
-        "/createTest", "/delete/test", "/editTest", "/test",
-        "/delete/user", "/edit/user", "/users" })
+@WebFilter(filterName = "adminFilter")
 public class AdminFilter implements Filter {
     private final Logger logger = LoggerFactory.getLogger(AdminFilter.class);
 
@@ -35,11 +32,11 @@ public class AdminFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         HttpSession session = req.getSession(false);
         if (session == null) {
-            chain.doFilter(req,resp);
+            chain.doFilter(req, resp);
         } else {
             User user = (User) session.getAttribute(Consts.CURRENT_USER);
             if ("admin".equals(user.getRole())) {
-                chain.doFilter(req,resp);
+                chain.doFilter(req, resp);
             } else {
                 resp.sendRedirect(Routes.HOME_TESTS);
             }

@@ -29,6 +29,6 @@ public class DeleteTestServlet extends HttpServlet {
             logger.error("Couldn't delete test.",e);
             throw new ServletException("Couldn't delete test.");
         }
-        resp.sendRedirect(Routes.HOME_TESTS);
+        resp.sendRedirect(Routes.SLASH_HOME_TESTS);
     }
 }

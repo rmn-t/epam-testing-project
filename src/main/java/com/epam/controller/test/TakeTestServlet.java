@@ -1,5 +1,6 @@
 package com.epam.controller.test;
 
+import com.epam.controller.util.CookieUtil;
 import com.epam.controller.util.Routes;
 import com.epam.controller.util.Views;
 import com.epam.db.model.Question;
@@ -30,9 +31,10 @@ public class TakeTestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+            String lang = CookieUtil.getCookieValueByName(req.getCookies(),"lang","en");
             int testId = Integer.parseInt(req.getParameter("id"));
             List<Question> questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
-            Test test = Consts.TEST_DAO.getTestById(testId);
+            Test test = Consts.TEST_DAO.getTestById(testId,lang);
             if (!test.getIsActive() || test.getQuestionsNum() == 0) {
                 req.setAttribute("error","You are not allowed to pass this test.");
                 req.getRequestDispatcher("/error").forward(req,resp);
@@ -58,8 +60,9 @@ public class TakeTestServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+            String lang = CookieUtil.getCookieValueByName(req.getCookies(),"lang","en");
             int testId = Integer.parseInt(req.getParameter("id"));
-            int testDuration = Consts.TEST_DAO.getTestById(testId).getDuration();
+            int testDuration = Consts.TEST_DAO.getTestById(testId,lang).getDuration();
             List<Question> questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
             double questionsNum = questions.size();
 

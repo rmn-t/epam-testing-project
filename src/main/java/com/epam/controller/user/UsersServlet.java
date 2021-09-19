@@ -31,6 +31,11 @@ public class UsersServlet extends HttpServlet implements IPaginatable {
             int usersNum = Consts.USER_DAO.getRecordsNumByStatusId(statusId);
             int lastPage = usersNum / recordsPerPage + ((usersNum % recordsPerPage == 0) ? 0 : 1);
 
+            if ((recordsOffset < 0 || recordsOffset > usersNum) && recordsOffset != 1) {
+                logger.error("User supplied invalid page number.");
+                throw new ServletException("Couldn't obtain users information.");
+            }
+
             req.setAttribute("users", Consts.USER_DAO.getRecordsLimitedSortedFiltered(recordsOffset, recordsPerPage, sorting, statusId));
             req.setAttribute("lastPage", lastPage);
             req.setAttribute("statuses", Consts.STATUS_DAO.getAllRecords());

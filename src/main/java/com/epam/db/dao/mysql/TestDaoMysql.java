@@ -25,15 +25,16 @@ public class TestDaoMysql implements TestDao {
     public TestDaoMysql() {
     }
 
-    public Test getTestById(int testId) throws DBException {
+    public Test getTestById(int testId, String lang) throws DBException {
         Test test = null;
         Connection con = null;
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
+        String subjectNameCol = "name_" + lang;
         try {
             con = DBUtil.getConnection();
             prepStmt = con.prepareStatement("" +
-                    "SELECT test.id,test.name,subject.name as subject,subject_id,complexity.name as complexity,complexity_id,duration_sec,is_active," +
+                    "SELECT test.id,test.name,subject." + subjectNameCol + " as subject,subject_id,complexity.name as complexity,complexity_id,duration_sec,is_active," +
                     "count(question.test_id) AS questionsNum " +
                     "FROM test LEFT JOIN question ON test.id = question.test_id " +
                     "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
@@ -76,7 +77,7 @@ public class TestDaoMysql implements TestDao {
             prepStmt.setInt(k++, complexityId);
             prepStmt.setInt(k++, duration);
             prepStmt.setBoolean(k++, isActive);
-            prepStmt.setInt(k++, id);
+            prepStmt.setInt(k, id);
             prepStmt.executeUpdate();
             logger.debug("Successfully updated test by id {}.", id);
         } catch (SQLException e) {
@@ -104,7 +105,7 @@ public class TestDaoMysql implements TestDao {
         }
     }
 
-    public List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy, int subjectId, String isActive) throws DBException {
+    public List<Test> getTestsLimitedSorted(int offset, int limit, String orderBy, int subjectId, String isActive, String lang) throws DBException {
         List<Test> results = new ArrayList<>();
         Connection con = null;
         PreparedStatement prepStmt = null;
@@ -113,10 +114,11 @@ public class TestDaoMysql implements TestDao {
         String isActiveValue = mapIsActiveForQuery(isActive);
         String where = isActiveValue.equals("") && subjectIdEquals.equals("") ? "" : " WHERE ";
         String and = subjectIdEquals.equals("") || isActiveValue.equals("") ? "" : " AND ";
+        String subjectNameCol = "name_" + lang;
         try {
             con = DBUtil.getConnection();
             prepStmt = con.prepareStatement("" +
-                    "SELECT test.id,test.name,subject.name as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active " +
+                    "SELECT test.id,test.name,subject." + subjectNameCol + " as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active " +
                     "FROM test " +
                     "LEFT JOIN question ON test.id = question.test_id " +
                     "LEFT JOIN complexity ON complexity.id = test.complexity_id " +
@@ -215,6 +217,20 @@ public class TestDaoMysql implements TestDao {
             DBUtil.closeAllInOrder(rs, prepStmt, con);
         }
         return res;
+    }
+
+    @Override
+    public void deactivateTestById(Connection con, int id) throws DBException {
+        PreparedStatement prepStmt = null;
+        try {
+            prepStmt = con.prepareStatement("UPDATE test SET is_active = false WHERE id = ?;");
+            int k = 1;
+            prepStmt.setInt(k,id);
+            prepStmt.executeUpdate();
+        } catch (SQLException e) {
+            logger.error("Couldn't deactivate test.",e);
+            throw new DBException("Couldn't deactivate test.",e);
+        }
     }
 
 }

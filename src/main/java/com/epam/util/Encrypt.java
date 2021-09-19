@@ -5,9 +5,22 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 
+/**
+ * A util class, used for password encryption. It is expected to use this class only with static context.
+ */
 public class Encrypt {
+
+    /**
+     * Private constructor in order to prevent creating instances of the class.
+     */
     private Encrypt() {    }
 
+    /**
+     * Encrypts the password into a hashed string
+     * @param password provided by the user
+     * @param salt used to provide additional layer of complexity if database will be exposed
+     * @return 128 char string
+     */
     public static String getSecurePassword(String password, int salt) {
         StringBuilder res = new StringBuilder();
         try {
@@ -18,7 +31,6 @@ public class Encrypt {
                 res.append(Integer.toString((aByte & 0xff) + 0x100, 16).substring(1));
             }
         } catch (NoSuchAlgorithmException e) {
-            // add log
             e.printStackTrace();
         }
         return res.toString();
@@ -36,26 +48,4 @@ public class Encrypt {
                 (byte)value};
     }
 
-//    public static void main(String[] args) {
-//        String p1 = "testqq";
-//        int salt1 = generateSalt();
-//        String p2 = "jack";
-//        int salt2 = generateSalt();
-//        String p3 = "amy";
-//        int salt3 = generateSalt();
-//        String pass1 = getSecurePassword(p1,salt1);
-//        String pass2 = getSecurePassword(p2,salt2);
-//        String pass3 = getSecurePassword(p3,salt3);
-//
-//        System.out.println(salt1);
-//        System.out.println(pass1);
-//        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-//        System.out.println(salt2);
-//        System.out.println(pass2);
-//        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-//        System.out.println(salt3);
-//        System.out.println(pass3);
-//
-//
-//    }
 }

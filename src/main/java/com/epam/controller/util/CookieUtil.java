@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * Utility class that helps finding the cookies by cookie name.
@@ -16,10 +17,10 @@ public class CookieUtil {
      *
      * @param cookies    array of cookies from request
      * @param cookieName the key representing cookie name
+     * @param defaultValue default value if cookie value is not found in request
      * @return if cookie found by name - return it's value, otherwise returns empty string ""
      */
-    public static String getCookieValueByName(Cookie[] cookies, String cookieName) {
-        String defaultValue = "";
+    public static String getCookieValueByName(Cookie[] cookies, String cookieName,String defaultValue) {
         if (cookies == null) {
             return defaultValue;
         }
@@ -32,5 +33,12 @@ public class CookieUtil {
             }
         }
         return defaultValue;
+    }
+
+    public static void addCookieToResponse(String cookieName, String cookieVal, int cookieMaxAge, String cookiePath, HttpServletResponse resp) {
+        Cookie langCookie = new Cookie(cookieName, cookieVal);
+        langCookie.setMaxAge(cookieMaxAge);
+        langCookie.setPath(cookiePath);
+        resp.addCookie(langCookie);
     }
 }

@@ -25,6 +25,30 @@
         </listener-class>
     </listener>
 
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>adminFilter</filter-name>
+        <url-pattern>/createTest</url-pattern>
+        <url-pattern>/add/question</url-pattern>
+        <url-pattern>/delete/question</url-pattern>
+        <url-pattern>/edit/question</url-pattern>
+        <url-pattern>/delete/test</url-pattern>
+        <url-pattern>/editTest</url-pattern>
+        <url-pattern>/test</url-pattern>
+        <url-pattern>/delete/user</url-pattern>
+        <url-pattern>/edit/user</url-pattern>
+        <url-pattern>/users</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>charsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <resource-env-ref>
         <description>Provide access for DataSource</description>
         <resource-env-ref-name>jdbc/mysql</resource-env-ref-name>

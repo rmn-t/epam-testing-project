@@ -58,24 +58,17 @@ public class EditQuestionServlet extends HttpServlet {
 
         int testId = Integer.parseInt("" + req.getParameter("testId"));
         int questionId;
-        if (req.getParameter("id") != null && !"".equals(req.getParameter("id"))) {
-            questionId = Integer.parseInt(req.getParameter("id"));
-            try {
+
+        try {
+            if (req.getParameter("id") != null && !"".equals(req.getParameter("id"))) {
+                questionId = Integer.parseInt(req.getParameter("id"));
                 Consts.QUESTION_DAO.updateQuestionAndItsAnswers(questionId, questionText, answers);
-            } catch (DBException e) {
-                logger.error("Error while trying to update question and it's answers.", e);
-                throw new ServletException("Error while trying to update question and it's answers.");
+            } else {
+                Consts.QUESTION_DAO.insertQuestionAndItsAnswersByTestId(questionText, testId, answers);
             }
-        } else {
-            try {
-                questionId = Consts.QUESTION_DAO.insertQuestionByTestId(questionText, testId);
-                if (questionId != -1) {
-                    Consts.ANSWER_DAO.insertAnswersByQuestionId(questionId, answers);
-                }
-            } catch (DBException e) {
-                logger.error("Error while trying to insert new question and it's answers.", e);
-                throw new ServletException("Error while trying to insert new question and it's answers.");
-            }
+        } catch (DBException e) {
+            logger.error("Error while trying to update question and it's answers.", e);
+            throw new ServletException("Error while trying to update question and it's answers.");
         }
         resp.sendRedirect("/epam/test?id=" + testId);
     }

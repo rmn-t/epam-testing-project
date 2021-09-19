@@ -11,6 +11,8 @@ public interface QuestionDao {
 
     int insertQuestionByTestId(String text, int testId) throws DBException;
 
+    void insertQuestionAndItsAnswersByTestId(String text, int testId, List<Answer> answers) throws DBException;
+
     Question getQuestionById(int questionId) throws DBException;
 
     List<Question> getQuestionsByTestId(int testId) throws DBException;
@@ -21,6 +23,6 @@ public interface QuestionDao {
 
     void updateQuestionTextById(Connection con, String questionText, int questionId) throws DBException;
 
-    void deleteQuestionById(int id) throws DBException;
+    void deleteQuestionById(int id, int testId, int questionsLeft) throws DBException;
 
 }

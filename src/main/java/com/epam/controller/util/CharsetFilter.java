@@ -8,7 +8,7 @@ import java.io.IOException;
  * Filter that processes all requests for the app and ensures the correct format is set on the page. Created in order
  * to support proper displaying for multiple languages in the jsp.
  */
-@WebFilter("/*")
+@WebFilter(filterName = "charsetFilter")
 public class CharsetFilter implements Filter {
 
     private String encoding;

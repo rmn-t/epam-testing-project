@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String loginStatus = CookieUtil.getCookieValueByName(req.getCookies(), LOGIN_STATUS);
+        String loginStatus = CookieUtil.getCookieValueByName(req.getCookies(), LOGIN_STATUS,"");
         req.setAttribute(LOGIN_STATUS, loginStatus);
         Cookie logStatus = new Cookie(LOGIN_STATUS, INCORRECT_CREDENTIALS);
         logStatus.setMaxAge(0);

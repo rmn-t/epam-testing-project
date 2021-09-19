@@ -1,8 +1,10 @@
 package com.epam.controller.auth;
 
-import com.epam.db.model.User;
-import com.epam.util.Consts;
+import com.epam.controller.util.CookieUtil;
 import com.epam.controller.util.Routes;
+import com.epam.db.model.User;
+import com.epam.exceptions.DBException;
+import com.epam.util.Consts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +22,7 @@ import java.io.IOException;
  * If the logged in user tries to access resource which requires to be logged in - they are successfully transferred to it,
  * otherwise they are transferred to login page.
  */
-@WebFilter("/*")
+@WebFilter(filterName = "loginFilter")
 public class LoginFilter implements Filter {
     private final Logger logger = LoggerFactory.getLogger(LoginFilter.class);
 
@@ -33,13 +35,23 @@ public class LoginFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse resp = (HttpServletResponse) servletResponse;
+        if ("".equals(CookieUtil.getCookieValueByName(req.getCookies(), "lang", ""))) {
+            CookieUtil.addCookieToResponse("lang", "en", 60 * 60 * 24, "/", resp);
+        }
         HttpSession session = req.getSession(false);
         String reqPath = req.getServletPath();
+
         if (session != null && session.getAttribute(Consts.CURRENT_USER) != null) {
-            if (((User) session.getAttribute(Consts.CURRENT_USER)).getStatus().equals("Banned")) {
-                req.getRequestDispatcher(Routes.LOGOUT).forward(req, resp);
-            } else {
-                filterChain.doFilter(req, resp);
+            try {
+                User user = Consts.USER_DAO.getUserDetailsByUserName(((User) session.getAttribute(Consts.CURRENT_USER)).getUsername());
+                if (user.getStatusId() == 2) {
+                    logger.info("logout proc from ban");
+                    req.getRequestDispatcher(Routes.SLASH_LOGOUT).forward(req, resp);
+                } else {
+                    filterChain.doFilter(req, resp);
+                }
+            } catch (DBException e) {
+                logger.error("Couldn't obtain user from db");
             }
         } else if (Routes.SLASH_LOGIN.equals(reqPath) || Routes.SLASH_LOCALE_EDIT.equals(reqPath) || Routes.SLASH_REGISTER.equals(reqPath)) {
             filterChain.doFilter(req, resp);

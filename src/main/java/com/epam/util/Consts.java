@@ -8,6 +8,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * A constants class, contains various types of the values. Currently it is mostly used to process sorting requests on
+ * various pages.
+ */
 public class Consts {
     public final Logger logger = LoggerFactory.getLogger(Consts.class);
 

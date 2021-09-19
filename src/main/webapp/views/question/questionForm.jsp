@@ -4,6 +4,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
 
+<fmt:setLocale value="${cookie.lang.value}"/>
+<fmt:bundle basename="messages">
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +16,10 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
     </style>
-    <title>///Main</title>
+    <title><fmt:message key="editQuestion" /></title>
 </head>
     <body>
-        <fmt:setLocale value="${cookie.lang.value}"/>
-        <fmt:bundle basename="messages">
+
         <my:preventBack />
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
@@ -32,14 +34,18 @@
                     <br>
                     <div class="containerErr">
                         <div class="mb-2 text-center">
-                            <label for="questionText" class="form-label">///Question text</label>
+                            <label for="questionText" class="form-label"><fmt:message key="questionText" /></label>
                             <c:if test="${empty question}">
-                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="///question text" value="" required
+                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="<fmt:message key='questionText' />" value="" required
+                                oninvalid="this.setCustomValidity('<fmt:message key='msg.fillOutThisField' />')"
+                                oninput="this.setCustomValidity('')"
                                 maxlength="400"
                                 >
                             </c:if>
                             <c:if test="${not empty question}">
-                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="///question text" value="${question.text}" required
+                                <input type="text" class="form-control" name="questionText" id="questionText" placeholder="<fmt:message key='questionText' />" value="${question.text}" required
+                                oninvalid="this.setCustomValidity('<fmt:message key='msg.fillOutThisField' />')"
+                                oninput="this.setCustomValidity('')"
                                 maxlength="400"
                                 >
                             </c:if>
@@ -48,7 +54,7 @@
                     <div class="answers">
                         <div class="row text-center">
                             <div class="col"></div>
-                            <div class="col"><button class="add_form_field btn btn-primary">///Add answer</button></div>
+                            <div class="col"><button class="add_form_field btn btn-primary"><fmt:message key='addAnswer' /></button></div>
                             <div class="col"></div>
                         </div>
 
@@ -56,30 +62,36 @@
                         <c:if test="${empty question}">
                             <div class="row mb-2 text-center q-row">
                                 <div class="col">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required maxlength="400">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="<fmt:message key='questionAnswer' />" value="" required maxlength="400"
+                                    oninvalid="this.setCustomValidity('<fmt:message key='msg.fillOutThisField' />')"
+                                    oninput="this.setCustomValidity('')"
+                                    >
                                 </div>
                                 <div class="col-3">
                                     <select class="form-select text-center" name="isCorrect" id="isCorrect">
-                                        <option value="false">///Incorrect</option>
-                                        <option value="true">///Correct</option>
+                                        <option value="false"><fmt:message key='incorrect' /></option>
+                                        <option value="true"><fmt:message key='correct' /></option>
                                     </select>
                                 </div>
                                 <div class="col-2">
-                                    <button type="button" type="button" class="delete-question-btn btn btn-danger">///Delete</button>
+                                    <button type="button" type="button" class="delete-question-btn btn btn-danger"><fmt:message key='delete' /></button>
                                 </div>
                             </div>
                             <div class="row mb-2 text-center q-row">
                                 <div class="col">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required maxlength="400">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="<fmt:message key='questionAnswer' />" value="" required maxlength="400"
+                                    oninvalid="this.setCustomValidity('<fmt:message key='msg.fillOutThisField' />')"
+                                    oninput="this.setCustomValidity('')"
+                                    >
                                 </div>
                                 <div class="col-3">
                                     <select class="form-select text-center" name="isCorrect" id="isCorrect">
-                                        <option value="false">///Incorrect</option>
-                                        <option value="true">///Correct</option>
+                                        <option value="false"><fmt:message key='incorrect' /></option>
+                                        <option value="true"><fmt:message key='correct' /></option>
                                     </select>
                                 </div>
                                 <div class="col-2">
-                                    <button type="button" type="button" class="delete-question-btn btn btn-danger">///Delete</button>
+                                    <button type="button" type="button" class="delete-question-btn btn btn-danger"><fmt:message key='delete' /></button>
                                 </div>
                             </div>
                         </c:if>
@@ -88,16 +100,19 @@
                             <c:forEach items="${question.answers}" var="element">
                                 <div class="row mb-2 text-center q-row">
                                     <div class="col">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="${element.text}" required maxlength="400">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="<fmt:message key='questionAnswer' />" value="${element.text}" required maxlength="400"
+                                        oninvalid="this.setCustomValidity('<fmt:message key='msg.fillOutThisField' />')"
+                                        oninput="this.setCustomValidity('')"
+                                        >
                                     </div>
                                     <div class="col-3">
                                         <select class="form-select text-center" name="isCorrect" id="isCorrect">
-                                            <option value="false" ${element.isCorrect == false ? 'selected' : ''}>///Incorrect</option>
-                                            <option value="true" ${element.isCorrect == true ? 'selected' : ''}>///Correct</option>
+                                            <option value="false" ${element.isCorrect == false ? 'selected' : ''}><fmt:message key='incorrect' /></option>
+                                            <option value="true" ${element.isCorrect == true ? 'selected' : ''}><fmt:message key='correct' /></option>
                                         </select>
                                     </div>
                                 <div class="col-2">
-                                    <button type="button" type="button" class="delete-question-btn btn btn-danger">///Delete</button>
+                                    <button type="button" type="button" class="delete-question-btn btn btn-danger"><fmt:message key='delete' /></button>
                                     </div>
                                 </div>
 
@@ -108,7 +123,7 @@
                     <br>
                 <div class="row mb-2 text-center">
                     <div class="col"></div>
-                    <div class="col"><input class="btn btn-success" type="submit" value="///Save changes"></div>
+                    <div class="col"><input class="btn btn-success" type="submit" value="<fmt:message key='saveChanges' />"></div>
                     <div class="col"></div>
                 </div>
                 </form>
@@ -132,16 +147,18 @@
                         $(wrapper).append(
                             '<div class="row mb-2 text-center q-row">' +
                                 '<div class="col">' +
-                                    '<input type="text" class="form-control" name="name" id="name" placeholder="///question answer" value="" required maxlength="400">' +
+                                    '<input type="text" class="form-control" name="name" id="name" placeholder="' + "<fmt:message key='questionAnswer' />" +  '" value="" required maxlength="400"'+
+                                     'oninvalid="this.setCustomValidity("' + '<fmt:message key="msg.fillOutThisField" />' + '") ' +
+                                     'oninput="this.setCustomValidity(' + '""' + ')" >' +
                                 '</div>' +
                                 '<div class="col-3">' +
                                     '<select class="form-select text-center" name="isCorrect" id="isCorrect">' +
-                                        '<option value="false">///Incorrect</option>' +
-                                        '<option value="true">///Correct</option>' +
+                                        '<option value="false"><fmt:message key="incorrect" /></option>' +
+                                        '<option value="true"><fmt:message key="correct" /></option>' +
                                     '</select>' +
                                 '</div>' +
                                 '<div class="col-2">' +
-                                    '<button type="button" class="delete-question-btn btn btn-danger">///Delete</button>' +
+                                    '<button type="button" class="delete-question-btn btn btn-danger"><fmt:message key="delete" /></button>' +
                                 '</div>' +
                             '</div>'
                         );
@@ -158,7 +175,7 @@
                         let questionText = $(".containerErr");
                         $(questionText).append(
                             '<div class="alert alert-info alert-dismissible fade show text-center" id="alert-num-answers" role="alert">' +
-                                '<strong>///There should be at least two answers for the question.</strong>' +
+                                '<strong><fmt:message key="msg.atLeastTwoAnswer" /></strong>' +
                                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
                             '</div>'
                         );
@@ -178,7 +195,7 @@
                 if (document.getElementById("alert-correct-answers") == null) {
                     $(questionText).append(
                         '<div class="alert alert-danger alert-dismissible fade show text-center" id="alert-correct-answers" role="alert">' +
-                            '<strong>///There should be at least one correct answer.</strong>' +
+                            '<strong><fmt:message key="msg.atLeastOneCorrectAnswer" /></strong>' +
                             '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>' +
                         '</div>'
                     );

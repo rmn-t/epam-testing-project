@@ -1,5 +1,6 @@
 package com.epam.controller.question;
 
+import com.epam.controller.util.CookieUtil;
 import com.epam.exceptions.DBException;
 import com.epam.util.Consts;
 import com.epam.controller.util.Views;
@@ -23,8 +24,9 @@ public class AddQuestionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+            String lang = CookieUtil.getCookieValueByName(req.getCookies(), "lang", "en");
             int testId = Integer.parseInt(req.getParameter("testId"));
-            if (Consts.TEST_DAO.getTestById(testId) != null) {
+            if (Consts.TEST_DAO.getTestById(testId, lang) != null) {
                 req.getRequestDispatcher(Views.QUESTION_FORM_JSP).forward(req, resp);
             }
         } catch (NumberFormatException | DBException e) {

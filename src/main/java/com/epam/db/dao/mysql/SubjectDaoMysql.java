@@ -15,17 +15,18 @@ public class SubjectDaoMysql implements SubjectDao {
     private final Logger logger = LoggerFactory.getLogger(SubjectDaoMysql.class);
 
     @Override
-    public List<Subject> getAllRecords() throws DBException {
+    public List<Subject> getAllRecords(String lang) throws DBException {
         List<Subject> subjects = new ArrayList<>();
+        String nameCol = "name_" + lang;
         Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
         try {
             con = DBUtil.getConnection();
             stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT id,name FROM subject ORDER BY name ASC;");
+            rs = stmt.executeQuery("SELECT id," + nameCol + " FROM subject ORDER BY " + nameCol + " ASC;");
             while (rs.next()) {
-                subjects.add(new Subject.Builder().setId(rs.getInt("id")).setName(rs.getString("name")).build());
+                subjects.add(new Subject.Builder().setId(rs.getInt("id")).setName(rs.getString(nameCol)).build());
             }
             logger.debug("Obtained {} subjects from database.",subjects.size());
         } catch (SQLException e) {

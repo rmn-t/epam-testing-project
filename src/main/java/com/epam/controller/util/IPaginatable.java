@@ -37,14 +37,14 @@ public interface IPaginatable {
      * @return return offset for the first record that will be displayed on the page
      */
     default int calculateRecordsOffset(HttpServletRequest req, int recordsPerPage, String pageParameterName) {
-        int pageNum = 1;
+        int offset = 1;
         if (req.getParameter(pageParameterName) != null) {
-            pageNum = Integer.parseInt(req.getParameter(pageParameterName));
+            offset = Integer.parseInt(req.getParameter(pageParameterName));
         }
-        if (pageNum > 1) {
-            pageNum = (pageNum - 1) * recordsPerPage + 1;
+        if (offset > 1) {
+            offset = (offset - 1) * recordsPerPage + 1;
         }
-        return pageNum;
+        return offset;
     }
 
     /**

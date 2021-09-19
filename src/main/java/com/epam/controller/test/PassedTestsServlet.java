@@ -32,6 +32,11 @@ public class PassedTestsServlet extends HttpServlet implements IPaginatable {
             int totalTests = Consts.PASSED_TESTS_DAO.getRecordsNumberByUserId(userId);
             int lastPage = totalTests / recordsPerPage + ((totalTests % recordsPerPage == 0) ? 0 : 1);
 
+            if ((recordsOffset < 0 || recordsOffset > totalTests) && recordsOffset != 1) {
+                logger.error("User supplied invalid page number.");
+                throw new ServletException("Couldn't obtain tests information.");
+            }
+
             req.setAttribute("passedTests", Consts.PASSED_TESTS_DAO.getRecordsByUserIdOrderedLimited(userId, recordsOffset, recordsPerPage, sorting));
             req.setAttribute("lastPage", lastPage);
         } catch (DBException | NumberFormatException e) {

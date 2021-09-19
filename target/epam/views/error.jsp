@@ -4,6 +4,9 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="my" uri="/tld/MyTagsDescriptor.tld"%>
 
+<fmt:setLocale value="${cookie.lang.value}"/>
+<fmt:bundle basename="messages">
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,16 +22,15 @@
             }
 
         </style>
-        <title>///Error</title>
+        <title><fmt:message key="tests.error" /></title>
     </head>
     <body>
-        <fmt:setLocale value="${cookie.lang.value}"/>
-        <fmt:bundle basename="messages">
+
         <my:preventBack />
 
-        <c:import url="/views/templates/navbar.jsp"></c:import>
-
-        <strong>${requestScope['javax.servlet.error.exception'].getClass().getCanonicalName()}</strong>
+        <c:if test="${not empty sessionScope.currentUser}">
+            <c:import url="/views/templates/navbar.jsp"></c:import>
+        </c:if>
 
         </br>
 
@@ -37,10 +39,17 @@
                 <div class="col-2"></div>
                     <div class="col">
                         <div class="card text-white bg-primary mb-3">
-                            <div class="card-header">///An error occurred while processing your request. Please try again later or contact support@test.com</div>
+                            <div class="card-header">An error occurred while processing your request. Please try again later or contact support@test.com</div>
                             <div class="card-body">
-                                <h5 class="card-title">///Status code: <c:out value="${requestScope['javax.servlet.error.status_code']}" /></h5>
-                                <p class="card-text">${requestScope['javax.servlet.error.exception'].getMessage()}</p>
+                                <h5 class="card-title">Status code: <c:out value="${requestScope['javax.servlet.error.status_code']}" /></h5>
+                                <p class="card-text">
+                                    <c:if test="${requestScope['javax.servlet.error.exception'].getClass().getCanonicalName() == 'javax.servlet.ServletException' }">
+                                        ${requestScope['javax.servlet.error.exception'].getMessage()}
+                                    </c:if>
+                                    <c:if test="${requestScope['javax.servlet.error.exception'].getClass().getCanonicalName() != 'javax.servlet.ServletException' }">
+                                        An unexpected error happened.
+                                    </c:if>
+                                </p>
                             </div>
                         </div>
                     </div>

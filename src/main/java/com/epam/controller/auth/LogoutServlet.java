@@ -37,6 +37,9 @@ public class LogoutServlet extends HttpServlet {
      */
     public void removeAllSessionAttributes(HttpServletRequest req, HttpSession session) {
         Enumeration<String> attributes = req.getSession().getAttributeNames();
+        if (attributes == null) {
+            return;
+        }
         while (attributes.hasMoreElements()) {
             session.removeAttribute(attributes.nextElement());
         }

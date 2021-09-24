@@ -22,7 +22,7 @@
             }
 
         </style>
-        <title><fmt:message key="tests.error" /></title>
+        <title><fmt:message key="error.error" /></title>
     </head>
     <body>
 

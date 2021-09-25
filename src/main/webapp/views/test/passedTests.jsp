@@ -67,7 +67,7 @@
         </div>
         <hr>
 
-        <table class="table table-light border border-3 align-middle">
+        <table class="table table-light border border-3 align-middle" style="table-layout: fixed;>
             <thead class="table-info">
                 <th class="text-center align-middle"><fmt:message key="tests.name" /></th>
                 <th class="text-center align-middle"><fmt:message key="tests.timeSpent" /></th>
@@ -79,7 +79,7 @@
             <tbody>
                 <c:forEach items="${requestScope['passedTests']}" var="element">
                     <tr class="bg-light">
-                        <td width="30%" class="text-left align-middle">${element.testName}</td>
+                        <td width="30%" style="text-overflow: ellipsis; overflow: hidden;" class="text-left align-middle">${element.testName}</td>
                         <td width="10%" class="text-center align-middle">
                             <fmt:formatNumber type="number" minFractionDigits="2" maxFractionDigits="2" value="${element.timeSpent}" />%
                         </td>

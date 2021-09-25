@@ -94,9 +94,9 @@
         </div>
 
         <br>
-        <table class="table table-light border">
+        <table class="table table-light border" style="table-layout: fixed;">
             <thead class="table-info">
-                <th><fmt:message key="tests.name" /></th>
+                <th style="width: 25%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" width="25%"><fmt:message key="tests.name" /></th>
                 <th class="text-center"><fmt:message key="subjects.subject" /></th>
                 <th class="text-center"><fmt:message key="tests.complexity" /></th>
                 <th class="text-center"><fmt:message key="tests.duration" /></th>
@@ -110,10 +110,10 @@
             <tbody>
                 <c:forEach items="${requestScope['tests']}" var="element">
                     <tr>
-                        <td class="align-middle">${element.name}</td>
+                        <td style="width: 25%; text-overflow: ellipsis; overflow: hidden;" width="25%" class="align-middle">${element.name}</td>
                         <td class="text-center align-middle">${element.subject}</td>
                         <td class="text-center align-middle"><fmt:message key="complexity.${element.complexity}" /></td>
-                        <td class="text-center align-middle"><my:floor val='${element.duration/60}' /><fmt:message key="time.min" /> : ${element.duration%60}<fmt:message key="time.sec" /></td>
+                        <td class="text-center align-middle"><my:floor val='${element.duration/60}' /> <fmt:message key="time.min" /> : ${element.duration%60} <fmt:message key="time.sec" /></td>
                         <td class="text-center align-middle">${element.questionsNum}</td>
                         <c:if test="${sessionScope.currentUser.role == 'admin'}">
                             <c:if test="${element.isActive == true}">
@@ -127,9 +127,9 @@
                             </td>
                             <td class="text-center align-middle"><a class="btn btn-warning" href="/epam/test?id=${element.id}"><fmt:message key="edit" /></a></td>
                         </c:if>
-                        <td class="text-center">
+                        <td class="text-center align-middle">
                             <div>
-                                <a class="btn btn-success ${element.questionsNum == 0 ? 'disabled' : ''}" href="/epam/take/test?id=${element.id}" data-bs-toggle="tooltip" data-bs-placement="top" title="<fmt:message key='msg.timerWillStart' />" disabled ><fmt:message key='start' /></a>
+                                <a class="btn text-center align-middle btn-success ${element.questionsNum == 0 || element.isActive == false ? 'disabled' : ''}" href="/epam/take/test?id=${element.id}" data-bs-toggle="tooltip" data-bs-placement="top" title="<fmt:message key='msg.timerWillStart' />" disabled ><fmt:message key='start' /></a>
                             </div>
                         </td>
                     </tr>

@@ -128,7 +128,6 @@ public class TestDaoMysql implements TestDao {
             int k = 1;
             prepStmt.setInt(k++, offset - 1);
             prepStmt.setInt(k++, limit);
-            logger.info(prepStmt.toString());
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 results.add(new Test.Builder()

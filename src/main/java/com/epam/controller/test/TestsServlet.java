@@ -29,7 +29,6 @@ public class TestsServlet extends HttpServlet implements IPaginatable {
             String lang = CookieUtil.getCookieValueByName(req.getCookies(), "lang", "en");
             int recordsPerPage = calculateRecordsPerPageNum(req, "perPage");
             int recordsOffset = calculateRecordsOffset(req, recordsPerPage, "page");
-            logger.info(String.valueOf(recordsOffset));
             String sorting = getSortingValue(req, "sort", Consts.getVALID_COLUMNS_FOR_TEST_ORDER_BY(), Consts.TESTS_DEFAULT_SORT);
             int subjectId = Integer.parseInt(req.getParameter("subject"));
             User user = (User) req.getSession().getAttribute(Consts.CURRENT_USER);

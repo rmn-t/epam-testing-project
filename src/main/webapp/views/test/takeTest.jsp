@@ -26,8 +26,11 @@
 
         <c:import url="/views/templates/navbar.jsp"></c:import>
 
-            <p class="fs-1 text-center mt-3">Test name:  <c:out value="${test.name}"></c:out><p>
+
             <div class="container">
+                <div class="row text-center">
+                    <p class="fs-1 text-center mt-3" style="text-overflow: ellipsis; overflow: hidden">Test name:  <c:out value="${test.name}"></c:out><p>
+                </div>
                 <div class="row text-center">
                     <div class="col">
                         <button type="button" class="btn btn-warning mb-1 mr-auto" disabled><fmt:message key="subjects.subject" />: <c:out value="${test.subject}"></c:out></button>

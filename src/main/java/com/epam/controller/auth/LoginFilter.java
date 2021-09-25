@@ -44,6 +44,7 @@ public class LoginFilter implements Filter {
         if (session != null && session.getAttribute(Consts.CURRENT_USER) != null) {
             try {
                 User user = Consts.USER_DAO.getUserDetailsByUserName(((User) session.getAttribute(Consts.CURRENT_USER)).getUsername());
+                session.setAttribute(Consts.CURRENT_USER,user);
                 if (user.getStatusId() == 2) {
                     logger.info("logout proc from ban");
                     req.getRequestDispatcher(Routes.SLASH_LOGOUT).forward(req, resp);

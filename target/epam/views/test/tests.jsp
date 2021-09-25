@@ -95,7 +95,7 @@
 
         <br>
         <table class="table table-light border" style="table-layout: fixed;">
-            <thead class="table-info">
+            <thead class="table-info align-middle">
                 <th style="width: 25%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" width="25%"><fmt:message key="tests.name" /></th>
                 <th class="text-center"><fmt:message key="subjects.subject" /></th>
                 <th class="text-center"><fmt:message key="tests.complexity" /></th>

@@ -26,7 +26,7 @@ public class AddQuestionServlet extends HttpServlet {
         try {
             String lang = CookieUtil.getCookieValueByName(req.getCookies(), "lang", "en");
             int testId = Integer.parseInt(req.getParameter("testId"));
-            if (Consts.TEST_DAO.getTestById(testId, lang) != null) {
+            if (Consts.TEST_DAO.getTestById(testId,lang) != null) {
                 req.getRequestDispatcher(Views.QUESTION_FORM_JSP).forward(req, resp);
             }
         } catch (NumberFormatException | DBException e) {

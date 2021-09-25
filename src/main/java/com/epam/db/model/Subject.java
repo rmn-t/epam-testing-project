@@ -28,6 +28,13 @@ public class Subject extends Model {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public static class Builder {
         private int id;
         private String name;

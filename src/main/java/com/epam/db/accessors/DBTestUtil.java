@@ -14,9 +14,6 @@ public class DBTestUtil implements DatabaseAccessable {
     private final String PASS = "testqq";
     private String conUrl = "jdbc:mysql://localhost:3306/" + DB_NAME + "?useSSL=false&useEncoding=true&characterEncoding=UTF-8&user=" + USER + "&password=" + PASS;
 
-    static final String URL = "jdbc:mysql://localhost:3306/shop"
-            + "?sslMode=DISABLED&serverTimezone=UTC&user=root&password=root";
-
     @Override
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(conUrl);

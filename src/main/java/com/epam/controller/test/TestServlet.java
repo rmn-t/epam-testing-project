@@ -36,7 +36,7 @@ public class TestServlet extends HttpServlet {
             req.setAttribute("complexities", complexities);
 
             int testId = Integer.parseInt(req.getParameter("id"));
-            Test test = Consts.TEST_DAO.getTestById(testId, lang);
+            Test test = Consts.TEST_DAO.getTestById(testId,lang);
             List<Question> questions = Consts.QUESTION_DAO.getQuestionsAndAnswersByTestId(testId);
 
             req.setAttribute("questions", questions);

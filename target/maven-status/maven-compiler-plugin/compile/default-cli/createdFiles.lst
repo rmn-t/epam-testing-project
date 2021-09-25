@@ -34,7 +34,6 @@ com\epam\controller\auth\LoginServlet.class
 com\epam\db\dao\mysql\AnswerDaoMysql.class
 com\epam\db\dao\ComplexityDao.class
 com\epam\db\accessors\DBProdUtil.class
-com\epam\db\DBUtil.class
 com\epam\db\model\Subject.class
 com\epam\db\dao\mysql\UserDaoMysql.class
 com\epam\db\dao\QuestionDao.class

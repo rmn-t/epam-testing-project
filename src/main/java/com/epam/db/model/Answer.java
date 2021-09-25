@@ -1,12 +1,9 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Class represents the table "answer" in the database. Table fields in the DB are: id, question_id, text, isCorrect.
  */
-public class Answer implements Serializable {
-    private int id;
+public class Answer extends Model {
     private int questionId;
     private String text;
     private boolean isCorrect;
@@ -22,7 +19,7 @@ public class Answer implements Serializable {
      * @param isCorrect  boolean, represents if this is a correct answer for the related question
      */
     public Answer(int id, int questionId, String text, boolean isCorrect) {
-        this.id = id;
+        super(id);
         this.questionId = questionId;
         this.text = text;
         this.isCorrect = isCorrect;
@@ -32,14 +29,6 @@ public class Answer implements Serializable {
      * Default constructor without params.
      */
     public Answer() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getQuestionId() {
@@ -69,8 +58,7 @@ public class Answer implements Serializable {
     @Override
     public String toString() {
         return "Answer{" +
-                "id=" + id +
-                ", questionId=" + questionId +
+                "questionId=" + questionId +
                 ", text='" + text + '\'' +
                 ", isCorrect=" + isCorrect +
                 '}';

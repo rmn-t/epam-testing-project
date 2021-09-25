@@ -1,15 +1,12 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Class represents the table "user" in the database. Table fields in the DB are: id, username, password, salt, first_name, last_name, role_id, status_id.
  * <p>
  * Rest of the class fields are used for convenience of displaying data in the variables jsp views etc., values for these properties are
  * supplied through joining util table with related tables.
  */
-public class User implements Serializable {
-    private int id;
+public class User extends Model {
     private String username;
     private String password;
     private int salt;
@@ -37,7 +34,7 @@ public class User implements Serializable {
      * @param statusId  id of the status of the user
      */
     public User(int id, String username, String password, int salt, String firstName, String lastName, String role, int roleId, String status, int statusId) {
-        this.id = id;
+        super(id);
         this.username = username;
         this.password = password;
         this.salt = salt;
@@ -50,14 +47,6 @@ public class User implements Serializable {
     }
 
     public User() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUsername() {
@@ -130,6 +119,20 @@ public class User implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", salt=" + salt +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", role='" + role + '\'' +
+                ", roleId=" + roleId +
+                ", status='" + status + '\'' +
+                ", statusId=" + statusId +
+                '}';
     }
 
     public static class Builder {

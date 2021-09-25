@@ -1,9 +1,9 @@
 package com.epam.db.dao.mysql;
 
-import com.epam.exceptions.DBException;
-import com.epam.db.DBUtil;
+import com.epam.db.accessors.DatabaseAccessable;
 import com.epam.db.dao.AnswerDao;
 import com.epam.db.model.Answer;
+import com.epam.exceptions.DBException;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,13 +12,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MySQL implementation of AnswerDao interface
+ */
 public class AnswerDaoMysql implements AnswerDao {
-    //    private final Logger logger = Logger.getLogger(AnswerDaoSql.class);
-//    private Logger abc = (Logger) LoggerFactory.getLogger(AnswerDaoSql.class);
-//    private org.slf4j.Logger
-    private org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(AnswerDaoMysql.class);
+    private final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(AnswerDaoMysql.class);
+    private final DatabaseAccessable databaseAccessable;
 
-    public AnswerDaoMysql() {
+    /**
+     * Constructor allows to pick which DB connection will be used for internal method execution, injected via interface
+     *
+     * @param databaseAccessable database utility instance that will be used for DAO operations
+     */
+    public AnswerDaoMysql(DatabaseAccessable databaseAccessable) {
+        this.databaseAccessable = databaseAccessable;
     }
 
     public List<Answer> getAnswersByQuestionId(int questionId) throws DBException {
@@ -27,7 +34,7 @@ public class AnswerDaoMysql implements AnswerDao {
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("SELECT id,question_id,text,isCorrect FROM answer WHERE question_id = ?;");
             prepStmt.setInt(1, questionId);
             rs = prepStmt.executeQuery();
@@ -39,12 +46,12 @@ public class AnswerDaoMysql implements AnswerDao {
                         .build()
                 );
             }
-            logger.debug("Successfully obtained answers by question_id {}.",questionId);
+            logger.debug("Successfully obtained answers by question_id {}.", questionId);
         } catch (SQLException e) {
             logger.error("Collecting answers by question id failed.", e);
             throw new DBException("Collecting answers by question id failed.", e);
         } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return results;
     }
@@ -55,10 +62,10 @@ public class AnswerDaoMysql implements AnswerDao {
             for (Answer a : answers) {
                 insertAnswerByQuestionId(con, questionId, a.getText(), a.getIsCorrect());
             }
-            logger.info("${} answers were successfully updated for {} question_id.",answers.size(),questionId);
+            logger.info("${} answers were successfully updated for {} question_id.", answers.size(), questionId);
         } catch (DBException e) {
-            logger.error("Updating answers by question id failed.",e);
-            throw new DBException("Updating answers by question id failed.",e);
+            logger.error("Updating answers by question id failed.", e);
+            throw new DBException("Updating answers by question id failed.", e);
         }
 
 
@@ -67,7 +74,7 @@ public class AnswerDaoMysql implements AnswerDao {
     public void insertAnswersByQuestionId(int questionId, List<Answer> answers) throws DBException {
         Connection con = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             for (Answer a : answers) {
@@ -79,7 +86,7 @@ public class AnswerDaoMysql implements AnswerDao {
             logger.error("Failed inserting answers for question_id {}.", questionId, e);
             throw new DBException("Failed inserting answers.", e);
         } finally {
-            DBUtil.close(con);
+            databaseAccessable.close(con);
         }
     }
 
@@ -97,7 +104,7 @@ public class AnswerDaoMysql implements AnswerDao {
             logger.error("Inserting new answer failed.", e);
             throw new DBException("Inserting new answer failed.", e);
         } finally {
-            DBUtil.close(prepStmt);
+            databaseAccessable.close(prepStmt);
         }
     }
 
@@ -112,7 +119,7 @@ public class AnswerDaoMysql implements AnswerDao {
             logger.error("Answers for question_id {} couldn't be deleted", questionId, e);
             throw new DBException("Answers for question_id {} couldn't be deleted", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt);
+            databaseAccessable.closeAllInOrder(prepStmt);
         }
     }
 

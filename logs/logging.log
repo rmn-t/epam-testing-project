@@ -446,3 +446,21 @@ java.lang.NumberFormatException: For input string: "12Ñ3"
 20:44:24,195 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
 20:44:26,569 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
 20:47:26,901 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+20:48:27,814 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+20:49:44,958 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+22:02:15,209 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:04:24,062 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:04:39,913 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:04:42,866 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:04:51,456 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 613 | text : c123c | isCorrect : true
+22:04:51,458 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 613 | text : cacsc | isCorrect : false
+22:04:51,461 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 613.
+22:04:51,478 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:04:55,161 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:58:37,818 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:58:38,932 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:58:40,744 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+22:58:45,632 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 614 | text : c13 | isCorrect : false
+22:58:45,634 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 614 | text : c2c | isCorrect : true
+22:58:45,637 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 614.
+22:58:45,663 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.

@@ -1,12 +1,9 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Class represents the table "role" in the database. Table fields in the DB are: id, name.
  */
-public class Role implements Serializable {
-    private int id;
+public class Role extends Model {
     private String name;
 
     /**
@@ -16,19 +13,8 @@ public class Role implements Serializable {
      * @param name name of the role in the system (max length 20 chars)
      */
     public Role(int id, String name) {
-        this.id = id;
+        super(id);
         this.name = name;
-    }
-
-    public Role() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -37,6 +23,13 @@ public class Role implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     public static class Builder {

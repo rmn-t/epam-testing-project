@@ -1,12 +1,9 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Class represents the table "passed_tests" in the database. Table fields in the DB are: id, user_id, test_id, questions_num, correct_answers, grade, time_spent, date.
  */
-public class PassedTest implements Serializable {
-    private int id;
+public class PassedTest extends Model {
     private int userId;
     private int testId;
     private String testName;
@@ -34,7 +31,7 @@ public class PassedTest implements Serializable {
      * @param date           date and time when the test was finished
      */
     public PassedTest(int id, int userId, int testId, String testName, int questionNum, int correctAnswers, double grade, double timeSpent, String date) {
-        this.id = id;
+        super(id);
         this.userId = userId;
         this.testId = testId;
         this.testName = testName;
@@ -43,14 +40,6 @@ public class PassedTest implements Serializable {
         this.grade = grade;
         this.timeSpent = timeSpent;
         this.date = date;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getUserId() {
@@ -115,6 +104,20 @@ public class PassedTest implements Serializable {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "PassedTest{" +
+                "userId=" + userId +
+                ", testId=" + testId +
+                ", testName='" + testName + '\'' +
+                ", questionNum=" + questionNum +
+                ", correctAnswers=" + correctAnswers +
+                ", grade=" + grade +
+                ", timeSpent=" + timeSpent +
+                ", date='" + date + '\'' +
+                '}';
     }
 
     public static class Builder {

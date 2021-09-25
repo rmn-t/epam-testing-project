@@ -1,12 +1,9 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Class represents the table "subject" in the database. Table fields in the DB are: id, name.
  */
-public class Subject implements Serializable {
-    private int id;
+public class Subject extends Model {
     private String name;
 
     /**
@@ -16,19 +13,11 @@ public class Subject implements Serializable {
      * @param name name of the role in the system (max length 50 chars)
      */
     public Subject(int id, String name) {
-        this.id = id;
+        super(id);
         this.name = name;
     }
 
     public Subject() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {

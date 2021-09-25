@@ -1,12 +1,9 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Class represents the table "complexity" in the database. Table fields in the DB are: id, name.
  */
-public class Complexity implements Serializable {
-    private int id;
+public class Complexity extends Model {
     private String name;
     private int scale;
 
@@ -18,20 +15,12 @@ public class Complexity implements Serializable {
      * @param scale numeric value that represents the complexity, then higher value the higher the complexity
      */
     public Complexity(int id, String name, int scale) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.scale = scale;
     }
 
     public Complexity() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -48,6 +37,14 @@ public class Complexity implements Serializable {
 
     public void setScale(int scale) {
         this.scale = scale;
+    }
+
+    @Override
+    public String toString() {
+        return "Complexity{" +
+                "name='" + name + '\'' +
+                ", scale=" + scale +
+                '}';
     }
 
     public static class Builder {

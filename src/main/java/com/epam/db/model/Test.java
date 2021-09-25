@@ -1,15 +1,12 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Test class represents the table "test" in the database. Table fields in the DB are: id, name, subject_id, complexity_id, duration_sec,
  * is_active.
  * Rest of the class fields are used for convenience of displaying data in the variables jsp views etc., values for these properties are
  * supplied through joining test table with related tables.
  */
-public class Test implements Serializable {
-    private int id;
+public class Test extends Model {
     private String name;
     private String subject;
     private int subjectId;
@@ -35,7 +32,7 @@ public class Test implements Serializable {
      * @param isActive     field represents if the test should be available for passing (field name is_active)
      */
     public Test(int id, String name, String subject, int subjectId, String complexity, int complexityId, int duration, int questionsNum, boolean isActive) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.subject = subject;
         this.subjectId = subjectId;
@@ -50,15 +47,6 @@ public class Test implements Serializable {
      * Default constructor without params.
      */
     public Test() {
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -123,6 +111,20 @@ public class Test implements Serializable {
 
     public void setIsActive(boolean active) {
         this.isActive = active;
+    }
+
+    @Override
+    public String toString() {
+        return "Test{" +
+                "name='" + name + '\'' +
+                ", subject='" + subject + '\'' +
+                ", subjectId=" + subjectId +
+                ", complexity='" + complexity + '\'' +
+                ", complexityId=" + complexityId +
+                ", duration=" + duration +
+                ", questionsNum=" + questionsNum +
+                ", isActive=" + isActive +
+                '}';
     }
 
     public static class Builder {

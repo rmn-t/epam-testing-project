@@ -1,12 +1,9 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
-
 /**
  * Class represents the table "status" in the database. Table fields in the DB are: id, name.
  */
-public class Status implements Serializable {
-    private int id;
+public class Status extends Model {
     private String name;
 
     /**
@@ -16,19 +13,11 @@ public class Status implements Serializable {
      * @param name name of the role in the system (max length 20 chars)
      */
     public Status(int id, String name) {
-        this.id = id;
+        super(id);
         this.name = name;
     }
 
     public Status() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -37,6 +26,13 @@ public class Status implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Status{" +
+                "name='" + name + '\'' +
+                '}';
     }
 
     public static class Builder {

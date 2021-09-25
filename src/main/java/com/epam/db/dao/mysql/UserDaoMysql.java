@@ -1,6 +1,6 @@
 package com.epam.db.dao.mysql;
 
-import com.epam.db.DBUtil;
+import com.epam.db.accessors.DatabaseAccessable;
 import com.epam.db.dao.UserDao;
 import com.epam.db.model.User;
 import com.epam.exceptions.DBException;
@@ -12,8 +12,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MySQL implementation of UserDao interface
+ */
 public class UserDaoMysql implements UserDao {
-    private Logger logger = LoggerFactory.getLogger(UserDaoMysql.class);
+    private final Logger logger = LoggerFactory.getLogger(UserDaoMysql.class);
     private final String ID = "id";
     private final String USERNAME = "username";
     private final String PASSWORD = "password";
@@ -25,7 +28,15 @@ public class UserDaoMysql implements UserDao {
     private final int DEFAULT_STATUS_ID = 1;
     private final int DEFAULT_ROLE_ID = 2;
 
-    public UserDaoMysql() {
+    private final DatabaseAccessable databaseAccessable;
+
+    /**
+     * Constructor allows to pick which DB connection will be used for internal method execution, injected via interface
+     *
+     * @param databaseAccessable database utility instance that will be used for DAO operations
+     */
+    public UserDaoMysql(DatabaseAccessable databaseAccessable) {
+        this.databaseAccessable = databaseAccessable;
     }
 
     public User getUserDetailsByUserName(String username) throws DBException {
@@ -34,13 +45,13 @@ public class UserDaoMysql implements UserDao {
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("" +
                     "SELECT user.id as id,username,role.name as role,password,salt,status.name as status,first_name,last_name,status_id,role_id FROM user " +
                     "INNER JOIN status ON user.status_id = status.id " +
                     "INNER JOIN role ON user.role_id = role.id " +
                     "where username = ?;");
-            prepStmt.setString(1,username);
+            prepStmt.setString(1, username);
             logger.debug(prepStmt.toString());
             rs = prepStmt.executeQuery();
             if (!rs.isBeforeFirst()) {
@@ -59,65 +70,65 @@ public class UserDaoMysql implements UserDao {
                     .setFirstName(rs.getString(FIRST_NAME))
                     .setLastName(rs.getString(LAST_NAME))
                     .build();
-            logger.debug("Successfully obtained user by username, id is {}.",user.getId());
+            logger.debug("Successfully obtained user by username, id is {}.", user.getId());
         } catch (SQLException e) {
-            logger.error("Failed to obtain user by username : {}.",user.getUsername(),e);
-            throw new DBException("Failed to obtain user by username",e);
+            logger.error("Failed to obtain user by username : {}.", user.getUsername(), e);
+            throw new DBException("Failed to obtain user by username", e);
         } finally {
-            DBUtil.closeAllInOrder(rs,prepStmt,con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return user;
     }
 
-    public int addNewUser(String userName,String password,String firstName,String lastName) throws DBException {
+    public int addNewUser(String userName, String password, String firstName, String lastName) throws DBException {
         int id = 0;
         Connection con = null;
         PreparedStatement prepStmt = null;
         int salt = Encrypt.generateSalt();
-        String securePassword = Encrypt.getSecurePassword(password,salt);
+        String securePassword = Encrypt.getSecurePassword(password, salt);
         try {
-            con = DBUtil.getConnection();
-            prepStmt = con.prepareStatement("INSERT INTO user VALUES(id,?,?,?,?,?,?,?);",Statement.RETURN_GENERATED_KEYS);
+            con = databaseAccessable.getConnection();
+            prepStmt = con.prepareStatement("INSERT INTO user VALUES(id,?,?,?,?,?,?,?);", Statement.RETURN_GENERATED_KEYS);
             int k = 1;
-            prepStmt.setString(k++,userName);
-            prepStmt.setString(k++,securePassword);
-            prepStmt.setInt(k++,salt);
-            prepStmt.setString(k++,firstName);
-            prepStmt.setString(k++,lastName);
-            prepStmt.setInt(k++,DEFAULT_ROLE_ID);
-            prepStmt.setInt(k,DEFAULT_STATUS_ID);
+            prepStmt.setString(k++, userName);
+            prepStmt.setString(k++, securePassword);
+            prepStmt.setInt(k++, salt);
+            prepStmt.setString(k++, firstName);
+            prepStmt.setString(k++, lastName);
+            prepStmt.setInt(k++, DEFAULT_ROLE_ID);
+            prepStmt.setInt(k, DEFAULT_STATUS_ID);
             id = prepStmt.executeUpdate();
-            logger.debug("Inserted new user with username {}.",userName);
+            logger.debug("Inserted new user with username {}.", userName);
         } catch (SQLException e) {
-            logger.error("Couldn't insert a new user with username: {}.",userName,e);
-            throw new DBException("Couldn't insert a new user",e);
+            logger.error("Couldn't insert a new user with username: {}.", userName, e);
+            throw new DBException("Couldn't insert a new user", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt,con);
+            databaseAccessable.closeAllInOrder(prepStmt, con);
         }
         return id;
     }
 
-    public void updateUserById(int id, String password,int roleId, int statusId,String firstName,String lastName,int salt) throws DBException {
+    public void updateUserById(int id, String password, int roleId, int statusId, String firstName, String lastName, int salt) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("UPDATE user SET password = ?, role_id = ?, status_id = ?, salt = ?, first_name = ?, last_name = ? WHERE id = ?;");
             int k = 1;
-            prepStmt.setString(k++,password);
-            prepStmt.setInt(k++,roleId);
-            prepStmt.setInt(k++,statusId);
-            prepStmt.setInt(k++,salt);
-            prepStmt.setString(k++,firstName);
-            prepStmt.setString(k++,lastName);
-            prepStmt.setInt(k,id);
+            prepStmt.setString(k++, password);
+            prepStmt.setInt(k++, roleId);
+            prepStmt.setInt(k++, statusId);
+            prepStmt.setInt(k++, salt);
+            prepStmt.setString(k++, firstName);
+            prepStmt.setString(k++, lastName);
+            prepStmt.setInt(k, id);
             prepStmt.executeUpdate();
-            logger.debug("Successfully updated user info by id {}.",id);
+            logger.debug("Successfully updated user info by id {}.", id);
         } catch (SQLException e) {
-            logger.error("Failed to update user by id {}.",id,e);
-            throw new DBException("Failed to update user by id.",e);
+            logger.error("Failed to update user by id {}.", id, e);
+            throw new DBException("Failed to update user by id.", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt,con);
+            databaseAccessable.closeAllInOrder(prepStmt, con);
         }
     }
 
@@ -126,16 +137,16 @@ public class UserDaoMysql implements UserDao {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("DELETE FROM user WHERE id = ?;");
-            prepStmt.setInt(1,id);
+            prepStmt.setInt(1, id);
             prepStmt.executeUpdate();
-            logger.debug("User by id {} was deleted.",id);
+            logger.debug("User by id {} was deleted.", id);
         } catch (SQLException e) {
-            logger.error("Couldn't delete user by ID is {}.",id,e);
-            throw new DBException("Couldn't delete user by id.",e);
+            logger.error("Couldn't delete user by ID is {}.", id, e);
+            throw new DBException("Couldn't delete user by id.", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt,con);
+            databaseAccessable.closeAllInOrder(prepStmt, con);
         }
     }
 
@@ -146,15 +157,15 @@ public class UserDaoMysql implements UserDao {
         ResultSet rs = null;
         String whereStatusId = statusId == 0 ? "" : " WHERE status_id = " + statusId;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("" +
-                "SELECT user.id as id,username,salt,first_name,last_name,role.name as role,status.name as status,role_id,status_id,password FROM user " +
+                    "SELECT user.id as id,username,salt,first_name,last_name,role.name as role,status.name as status,role_id,status_id,password FROM user " +
                     "INNER JOIN status ON user.status_id = status.id " +
                     "INNER JOIN role ON user.role_id = role.id " + whereStatusId +
                     " ORDER BY " + orderBy + " LIMIT ?, ?;");
             int k = 1;
-            prepStmt.setInt(k++,offset-1);
-            prepStmt.setInt(k,limit);
+            prepStmt.setInt(k++, offset - 1);
+            prepStmt.setInt(k, limit);
             rs = prepStmt.executeQuery();
             while (rs.next()) {
                 users.add(new User.Builder()
@@ -170,12 +181,12 @@ public class UserDaoMysql implements UserDao {
                         .setSalt(rs.getInt("salt"))
                         .build());
             }
-            logger.debug("Successfully obtained {} users limited and sorted.",users.size());
+            logger.debug("Successfully obtained {} users limited and sorted.", users.size());
         } catch (SQLException e) {
-            logger.error("Failed to obtain users limited and sorted order by {}, limit {},{}.",orderBy,offset,limit,e);
-            throw new DBException("Failed to obtain users limited and sorted.",e);
+            logger.error("Failed to obtain users limited and sorted order by {}, limit {},{}.", orderBy, offset, limit, e);
+            throw new DBException("Failed to obtain users limited and sorted.", e);
         } finally {
-            DBUtil.closeAllInOrder(rs,prepStmt,con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return users;
     }
@@ -187,27 +198,27 @@ public class UserDaoMysql implements UserDao {
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("SELECT COUNT(*) AS total FROM user " + whereStatusId + ";");
             rs = prepStmt.executeQuery();
             rs.next();
             res = rs.getInt("total");
-            logger.debug("Total number of users in user table is {}.",res);
+            logger.debug("Total number of users in user table is {}.", res);
         } catch (SQLException e) {
-            logger.error("Failed to get the total users number.",e);
-            throw new DBException("Failed to get the total users number.",e);
+            logger.error("Failed to get the total users number.", e);
+            throw new DBException("Failed to get the total users number.", e);
         } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return res;
     }
 
-    public boolean validateCredentials(User userFromDb,String password,String userName) {
+    public boolean validateCredentials(User userFromDb, String password, String userName) {
         if (userFromDb == null || !userName.equals(userFromDb.getUsername())) {
             logger.debug("Failed to validate credentials, either user name is incorrect or password is null.");
             return false;
         }
-        return userFromDb.getPassword().equals(Encrypt.getSecurePassword(password,userFromDb.getSalt()));
+        return userFromDb.getPassword().equals(Encrypt.getSecurePassword(password, userFromDb.getSalt()));
     }
 
 }

@@ -11,6 +11,9 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * This class provides database utility services
+ */
 public class DBUtil {
     private static final Logger logger = LoggerFactory.getLogger(DBUtil.class);
     private static DataSource dataSource;
@@ -41,6 +44,11 @@ public class DBUtil {
         }
     }
 
+    /**
+     * Closes all autocloseable items in order they are supplied as parameters
+     * @param autoCloseables one or more autocloseable items
+     * @throws DBException in case an error occurred while closing an item
+     */
     public static void closeAllInOrder(AutoCloseable ...autoCloseables) throws DBException {
         for (AutoCloseable ac : autoCloseables) {
             close(ac);

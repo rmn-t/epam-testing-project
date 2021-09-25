@@ -1,9 +1,9 @@
 package com.epam.db.dao.mysql;
 
-import com.epam.exceptions.DBException;
-import com.epam.db.DBUtil;
+import com.epam.db.accessors.DatabaseAccessable;
 import com.epam.db.dao.TestDao;
 import com.epam.db.model.Test;
+import com.epam.exceptions.DBException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +11,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MySQL implementation of TestDao interface
+ */
 public class TestDaoMysql implements TestDao {
     private static final String ID = "id";
     private static final String NAME = "name";
@@ -22,7 +25,15 @@ public class TestDaoMysql implements TestDao {
     private static final String IS_ACTIVE = "is_active";
     private final Logger logger = LoggerFactory.getLogger(TestDaoMysql.class);
 
-    public TestDaoMysql() {
+    private final DatabaseAccessable databaseAccessable;
+
+    /**
+     * Constructor allows to pick which DB connection will be used for internal method execution, injected via interface
+     *
+     * @param databaseAccessable database utility instance that will be used for DAO operations
+     */
+    public TestDaoMysql(DatabaseAccessable databaseAccessable) {
+        this.databaseAccessable = databaseAccessable;
     }
 
     public Test getTestById(int testId, String lang) throws DBException {
@@ -32,7 +43,7 @@ public class TestDaoMysql implements TestDao {
         ResultSet rs = null;
         String subjectNameCol = "name_" + lang;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("" +
                     "SELECT test.id,test.name,subject." + subjectNameCol + " as subject,subject_id,complexity.name as complexity,complexity_id,duration_sec,is_active," +
                     "count(question.test_id) AS questionsNum " +
@@ -60,7 +71,7 @@ public class TestDaoMysql implements TestDao {
             logger.error("Failed to get test by id {}.", testId, e);
             throw new DBException("Failed to get test by id.", e);
         } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return test;
     }
@@ -69,7 +80,7 @@ public class TestDaoMysql implements TestDao {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("UPDATE test SET name = ?, subject_id = ?, complexity_id = ?, duration_sec = ?,is_active = ? WHERE id = ?;");
             int k = 1;
             prepStmt.setString(k++, name);
@@ -84,7 +95,7 @@ public class TestDaoMysql implements TestDao {
             logger.error("Failed to update test by id {}.", id, e);
             throw new DBException("Failed to update test by id.", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt, con);
+            databaseAccessable.closeAllInOrder(prepStmt, con);
         }
     }
 
@@ -92,7 +103,7 @@ public class TestDaoMysql implements TestDao {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("DELETE FROM test WHERE id = ?;");
             prepStmt.setInt(1, id);
             prepStmt.executeUpdate();
@@ -101,7 +112,7 @@ public class TestDaoMysql implements TestDao {
             logger.error("Failed to delete test by id {}.", id, e);
             throw new DBException("Failed to delete test by id.", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt, con);
+            databaseAccessable.closeAllInOrder(prepStmt, con);
         }
     }
 
@@ -116,7 +127,7 @@ public class TestDaoMysql implements TestDao {
         String and = subjectIdEquals.equals("") || isActiveValue.equals("") ? "" : " AND ";
         String subjectNameCol = "name_" + lang;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("" +
                     "SELECT test.id,test.name,subject." + subjectNameCol + " as subject,complexity.name as complexity,duration_sec,count(question.test_id) AS questionsNum,is_active " +
                     "FROM test " +
@@ -145,7 +156,7 @@ public class TestDaoMysql implements TestDao {
             logger.error("Failed to obtain tests (limited,sorted,ordered).", e);
             throw new DBException("Failed to obtain tests (limited,sorted,ordered).", e);
         } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return results;
     }
@@ -169,7 +180,7 @@ public class TestDaoMysql implements TestDao {
         PreparedStatement prepStmt = null;
         ResultSet generatedKeys = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("INSERT INTO test(name,subject_id,complexity_id,duration_sec,is_active) values(?,?,?,?,FALSE);", Statement.RETURN_GENERATED_KEYS);
             int k = 0;
             prepStmt.setString(++k, name);
@@ -188,7 +199,7 @@ public class TestDaoMysql implements TestDao {
             logger.error("Failed to insert new test.");
             throw new DBException("Failed to insert new test.", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt, con);
+            databaseAccessable.closeAllInOrder(prepStmt, con);
         }
         return res;
     }
@@ -203,7 +214,7 @@ public class TestDaoMysql implements TestDao {
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("SELECT COUNT(*) AS total FROM test " + where + subjectIdEquals + and + isActiveTrue + ";");
             rs = prepStmt.executeQuery();
             rs.next();
@@ -213,7 +224,7 @@ public class TestDaoMysql implements TestDao {
             logger.error("Failed to get the total tests number.", e);
             throw new DBException("Failed to get the total tests number.", e);
         } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return res;
     }
@@ -224,11 +235,11 @@ public class TestDaoMysql implements TestDao {
         try {
             prepStmt = con.prepareStatement("UPDATE test SET is_active = false WHERE id = ?;");
             int k = 1;
-            prepStmt.setInt(k,id);
+            prepStmt.setInt(k, id);
             prepStmt.executeUpdate();
         } catch (SQLException e) {
-            logger.error("Couldn't deactivate test.",e);
-            throw new DBException("Couldn't deactivate test.",e);
+            logger.error("Couldn't deactivate test.", e);
+            throw new DBException("Couldn't deactivate test.", e);
         }
     }
 

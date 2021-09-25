@@ -1,6 +1,6 @@
 package com.epam.db.dao.mysql;
 
-import com.epam.db.DBUtil;
+import com.epam.db.accessors.DatabaseAccessable;
 import com.epam.db.dao.PassedTestsDao;
 import com.epam.db.model.PassedTest;
 import com.epam.exceptions.DBException;
@@ -14,14 +14,27 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * MySQL implementation of PassedTestsDao interface
+ */
 public class PassedTestsDaoMysql implements PassedTestsDao {
-    private Logger logger = LoggerFactory.getLogger(PassedTestsDaoMysql.class);
+    private final Logger logger = LoggerFactory.getLogger(PassedTestsDaoMysql.class);
+    private final DatabaseAccessable databaseAccessable;
+
+    /**
+     * Constructor allows to pick which DB connection will be used for internal method execution, injected via interface
+     *
+     * @param databaseAccessable database utility instance that will be used for DAO operations
+     */
+    public PassedTestsDaoMysql(DatabaseAccessable databaseAccessable) {
+        this.databaseAccessable = databaseAccessable;
+    }
 
     public void insertNew(int testId, int userId, int questionNum, int correctAnswers, double grade, double timeSpent) throws DBException {
         Connection con = null;
         PreparedStatement prepStmt = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("INSERT INTO passed_tests(user_id,test_id,question_num,correct_answers,grade,time_spent) VALUES(?,?,?,?,?,?);");
             int k = 1;
             prepStmt.setInt(k++, userId);
@@ -36,7 +49,7 @@ public class PassedTestsDaoMysql implements PassedTestsDao {
             logger.error("Couldn't insert a new passed test for test {}.", testId, e);
             throw new DBException("Couldn't insert a new passed test for test {}.", e);
         } finally {
-            DBUtil.closeAllInOrder(prepStmt, con);
+            databaseAccessable.closeAllInOrder(prepStmt, con);
         }
     }
 
@@ -46,7 +59,7 @@ public class PassedTestsDaoMysql implements PassedTestsDao {
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("" +
                     "SELECT passed_tests.id as id,user_id,test_id, test.name as testName,question_num,grade,correct_answers,time_spent,date FROM passed_tests " +
                     "INNER JOIN test ON passed_tests.test_id = test.id " +
@@ -69,12 +82,12 @@ public class PassedTestsDaoMysql implements PassedTestsDao {
                         .setDate(rs.getString("date"))
                         .build());
             }
-            logger.debug("Successfully obtained passed tests. Query : SELECT id,user_id,test_id,grade,time_spent,date FROM passed_tests WHERE user_id = {} ORDER BY {} LIMIT {},{};",userId,orderBy,offset-1,limit);
+            logger.debug("Successfully obtained passed tests. Query : SELECT id,user_id,test_id,grade,time_spent,date FROM passed_tests WHERE user_id = {} ORDER BY {} LIMIT {},{};", userId, orderBy, offset - 1, limit);
         } catch (SQLException e) {
-            logger.error("Couldn't obtain passed tests by user.",e);
-            throw new DBException("Couldn't obtain passed tests by user.",e);
+            logger.error("Couldn't obtain passed tests by user.", e);
+            throw new DBException("Couldn't obtain passed tests by user.", e);
         } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return passedTests;
     }
@@ -85,18 +98,18 @@ public class PassedTestsDaoMysql implements PassedTestsDao {
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
         try {
-            con = DBUtil.getConnection();
+            con = databaseAccessable.getConnection();
             prepStmt = con.prepareStatement("SELECT COUNT(*) as total FROM passed_tests WHERE user_id = ?;");
             prepStmt.setInt(1, userId);
             rs = prepStmt.executeQuery();
             rs.next();
             res = rs.getInt("total");
-            logger.debug("Total number of obtained passed tests by user_id {} is {}.",userId,res);
+            logger.debug("Total number of obtained passed tests by user_id {} is {}.", userId, res);
         } catch (SQLException e) {
-            logger.error("Couldn't obtain the number of passed tests by user.",e);
-            throw new DBException("Couldn't obtain the number of passed tests by user.",e);
+            logger.error("Couldn't obtain the number of passed tests by user.", e);
+            throw new DBException("Couldn't obtain the number of passed tests by user.", e);
         } finally {
-            DBUtil.closeAllInOrder(rs, prepStmt, con);
+            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return res;
     }

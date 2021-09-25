@@ -1,6 +1,5 @@
 package com.epam.db.model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,8 +7,7 @@ import java.util.List;
 /**
  * Class represents the table "question" in the database. Table fields in the DB are: id, text, test_id;
  */
-public class Question implements Serializable {
-    private int id;
+public class Question extends Model {
     private String text;
     private int testId;
     private List<Answer> answers;
@@ -24,21 +22,13 @@ public class Question implements Serializable {
      * @param answers a list of answers for the question, not present in db table
      */
     public Question(int id, String text, int testId, List<Answer> answers) {
-        this.id = id;
+        super(id);
         this.text = text;
         this.testId = testId;
         this.answers = answers;
     }
 
     public Question() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getText() {
@@ -78,8 +68,7 @@ public class Question implements Serializable {
     @Override
     public String toString() {
         return "Question{" +
-                "id=" + id +
-                ", text='" + text + '\'' +
+                "text='" + text + '\'' +
                 ", testId=" + testId +
                 ", answers=" + answers +
                 '}';

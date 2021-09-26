@@ -124,6 +124,7 @@ public class User extends Model {
     @Override
     public String toString() {
         return "User{" +
+                super.toString() +
                 "username='" + username + '\'' +
                 ", salt=" + salt +
                 ", firstName='" + firstName + '\'' +

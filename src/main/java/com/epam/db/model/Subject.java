@@ -31,6 +31,7 @@ public class Subject extends Model {
     @Override
     public String toString() {
         return "Subject{" +
+                super.toString() +
                 "name='" + name + '\'' +
                 '}';
     }

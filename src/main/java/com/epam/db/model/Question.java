@@ -68,6 +68,7 @@ public class Question extends Model {
     @Override
     public String toString() {
         return "Question{" +
+                super.toString() +
                 "text='" + text + '\'' +
                 ", testId=" + testId +
                 ", answers=" + answers +

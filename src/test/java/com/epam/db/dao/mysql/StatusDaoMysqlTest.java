@@ -24,6 +24,7 @@ public class StatusDaoMysqlTest {
     public static void beforeTest() throws SQLException, DBException {
         Connection con = dbAccessor.getConnection();
         Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+        stmt.addBatch(DBSetup.DEACTIVATE_FOREIGN_KEYS);
         DBSetup.addStatementsToBatch(stmt,DBSetup.STATUS_RELATED);
         stmt.executeBatch();
         dbAccessor.close(con);

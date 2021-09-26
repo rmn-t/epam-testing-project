@@ -109,6 +109,7 @@ public class PassedTest extends Model {
     @Override
     public String toString() {
         return "PassedTest{" +
+                super.toString() +
                 "userId=" + userId +
                 ", testId=" + testId +
                 ", testName='" + testName + '\'' +

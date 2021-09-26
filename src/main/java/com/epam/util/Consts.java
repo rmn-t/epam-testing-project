@@ -74,12 +74,12 @@ public class Consts {
     public static final AnswerDao ANSWER_DAO = new AnswerDaoMysql(prodDbAccessor);
     public static final ComplexityDao COMPLEXITY_DAO = new ComplexityDaoMysql(prodDbAccessor);
     public static final PassedTestsDao PASSED_TESTS_DAO = new PassedTestsDaoMysql(prodDbAccessor);
-    public static final QuestionDao QUESTION_DAO = new QuestionDaoMysql(prodDbAccessor);
     public static final RoleDao ROLE_DAO = new RoleDaoMysql(prodDbAccessor);
     public static final StatusDao STATUS_DAO = new StatusDaoMysql(prodDbAccessor);
     public static final SubjectDao SUBJECT_DAO = new SubjectDaoMysql(prodDbAccessor);
     public static final TestDao TEST_DAO = new TestDaoMysql(prodDbAccessor);
     public static final UserDao USER_DAO = new UserDaoMysql(prodDbAccessor);
+    public static final QuestionDao QUESTION_DAO = new QuestionDaoMysql(prodDbAccessor,TEST_DAO,ANSWER_DAO);
 
     public static final String CURRENT_USER = "currentUser";
 

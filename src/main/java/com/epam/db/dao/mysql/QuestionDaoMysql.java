@@ -3,10 +3,10 @@ package com.epam.db.dao.mysql;
 import com.epam.db.accessors.DatabaseAccessable;
 import com.epam.db.dao.AnswerDao;
 import com.epam.db.dao.QuestionDao;
+import com.epam.db.dao.TestDao;
 import com.epam.db.model.Answer;
 import com.epam.db.model.Question;
 import com.epam.exceptions.DBException;
-import com.epam.util.Consts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +20,8 @@ import java.util.List;
 public class QuestionDaoMysql implements QuestionDao {
     private final Logger logger = LoggerFactory.getLogger(QuestionDaoMysql.class);
     private final DatabaseAccessable databaseAccessable;
+    private final TestDao testDao;
+    private final AnswerDao answerDao;
 
     /**
      * Constructor allows to pick which DB connection will be used for internal method execution, injected via interface
@@ -28,6 +30,20 @@ public class QuestionDaoMysql implements QuestionDao {
      */
     public QuestionDaoMysql(DatabaseAccessable databaseAccessable) {
         this.databaseAccessable = databaseAccessable;
+        this.testDao = new TestDaoMysql(databaseAccessable);
+        this.answerDao = new AnswerDaoMysql(databaseAccessable);
+    }
+
+    /**
+     * Constructor allows pass in already initiated DAOs that will be used internally
+     * @param databaseAccessable database utility instance that will be used for DAO operations
+     * @param testDao instance of implemented test dao
+     * @param answerDao instance of implemented answer dao
+     */
+    public QuestionDaoMysql(DatabaseAccessable databaseAccessable,TestDao testDao, AnswerDao answerDao) {
+        this.databaseAccessable = databaseAccessable;
+        this.testDao = testDao;
+        this.answerDao = answerDao;
     }
 
     public int insertQuestionByTestId(String text, int testId) throws DBException {
@@ -65,8 +81,8 @@ public class QuestionDaoMysql implements QuestionDao {
             con = databaseAccessable.getConnection();
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
-            int questionId = Consts.QUESTION_DAO.insertQuestionByTestId(text, testId);
-            Consts.ANSWER_DAO.insertAnswersByQuestionId(questionId, answers);
+            int questionId = insertQuestionByTestId(text, testId);
+            answerDao.insertAnswersByQuestionId(questionId, answers);
             con.commit();
             logger.debug("Successfully inserted question_id {} and it's answers.", questionId);
         } catch (SQLException | DBException e) {
@@ -85,7 +101,7 @@ public class QuestionDaoMysql implements QuestionDao {
     }
 
     public Question getQuestionById(int questionId) throws DBException {
-        Question q;
+        Question q = new Question();
         Connection con = null;
         PreparedStatement prepStmt = null;
         ResultSet rs = null;
@@ -94,9 +110,9 @@ public class QuestionDaoMysql implements QuestionDao {
             prepStmt = con.prepareStatement("SELECT id,text,test_id FROM question WHERE id = ?;");
             prepStmt.setInt(1, questionId);
             rs = prepStmt.executeQuery();
-            rs.next();
-            q = new Question.Builder().setId(rs.getInt("id")).setTestId(rs.getInt("test_id")).setText(rs.getString("text")).build();
-            logger.debug("Successfully obtained question by id {} with text : {}.", questionId, q.getText());
+            if (rs.next()) {
+                q = new Question.Builder().setId(rs.getInt("id")).setTestId(rs.getInt("test_id")).setText(rs.getString("text")).build();
+            }
         } catch (SQLException e) {
             logger.error("Failed to get question by id {}.", questionId, e);
             throw new DBException("Failed to get question by id", e);
@@ -104,33 +120,6 @@ public class QuestionDaoMysql implements QuestionDao {
             databaseAccessable.closeAllInOrder(rs, prepStmt, con);
         }
         return q;
-    }
-
-    public List<Question> getQuestionsByTestId(int testId) throws DBException {
-        List<Question> results = new ArrayList<>();
-        Connection con = null;
-        PreparedStatement prepStmt = null;
-        ResultSet rs = null;
-        try {
-            con = databaseAccessable.getConnection();
-            prepStmt = con.prepareStatement("SELECT id,text,test_id FROM question WHERE test_id = ?;");
-            prepStmt.setInt(1, testId);
-            rs = prepStmt.executeQuery();
-            while (rs.next()) {
-                results.add(new Question.Builder()
-                        .setId(rs.getInt("id"))
-                        .setText(rs.getString("text"))
-                        .setTestId(rs.getInt("test_id"))
-                        .build());
-            }
-            logger.debug("Obtained {} questions by test_id : {}.", results.size(), testId);
-        } catch (SQLException e) {
-            logger.error("Couldn't obtain questions by test_id {}.", testId, e);
-            throw new DBException("Couldn't obtain questions by test_id", e);
-        } finally {
-            databaseAccessable.closeAllInOrder(rs, prepStmt, con);
-        }
-        return results;
     }
 
     public List<Question> getQuestionsAndAnswersByTestId(int testId) throws DBException {
@@ -143,7 +132,6 @@ public class QuestionDaoMysql implements QuestionDao {
             prepStmt = con.prepareStatement("SELECT id,text,test_id FROM question WHERE test_id = ?;");
             prepStmt.setInt(1, testId);
             rs = prepStmt.executeQuery();
-            AnswerDao answerDao = Consts.ANSWER_DAO;
             while (rs.next()) {
                 Question q = new Question.Builder()
                         .setId(rs.getInt("id"))
@@ -170,7 +158,7 @@ public class QuestionDaoMysql implements QuestionDao {
             con.setAutoCommit(false);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             updateQuestionTextById(con, questionText, id);
-            Consts.ANSWER_DAO.updateAnswersByQuestionId(con, id, answers);
+            new AnswerDaoMysql(databaseAccessable).updateAnswersByQuestionId(con, id, answers);
             con.commit();
             logger.debug("Successfully updated question_id {} and it's answers.", id);
         } catch (SQLException | DBException e) {
@@ -214,7 +202,7 @@ public class QuestionDaoMysql implements QuestionDao {
             prepStmt.setInt(1, id);
             prepStmt.executeUpdate();
             if (questionsLeft == 1) {
-                Consts.TEST_DAO.deactivateTestById(con, testId);
+                testDao.deactivateTestById(con, testId);
             }
             logger.debug("Successfully deleted question_id {}", id);
         } catch (SQLException e) {

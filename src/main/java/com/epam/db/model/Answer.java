@@ -58,11 +58,14 @@ public class Answer extends Model {
     @Override
     public String toString() {
         return "Answer{" +
+                super.toString() +
                 "questionId=" + questionId +
                 ", text='" + text + '\'' +
                 ", isCorrect=" + isCorrect +
                 '}';
     }
+
+
 
     public static class Builder {
         private int id;

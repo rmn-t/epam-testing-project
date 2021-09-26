@@ -31,6 +31,7 @@ public class Status extends Model {
     @Override
     public String toString() {
         return "Status{" +
+                super.toString() +
                 "name='" + name + '\'' +
                 '}';
     }

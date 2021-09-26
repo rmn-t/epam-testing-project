@@ -42,6 +42,7 @@ public class Complexity extends Model {
     @Override
     public String toString() {
         return "Complexity{" +
+                super.toString() +
                 "name='" + name + '\'' +
                 ", scale=" + scale +
                 '}';

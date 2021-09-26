@@ -116,6 +116,7 @@ public class Test extends Model {
     @Override
     public String toString() {
         return "Test{" +
+                super.toString() +
                 "name='" + name + '\'' +
                 ", subject='" + subject + '\'' +
                 ", subjectId=" + subjectId +

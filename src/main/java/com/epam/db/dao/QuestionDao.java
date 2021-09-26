@@ -15,8 +15,6 @@ public interface QuestionDao {
 
     Question getQuestionById(int questionId) throws DBException;
 
-    List<Question> getQuestionsByTestId(int testId) throws DBException;
-
     List<Question> getQuestionsAndAnswersByTestId(int testId) throws DBException;
 
     void updateQuestionAndItsAnswers(int id, String questionText, List<Answer> answers) throws DBException;

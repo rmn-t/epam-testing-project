@@ -87,3 +87,4 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'subject.name' in 'f
 	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
 	at com.epam.db.dao.mysql.TestDaoMysql.getTestById(TestDaoMysql.java:56)
 	... 31 more
+02:01:34,165 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.

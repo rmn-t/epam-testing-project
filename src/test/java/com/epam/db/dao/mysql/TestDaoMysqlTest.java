@@ -26,8 +26,8 @@ public class TestDaoMysqlTest {
         stmt.addBatch(DBSetup.DEACTIVATE_FOREIGN_KEYS);
         DBSetup.addStatementsToBatch(stmt, DBSetup.COMPLEXITY_RELATED);
         DBSetup.addStatementsToBatch(stmt, DBSetup.SUBJECT_RELATED);
-        DBSetup.addStatementsToBatch(stmt, DBSetup.TESTS_RELATED);
-        DBSetup.addStatementsToBatch(stmt, DBSetup.QUESTIONS_RELATED);
+        DBSetup.addStatementsToBatch(stmt, DBSetup.TEST_RELATED);
+        DBSetup.addStatementsToBatch(stmt, DBSetup.QUESTION_RELATED);
         stmt.executeBatch();
         dbAccessor.close(con);
     }
@@ -161,8 +161,6 @@ public class TestDaoMysqlTest {
         }
         Assert.assertEquals(expected,actualTests);
     }
-
-
 
     @After
     public void afterTest() throws SQLException, DBException {

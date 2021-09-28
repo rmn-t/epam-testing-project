@@ -1,90 +1,18 @@
-00:20:57,939 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
-01:50:18,925 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - The lang value is _ru_
-01:50:18,934 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
-01:51:42,863 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
-01:51:42,921 [ INFO|com.epam.controller.test.TestServlet|TestServlet] - The lang value is _ru_ and the complexity name in test is _Advanced_
-01:56:31,412 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
-01:56:31,430 [ERROR|com.epam.db.dao.mysql.TestDaoMysql|TestDaoMysql] - Failed to get test by id 1.
-java.sql.SQLSyntaxErrorException: Unknown column 'subject.name' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
-	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
-	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
-	at com.epam.db.dao.mysql.TestDaoMysql.getTestById(TestDaoMysql.java:56)
-	at com.epam.controller.test.TestServlet.doGet(TestServlet.java:39)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:29)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-01:56:31,435 [ERROR|com.epam.controller.test.TestServlet|TestServlet] - Couldn't obtain the information for provided test id.
-com.epam.exceptions.DBException: Failed to get test by id.
-	at com.epam.db.dao.mysql.TestDaoMysql.getTestById(TestDaoMysql.java:72)
-	at com.epam.controller.test.TestServlet.doGet(TestServlet.java:39)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.util.CharsetFilter.doFilter(CharsetFilter.java:29)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.auth.AdminFilter.doFilter(AdminFilter.java:39)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at com.epam.controller.auth.LoginFilter.doFilter(LoginFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
-	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
-	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
-	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
-	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'subject.name' in 'field list'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1003)
-	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
-	at org.apache.tomcat.dbcp.dbcp.DelegatingPreparedStatement.executeQuery(DelegatingPreparedStatement.java:96)
-	at com.epam.db.dao.mysql.TestDaoMysql.getTestById(TestDaoMysql.java:56)
-	... 31 more
-02:01:34,165 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+00:53:29,946 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban
+01:05:17,412 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:20:31,576 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:27:56,979 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:29:11,449 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 624 | text : ответ 1 | isCorrect : false
+01:29:11,451 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 624 | text : ответ 2 | isCorrect : true
+01:29:11,452 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted 2 answers for question_id 624.
+01:29:11,469 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:29:18,222 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:30:28,359 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - All questions for test_id 624 were deleted.
+01:30:28,365 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 624 | text : ответ 1 | isCorrect : false
+01:30:28,373 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - Inserted new record to answer table. question_id : 624 | text : ответ 2 | isCorrect : true
+01:30:28,374 [ INFO|com.epam.db.dao.mysql.AnswerDaoMysql|AnswerDaoMysql] - $2 answers were successfully updated for 624 question_id.
+01:30:28,392 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:30:42,899 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:30:51,015 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:32:12,116 [ INFO|com.epam.db.dao.mysql.ComplexityDaoMysql|ComplexityDaoMysql] - Successfully obtained 4 records from complexity table in DB.
+01:40:42,892 [ INFO|com.epam.controller.auth.LoginFilter|LoginFilter] - logout proc from ban

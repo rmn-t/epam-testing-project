@@ -10,6 +10,9 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * An implementation of DatabaseAccessable interface that is used for creating connection on production
+ */
 public class DBProdUtil implements DatabaseAccessable {
     private final Logger logger = LoggerFactory.getLogger(DBProdUtil.class);
     private static DataSource dataSource;

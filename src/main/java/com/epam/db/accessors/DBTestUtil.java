@@ -7,6 +7,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * An implementation of DatabaseAccessable interface that is used for creating connection for testing purposes
+ */
 public class DBTestUtil implements DatabaseAccessable {
     private final Logger logger = LoggerFactory.getLogger(DBProdUtil.class);
     private final String DB_NAME = "epam_project_test";

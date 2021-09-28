@@ -19,10 +19,6 @@ public class LocaleUpdateServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        Cookie langCookie = new Cookie("lang", req.getParameter("lang"));
-//        langCookie.setMaxAge(60 * 60 * 24);
-//        langCookie.setPath("/");
-//        resp.addCookie(langCookie);
         CookieUtil.addCookieToResponse("lang", req.getParameter("lang"), 60 * 60 * 24, "/", resp);
         resp.sendRedirect(req.getParameter("prevUrl"));
     }

@@ -184,8 +184,6 @@
             </ul>
         </nav>
 
-        <strong>${lastPage}<strong>
-
         <script>
             let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
             let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {

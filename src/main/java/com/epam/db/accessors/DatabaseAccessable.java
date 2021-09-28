@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * An interface that is used for creating different types of connection to database
+ */
 public interface DatabaseAccessable {
     Logger logger = LoggerFactory.getLogger(DatabaseAccessable.class);
 
